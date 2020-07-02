@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package clickerrpg;
+package clickerrpg.UserInterfaces;
 
 /**
  *
@@ -48,9 +48,7 @@ public class GameUI extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(960, 720));
         setMinimumSize(new java.awt.Dimension(960, 720));
-        setPreferredSize(new java.awt.Dimension(960, 720));
         setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
@@ -71,7 +69,6 @@ public class GameUI extends javax.swing.JFrame {
 
         jLayeredPane1.setMaximumSize(new java.awt.Dimension(940, 440));
         jLayeredPane1.setMinimumSize(new java.awt.Dimension(940, 440));
-        jLayeredPane1.setPreferredSize(new java.awt.Dimension(940, 440));
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\ampki\\Desktop\\bgtest.png")); // NOI18N
@@ -157,7 +154,7 @@ public class GameUI extends javax.swing.JFrame {
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(20, Short.MAX_VALUE))
             .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jLayeredPane1Layout.createSequentialGroup()
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -191,7 +188,7 @@ public class GameUI extends javax.swing.JFrame {
         jButton4.setMinimumSize(new java.awt.Dimension(200, 100));
         jButton4.setPreferredSize(new java.awt.Dimension(200, 100));
 
-        jButton5.setText("Equipment");
+        jButton5.setLabel("Inventory");
         jButton5.setMaximumSize(new java.awt.Dimension(200, 100));
         jButton5.setMinimumSize(new java.awt.Dimension(200, 100));
         jButton5.setPreferredSize(new java.awt.Dimension(200, 100));
