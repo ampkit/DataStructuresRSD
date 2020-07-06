@@ -1,7 +1,6 @@
 package clickerrpg;
 
-import clickerrpg.ADT.SortedList;
-
-public class Inventory implements SortedList {
+public class Inventory<T> implements SortedListInterface<T> {
     
 }
+
