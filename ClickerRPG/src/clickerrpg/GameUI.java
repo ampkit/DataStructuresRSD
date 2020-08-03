@@ -67,9 +67,6 @@ public class GameUI extends javax.swing.JFrame {
 
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/background.png"))); // NOI18N
-        jLabel5.setMaximumSize(new java.awt.Dimension(940, 440));
-        jLabel5.setMinimumSize(new java.awt.Dimension(940, 440));
-        jLabel5.setPreferredSize(new java.awt.Dimension(940, 440));
         jLabel5.setRequestFocusEnabled(false);
         jLabel5.setVerifyInputWhenFocusTarget(false);
 
@@ -163,7 +160,7 @@ public class GameUI extends javax.swing.JFrame {
                 .addGap(212, 212, 212))
             .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(gameScreenLayout.createSequentialGroup()
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
                     .addContainerGap()))
         );
         gameScreenLayout.setVerticalGroup(
@@ -184,7 +181,7 @@ public class GameUI extends javax.swing.JFrame {
                     .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, 0))
             .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel5))
         );
 
         jPanel2.setMaximumSize(new java.awt.Dimension(940, 120));
@@ -273,7 +270,7 @@ public class GameUI extends javax.swing.JFrame {
                 .addComponent(gameScreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 84, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -338,6 +335,7 @@ public class GameUI extends javax.swing.JFrame {
                 new GameUI().setVisible(true);
             }
         });
+        
     }
     
     public void startUp(){
