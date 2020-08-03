@@ -1,17 +1,17 @@
 package clickerrpg;
 
 //adt implementation class
-public class HelperList<T extends Comparable<T>> implements HelperListInterface<T> {
+public class SortedArrayList<T extends Comparable<T>> implements ListInterface<T> {
 
     private T[] dataList;
     private int length;
     private static final int DEFAULT_SIZE = 25;
 
-    public HelperList() {
+    public SortedArrayList() {
         this(DEFAULT_SIZE);
     }
 
-    public HelperList(int size) {
+    public SortedArrayList(int size) {
         length = 0;
         dataList = (T[]) new Comparable[size];
     }

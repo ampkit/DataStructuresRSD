@@ -1,7 +1,7 @@
 package clickerrpg;
 
 //adt interface class
-public interface HelperListInterface<T extends Comparable<T>> {
+public interface ListInterface<T extends Comparable<T>> {
 
     public boolean add(T newEntry);
 
