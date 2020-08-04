@@ -1,7 +1,7 @@
-package clickerrpg;
+package CheongKaMeng;
 
 //adt interface class
-public interface ListInterface<T extends Comparable<T>> {
+public interface SortedHelperListInterface<T extends Comparable<T>> {
 
     public boolean add(T newEntry);
 

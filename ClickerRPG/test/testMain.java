@@ -1,7 +1,7 @@
-
-import clickerrpg.SortedArrayList;
+ 
+import CheongKaMeng.SortedHelperList;
 import clickerrpg.Helper;
-import clickerrpg.ListInterface;
+import CheongKaMeng.SortedHelperListInterface;
 
 public class testMain {
 
@@ -14,7 +14,7 @@ public class testMain {
         Helper h5 = new Helper(5, "Erin", 10, 500, 1, 3200);
         
 
-        ListInterface<Helper> hiredHelperList = new SortedArrayList<>();
+        SortedHelperListInterface<Helper> hiredHelperList = new SortedHelperList<>();
          hiredHelperList.add(h3);
          hiredHelperList.add(h4);
         hiredHelperList.add(h1);

@@ -1,17 +1,20 @@
-package clickerrpg;
+package CheongKaMeng;
 
 //adt implementation class
-public class SortedArrayList<T extends Comparable<T>> implements ListInterface<T> {
+
+import CheongKaMeng.SortedHelperListInterface;
+
+public class SortedHelperList<T extends Comparable<T>> implements SortedHelperListInterface<T> {
 
     private T[] dataList;
     private int length;
     private static final int DEFAULT_SIZE = 25;
 
-    public SortedArrayList() {
+    public SortedHelperList() {
         this(DEFAULT_SIZE);
     }
 
-    public SortedArrayList(int size) {
+    public SortedHelperList(int size) {
         length = 0;
         dataList = (T[]) new Comparable[size];
     }
