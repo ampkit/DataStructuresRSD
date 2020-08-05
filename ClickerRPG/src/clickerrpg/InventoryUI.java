@@ -78,6 +78,12 @@ public class InventoryUI extends javax.swing.JFrame {
         });
     }
 
+        public void startUp(){
+        setAlwaysOnTop(true);
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
 }

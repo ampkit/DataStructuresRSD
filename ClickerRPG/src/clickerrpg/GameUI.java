@@ -1,5 +1,7 @@
 package clickerrpg;
 
+import java.util.HashSet;
+
 public class GameUI extends javax.swing.JFrame {
 
     public GameUI() {
@@ -20,8 +22,8 @@ public class GameUI extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel8 = new javax.swing.JLabel();
-        jProgressBar2 = new javax.swing.JProgressBar();
+        labelPlayerName = new javax.swing.JLabel();
+        playerHealthBar = new javax.swing.JProgressBar();
         labelEnemyName = new javax.swing.JLabel();
         enemyHealthBar = new javax.swing.JProgressBar();
         jLabel4 = new javax.swing.JLabel();
@@ -29,7 +31,7 @@ public class GameUI extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnInventory = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -85,10 +87,10 @@ public class GameUI extends javax.swing.JFrame {
         jPanel3.setRequestFocusEnabled(false);
         jPanel3.setVerifyInputWhenFocusTarget(false);
 
-        jLabel8.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
-        jLabel8.setText("Player Name");
+        labelPlayerName.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
+        labelPlayerName.setText("Player Name");
 
-        jProgressBar2.setName(""); // NOI18N
+        playerHealthBar.setName(""); // NOI18N
 
         labelEnemyName.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         labelEnemyName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
@@ -101,9 +103,9 @@ public class GameUI extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jProgressBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
+                    .addComponent(labelPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(playerHealthBar, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelEnemyName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(enemyHealthBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -114,14 +116,14 @@ public class GameUI extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(labelPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 1, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(labelEnemyName, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jProgressBar2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(playerHealthBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(enemyHealthBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
@@ -200,11 +202,16 @@ public class GameUI extends javax.swing.JFrame {
         jButton4.setMinimumSize(new java.awt.Dimension(200, 100));
         jButton4.setPreferredSize(new java.awt.Dimension(200, 100));
 
-        jButton5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton5.setLabel("Inventory");
-        jButton5.setMaximumSize(new java.awt.Dimension(200, 100));
-        jButton5.setMinimumSize(new java.awt.Dimension(200, 100));
-        jButton5.setPreferredSize(new java.awt.Dimension(200, 100));
+        btnInventory.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        btnInventory.setLabel("Inventory");
+        btnInventory.setMaximumSize(new java.awt.Dimension(200, 100));
+        btnInventory.setMinimumSize(new java.awt.Dimension(200, 100));
+        btnInventory.setPreferredSize(new java.awt.Dimension(200, 100));
+        btnInventory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInventoryActionPerformed(evt);
+            }
+        });
 
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton6.setText("Prestige");
@@ -220,21 +227,21 @@ public class GameUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(47, 47, 47)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnInventory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(39, 39, 39)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnInventory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
@@ -290,20 +297,13 @@ public class GameUI extends javax.swing.JFrame {
     
     // <editor-fold defaultstate="collapsed" desc="Events">                          
     private void gameScreenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gameScreenMouseClicked
-        int currentHealth = enemyHealthBar.getValue() - 11;
-        
-        if (currentHealth <= 0)
-        {
-            int gold = Integer.valueOf(labelGold.getText()) + 10;
-            labelGold.setText(Integer.toString(gold));
-            enemyHealthBar.setValue(100);
-        }
-        else 
-        {
-            enemyHealthBar.setValue(currentHealth );
-
-        }
+        MainClass.attack();
     }//GEN-LAST:event_gameScreenMouseClicked
+
+    private void btnInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventoryActionPerformed
+        InventoryUI inventoryUI = new InventoryUI();
+        inventoryUI.startUp();
+    }//GEN-LAST:event_btnInventoryActionPerformed
     // </editor-fold>
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -339,20 +339,29 @@ public class GameUI extends javax.swing.JFrame {
     }
     
     public void startUp(){
-        labelGold.setText("0");
-        labelEnemyName.setText("Test Enemy");
-        enemyHealthBar.setValue(100);
-        super.update(this.getGraphics());
-        this.setVisible(true);
+        setLocationRelativeTo(null);
+        setVisible(true);
     }
 
+    public void updateGameUI(Player player, Enemy enemy){
+        labelPlayerName.setText(player.name);
+        playerHealthBar.setMaximum((int)player.maxHealth);
+        playerHealthBar.setValue((int)player.curHealth);
+        
+        labelEnemyName.setText(enemy.name);
+        enemyHealthBar.setMaximum((int)enemy.maxHealth);
+        enemyHealthBar.setValue((int)enemy.curHealth);
+        
+        labelGold.setText(String.valueOf(player.gold));
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnInventory;
     private javax.swing.JProgressBar enemyHealthBar;
     private javax.swing.JLayeredPane gameScreen;
     private javax.swing.JPanel gameUIPanel;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
@@ -362,11 +371,11 @@ public class GameUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JProgressBar jProgressBar2;
     private javax.swing.JLabel labelEnemyName;
     private javax.swing.JLabel labelGold;
+    private javax.swing.JLabel labelPlayerName;
+    private javax.swing.JProgressBar playerHealthBar;
     // End of variables declaration//GEN-END:variables
 }
