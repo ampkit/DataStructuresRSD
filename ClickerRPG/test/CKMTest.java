@@ -13,21 +13,21 @@ public class CKMTest {
 //        Helper h4 = new Helper(4, "Doggy", 8, 400, 1, 1600);
 //        Helper h5 = new Helper(5, "Erin", 10, 500, 1, 3200);
 
-        Helper[] hArray = {h4,h5,h2};
-
-        SortedHelperListInterface<Helper> hiredHelperList = new SortedHelperList<>();
-        hiredHelperList.add(h3);
-        hiredHelperList.add(h4);
-        hiredHelperList.add(h1);
-        hiredHelperList.add(h5);
-        hiredHelperList.add(h2);
-
-        hiredHelperList.remove(h5);
-        for (int i = 0; i < hiredHelperList.size(); i++) {
-            System.out.println(hiredHelperList.get(i));
-        }
+//        Helper[] hArray = {h4,h5,h2};
+//
+//        SortedHelperListInterface<Helper> hiredHelperList = new SortedHelperList<>();
+//        hiredHelperList.add(h3);
+//        hiredHelperList.add(h4);
+//        hiredHelperList.add(h1);
+//        hiredHelperList.add(h5);
+//        hiredHelperList.add(h2);
+//
+//        hiredHelperList.remove(h5);
+//        for (int i = 0; i < hiredHelperList.size(); i++) {
+//            System.out.println(hiredHelperList.get(i));
+//        }
 //        System.out.println(hiredHelperList.contains(h4));
-        System.out.println(hiredHelperList.containsArray(hArray));
+//        System.out.println(hiredHelperList.containsArray(hArray));
 //        for (int i = 0; i < hiredHelperList.size();i++){
 //            System.out.println(hiredHelperList.get(i));
 //        }

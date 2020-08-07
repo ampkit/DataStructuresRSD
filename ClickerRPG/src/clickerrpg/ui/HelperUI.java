@@ -31,104 +31,157 @@ public class HelperUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        p2Name = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        p2BtnUpgrade = new javax.swing.JButton();
-        p2BtnHire = new javax.swing.JButton();
-        p2LblUpgradeCost = new javax.swing.JLabel();
-        p2LblDmg = new javax.swing.JLabel();
-        lblUpgradeCostValue = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        p2Name1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        p2BtnUpgrade1 = new javax.swing.JButton();
-        p2BtnHire1 = new javax.swing.JButton();
-        p2LblUpgradeCost1 = new javax.swing.JLabel();
-        p2LblDmg1 = new javax.swing.JLabel();
-        lblUpgradeCostValue1 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        labelGold = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        p2Name2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        p2BtnUpgrade2 = new javax.swing.JButton();
-        p2BtnHire2 = new javax.swing.JButton();
-        p2LblUpgradeCost2 = new javax.swing.JLabel();
-        p2LblDmg2 = new javax.swing.JLabel();
-        lblUpgradeCostValue2 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        p2Name3 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        p2BtnUpgrade3 = new javax.swing.JButton();
-        p2BtnHire3 = new javax.swing.JButton();
-        p2LblUpgradeCost3 = new javax.swing.JLabel();
-        p2LblDmg3 = new javax.swing.JLabel();
-        lblUpgradeCostValue3 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        labelGold = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        lblName = new javax.swing.JLabel();
+        lblDamage = new javax.swing.JLabel();
+        btnUpgrade = new javax.swing.JButton();
+        btnHire = new javax.swing.JButton();
+        lblUpgradeCost = new javax.swing.JLabel();
+        lblDamageValue = new javax.swing.JLabel();
+        lblUpgradeCostValue = new javax.swing.JLabel();
+        lblIcon = new javax.swing.JLabel();
+        lblHireCost = new javax.swing.JLabel();
+        lblHireCostValue = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        lblName5 = new javax.swing.JLabel();
+        lblDamage5 = new javax.swing.JLabel();
+        btnUpgrade5 = new javax.swing.JButton();
+        btnHire5 = new javax.swing.JButton();
+        lblUpgradeCost5 = new javax.swing.JLabel();
+        lblDamageValue5 = new javax.swing.JLabel();
+        lblUpgradeCostValue5 = new javax.swing.JLabel();
+        lblIcon5 = new javax.swing.JLabel();
+        lblHireCost5 = new javax.swing.JLabel();
+        lblHireCostValue5 = new javax.swing.JLabel();
+        jPanel8 = new javax.swing.JPanel();
+        lblName6 = new javax.swing.JLabel();
+        lblDamage6 = new javax.swing.JLabel();
+        btnUpgrade6 = new javax.swing.JButton();
+        btnHire6 = new javax.swing.JButton();
+        lblUpgradeCost6 = new javax.swing.JLabel();
+        lblDamageValue6 = new javax.swing.JLabel();
+        lblUpgradeCostValue6 = new javax.swing.JLabel();
+        lblIcon6 = new javax.swing.JLabel();
+        lblHireCost6 = new javax.swing.JLabel();
+        lblHireCostValue6 = new javax.swing.JLabel();
+        jPanel9 = new javax.swing.JPanel();
+        lblName7 = new javax.swing.JLabel();
+        lblDamage7 = new javax.swing.JLabel();
+        btnUpgrade7 = new javax.swing.JButton();
+        btnHire7 = new javax.swing.JButton();
+        lblUpgradeCost7 = new javax.swing.JLabel();
+        lblDamageValue7 = new javax.swing.JLabel();
+        lblUpgradeCostValue7 = new javax.swing.JLabel();
+        lblIcon7 = new javax.swing.JLabel();
+        lblHireCost7 = new javax.swing.JLabel();
+        lblHireCostValue7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 102));
-        setMaximumSize(new java.awt.Dimension(700, 550));
-        setMinimumSize(new java.awt.Dimension(700, 550));
+        setMaximumSize(new java.awt.Dimension(705, 550));
+        setMinimumSize(new java.awt.Dimension(705, 550));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(700, 550));
         setResizable(false);
-        setSize(new java.awt.Dimension(700, 550));
+        setSize(new java.awt.Dimension(705, 550));
 
+        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+
+        jButton3.setBackground(new java.awt.Color(51, 51, 51));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(153, 153, 153));
+        jButton3.setText("Previous Page");
+        jButton3.setFocusPainted(false);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setBackground(new java.awt.Color(51, 51, 51));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(153, 153, 153));
+        jButton2.setText("Next Page");
+        jButton2.setFocusPainted(false);
+
+        jButton1.setBackground(new java.awt.Color(51, 51, 51));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(153, 153, 153));
+        jButton1.setText("Back");
+        jButton1.setFocusPainted(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        labelGold.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        labelGold.setForeground(new java.awt.Color(255, 215, 0));
+        labelGold.setText("999 999 999");
+        labelGold.setName(""); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 215, 0));
+        jLabel1.setText("$");
+
+        jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        p2Name.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        p2Name.setText("Helper1");
+        lblName.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblName.setForeground(new java.awt.Color(204, 204, 204));
+        lblName.setText("Helper1");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel3.setText("Damage:");
+        lblDamage.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblDamage.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamage.setText("Damage:");
 
-        p2BtnUpgrade.setText("Upgrade");
-        p2BtnUpgrade.addActionListener(new java.awt.event.ActionListener() {
+        btnUpgrade.setBackground(new java.awt.Color(51, 51, 51));
+        btnUpgrade.setForeground(new java.awt.Color(153, 153, 153));
+        btnUpgrade.setText("Upgrade");
+        btnUpgrade.setFocusPainted(false);
+        btnUpgrade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                p2BtnUpgradeActionPerformed(evt);
+                btnUpgradeActionPerformed(evt);
             }
         });
 
-        p2BtnHire.setText("Hire");
-        p2BtnHire.addActionListener(new java.awt.event.ActionListener() {
+        btnHire.setBackground(new java.awt.Color(51, 51, 51));
+        btnHire.setForeground(new java.awt.Color(153, 153, 153));
+        btnHire.setText("Hire");
+        btnHire.setFocusPainted(false);
+        btnHire.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                p2BtnHireActionPerformed(evt);
+                btnHireActionPerformed(evt);
             }
         });
 
-        p2LblUpgradeCost.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        p2LblUpgradeCost.setText("Upgrade Cost: $");
+        lblUpgradeCost.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblUpgradeCost.setForeground(new java.awt.Color(204, 204, 204));
+        lblUpgradeCost.setText("Upgrade Cost: $");
 
-        p2LblDmg.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        p2LblDmg.setText("30");
+        lblDamageValue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblDamageValue.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamageValue.setText("30");
 
         lblUpgradeCostValue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblUpgradeCostValue.setForeground(new java.awt.Color(204, 204, 204));
         lblUpgradeCostValue.setText("100");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
-        jLabel6.setText("icon");
+        lblIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
+        lblIcon.setText("icon");
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel7.setText("Hire Cost: $");
+        lblHireCost.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblHireCost.setForeground(new java.awt.Color(204, 204, 204));
+        lblHireCost.setText("Hire Cost: $");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel8.setText("100");
+        lblHireCostValue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblHireCostValue.setForeground(new java.awt.Color(204, 204, 204));
+        lblHireCostValue.setText("100");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -136,474 +189,493 @@ public class HelperUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(p2Name, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblName, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(p2BtnUpgrade))
+                                .addComponent(btnUpgrade))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel7)
-                                    .addComponent(p2LblUpgradeCost))
+                                    .addComponent(lblHireCost)
+                                    .addComponent(lblUpgradeCost))
                                 .addGap(0, 3, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(p2BtnHire)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-                            .addComponent(lblUpgradeCostValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(lblHireCostValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblUpgradeCostValue, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(btnHire))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblDamage, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
-                        .addComponent(p2LblDmg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(16, 16, 16))
+                        .addComponent(lblDamageValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(p2Name)
+                .addGap(44, 44, 44)
+                .addComponent(lblIcon)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblName)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDamage)
+                    .addComponent(lblDamageValue))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUpgradeCost)
+                    .addComponent(lblUpgradeCostValue))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(p2LblDmg))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(p2LblUpgradeCost)
-                            .addComponent(lblUpgradeCostValue))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)))
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblHireCostValue)
+                    .addComponent(lblHireCost))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(p2BtnUpgrade)
-                    .addComponent(p2BtnHire))
+                    .addComponent(btnUpgrade)
+                    .addComponent(btnHire))
                 .addContainerGap())
         );
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel7.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        p2Name1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        p2Name1.setText("Helper1");
+        lblName5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblName5.setForeground(new java.awt.Color(204, 204, 204));
+        lblName5.setText("Helper1");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel4.setText("Damage:");
+        lblDamage5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblDamage5.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamage5.setText("Damage:");
 
-        p2BtnUpgrade1.setText("Upgrade");
-        p2BtnUpgrade1.addActionListener(new java.awt.event.ActionListener() {
+        btnUpgrade5.setBackground(new java.awt.Color(51, 51, 51));
+        btnUpgrade5.setForeground(new java.awt.Color(153, 153, 153));
+        btnUpgrade5.setText("Upgrade");
+        btnUpgrade5.setFocusPainted(false);
+        btnUpgrade5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                p2BtnUpgrade1ActionPerformed(evt);
+                btnUpgrade5ActionPerformed(evt);
             }
         });
 
-        p2BtnHire1.setText("Hire");
-        p2BtnHire1.addActionListener(new java.awt.event.ActionListener() {
+        btnHire5.setBackground(new java.awt.Color(51, 51, 51));
+        btnHire5.setForeground(new java.awt.Color(153, 153, 153));
+        btnHire5.setText("Hire");
+        btnHire5.setFocusPainted(false);
+        btnHire5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                p2BtnHire1ActionPerformed(evt);
+                btnHire5ActionPerformed(evt);
             }
         });
 
-        p2LblUpgradeCost1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        p2LblUpgradeCost1.setText("Upgrade Cost: $");
+        lblUpgradeCost5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblUpgradeCost5.setForeground(new java.awt.Color(204, 204, 204));
+        lblUpgradeCost5.setText("Upgrade Cost: $");
 
-        p2LblDmg1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        p2LblDmg1.setText("30");
+        lblDamageValue5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblDamageValue5.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamageValue5.setText("30");
 
-        lblUpgradeCostValue1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblUpgradeCostValue1.setText("100");
+        lblUpgradeCostValue5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblUpgradeCostValue5.setForeground(new java.awt.Color(204, 204, 204));
+        lblUpgradeCostValue5.setText("100");
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
-        jLabel9.setText("icon");
+        lblIcon5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
+        lblIcon5.setText("icon");
 
-        jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel10.setText("Hire Cost: $");
+        lblHireCost5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblHireCost5.setForeground(new java.awt.Color(204, 204, 204));
+        lblHireCost5.setText("Hire Cost: $");
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel11.setText("100");
+        lblHireCostValue5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblHireCostValue5.setForeground(new java.awt.Color(204, 204, 204));
+        lblHireCostValue5.setText("100");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(p2Name1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblIcon5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(lblName5, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(p2BtnUpgrade1))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel10)
-                                    .addComponent(p2LblUpgradeCost1))
+                                .addComponent(btnUpgrade5))
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblHireCost5)
+                                    .addComponent(lblUpgradeCost5))
                                 .addGap(0, 3, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(p2BtnHire1)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-                            .addComponent(lblUpgradeCostValue1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblHireCostValue5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblUpgradeCostValue5, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel7Layout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(btnHire5))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addComponent(lblDamage5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
-                        .addComponent(p2LblDmg1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(16, 16, 16))
+                        .addComponent(lblDamageValue5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(p2Name1)
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(lblIcon5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblName5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(p2LblDmg1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(p2LblUpgradeCost1)
-                            .addComponent(lblUpgradeCostValue1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel10)
-                            .addComponent(jLabel11)))
-                    .addComponent(jLabel9))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(p2BtnUpgrade1)
-                    .addComponent(p2BtnHire1))
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDamage5)
+                    .addComponent(lblDamageValue5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUpgradeCost5)
+                    .addComponent(lblUpgradeCostValue5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHireCostValue5)
+                    .addComponent(lblHireCost5))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnUpgrade5)
+                    .addComponent(btnHire5))
                 .addContainerGap())
         );
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 215, 0));
-        jLabel1.setText("$");
+        jPanel8.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        labelGold.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        labelGold.setForeground(new java.awt.Color(255, 215, 0));
-        labelGold.setText("999 999 999");
-        labelGold.setName(""); // NOI18N
+        lblName6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblName6.setForeground(new java.awt.Color(204, 204, 204));
+        lblName6.setText("Helper1");
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        lblDamage6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblDamage6.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamage6.setText("Damage:");
 
-        p2Name2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        p2Name2.setText("Helper1");
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel5.setText("Damage:");
-
-        p2BtnUpgrade2.setText("Upgrade");
-        p2BtnUpgrade2.addActionListener(new java.awt.event.ActionListener() {
+        btnUpgrade6.setBackground(new java.awt.Color(51, 51, 51));
+        btnUpgrade6.setForeground(new java.awt.Color(153, 153, 153));
+        btnUpgrade6.setText("Upgrade");
+        btnUpgrade6.setFocusPainted(false);
+        btnUpgrade6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                p2BtnUpgrade2ActionPerformed(evt);
+                btnUpgrade6ActionPerformed(evt);
             }
         });
 
-        p2BtnHire2.setText("Hire");
-        p2BtnHire2.addActionListener(new java.awt.event.ActionListener() {
+        btnHire6.setBackground(new java.awt.Color(51, 51, 51));
+        btnHire6.setForeground(new java.awt.Color(153, 153, 153));
+        btnHire6.setText("Hire");
+        btnHire6.setFocusPainted(false);
+        btnHire6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                p2BtnHire2ActionPerformed(evt);
+                btnHire6ActionPerformed(evt);
             }
         });
 
-        p2LblUpgradeCost2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        p2LblUpgradeCost2.setText("Upgrade Cost: $");
+        lblUpgradeCost6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblUpgradeCost6.setForeground(new java.awt.Color(204, 204, 204));
+        lblUpgradeCost6.setText("Upgrade Cost: $");
 
-        p2LblDmg2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        p2LblDmg2.setText("30");
+        lblDamageValue6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblDamageValue6.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamageValue6.setText("30");
 
-        lblUpgradeCostValue2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblUpgradeCostValue2.setText("100");
+        lblUpgradeCostValue6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblUpgradeCostValue6.setForeground(new java.awt.Color(204, 204, 204));
+        lblUpgradeCostValue6.setText("100");
 
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
-        jLabel12.setText("icon");
+        lblIcon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
+        lblIcon6.setText("icon");
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel13.setText("Hire Cost: $");
+        lblHireCost6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblHireCost6.setForeground(new java.awt.Color(204, 204, 204));
+        lblHireCost6.setText("Hire Cost: $");
 
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel14.setText("100");
+        lblHireCostValue6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblHireCostValue6.setForeground(new java.awt.Color(204, 204, 204));
+        lblHireCostValue6.setText("100");
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(p2Name2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblIcon6, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel8Layout.createSequentialGroup()
+                        .addComponent(lblName6, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(p2BtnUpgrade2))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel13)
-                                    .addComponent(p2LblUpgradeCost2))
+                                .addComponent(btnUpgrade6))
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblHireCost6)
+                                    .addComponent(lblUpgradeCost6))
                                 .addGap(0, 3, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(p2BtnHire2)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-                            .addComponent(lblUpgradeCostValue2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblHireCostValue6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblUpgradeCostValue6, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel8Layout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(btnHire6))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                        .addComponent(lblDamage6, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
-                        .addComponent(p2LblDmg2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(16, 16, 16))
+                        .addComponent(lblDamageValue6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(p2Name2)
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(lblIcon6)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel8Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblName6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(p2LblDmg2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(p2LblUpgradeCost2)
-                            .addComponent(lblUpgradeCostValue2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel14)))
-                    .addComponent(jLabel12))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(p2BtnUpgrade2)
-                    .addComponent(p2BtnHire2))
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDamage6)
+                    .addComponent(lblDamageValue6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUpgradeCost6)
+                    .addComponent(lblUpgradeCostValue6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHireCostValue6)
+                    .addComponent(lblHireCost6))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnUpgrade6)
+                    .addComponent(btnHire6))
                 .addContainerGap())
         );
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        jPanel9.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        p2Name3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        p2Name3.setText("Helper1");
+        lblName7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblName7.setForeground(new java.awt.Color(204, 204, 204));
+        lblName7.setText("Helper1");
 
-        jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel15.setText("Damage:");
+        lblDamage7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblDamage7.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamage7.setText("Damage:");
 
-        p2BtnUpgrade3.setText("Upgrade");
-        p2BtnUpgrade3.addActionListener(new java.awt.event.ActionListener() {
+        btnUpgrade7.setBackground(new java.awt.Color(51, 51, 51));
+        btnUpgrade7.setForeground(new java.awt.Color(153, 153, 153));
+        btnUpgrade7.setText("Upgrade");
+        btnUpgrade7.setFocusPainted(false);
+        btnUpgrade7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                p2BtnUpgrade3ActionPerformed(evt);
+                btnUpgrade7ActionPerformed(evt);
             }
         });
 
-        p2BtnHire3.setText("Hire");
-        p2BtnHire3.addActionListener(new java.awt.event.ActionListener() {
+        btnHire7.setBackground(new java.awt.Color(51, 51, 51));
+        btnHire7.setForeground(new java.awt.Color(153, 153, 153));
+        btnHire7.setText("Hire");
+        btnHire7.setFocusPainted(false);
+        btnHire7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                p2BtnHire3ActionPerformed(evt);
+                btnHire7ActionPerformed(evt);
             }
         });
 
-        p2LblUpgradeCost3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        p2LblUpgradeCost3.setText("Upgrade Cost: $");
+        lblUpgradeCost7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblUpgradeCost7.setForeground(new java.awt.Color(204, 204, 204));
+        lblUpgradeCost7.setText("Upgrade Cost: $");
 
-        p2LblDmg3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        p2LblDmg3.setText("30");
+        lblDamageValue7.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblDamageValue7.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamageValue7.setText("30");
 
-        lblUpgradeCostValue3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblUpgradeCostValue3.setText("100");
+        lblUpgradeCostValue7.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblUpgradeCostValue7.setForeground(new java.awt.Color(204, 204, 204));
+        lblUpgradeCostValue7.setText("100");
 
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
-        jLabel16.setText("icon");
+        lblIcon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
+        lblIcon7.setText("icon");
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel17.setText("Hire Cost: $");
+        lblHireCost7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblHireCost7.setForeground(new java.awt.Color(204, 204, 204));
+        lblHireCost7.setText("Hire Cost: $");
 
-        jLabel18.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        jLabel18.setText("100");
+        lblHireCostValue7.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblHireCostValue7.setForeground(new java.awt.Color(204, 204, 204));
+        lblHireCostValue7.setText("100");
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(p2Name3, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblIcon7, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel9Layout.createSequentialGroup()
+                        .addComponent(lblName7, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
                                 .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(p2BtnUpgrade3))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel17)
-                                    .addComponent(p2LblUpgradeCost3))
+                                .addComponent(btnUpgrade7))
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(lblHireCost7)
+                                    .addComponent(lblUpgradeCost7))
                                 .addGap(0, 3, Short.MAX_VALUE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(p2BtnHire3)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.DEFAULT_SIZE, 107, Short.MAX_VALUE)
-                            .addComponent(lblUpgradeCostValue3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblHireCostValue7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblUpgradeCostValue7, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel9Layout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addComponent(btnHire7))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
+                        .addComponent(lblDamage7, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(38, 38, 38)
-                        .addComponent(p2LblDmg3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(16, 16, 16))
+                        .addComponent(lblDamageValue7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(13, 13, 13)
-                .addComponent(p2Name3)
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
+                .addComponent(lblIcon7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel9Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblName7)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel15)
-                            .addComponent(p2LblDmg3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(p2LblUpgradeCost3)
-                            .addComponent(lblUpgradeCostValue3))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel17)
-                            .addComponent(jLabel18)))
-                    .addComponent(jLabel16))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(p2BtnUpgrade3)
-                    .addComponent(p2BtnHire3))
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDamage7)
+                    .addComponent(lblDamageValue7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblUpgradeCost7)
+                    .addComponent(lblUpgradeCostValue7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHireCostValue7)
+                    .addComponent(lblHireCost7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnUpgrade7)
+                    .addComponent(btnHire7))
                 .addContainerGap())
         );
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton2.setText("Next Page");
-
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton3.setText("Previous Page");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(15, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton3)
+                .addGap(18, 18, 18)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(157, 157, 157))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(18, 18, 18)
+                    .addComponent(labelGold)
+                    .addContainerGap(440, Short.MAX_VALUE)))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(81, 81, 81)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(50, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel1)
+                        .addComponent(labelGold))
+                    .addContainerGap(486, Short.MAX_VALUE)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(labelGold))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(156, 156, 156))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(labelGold))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3))
-                .addGap(26, 26, 26))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void p2BtnUpgradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2BtnUpgradeActionPerformed
+    private void btnUpgradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgradeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_p2BtnUpgradeActionPerformed
+    }//GEN-LAST:event_btnUpgradeActionPerformed
 
-    private void p2BtnHireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2BtnHireActionPerformed
+    private void btnHireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHireActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_p2BtnHireActionPerformed
-
-    private void p2BtnUpgrade1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2BtnUpgrade1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_p2BtnUpgrade1ActionPerformed
-
-    private void p2BtnHire1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2BtnHire1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_p2BtnHire1ActionPerformed
-
-    private void p2BtnUpgrade2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2BtnUpgrade2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_p2BtnUpgrade2ActionPerformed
-
-    private void p2BtnHire2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2BtnHire2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_p2BtnHire2ActionPerformed
-
-    private void p2BtnUpgrade3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2BtnUpgrade3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_p2BtnUpgrade3ActionPerformed
-
-    private void p2BtnHire3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_p2BtnHire3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_p2BtnHire3ActionPerformed
+    }//GEN-LAST:event_btnHireActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
@@ -613,6 +685,30 @@ public class HelperUI extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void btnUpgrade5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpgrade5ActionPerformed
+
+    private void btnHire5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHire5ActionPerformed
+
+    private void btnUpgrade6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpgrade6ActionPerformed
+
+    private void btnHire6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHire6ActionPerformed
+
+    private void btnUpgrade7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnUpgrade7ActionPerformed
+
+    private void btnHire7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnHire7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -656,54 +752,55 @@ public class HelperUI extends javax.swing.JFrame {
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnHire;
+    private javax.swing.JButton btnHire5;
+    private javax.swing.JButton btnHire6;
+    private javax.swing.JButton btnHire7;
+    private javax.swing.JButton btnUpgrade;
+    private javax.swing.JButton btnUpgrade5;
+    private javax.swing.JButton btnUpgrade6;
+    private javax.swing.JButton btnUpgrade7;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel labelGold;
+    private javax.swing.JLabel lblDamage;
+    private javax.swing.JLabel lblDamage5;
+    private javax.swing.JLabel lblDamage6;
+    private javax.swing.JLabel lblDamage7;
+    private javax.swing.JLabel lblDamageValue;
+    private javax.swing.JLabel lblDamageValue5;
+    private javax.swing.JLabel lblDamageValue6;
+    private javax.swing.JLabel lblDamageValue7;
+    private javax.swing.JLabel lblHireCost;
+    private javax.swing.JLabel lblHireCost5;
+    private javax.swing.JLabel lblHireCost6;
+    private javax.swing.JLabel lblHireCost7;
+    private javax.swing.JLabel lblHireCostValue;
+    private javax.swing.JLabel lblHireCostValue5;
+    private javax.swing.JLabel lblHireCostValue6;
+    private javax.swing.JLabel lblHireCostValue7;
+    private javax.swing.JLabel lblIcon;
+    private javax.swing.JLabel lblIcon5;
+    private javax.swing.JLabel lblIcon6;
+    private javax.swing.JLabel lblIcon7;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblName5;
+    private javax.swing.JLabel lblName6;
+    private javax.swing.JLabel lblName7;
+    private javax.swing.JLabel lblUpgradeCost;
+    private javax.swing.JLabel lblUpgradeCost5;
+    private javax.swing.JLabel lblUpgradeCost6;
+    private javax.swing.JLabel lblUpgradeCost7;
     private javax.swing.JLabel lblUpgradeCostValue;
-    private javax.swing.JLabel lblUpgradeCostValue1;
-    private javax.swing.JLabel lblUpgradeCostValue2;
-    private javax.swing.JLabel lblUpgradeCostValue3;
-    private javax.swing.JButton p2BtnHire;
-    private javax.swing.JButton p2BtnHire1;
-    private javax.swing.JButton p2BtnHire2;
-    private javax.swing.JButton p2BtnHire3;
-    private javax.swing.JButton p2BtnUpgrade;
-    private javax.swing.JButton p2BtnUpgrade1;
-    private javax.swing.JButton p2BtnUpgrade2;
-    private javax.swing.JButton p2BtnUpgrade3;
-    private javax.swing.JLabel p2LblDmg;
-    private javax.swing.JLabel p2LblDmg1;
-    private javax.swing.JLabel p2LblDmg2;
-    private javax.swing.JLabel p2LblDmg3;
-    private javax.swing.JLabel p2LblUpgradeCost;
-    private javax.swing.JLabel p2LblUpgradeCost1;
-    private javax.swing.JLabel p2LblUpgradeCost2;
-    private javax.swing.JLabel p2LblUpgradeCost3;
-    private javax.swing.JLabel p2Name;
-    private javax.swing.JLabel p2Name1;
-    private javax.swing.JLabel p2Name2;
-    private javax.swing.JLabel p2Name3;
+    private javax.swing.JLabel lblUpgradeCostValue5;
+    private javax.swing.JLabel lblUpgradeCostValue6;
+    private javax.swing.JLabel lblUpgradeCostValue7;
     // End of variables declaration//GEN-END:variables
 }
