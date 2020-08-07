@@ -2,20 +2,20 @@ package clickerrpg;
 
 import clickerrpg.ui.GameUI;
 import ChongWaiKit.SortedLinkedList;
-import javax.swing.JFrame;
-import java.awt.*;
-import javax.swing.AbstractButton;
+import IsabelLai.UpgradeList;
 
 public class MainClass {
 
     static Player player;
     static Enemy enemy;
     static SortedLinkedList<Equipment> equipmentInventory;
+    static UpgradeList<Upgrade> upgradeList;
     static GameUI gameUI = new GameUI();
 
     public static void main(String args[]) {
         player = new Player();
         enemy = new Enemy();
+        initializeData();
 
         gameUI.updateGameUI(player, enemy);
         gameUI.startUp();
@@ -35,4 +35,10 @@ public class MainClass {
         gameUI.updateGameUI(player, enemy);
     }
 
+    public static void initializeData() {
+        upgradeList.add(new Upgrade("Hp+10", 0, 10, 0, 30));
+        upgradeList.add(new Upgrade("Att+10", 10, 0, 0, 50));
+        upgradeList.add(new Upgrade("Df+10", 0, 0, 10, 50));
+
+    }
 }
