@@ -35,7 +35,6 @@ public class Equipment implements Comparable<Equipment> {
                     setEquipmentAttributes("Error", "Error", 0, 0, 0);
                     break;
             }
-
     }
 
     private void setEquipmentAttributes(String eqName, String eqSlot, double attack, double health, double defense) {
