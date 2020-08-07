@@ -21,48 +21,6 @@ public class Helper implements Comparable<Helper> {
         this.imageUrl = imageUrl;
     }
 
-    public Helper(int id) {
-        switch (id) {
-            case 1:
-                setHelperDetails(1, "Helper1", 10, 100, 1, 50, ".png");
-                break;
-            case 2:
-                setHelperDetails(2, "Helper2", 10, 100, 1, 50, ".png");
-                break;
-            case 3:
-                setHelperDetails(3, "Helper3", 10, 100, 1, 50, ".png");
-                break;
-            case 4:
-                setHelperDetails(4, "Helper4", 10, 100, 1, 50, ".png");
-                break;
-            case 5:
-                setHelperDetails(5, "Helper5", 10, 100, 1, 50, ".png");
-                break;
-            case 6:
-                setHelperDetails(6, "Helper6", 10, 100, 1, 50, ".png");
-                break;
-            case 7:
-                setHelperDetails(7, "Helper7", 10, 100, 1, 50, ".png");
-                break;
-            case 8:
-                setHelperDetails(8, "Helper8", 10, 100, 1, 50, ".png");
-                break;
-            case 9:
-                setHelperDetails(9, "Helper9", 10, 100, 1, 50, ".png");
-                break;
-        }
-    }
-
-    public void setHelperDetails(int id, String name, double damage, double hireCost, int level, double levelUpCost, String imageUrl) {
-        this.id = id;
-        this.name = name;
-        this.damage = damage;
-        this.hireCost = hireCost;
-        this.level = level;
-        this.levelUpCost = levelUpCost;
-        this.imageUrl = imageUrl;
-    }
-
     public int getId() {
         return id;
     }

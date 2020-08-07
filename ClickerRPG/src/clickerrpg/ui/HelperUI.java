@@ -5,6 +5,10 @@
  */
 package clickerrpg.ui;
 
+import clickerrpg.MainClass;
+import CheongKaMeng.SortedHelperList;
+import CheongKaMeng.SortedHelperListInterface;
+import clickerrpg.Helper;
 import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JPanel;
@@ -14,7 +18,7 @@ import javax.swing.JPanel;
  * @author Louis Cheong
  */
 public class HelperUI extends javax.swing.JFrame {
-
+    private static int page = 1;
     /**
      * Creates new form HelperUI
      */
@@ -32,9 +36,9 @@ public class HelperUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        btnPrevPage = new javax.swing.JButton();
+        btnNextPage = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
         labelGold = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -92,31 +96,36 @@ public class HelperUI extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
 
-        jButton3.setBackground(new java.awt.Color(51, 51, 51));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(153, 153, 153));
-        jButton3.setText("Previous Page");
-        jButton3.setFocusPainted(false);
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btnPrevPage.setBackground(new java.awt.Color(51, 51, 51));
+        btnPrevPage.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnPrevPage.setForeground(new java.awt.Color(153, 153, 153));
+        btnPrevPage.setText("Previous Page");
+        btnPrevPage.setFocusPainted(false);
+        btnPrevPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btnPrevPageActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(51, 51, 51));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(153, 153, 153));
-        jButton2.setText("Next Page");
-        jButton2.setFocusPainted(false);
-
-        jButton1.setBackground(new java.awt.Color(51, 51, 51));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(153, 153, 153));
-        jButton1.setText("Back");
-        jButton1.setFocusPainted(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnNextPage.setBackground(new java.awt.Color(51, 51, 51));
+        btnNextPage.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnNextPage.setForeground(new java.awt.Color(153, 153, 153));
+        btnNextPage.setText("Next Page");
+        btnNextPage.setFocusPainted(false);
+        btnNextPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnNextPageActionPerformed(evt);
+            }
+        });
+
+        btnBack.setBackground(new java.awt.Color(51, 51, 51));
+        btnBack.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(153, 153, 153));
+        btnBack.setText("Back");
+        btnBack.setFocusPainted(false);
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
             }
         });
 
@@ -606,20 +615,20 @@ public class HelperUI extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(15, Short.MAX_VALUE))
+                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(21, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(btnPrevPage)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
+                .addComponent(btnBack)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnNextPage, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(157, 157, 157))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
@@ -632,20 +641,20 @@ public class HelperUI extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(76, 76, 76)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addContainerGap(50, Short.MAX_VALUE))
+                    .addComponent(btnPrevPage)
+                    .addComponent(btnBack)
+                    .addComponent(btnNextPage))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addContainerGap()
@@ -677,14 +686,18 @@ public class HelperUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnHireActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void btnPrevPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrevPageActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+        if (page == 2){
+            page--;
+            updateUI();
+        }
+    }//GEN-LAST:event_btnPrevPageActionPerformed
 
     private void btnUpgrade5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade5ActionPerformed
         // TODO add your handling code here:
@@ -709,6 +722,14 @@ public class HelperUI extends javax.swing.JFrame {
     private void btnHire7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnHire7ActionPerformed
+
+    private void btnNextPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextPageActionPerformed
+        // TODO add your handling code here:
+        if (page == 1){
+            page++;
+            updateUI();
+        }
+    }//GEN-LAST:event_btnNextPageActionPerformed
 
     /**
      * @param args the command line arguments
@@ -746,23 +767,57 @@ public class HelperUI extends javax.swing.JFrame {
     }
 
     public void startUp(){
+        updateUI();
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
     }
     
+    private void updateUI() {
+        updatePanel1Control(MainClass.helperList.get(page * 4 - 4));
+        updatePanel2Control(MainClass.helperList.get(page* 4 - 3));
+        updatePanel3Control(MainClass.helperList.get(page* 4 - 2));
+        updatePanel4Control(MainClass.helperList.get(page * 4 - 1));
+    }
+    private void updatePanel1Control(Helper helper) {
+        lblName.setText(helper.getName());
+        lblDamageValue.setText(String.valueOf(helper.getDamage()));
+        lblHireCostValue.setText(String.valueOf(helper.getHireCost()));
+        lblUpgradeCostValue.setText(String.valueOf(helper.getLevelUpCost()));
+    }
+    
+    private void updatePanel2Control(Helper helper) {
+        lblName5.setText(helper.getName());
+        lblDamageValue5.setText(String.valueOf(helper.getDamage()));
+        lblHireCostValue5.setText(String.valueOf(helper.getHireCost()));
+        lblUpgradeCostValue5.setText(String.valueOf(helper.getLevelUpCost()));
+    }
+    
+    private void updatePanel3Control(Helper helper) {
+        lblName6.setText(helper.getName());
+        lblDamageValue6.setText(String.valueOf(helper.getDamage()));
+        lblHireCostValue6.setText(String.valueOf(helper.getHireCost()));
+        lblUpgradeCostValue6.setText(String.valueOf(helper.getLevelUpCost()));
+    }
+    
+    private void updatePanel4Control(Helper helper) {
+        lblName7.setText(helper.getName());
+        lblDamageValue7.setText(String.valueOf(helper.getDamage()));
+        lblHireCostValue7.setText(String.valueOf(helper.getHireCost()));
+        lblUpgradeCostValue7.setText(String.valueOf(helper.getLevelUpCost()));
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnHire;
     private javax.swing.JButton btnHire5;
     private javax.swing.JButton btnHire6;
     private javax.swing.JButton btnHire7;
+    private javax.swing.JButton btnNextPage;
+    private javax.swing.JButton btnPrevPage;
     private javax.swing.JButton btnUpgrade;
     private javax.swing.JButton btnUpgrade5;
     private javax.swing.JButton btnUpgrade6;
     private javax.swing.JButton btnUpgrade7;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
