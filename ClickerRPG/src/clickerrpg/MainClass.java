@@ -3,20 +3,20 @@ package clickerrpg;
 import clickerrpg.ui.GameUI;
 import ChongWaiKit.SortedLinkedList;
 import IsabelLai.UpgradeList;
+import IsabelLai.UpgradeListInterface;
 
 public class MainClass {
 
     static Player player;
     static Enemy enemy;
     static SortedLinkedList<Equipment> equipmentInventory;
-    static UpgradeList<Upgrade> upgradeList;
+    public static UpgradeListInterface<Upgrade> upgradeList = new UpgradeList<Upgrade>();
     static GameUI gameUI = new GameUI();
 
     public static void main(String args[]) {
         player = new Player();
         enemy = new Enemy();
         initializeData();
-
         gameUI.updateGameUI(player, enemy);
         gameUI.startUp();
     }

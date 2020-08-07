@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package clickerrpg.ui;
-
+import clickerrpg.MainClass;
 /**
  *
  * @author User
@@ -353,7 +353,7 @@ public class ShopUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonUpgradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpgradeActionPerformed
-      
+ 
     }//GEN-LAST:event_buttonUpgradeActionPerformed
 
     /**
