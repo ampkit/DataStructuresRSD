@@ -455,7 +455,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="24" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Prestige"/>
+                <Property name="text" type="java.lang.String" value="Helper"/>
                 <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                   <Dimension value="[200, 100]"/>
                 </Property>
@@ -466,6 +466,9 @@
                   <Dimension value="[200, 100]"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+              </Events>
             </Component>
           </SubComponents>
         </Container>

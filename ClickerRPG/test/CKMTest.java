@@ -7,11 +7,11 @@ public class CKMTest {
 
     public static void main(String[] args) {
 
-        Helper h1 = new Helper(1, "Ali", 2, 100, 1, 200);
-        Helper h2 = new Helper(2, "Bob", 4, 200, 1, 400);
-        Helper h3 = new Helper(3, "Candy", 6, 300, 1, 800);
-        Helper h4 = new Helper(4, "Doggy", 8, 400, 1, 1600);
-        Helper h5 = new Helper(5, "Erin", 10, 500, 1, 3200);
+//        Helper h1 = new Helper(1, "Ali", 2, 100, 1, 200);
+//        Helper h2 = new Helper(2, "Bob", 4, 200, 1, 400);
+//        Helper h3 = new Helper(3, "Candy", 6, 300, 1, 800);
+//        Helper h4 = new Helper(4, "Doggy", 8, 400, 1, 1600);
+//        Helper h5 = new Helper(5, "Erin", 10, 500, 1, 3200);
 
         Helper[] hArray = {h4,h5,h2};
 

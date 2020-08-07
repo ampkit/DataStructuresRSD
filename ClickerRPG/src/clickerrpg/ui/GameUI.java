@@ -216,10 +216,15 @@ public class GameUI extends javax.swing.JFrame {
         });
 
         jButton6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton6.setText("Prestige");
+        jButton6.setText("Helper");
         jButton6.setMaximumSize(new java.awt.Dimension(200, 100));
         jButton6.setMinimumSize(new java.awt.Dimension(200, 100));
         jButton6.setPreferredSize(new java.awt.Dimension(200, 100));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -306,6 +311,11 @@ public class GameUI extends javax.swing.JFrame {
         InventoryUI inventoryUI = new InventoryUI();
         inventoryUI.startUp();
     }//GEN-LAST:event_btnInventoryActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        HelperUI helperUI = new HelperUI();
+        helperUI.startUp();
+    }//GEN-LAST:event_jButton6ActionPerformed
     // </editor-fold>
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
