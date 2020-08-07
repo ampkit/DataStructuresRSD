@@ -12,8 +12,12 @@ public class Player {
     double attack;
     double defense;
     
-    String helmet;
-    String chest;
+    Equipment helmet;
+    Equipment chest;
+    Equipment leggings;
+    Equipment boots;
+    
+    Equipment weapon;
     
     double gold;
     
