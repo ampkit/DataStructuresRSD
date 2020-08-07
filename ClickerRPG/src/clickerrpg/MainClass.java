@@ -1,4 +1,5 @@
 package clickerrpg;
+import clickerrpg.ui.GameUI;
 import ChongWaiKit.SortedLinkedList;
 
 public class MainClass {

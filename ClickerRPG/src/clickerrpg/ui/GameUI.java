@@ -1,6 +1,7 @@
-package clickerrpg;
-
-import java.util.HashSet;
+package clickerrpg.ui;
+import clickerrpg.Enemy;
+import clickerrpg.MainClass;
+import clickerrpg.Player;
 
 public class GameUI extends javax.swing.JFrame {
 
@@ -344,15 +345,15 @@ public class GameUI extends javax.swing.JFrame {
     }
 
     public void updateGameUI(Player player, Enemy enemy){
-        labelPlayerName.setText(player.name);
-        playerHealthBar.setMaximum((int)player.maxHealth);
-        playerHealthBar.setValue((int)player.curHealth);
+        labelPlayerName.setText(player.getName());
+        playerHealthBar.setMaximum((int)player.getMaxHealth());
+        playerHealthBar.setValue((int)player.getCurHealth());
         
-        labelEnemyName.setText(enemy.name);
-        enemyHealthBar.setMaximum((int)enemy.maxHealth);
-        enemyHealthBar.setValue((int)enemy.curHealth);
+        labelEnemyName.setText(enemy.getName());
+        enemyHealthBar.setMaximum((int)enemy.getMaxHealth());
+        enemyHealthBar.setValue((int)enemy.getCurHealth());
         
-        labelGold.setText(String.valueOf(player.gold));
+        labelGold.setText(String.valueOf(player.getGold()));
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
