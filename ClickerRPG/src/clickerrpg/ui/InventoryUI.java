@@ -28,6 +28,7 @@ public class InventoryUI extends javax.swing.JFrame {
     private void initComponents() {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,12 +79,12 @@ public class InventoryUI extends javax.swing.JFrame {
         });
     }
 
-        public void startUp(){
+    public void startUp() {
         setAlwaysOnTop(true);
         setLocationRelativeTo(null);
         setVisible(true);
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
 }
