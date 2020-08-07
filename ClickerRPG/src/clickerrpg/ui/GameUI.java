@@ -37,6 +37,7 @@ public class GameUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(960, 720));
+        setUndecorated(true);
         setResizable(false);
 
         gameUIPanel.setBackground(new java.awt.Color(102, 102, 102));
@@ -340,6 +341,7 @@ public class GameUI extends javax.swing.JFrame {
     }
     
     public void startUp(){
+        setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
     }
