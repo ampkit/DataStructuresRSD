@@ -94,11 +94,9 @@ public class InventoryUI extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel1.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Details");
 
@@ -120,7 +118,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel6.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -140,13 +137,11 @@ public class InventoryUI extends javax.swing.JFrame {
         jButton5.setPreferredSize(new java.awt.Dimension(150, 35));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("0 / 0");
         jLabel7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel8.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -154,7 +149,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel8.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel9.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -162,7 +156,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel9.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel10.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -170,7 +163,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel10.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel11.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -178,7 +170,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel11.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel12.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -186,7 +177,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel12.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel13.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -194,7 +184,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel13.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel14.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -202,7 +191,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel14.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel15.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -210,7 +198,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel15.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel16.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -218,7 +205,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel16.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel17.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -226,7 +212,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel17.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(0, 0, 0));
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel18.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -234,7 +219,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel18.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel19.setForeground(new java.awt.Color(0, 0, 0));
         jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel19.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -242,7 +226,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel19.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel20.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -250,7 +233,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel20.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel21.setForeground(new java.awt.Color(0, 0, 0));
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel21.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -258,7 +240,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel21.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel22.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel22.setForeground(new java.awt.Color(0, 0, 0));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel22.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -266,7 +247,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel22.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel23.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel23.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -274,7 +254,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel23.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel24.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel24.setForeground(new java.awt.Color(0, 0, 0));
         jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel24.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -282,7 +261,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel24.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel25.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel25.setForeground(new java.awt.Color(0, 0, 0));
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel25.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -290,7 +268,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel25.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel26.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel26.setForeground(new java.awt.Color(0, 0, 0));
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel26.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel26.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -298,7 +275,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel26.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel27.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel27.setForeground(new java.awt.Color(0, 0, 0));
         jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel27.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel27.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -306,7 +282,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel27.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel28.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel28.setForeground(new java.awt.Color(0, 0, 0));
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel28.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel28.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -314,7 +289,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel28.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel29.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel29.setForeground(new java.awt.Color(0, 0, 0));
         jLabel29.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel29.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel29.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -322,7 +296,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel29.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel30.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel30.setForeground(new java.awt.Color(0, 0, 0));
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel30.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel30.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -330,7 +303,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel30.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel31.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel31.setForeground(new java.awt.Color(0, 0, 0));
         jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel31.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel31.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -338,7 +310,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel31.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel32.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel32.setForeground(new java.awt.Color(0, 0, 0));
         jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel32.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel32.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -346,7 +317,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel32.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel33.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel33.setForeground(new java.awt.Color(0, 0, 0));
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel33.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel33.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -354,7 +324,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel33.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel34.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel34.setForeground(new java.awt.Color(0, 0, 0));
         jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel34.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel34.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -362,7 +331,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel34.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel35.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel35.setForeground(new java.awt.Color(0, 0, 0));
         jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel35.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel35.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -370,7 +338,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel35.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel36.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel36.setForeground(new java.awt.Color(0, 0, 0));
         jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel36.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel36.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -378,7 +345,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel36.setPreferredSize(new java.awt.Dimension(70, 70));
 
         jLabel37.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel37.setForeground(new java.awt.Color(0, 0, 0));
         jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel37.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel37.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -386,7 +352,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel37.setPreferredSize(new java.awt.Dimension(25, 25));
 
         jLabel38.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel38.setForeground(new java.awt.Color(0, 0, 0));
         jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel38.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel38.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -394,7 +359,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel38.setPreferredSize(new java.awt.Dimension(25, 25));
 
         jLabel39.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel39.setForeground(new java.awt.Color(0, 0, 0));
         jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel39.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel39.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -402,7 +366,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel39.setPreferredSize(new java.awt.Dimension(25, 25));
 
         jLabel40.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel40.setForeground(new java.awt.Color(0, 0, 0));
         jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel40.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel40.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -410,7 +373,6 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel40.setPreferredSize(new java.awt.Dimension(25, 25));
 
         jLabel41.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel41.setForeground(new java.awt.Color(0, 0, 0));
         jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel41.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jLabel41.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -508,7 +470,7 @@ public class InventoryUI extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(10, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)

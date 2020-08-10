@@ -6,11 +6,14 @@ import clickerrpg.ui.GameUI;
 import ChongWaiKit.SortedLinkedList;
 import IsabelLai.UpgradeList;
 import IsabelLai.UpgradeListInterface;
+import OoiPingXiu.QueueEnemy;
+import OoiPingXiu.QueueEnemyInterface;
 
 public class MainClass {
 
     static Player player;
     static Enemy enemy;
+    public static QueueEnemyInterface<Enemy> enemyQueue = new QueueEnemy<Enemy>();
     public static SortedHelperListInterface<Helper> helperList = new SortedHelperList<Helper>();
     static SortedLinkedList<Equipment> equipmentInventory;
     public static UpgradeListInterface<Upgrade> upgradeList = new UpgradeList<Upgrade>();
@@ -18,9 +21,9 @@ public class MainClass {
 
     public static void main(String args[]) {
         player = new Player();
-        enemy = new Enemy();
+        //enemy = new Enemy();
         initializeData();
-        gameUI.updateGameUI(player, enemy);
+        //gameUI.updateGameUI(player, enemy);
         gameUI.startUp();
     }
 
@@ -32,7 +35,7 @@ public class MainClass {
 
             //SUPPOSED FUNCTION : load next Enemy
             //below is placeholder
-            enemy.curHealth = enemy.maxHealth;
+            //enemy.curHealth = enemy.maxHealth;
         }
 
         gameUI.updateGameUI(player, enemy);
@@ -52,5 +55,18 @@ public class MainClass {
         helperList.add(new Helper(6, "Helper6", 60, 600, 1, 300, ".png"));
         helperList.add(new Helper(7, "Helper7", 70, 700, 1, 350, ".png"));
         helperList.add(new Helper(8, "Helper8", 80, 800, 1, 400, ".png"));
+        
+        
+        //enemy
+        enemyQueue.enqueue(new Enemy("Test1",100,100,10,1,10));
+        enemyQueue.enqueue(new Enemy("Test2",100,100,10,2,30));
+        enemyQueue.enqueue(new Enemy("Test3",100,100,30,3,30));
+        enemyQueue.enqueue(new Enemy("Test4",100,100,30,4,30));
+        enemyQueue.enqueue(new Enemy("Test5",100,100,40,5,40));
+        enemyQueue.enqueue(new Enemy("Test6",100,100,40,6,40));
+        enemyQueue.enqueue(new Enemy("Test7",100,100,50,7,40));
+        enemyQueue.enqueue(new Enemy("Test8",100,100,50,8,60));
+        enemyQueue.enqueue(new Enemy("Test9",100,100,60,9,60));
+        enemyQueue.enqueue(new Enemy("Test10",100,100,60,10,60));
     }
 }

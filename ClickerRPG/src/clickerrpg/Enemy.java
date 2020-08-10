@@ -1,12 +1,8 @@
 package clickerrpg;
 
-/**
- *
- * @author Chong Wai Kit
- */
-public class Enemy {
+// entity class
+public class Enemy implements Comparable<Enemy> {
     String name;
-    
     double curHealth;
     double maxHealth;
     double attack;
@@ -14,16 +10,26 @@ public class Enemy {
     
     double goldDropped;
 
-    public Enemy() {
-         this.name = "testEnemy";
-
-        this.curHealth = 100;
-        this.maxHealth = 100;   
-        
-        this.attack = 10;
-        this.defense = 1;
-        
+    public Enemy(String name, double curHealth, double maxHealth, double attack, double defense, double goldDropped) {
+        this.name = name;
+        this.curHealth = curHealth;
+        this.maxHealth = maxHealth;
+        this.attack = attack;
+        this.defense = defense;
+        this.goldDropped = goldDropped;
     }
+
+    
+    //public Enemy() {
+         //this.name = "testEnemy";
+
+        //this.curHealth = 100;
+        //this.maxHealth = 100;   
+        
+        //this.attack = 10;
+        //this.defense = 1;
+        
+    //}
 
     public String getName() {
         return name;
@@ -71,5 +77,17 @@ public class Enemy {
 
     public void setGoldDropped(double goldDropped) {
         this.goldDropped = goldDropped;
+    }
+
+    
+    //testing
+    @Override
+    public int compareTo(Enemy compareEnemy) {
+        if(this.getName() != compareEnemy.getName()){
+            return 0;
+        }
+        else
+            return 1;
+        
     }
 }
