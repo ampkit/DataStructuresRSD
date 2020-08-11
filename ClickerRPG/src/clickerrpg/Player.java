@@ -34,7 +34,47 @@ public class Player {
     }
     
     //add function for increase gold
-
+    
+    public void equipEquipment(Equipment equipment){
+        switch (equipment.getEqSlot()){
+            case "Helmet":
+                if (helmet != null) {
+                    helmet.unequip();
+                }
+                equipment.equip();
+                helmet = equipment;
+                break;            
+            case "Chest":
+                if (chest != null) {
+                    chest.unequip();
+                }
+                equipment.equip();
+                chest = equipment;
+                break;         
+            case "Leggings":
+                if (leggings != null) {
+                    leggings.unequip();
+                }
+                equipment.equip();
+                helmet = equipment;
+                break;         
+            case "Boots":
+                if (boots != null) {
+                    boots.unequip();
+                }
+                equipment.equip();
+                boots = equipment;
+                break;         
+            case "Weapon":
+                if (weapon != null) {
+                    weapon.unequip();
+                }
+                equipment.equip();
+                weapon = equipment;
+                break;
+        }
+    }
+    
     public String getName() {
         return name;
     }

@@ -192,7 +192,7 @@ public class SortedLinkedList<T extends Comparable<T>> implements SLListInterfac
         return false;    
     }
 
-    public int getlength() {
+    public int getLength() {
         return length;    
     }
     

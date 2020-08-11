@@ -20,7 +20,7 @@ public interface SLListInterface<T extends Comparable<T>> {
 
     public boolean contains(T anEntry);
     
-    public int getlength();
+    public int getLength();
     
     public boolean isEmpty();
     

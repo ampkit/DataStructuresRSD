@@ -1,13 +1,11 @@
 package clickerrpg;
 
-import CheongKaMeng.SortedHelperList;
-import CheongKaMeng.SortedHelperListInterface;
+import ChongWaiKit.*;
+import CheongKaMeng.*;
+import IsabelLai.*;
+import OoiPingXiu.*;
+
 import clickerrpg.ui.GameUI;
-import ChongWaiKit.SortedLinkedList;
-import IsabelLai.UpgradeList;
-import IsabelLai.UpgradeListInterface;
-import OoiPingXiu.QueueEnemy;
-import OoiPingXiu.QueueEnemyInterface;
 
 public class MainClass {
 
@@ -15,15 +13,15 @@ public class MainClass {
     static Enemy enemy;
     public static QueueEnemyInterface<Enemy> enemyQueue = new QueueEnemy<Enemy>();
     public static SortedHelperListInterface<Helper> helperList = new SortedHelperList<Helper>();
-    static SortedLinkedList<Equipment> equipmentInventory;
+    public static SLListInterface<Equipment> equipmentInventory = new SortedLinkedList<Equipment>();
     public static UpgradeListInterface<Upgrade> upgradeList = new UpgradeList<Upgrade>();
     static GameUI gameUI = new GameUI();
 
     public static void main(String args[]) {
         player = new Player();
-        //enemy = new Enemy();
+        enemy = new Enemy("test",100,100, 1, 1 , 10);
         initializeData();
-        //gameUI.updateGameUI(player, enemy);
+        gameUI.updateGameUI(player, enemy);
         gameUI.startUp();
     }
 
@@ -35,7 +33,7 @@ public class MainClass {
 
             //SUPPOSED FUNCTION : load next Enemy
             //below is placeholder
-            //enemy.curHealth = enemy.maxHealth;
+            enemy.curHealth = enemy.maxHealth;
         }
 
         gameUI.updateGameUI(player, enemy);
@@ -46,7 +44,7 @@ public class MainClass {
         upgradeList.add(new Upgrade("Att+10", 10, 0, 0, 50));
         upgradeList.add(new Upgrade("Df+10", 0, 0, 10, 50));
         
-        //Helper
+        // <editor-fold defaultstate="collapsed" desc="Helpers">
         helperList.add(new Helper(1, "Helper1", 10, 100, 1, 50, ".png"));
         helperList.add(new Helper(2, "Helper2", 20, 200, 1, 100, ".png"));
         helperList.add(new Helper(3, "Helper3", 30, 300, 1, 150, ".png"));
@@ -55,9 +53,9 @@ public class MainClass {
         helperList.add(new Helper(6, "Helper6", 60, 600, 1, 300, ".png"));
         helperList.add(new Helper(7, "Helper7", 70, 700, 1, 350, ".png"));
         helperList.add(new Helper(8, "Helper8", 80, 800, 1, 400, ".png"));
-        
-        
-        //enemy
+        // </editor-fold>
+
+        // <editor-fold defaultstate="collapsed" desc="Enemies">
         enemyQueue.enqueue(new Enemy("Test1",100,100,10,1,10));
         enemyQueue.enqueue(new Enemy("Test2",100,100,10,2,30));
         enemyQueue.enqueue(new Enemy("Test3",100,100,30,3,30));
@@ -68,5 +66,11 @@ public class MainClass {
         enemyQueue.enqueue(new Enemy("Test8",100,100,50,8,60));
         enemyQueue.enqueue(new Enemy("Test9",100,100,60,9,60));
         enemyQueue.enqueue(new Enemy("Test10",100,100,60,10,60));
+        // </editor-fold>
+        
+        //add test inventory data
+        equipmentInventory.add(new Equipment("Wooden Sword"));        
+        equipmentInventory.add(new Equipment("Tin Sword"));
+        
     }
 }
