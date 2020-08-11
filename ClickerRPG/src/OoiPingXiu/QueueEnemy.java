@@ -1,6 +1,6 @@
 package OoiPingXiu;
 
-public class QueueEnemy <T extends Comparable<T>> implements QueueEnemyInterface<T> {
+public class QueueEnemy <T> implements QueueEnemyInterface<T> {
   
   private T[] array;
   private final static int front = 0;
@@ -14,7 +14,7 @@ public class QueueEnemy <T extends Comparable<T>> implements QueueEnemyInterface
    public QueueEnemy(int size) {
     array = (T[]) new Object[size];
     rear = -1;
-  } 
+  } //end constructor
    
    // add in new entry 
   public void enqueue(T newEntry){

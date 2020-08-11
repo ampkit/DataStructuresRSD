@@ -1,6 +1,6 @@
 package OoiPingXiu;
 
-public interface QueueEnemyInterface<T extends Comparable<T>> {
+public interface QueueEnemyInterface<T> {
         
     public void enqueue(T newEntry) ;
     
