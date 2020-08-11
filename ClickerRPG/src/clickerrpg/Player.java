@@ -75,6 +75,10 @@ public class Player {
         }
     }
     
+    public void deductGold(double deduction){
+        this.gold -= deduction;
+    }
+    
     public String getName() {
         return name;
     }

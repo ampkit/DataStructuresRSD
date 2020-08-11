@@ -72,7 +72,6 @@ public class InventoryUI extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(850, 660));
         setMinimumSize(new java.awt.Dimension(850, 660));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(850, 660));
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N

@@ -10,6 +10,7 @@ import CheongKaMeng.SortedHelperList;
 import CheongKaMeng.SortedHelperListInterface;
 import clickerrpg.Helper;
 import java.awt.Color;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -18,7 +19,10 @@ import javax.swing.JPanel;
  * @author Louis Cheong
  */
 public class HelperUI extends javax.swing.JFrame {
+
     private static int page = 1;
+    private final String imageFolderPath = "src/clickerrpg/img/";
+
     /**
      * Creates new form HelperUI
      */
@@ -152,6 +156,7 @@ public class HelperUI extends javax.swing.JFrame {
         btnUpgrade.setBackground(new java.awt.Color(51, 51, 51));
         btnUpgrade.setForeground(new java.awt.Color(153, 153, 153));
         btnUpgrade.setText("Upgrade");
+        btnUpgrade.setEnabled(false);
         btnUpgrade.setFocusPainted(false);
         btnUpgrade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -181,7 +186,7 @@ public class HelperUI extends javax.swing.JFrame {
         lblUpgradeCostValue.setForeground(new java.awt.Color(204, 204, 204));
         lblUpgradeCostValue.setText("100");
 
-        lblIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
+        lblIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/HelperWaikit.png"))); // NOI18N
         lblIcon.setText("icon");
 
         lblHireCost.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -269,6 +274,7 @@ public class HelperUI extends javax.swing.JFrame {
         btnUpgrade5.setBackground(new java.awt.Color(51, 51, 51));
         btnUpgrade5.setForeground(new java.awt.Color(153, 153, 153));
         btnUpgrade5.setText("Upgrade");
+        btnUpgrade5.setEnabled(false);
         btnUpgrade5.setFocusPainted(false);
         btnUpgrade5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -386,6 +392,7 @@ public class HelperUI extends javax.swing.JFrame {
         btnUpgrade6.setBackground(new java.awt.Color(51, 51, 51));
         btnUpgrade6.setForeground(new java.awt.Color(153, 153, 153));
         btnUpgrade6.setText("Upgrade");
+        btnUpgrade6.setEnabled(false);
         btnUpgrade6.setFocusPainted(false);
         btnUpgrade6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -503,6 +510,7 @@ public class HelperUI extends javax.swing.JFrame {
         btnUpgrade7.setBackground(new java.awt.Color(51, 51, 51));
         btnUpgrade7.setForeground(new java.awt.Color(153, 153, 153));
         btnUpgrade7.setText("Upgrade");
+        btnUpgrade7.setEnabled(false);
         btnUpgrade7.setFocusPainted(false);
         btnUpgrade7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -680,10 +688,28 @@ public class HelperUI extends javax.swing.JFrame {
 
     private void btnUpgradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgradeActionPerformed
         // TODO add your handling code here:
+        MainClass.player.deductGold(Double.parseDouble(lblUpgradeCostValue.getText()));
+        MainClass.helperList.get(page * 4 - 4).upgrade();
+        updateUI();
+
     }//GEN-LAST:event_btnUpgradeActionPerformed
 
     private void btnHireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHireActionPerformed
         // TODO add your handling code here:
+        Helper helper = MainClass.helperList.get(page * 4 - 4);
+
+        if (btnHire.getText() == "Hire") {
+            if (MainClass.player.getGold() >= Double.parseDouble(lblHireCostValue.getText())) {
+                MainClass.player.deductGold(Double.parseDouble(lblHireCostValue.getText()));
+                helper.setHired(true);
+            }
+        } else if (btnHire.getText() == "Assign") {
+            helper.setAssigned(true);
+        } else {
+            btnHire.setText("Assign");
+            helper.setAssigned(false);
+        }
+        updateUI();
     }//GEN-LAST:event_btnHireActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -693,7 +719,7 @@ public class HelperUI extends javax.swing.JFrame {
 
     private void btnPrevPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrevPageActionPerformed
         // TODO add your handling code here:
-        if (page == 2){
+        if (page == 2) {
             page--;
             updateUI();
         }
@@ -701,31 +727,85 @@ public class HelperUI extends javax.swing.JFrame {
 
     private void btnUpgrade5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade5ActionPerformed
         // TODO add your handling code here:
+        MainClass.player.deductGold(Double.parseDouble(lblUpgradeCostValue5.getText()));
+        MainClass.helperList.get(page * 4 - 3).upgrade();
+        updateUI();
+
     }//GEN-LAST:event_btnUpgrade5ActionPerformed
 
     private void btnHire5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire5ActionPerformed
         // TODO add your handling code here:
+        Helper helper = MainClass.helperList.get(page * 4 - 3);
+
+        if (btnHire5.getText() == "Hire") {
+            if (MainClass.player.getGold() >= Double.parseDouble(lblHireCostValue5.getText())) {
+                MainClass.player.deductGold(Double.parseDouble(lblHireCostValue5.getText()));
+                helper.setHired(true);
+            }
+        } else if (btnHire5.getText() == "Assign") {
+            helper.setAssigned(true);
+        } else {
+            btnHire5.setText("Assign");
+            helper.setAssigned(false);
+        }
+        updateUI();
     }//GEN-LAST:event_btnHire5ActionPerformed
 
     private void btnUpgrade6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade6ActionPerformed
         // TODO add your handling code here:
+        MainClass.player.deductGold(Double.parseDouble(lblUpgradeCostValue6.getText()));
+        MainClass.helperList.get(page * 4 - 2).upgrade();
+        updateUI();
+
     }//GEN-LAST:event_btnUpgrade6ActionPerformed
 
     private void btnHire6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire6ActionPerformed
         // TODO add your handling code here:
+        Helper helper = MainClass.helperList.get(page * 4 - 2);
+
+        if (btnHire6.getText() == "Hire") {
+            if (MainClass.player.getGold() >= Double.parseDouble(lblHireCostValue6.getText())) {
+                MainClass.player.deductGold(Double.parseDouble(lblHireCostValue6.getText()));
+                helper.setHired(true);
+            }
+        } else if (btnHire6.getText() == "Assign") {
+            helper.setAssigned(true);
+        } else {
+            btnHire6.setText("Assign");
+            helper.setAssigned(false);
+        }
+        updateUI();
     }//GEN-LAST:event_btnHire6ActionPerformed
 
     private void btnUpgrade7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade7ActionPerformed
         // TODO add your handling code here:
+        MainClass.player.deductGold(Double.parseDouble(lblUpgradeCostValue7.getText()));
+        MainClass.helperList.get(page * 4 - 1).upgrade();
+        updateUI();
+
     }//GEN-LAST:event_btnUpgrade7ActionPerformed
 
     private void btnHire7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire7ActionPerformed
         // TODO add your handling code here:
+        Helper helper = MainClass.helperList.get(page * 4 - 1);
+
+        if (btnHire7.getText() == "Hire") {
+            if (MainClass.player.getGold() >= Double.parseDouble(lblHireCostValue7.getText())) {
+                MainClass.player.deductGold(Double.parseDouble(lblHireCostValue7.getText()));
+                helper.setHired(true);
+            }
+        } else if (btnHire7.getText() == "Assign") {
+            helper.setAssigned(true);
+        } else {
+            btnHire7.setText("Assign");
+            helper.setAssigned(false);
+        }
+        updateUI();
     }//GEN-LAST:event_btnHire7ActionPerformed
 
     private void btnNextPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextPageActionPerformed
         // TODO add your handling code here:
-        if (page == 1){
+        if (page == 1) {
             page++;
             updateUI();
         }
@@ -766,45 +846,136 @@ public class HelperUI extends javax.swing.JFrame {
         });
     }
 
-    public void startUp(){
+    public void startUp() {
+        MainClass.player.setGold(1000);
         updateUI();
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
     }
-    
+
     private void updateUI() {
+        labelGold.setText(String.format("%.2f", MainClass.player.getGold()));
         updatePanel1Control(MainClass.helperList.get(page * 4 - 4));
-        updatePanel2Control(MainClass.helperList.get(page* 4 - 3));
-        updatePanel3Control(MainClass.helperList.get(page* 4 - 2));
+        updatePanel2Control(MainClass.helperList.get(page * 4 - 3));
+        updatePanel3Control(MainClass.helperList.get(page * 4 - 2));
         updatePanel4Control(MainClass.helperList.get(page * 4 - 1));
     }
+
     private void updatePanel1Control(Helper helper) {
         lblName.setText(helper.getName());
-        lblDamageValue.setText(String.valueOf(helper.getDamage()));
-        lblHireCostValue.setText(String.valueOf(helper.getHireCost()));
-        lblUpgradeCostValue.setText(String.valueOf(helper.getLevelUpCost()));
+        lblDamageValue.setText(String.format("%.2f", helper.getDamage()));
+        lblHireCostValue.setText(String.format("%.2f", helper.getHireCost()));
+        lblUpgradeCostValue.setText(String.format("%.2f", helper.getUpgradeCost()));
+        lblIcon.setIcon(new ImageIcon(imageFolderPath + "HelperWaikit.png"));
+        if (helper.isHired()) {
+            btnUpgrade.setEnabled(true);
+            btnHire.setEnabled(true);
+            if (helper.isAssigned()) {
+                btnHire.setText("Unassign");
+            } else {
+                btnHire.setText("Assign");
+            }
+        } else {
+            btnHire.setText("Hire");
+            btnUpgrade.setEnabled(false);
+            if (MainClass.player.getGold() < helper.getHireCost()) {
+                btnHire.setEnabled(false);
+            } else {
+                btnHire.setEnabled(true);
+            }
+        }
+
+        if (MainClass.player.getGold() < helper.getUpgradeCost()) {
+            btnUpgrade.setEnabled(false);
+        }
     }
-    
+
     private void updatePanel2Control(Helper helper) {
         lblName5.setText(helper.getName());
-        lblDamageValue5.setText(String.valueOf(helper.getDamage()));
-        lblHireCostValue5.setText(String.valueOf(helper.getHireCost()));
-        lblUpgradeCostValue5.setText(String.valueOf(helper.getLevelUpCost()));
+        lblDamageValue5.setText(String.format("%.2f", helper.getDamage()));
+        lblHireCostValue5.setText(String.format("%.2f", helper.getHireCost()));
+        lblUpgradeCostValue5.setText(String.format("%.2f", helper.getUpgradeCost()));
+        lblIcon5.setIcon(new ImageIcon(imageFolderPath + "HelperWaikit.png"));
+        if (helper.isHired()) {
+            btnUpgrade5.setEnabled(true);
+            btnHire5.setEnabled(true);
+            if (helper.isAssigned()) {
+                btnHire5.setText("Unassign");
+            } else {
+                btnHire5.setText("Assign");
+            }
+        } else {
+            btnHire5.setText("Hire");
+            btnUpgrade5.setEnabled(false);
+            if (MainClass.player.getGold() < helper.getHireCost()) {
+                btnHire5.setEnabled(false);
+            } else {
+                btnHire5.setEnabled(true);
+            }
+        }
+
+        if (MainClass.player.getGold() < helper.getUpgradeCost()) {
+            btnUpgrade5.setEnabled(false);
+        }
     }
-    
+
     private void updatePanel3Control(Helper helper) {
         lblName6.setText(helper.getName());
-        lblDamageValue6.setText(String.valueOf(helper.getDamage()));
-        lblHireCostValue6.setText(String.valueOf(helper.getHireCost()));
-        lblUpgradeCostValue6.setText(String.valueOf(helper.getLevelUpCost()));
+        lblDamageValue6.setText(String.format("%.2f", helper.getDamage()));
+        lblHireCostValue6.setText(String.format("%.2f", helper.getHireCost()));
+        lblUpgradeCostValue6.setText(String.format("%.2f", helper.getUpgradeCost()));
+        lblIcon6.setIcon(new ImageIcon(imageFolderPath + "HelperWaikit.png"));
+        if (helper.isHired()) {
+            btnUpgrade6.setEnabled(true);
+            btnHire6.setEnabled(true);
+            if (helper.isAssigned()) {
+                btnHire6.setText("Unassign");
+            } else {
+                btnHire6.setText("Assign");
+            }
+        } else {
+            btnHire6.setText("Hire");
+            btnUpgrade6.setEnabled(false);
+            if (MainClass.player.getGold() < helper.getHireCost()) {
+                btnHire6.setEnabled(false);
+            } else {
+                btnHire6.setEnabled(true);
+            }
+        }
+
+        if (MainClass.player.getGold() < helper.getUpgradeCost()) {
+            btnUpgrade6.setEnabled(false);
+        }
     }
-    
+
     private void updatePanel4Control(Helper helper) {
         lblName7.setText(helper.getName());
-        lblDamageValue7.setText(String.valueOf(helper.getDamage()));
-        lblHireCostValue7.setText(String.valueOf(helper.getHireCost()));
-        lblUpgradeCostValue7.setText(String.valueOf(helper.getLevelUpCost()));
+        lblDamageValue7.setText(String.format("%.2f", helper.getDamage()));
+        lblHireCostValue7.setText(String.format("%.2f", helper.getHireCost()));
+        lblUpgradeCostValue7.setText(String.format("%.2f", helper.getUpgradeCost()));
+        lblIcon7.setIcon(new ImageIcon(imageFolderPath + "HelperWaikit.png"));
+        if (helper.isHired()) {
+            btnUpgrade7.setEnabled(true);
+            btnHire7.setEnabled(true);
+            if (helper.isAssigned()) {
+                btnHire7.setText("Unassign");
+            } else {
+                btnHire7.setText("Assign");
+            }
+        } else {
+            btnHire7.setText("Hire");
+            btnUpgrade7.setEnabled(false);
+            if (MainClass.player.getGold() < helper.getHireCost()) {
+                btnHire7.setEnabled(false);
+            } else {
+                btnHire7.setEnabled(true);
+            }
+        }
+
+        if (MainClass.player.getGold() < helper.getUpgradeCost()) {
+            btnUpgrade7.setEnabled(false);
+        }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;

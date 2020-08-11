@@ -8,21 +8,31 @@ public class Helper implements Comparable<Helper> {
     private double damage;
     private double hireCost;
     private int level;
-    private double levelUpCost;
+    private double upgradeCost;
     private String imageUrl;
+    private boolean hired;
+    private boolean assigned;
 
-    public Helper(int id, String name, double damage, double hireCost, int level, double levelUpCost, String imageUrl) {
+    public Helper(int id, String name, double damage, double hireCost, int level, double upgradeCost, String imageUrl) {
         this.id = id;
         this.name = name;
         this.damage = damage;
         this.hireCost = hireCost;
         this.level = level;
-        this.levelUpCost = levelUpCost;
+        this.upgradeCost = upgradeCost;
         this.imageUrl = imageUrl;
+        this.hired = false;
+        this.assigned = false;
     }
 
     public int getId() {
         return id;
+    }
+
+    public void upgrade() {
+        this.level++;
+        this.upgradeCost *= 1.3;
+        this.damage *= 1.3;
     }
 
     @Override
@@ -36,6 +46,12 @@ public class Helper implements Comparable<Helper> {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Helper{" + "id=" + id + ", name=" + name + ", damage=" + damage + ", hireCost=" + hireCost + ", level=" + level + ", levelUpCost=" + upgradeCost + '}';
+    }
+
+    //setter, getter
     public String getName() {
         return name;
     }
@@ -68,17 +84,37 @@ public class Helper implements Comparable<Helper> {
         this.level = level;
     }
 
-    public double getLevelUpCost() {
-        return levelUpCost;
+    public double getUpgradeCost() {
+        return upgradeCost;
     }
 
-    public void setLevelUpCost(double levelUpCost) {
-        this.levelUpCost = levelUpCost;
+    public void setUpgradeCost(double levelUpCost) {
+        this.upgradeCost = levelUpCost;
     }
 
-    @Override
-    public String toString() {
-        return "Helper{" + "id=" + id + ", name=" + name + ", damage=" + damage + ", hireCost=" + hireCost + ", level=" + level + ", levelUpCost=" + levelUpCost + '}';
+    public String getImageUrl() {
+        return imageUrl;
     }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public boolean isHired() {
+        return hired;
+    }
+
+    public void setHired(boolean hired) {
+        this.hired = hired;
+    }
+
+    public boolean isAssigned() {
+        return assigned;
+    }
+
+    public void setAssigned(boolean assigned) {
+        this.assigned = assigned;
+    }
+
 
 }

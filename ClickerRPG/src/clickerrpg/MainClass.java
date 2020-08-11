@@ -9,8 +9,8 @@ import clickerrpg.ui.GameUI;
 
 public class MainClass {
 
-    static Player player;
-    static Enemy enemy;
+    public static Player player;
+    public static Enemy enemy;
     public static QueueEnemyInterface<Enemy> enemyQueue = new QueueEnemy<Enemy>();
     public static SortedHelperListInterface<Helper> helperList = new SortedHelperList<Helper>();
     public static SLListInterface<Equipment> equipmentInventory = new SortedLinkedList<Equipment>();
