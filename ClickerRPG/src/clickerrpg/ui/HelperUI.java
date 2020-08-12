@@ -22,7 +22,6 @@ public class HelperUI extends javax.swing.JFrame {
 
     private static int page = 1;
     private final String imageFolderPath = "src/clickerrpg/img/";
-
     /**
      * Creates new form HelperUI
      */
@@ -47,48 +46,48 @@ public class HelperUI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         lblName = new javax.swing.JLabel();
-        lblDamage = new javax.swing.JLabel();
+        lblLevel = new javax.swing.JLabel();
         btnUpgrade = new javax.swing.JButton();
         btnHire = new javax.swing.JButton();
-        lblUpgradeCost = new javax.swing.JLabel();
+        lblDamage = new javax.swing.JLabel();
+        lblLevelValue = new javax.swing.JLabel();
         lblDamageValue = new javax.swing.JLabel();
-        lblUpgradeCostValue = new javax.swing.JLabel();
         lblIcon = new javax.swing.JLabel();
-        lblHireCost = new javax.swing.JLabel();
-        lblHireCostValue = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        lblName5 = new javax.swing.JLabel();
-        lblDamage5 = new javax.swing.JLabel();
-        btnUpgrade5 = new javax.swing.JButton();
-        btnHire5 = new javax.swing.JButton();
-        lblUpgradeCost5 = new javax.swing.JLabel();
-        lblDamageValue5 = new javax.swing.JLabel();
-        lblUpgradeCostValue5 = new javax.swing.JLabel();
-        lblIcon5 = new javax.swing.JLabel();
-        lblHireCost5 = new javax.swing.JLabel();
-        lblHireCostValue5 = new javax.swing.JLabel();
-        jPanel8 = new javax.swing.JPanel();
-        lblName6 = new javax.swing.JLabel();
-        lblDamage6 = new javax.swing.JLabel();
-        btnUpgrade6 = new javax.swing.JButton();
-        btnHire6 = new javax.swing.JButton();
-        lblUpgradeCost6 = new javax.swing.JLabel();
-        lblDamageValue6 = new javax.swing.JLabel();
-        lblUpgradeCostValue6 = new javax.swing.JLabel();
-        lblIcon6 = new javax.swing.JLabel();
-        lblHireCost6 = new javax.swing.JLabel();
-        lblHireCostValue6 = new javax.swing.JLabel();
-        jPanel9 = new javax.swing.JPanel();
-        lblName7 = new javax.swing.JLabel();
-        lblDamage7 = new javax.swing.JLabel();
-        btnUpgrade7 = new javax.swing.JButton();
-        btnHire7 = new javax.swing.JButton();
-        lblUpgradeCost7 = new javax.swing.JLabel();
-        lblDamageValue7 = new javax.swing.JLabel();
-        lblUpgradeCostValue7 = new javax.swing.JLabel();
-        lblIcon7 = new javax.swing.JLabel();
-        lblHireCost7 = new javax.swing.JLabel();
-        lblHireCostValue7 = new javax.swing.JLabel();
+        lblCost = new javax.swing.JLabel();
+        lblCostValue = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        lblName1 = new javax.swing.JLabel();
+        lblLevel1 = new javax.swing.JLabel();
+        btnUpgrade1 = new javax.swing.JButton();
+        btnHire1 = new javax.swing.JButton();
+        lblDamage1 = new javax.swing.JLabel();
+        lblLevelValue1 = new javax.swing.JLabel();
+        lblDamageValue1 = new javax.swing.JLabel();
+        lblIcon1 = new javax.swing.JLabel();
+        lblCost1 = new javax.swing.JLabel();
+        lblCostValue1 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        lblName2 = new javax.swing.JLabel();
+        lblLevel2 = new javax.swing.JLabel();
+        btnUpgrade2 = new javax.swing.JButton();
+        btnHire2 = new javax.swing.JButton();
+        lblDamage2 = new javax.swing.JLabel();
+        lblLevelValue2 = new javax.swing.JLabel();
+        lblDamageValue2 = new javax.swing.JLabel();
+        lblIcon2 = new javax.swing.JLabel();
+        lblCost2 = new javax.swing.JLabel();
+        lblCostValue2 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        lblName3 = new javax.swing.JLabel();
+        lblLevel3 = new javax.swing.JLabel();
+        btnUpgrade3 = new javax.swing.JButton();
+        btnHire3 = new javax.swing.JButton();
+        lblDamage3 = new javax.swing.JLabel();
+        lblLevelValue3 = new javax.swing.JLabel();
+        lblDamageValue3 = new javax.swing.JLabel();
+        lblIcon3 = new javax.swing.JLabel();
+        lblCost3 = new javax.swing.JLabel();
+        lblCostValue3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 102));
@@ -99,6 +98,7 @@ public class HelperUI extends javax.swing.JFrame {
         setSize(new java.awt.Dimension(705, 550));
 
         jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         btnPrevPage.setBackground(new java.awt.Color(51, 51, 51));
         btnPrevPage.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -149,9 +149,9 @@ public class HelperUI extends javax.swing.JFrame {
         lblName.setForeground(new java.awt.Color(204, 204, 204));
         lblName.setText("Helper1");
 
-        lblDamage.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblDamage.setForeground(new java.awt.Color(204, 204, 204));
-        lblDamage.setText("Damage:");
+        lblLevel.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblLevel.setForeground(new java.awt.Color(204, 204, 204));
+        lblLevel.setText("Level:");
 
         btnUpgrade.setBackground(new java.awt.Color(51, 51, 51));
         btnUpgrade.setForeground(new java.awt.Color(153, 153, 153));
@@ -174,28 +174,28 @@ public class HelperUI extends javax.swing.JFrame {
             }
         });
 
-        lblUpgradeCost.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblUpgradeCost.setForeground(new java.awt.Color(204, 204, 204));
-        lblUpgradeCost.setText("Upgrade Cost: $");
+        lblDamage.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblDamage.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamage.setText("Damage:");
+
+        lblLevelValue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblLevelValue.setForeground(new java.awt.Color(204, 204, 204));
+        lblLevelValue.setText("30");
 
         lblDamageValue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         lblDamageValue.setForeground(new java.awt.Color(204, 204, 204));
-        lblDamageValue.setText("30");
-
-        lblUpgradeCostValue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblUpgradeCostValue.setForeground(new java.awt.Color(204, 204, 204));
-        lblUpgradeCostValue.setText("100");
+        lblDamageValue.setText("100");
 
         lblIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/HelperWaikit.png"))); // NOI18N
         lblIcon.setText("icon");
 
-        lblHireCost.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblHireCost.setForeground(new java.awt.Color(204, 204, 204));
-        lblHireCost.setText("Hire Cost: $");
+        lblCost.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblCost.setForeground(new java.awt.Color(204, 204, 204));
+        lblCost.setText("Hire Cost: $");
 
-        lblHireCostValue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblHireCostValue.setForeground(new java.awt.Color(204, 204, 204));
-        lblHireCostValue.setText("100");
+        lblCostValue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblCostValue.setForeground(new java.awt.Color(204, 204, 204));
+        lblCostValue.setText("100");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -211,458 +211,450 @@ public class HelperUI extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnUpgrade))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblHireCost)
-                                    .addComponent(lblUpgradeCost))
-                                .addGap(0, 3, Short.MAX_VALUE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(lblCost, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(lblDamage, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(lblLevel, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblHireCostValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblUpgradeCostValue, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addComponent(btnHire))))
+                            .addComponent(lblCostValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblDamageValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblLevelValue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(lblDamage, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(lblDamageValue, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 25, Short.MAX_VALUE)
+                        .addComponent(btnUpgrade, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnHire, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(lblIcon)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblName)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDamage)
-                    .addComponent(lblDamageValue))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUpgradeCost)
-                    .addComponent(lblUpgradeCostValue))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblHireCostValue)
-                    .addComponent(lblHireCost))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpgrade)
-                    .addComponent(btnHire))
-                .addContainerGap())
-        );
-
-        jPanel7.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        lblName5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblName5.setForeground(new java.awt.Color(204, 204, 204));
-        lblName5.setText("Helper1");
-
-        lblDamage5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblDamage5.setForeground(new java.awt.Color(204, 204, 204));
-        lblDamage5.setText("Damage:");
-
-        btnUpgrade5.setBackground(new java.awt.Color(51, 51, 51));
-        btnUpgrade5.setForeground(new java.awt.Color(153, 153, 153));
-        btnUpgrade5.setText("Upgrade");
-        btnUpgrade5.setEnabled(false);
-        btnUpgrade5.setFocusPainted(false);
-        btnUpgrade5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpgrade5ActionPerformed(evt);
-            }
-        });
-
-        btnHire5.setBackground(new java.awt.Color(51, 51, 51));
-        btnHire5.setForeground(new java.awt.Color(153, 153, 153));
-        btnHire5.setText("Hire");
-        btnHire5.setFocusPainted(false);
-        btnHire5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHire5ActionPerformed(evt);
-            }
-        });
-
-        lblUpgradeCost5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblUpgradeCost5.setForeground(new java.awt.Color(204, 204, 204));
-        lblUpgradeCost5.setText("Upgrade Cost: $");
-
-        lblDamageValue5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblDamageValue5.setForeground(new java.awt.Color(204, 204, 204));
-        lblDamageValue5.setText("30");
-
-        lblUpgradeCostValue5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblUpgradeCostValue5.setForeground(new java.awt.Color(204, 204, 204));
-        lblUpgradeCostValue5.setText("100");
-
-        lblIcon5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
-        lblIcon5.setText("icon");
-
-        lblHireCost5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblHireCost5.setForeground(new java.awt.Color(204, 204, 204));
-        lblHireCost5.setText("Hire Cost: $");
-
-        lblHireCostValue5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblHireCostValue5.setForeground(new java.awt.Color(204, 204, 204));
-        lblHireCostValue5.setText("100");
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblIcon5, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel7Layout.createSequentialGroup()
-                        .addComponent(lblName5, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnUpgrade5))
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblHireCost5)
-                                    .addComponent(lblUpgradeCost5))
-                                .addGap(0, 3, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(lblIcon))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblName)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblHireCostValue5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblUpgradeCostValue5, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel7Layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addComponent(btnHire5))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                        .addComponent(lblDamage5, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(lblDamageValue5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(lblIcon5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblName5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDamage5)
-                    .addComponent(lblDamageValue5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUpgradeCost5)
-                    .addComponent(lblUpgradeCostValue5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblHireCostValue5)
-                    .addComponent(lblHireCost5))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpgrade5)
-                    .addComponent(btnHire5))
-                .addContainerGap())
-        );
-
-        jPanel8.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel8.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        lblName6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblName6.setForeground(new java.awt.Color(204, 204, 204));
-        lblName6.setText("Helper1");
-
-        lblDamage6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblDamage6.setForeground(new java.awt.Color(204, 204, 204));
-        lblDamage6.setText("Damage:");
-
-        btnUpgrade6.setBackground(new java.awt.Color(51, 51, 51));
-        btnUpgrade6.setForeground(new java.awt.Color(153, 153, 153));
-        btnUpgrade6.setText("Upgrade");
-        btnUpgrade6.setEnabled(false);
-        btnUpgrade6.setFocusPainted(false);
-        btnUpgrade6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpgrade6ActionPerformed(evt);
-            }
-        });
-
-        btnHire6.setBackground(new java.awt.Color(51, 51, 51));
-        btnHire6.setForeground(new java.awt.Color(153, 153, 153));
-        btnHire6.setText("Hire");
-        btnHire6.setFocusPainted(false);
-        btnHire6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHire6ActionPerformed(evt);
-            }
-        });
-
-        lblUpgradeCost6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblUpgradeCost6.setForeground(new java.awt.Color(204, 204, 204));
-        lblUpgradeCost6.setText("Upgrade Cost: $");
-
-        lblDamageValue6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblDamageValue6.setForeground(new java.awt.Color(204, 204, 204));
-        lblDamageValue6.setText("30");
-
-        lblUpgradeCostValue6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblUpgradeCostValue6.setForeground(new java.awt.Color(204, 204, 204));
-        lblUpgradeCostValue6.setText("100");
-
-        lblIcon6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
-        lblIcon6.setText("icon");
-
-        lblHireCost6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblHireCost6.setForeground(new java.awt.Color(204, 204, 204));
-        lblHireCost6.setText("Hire Cost: $");
-
-        lblHireCostValue6.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblHireCostValue6.setForeground(new java.awt.Color(204, 204, 204));
-        lblHireCostValue6.setText("100");
-
-        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
-        jPanel8.setLayout(jPanel8Layout);
-        jPanel8Layout.setHorizontalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblIcon6, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(lblName6, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnUpgrade6))
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblHireCost6)
-                                    .addComponent(lblUpgradeCost6))
-                                .addGap(0, 3, Short.MAX_VALUE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblLevel)
+                            .addComponent(lblLevelValue))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblHireCostValue6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblUpgradeCostValue6, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel8Layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addComponent(btnHire6))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                        .addComponent(lblDamage6, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(lblDamageValue6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        jPanel8Layout.setVerticalGroup(
-            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(lblIcon6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblName6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDamage6)
-                    .addComponent(lblDamageValue6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUpgradeCost6)
-                    .addComponent(lblUpgradeCostValue6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblHireCostValue6)
-                    .addComponent(lblHireCost6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpgrade6)
-                    .addComponent(btnHire6))
-                .addContainerGap())
-        );
-
-        jPanel9.setBackground(new java.awt.Color(51, 51, 51));
-        jPanel9.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-
-        lblName7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        lblName7.setForeground(new java.awt.Color(204, 204, 204));
-        lblName7.setText("Helper1");
-
-        lblDamage7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblDamage7.setForeground(new java.awt.Color(204, 204, 204));
-        lblDamage7.setText("Damage:");
-
-        btnUpgrade7.setBackground(new java.awt.Color(51, 51, 51));
-        btnUpgrade7.setForeground(new java.awt.Color(153, 153, 153));
-        btnUpgrade7.setText("Upgrade");
-        btnUpgrade7.setEnabled(false);
-        btnUpgrade7.setFocusPainted(false);
-        btnUpgrade7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpgrade7ActionPerformed(evt);
-            }
-        });
-
-        btnHire7.setBackground(new java.awt.Color(51, 51, 51));
-        btnHire7.setForeground(new java.awt.Color(153, 153, 153));
-        btnHire7.setText("Hire");
-        btnHire7.setFocusPainted(false);
-        btnHire7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnHire7ActionPerformed(evt);
-            }
-        });
-
-        lblUpgradeCost7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblUpgradeCost7.setForeground(new java.awt.Color(204, 204, 204));
-        lblUpgradeCost7.setText("Upgrade Cost: $");
-
-        lblDamageValue7.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblDamageValue7.setForeground(new java.awt.Color(204, 204, 204));
-        lblDamageValue7.setText("30");
-
-        lblUpgradeCostValue7.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblUpgradeCostValue7.setForeground(new java.awt.Color(204, 204, 204));
-        lblUpgradeCostValue7.setText("100");
-
-        lblIcon7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
-        lblIcon7.setText("icon");
-
-        lblHireCost7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        lblHireCost7.setForeground(new java.awt.Color(204, 204, 204));
-        lblHireCost7.setText("Hire Cost: $");
-
-        lblHireCostValue7.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
-        lblHireCostValue7.setForeground(new java.awt.Color(204, 204, 204));
-        lblHireCostValue7.setText("100");
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblIcon7, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(lblName7, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btnUpgrade7))
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblHireCost7)
-                                    .addComponent(lblUpgradeCost7))
-                                .addGap(0, 3, Short.MAX_VALUE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblDamage)
+                            .addComponent(lblDamageValue))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblHireCostValue7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblUpgradeCostValue7, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addGap(13, 13, 13)
-                                .addComponent(btnHire7))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel9Layout.createSequentialGroup()
-                        .addComponent(lblDamage7, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(38, 38, 38)
-                        .addComponent(lblDamageValue7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblCostValue)
+                            .addComponent(lblCost))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnHire)
+                            .addComponent(btnUpgrade))))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(lblIcon7)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel9Layout.createSequentialGroup()
+
+        jPanel3.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        lblName1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblName1.setForeground(new java.awt.Color(204, 204, 204));
+        lblName1.setText("Helper1");
+
+        lblLevel1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblLevel1.setForeground(new java.awt.Color(204, 204, 204));
+        lblLevel1.setText("Level:");
+
+        btnUpgrade1.setBackground(new java.awt.Color(51, 51, 51));
+        btnUpgrade1.setForeground(new java.awt.Color(153, 153, 153));
+        btnUpgrade1.setText("Upgrade");
+        btnUpgrade1.setEnabled(false);
+        btnUpgrade1.setFocusPainted(false);
+        btnUpgrade1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpgrade1ActionPerformed(evt);
+            }
+        });
+
+        btnHire1.setBackground(new java.awt.Color(51, 51, 51));
+        btnHire1.setForeground(new java.awt.Color(153, 153, 153));
+        btnHire1.setText("Hire");
+        btnHire1.setFocusPainted(false);
+        btnHire1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHire1ActionPerformed(evt);
+            }
+        });
+
+        lblDamage1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblDamage1.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamage1.setText("Damage:");
+
+        lblLevelValue1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblLevelValue1.setForeground(new java.awt.Color(204, 204, 204));
+        lblLevelValue1.setText("30");
+
+        lblDamageValue1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblDamageValue1.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamageValue1.setText("100");
+
+        lblIcon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/HelperWaikit.png"))); // NOI18N
+        lblIcon1.setText("icon");
+
+        lblCost1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblCost1.setForeground(new java.awt.Color(204, 204, 204));
+        lblCost1.setText("Hire Cost: $");
+
+        lblCostValue1.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblCostValue1.setForeground(new java.awt.Color(204, 204, 204));
+        lblCostValue1.setText("100");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblName7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblDamage7)
-                    .addComponent(lblDamageValue7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblUpgradeCost7)
-                    .addComponent(lblUpgradeCostValue7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblHireCostValue7)
-                    .addComponent(lblHireCost7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpgrade7)
-                    .addComponent(btnHire7))
-                .addContainerGap())
+                .addComponent(lblIcon1, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(lblName1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(lblCost1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblDamage1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(lblLevel1, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblCostValue1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblDamageValue1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblLevelValue1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnUpgrade1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnHire1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(25, 25, 25))))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(lblIcon1))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblName1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblLevel1)
+                            .addComponent(lblLevelValue1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblDamage1)
+                            .addComponent(lblDamageValue1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblCostValue1)
+                            .addComponent(lblCost1))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnHire1)
+                            .addComponent(btnUpgrade1))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel4.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        lblName2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblName2.setForeground(new java.awt.Color(204, 204, 204));
+        lblName2.setText("Helper1");
+
+        lblLevel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblLevel2.setForeground(new java.awt.Color(204, 204, 204));
+        lblLevel2.setText("Level:");
+
+        btnUpgrade2.setBackground(new java.awt.Color(51, 51, 51));
+        btnUpgrade2.setForeground(new java.awt.Color(153, 153, 153));
+        btnUpgrade2.setText("Upgrade");
+        btnUpgrade2.setEnabled(false);
+        btnUpgrade2.setFocusPainted(false);
+        btnUpgrade2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpgrade2ActionPerformed(evt);
+            }
+        });
+
+        btnHire2.setBackground(new java.awt.Color(51, 51, 51));
+        btnHire2.setForeground(new java.awt.Color(153, 153, 153));
+        btnHire2.setText("Hire");
+        btnHire2.setFocusPainted(false);
+        btnHire2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHire2ActionPerformed(evt);
+            }
+        });
+
+        lblDamage2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblDamage2.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamage2.setText("Damage:");
+
+        lblLevelValue2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblLevelValue2.setForeground(new java.awt.Color(204, 204, 204));
+        lblLevelValue2.setText("30");
+
+        lblDamageValue2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblDamageValue2.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamageValue2.setText("100");
+
+        lblIcon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/HelperWaikit.png"))); // NOI18N
+        lblIcon2.setText("icon");
+
+        lblCost2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblCost2.setForeground(new java.awt.Color(204, 204, 204));
+        lblCost2.setText("Hire Cost: $");
+
+        lblCostValue2.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblCostValue2.setForeground(new java.awt.Color(204, 204, 204));
+        lblCostValue2.setText("100");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblIcon2, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(lblName2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(lblCost2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblDamage2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(lblLevel2, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblCostValue2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblDamageValue2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblLevelValue2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnUpgrade2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnHire2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29))))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(lblIcon2))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblName2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblLevel2)
+                            .addComponent(lblLevelValue2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblDamage2)
+                            .addComponent(lblDamageValue2))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblCostValue2)
+                            .addComponent(lblCost2))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnHire2)
+                            .addComponent(btnUpgrade2))))
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
+        jPanel5.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel5.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        lblName3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblName3.setForeground(new java.awt.Color(204, 204, 204));
+        lblName3.setText("Helper1");
+
+        lblLevel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblLevel3.setForeground(new java.awt.Color(204, 204, 204));
+        lblLevel3.setText("Level:");
+
+        btnUpgrade3.setBackground(new java.awt.Color(51, 51, 51));
+        btnUpgrade3.setForeground(new java.awt.Color(153, 153, 153));
+        btnUpgrade3.setText("Upgrade");
+        btnUpgrade3.setEnabled(false);
+        btnUpgrade3.setFocusPainted(false);
+        btnUpgrade3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpgrade3ActionPerformed(evt);
+            }
+        });
+
+        btnHire3.setBackground(new java.awt.Color(51, 51, 51));
+        btnHire3.setForeground(new java.awt.Color(153, 153, 153));
+        btnHire3.setText("Hire");
+        btnHire3.setFocusPainted(false);
+        btnHire3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnHire3ActionPerformed(evt);
+            }
+        });
+
+        lblDamage3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblDamage3.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamage3.setText("Damage:");
+
+        lblLevelValue3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblLevelValue3.setForeground(new java.awt.Color(204, 204, 204));
+        lblLevelValue3.setText("30");
+
+        lblDamageValue3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblDamageValue3.setForeground(new java.awt.Color(204, 204, 204));
+        lblDamageValue3.setText("100");
+
+        lblIcon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/HelperWaikit.png"))); // NOI18N
+        lblIcon3.setText("icon");
+
+        lblCost3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        lblCost3.setForeground(new java.awt.Color(204, 204, 204));
+        lblCost3.setText("Hire Cost: $");
+
+        lblCostValue3.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        lblCostValue3.setForeground(new java.awt.Color(204, 204, 204));
+        lblCostValue3.setText("100");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblIcon3, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel5Layout.createSequentialGroup()
+                                .addComponent(lblName3, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(lblCost3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(lblDamage3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(lblLevel3, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lblCostValue3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblDamageValue3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(lblLevelValue3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
+                        .addComponent(btnUpgrade3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(btnHire3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(29, 29, 29))))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addComponent(lblIcon3))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblName3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblLevel3)
+                            .addComponent(lblLevelValue3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblDamage3)
+                            .addComponent(lblDamageValue3))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblCostValue3)
+                            .addComponent(lblCost3))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(btnHire3)
+                            .addComponent(btnUpgrade3))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(21, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(159, 159, 159)
                 .addComponent(btnPrevPage)
                 .addGap(18, 18, 18)
                 .addComponent(btnBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnNextPage, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(157, 157, 157))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(140, 140, 140))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addContainerGap()
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(18, 18, 18)
                     .addComponent(labelGold)
-                    .addContainerGap(440, Short.MAX_VALUE)))
+                    .addContainerGap(595, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(76, 76, 76)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnPrevPage)
                     .addComponent(btnBack)
                     .addComponent(btnNextPage))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(46, 46, 46))
             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel2Layout.createSequentialGroup()
                     .addContainerGap()
@@ -676,7 +668,7 @@ public class HelperUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 746, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -686,122 +678,118 @@ public class HelperUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnUpgradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgradeActionPerformed
+    private void btnHire3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire3ActionPerformed
         // TODO add your handling code here:
-        MainClass.player.deductGold(Double.parseDouble(lblUpgradeCostValue.getText()));
-        MainClass.helperList.get(page * 4 - 4).upgrade();
-        updateUI();
+        Helper helper = MainClass.helperList.get(page * 4 - 1);
 
-    }//GEN-LAST:event_btnUpgradeActionPerformed
+        if (btnHire3.getText() == "Hire") {
+            if (MainClass.player.getGold() >= Double.parseDouble(lblCostValue3.getText())) {
+                MainClass.player.deductGold(Double.parseDouble(lblCostValue3.getText()));
+                helper.setHired(true);
+            }
+        } else if (btnHire3.getText() == "Assign") {
+            helper.setAssigned(true);
+            MainClass.assignedHelperList.add(helper);
+        } else {
+            helper.setAssigned(false);
+            MainClass.assignedHelperList.remove(helper);
+        }
+        updateUI();
+        MainClass.gameUI.updateHelper();
+    }//GEN-LAST:event_btnHire3ActionPerformed
+
+    private void btnUpgrade3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade3ActionPerformed
+        // TODO add your handling code here:
+        MainClass.player.deductGold(Double.parseDouble(lblDamageValue3.getText()));
+        MainClass.helperList.get(page * 4 - 1).upgrade();
+        updateUI();
+    }//GEN-LAST:event_btnUpgrade3ActionPerformed
+
+    private void btnHire2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire2ActionPerformed
+        // TODO add your handling code here:
+        Helper helper = MainClass.helperList.get(page * 4 - 2);
+
+        if (btnHire2.getText() == "Hire") {
+            if (MainClass.player.getGold() >= Double.parseDouble(lblCostValue2.getText())) {
+                MainClass.player.deductGold(Double.parseDouble(lblCostValue2.getText()));
+                helper.setHired(true);
+            }
+        } else if (btnHire2.getText() == "Assign") {
+            helper.setAssigned(true);
+            MainClass.assignedHelperList.add(helper);
+        } else {
+            helper.setAssigned(false);
+            MainClass.assignedHelperList.remove(helper);
+        }
+        updateUI();
+        MainClass.gameUI.updateHelper();
+    }//GEN-LAST:event_btnHire2ActionPerformed
+
+    private void btnUpgrade2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade2ActionPerformed
+        // TODO add your handling code here:
+        MainClass.player.deductGold(Double.parseDouble(lblDamageValue2.getText()));
+        MainClass.helperList.get(page * 4 - 2).upgrade();
+        updateUI();
+    }//GEN-LAST:event_btnUpgrade2ActionPerformed
+
+    private void btnHire1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire1ActionPerformed
+        // TODO add your handling code here:
+        Helper helper = MainClass.helperList.get(page * 4 - 3);
+
+        if (btnHire1.getText() == "Hire") {
+            if (MainClass.player.getGold() >= Double.parseDouble(lblCostValue1.getText())) {
+                MainClass.player.deductGold(Double.parseDouble(lblCostValue1.getText()));
+                helper.setHired(true);
+            }
+        } else if (btnHire1.getText() == "Assign") {
+            helper.setAssigned(true);
+            MainClass.assignedHelperList.add(helper);
+        } else {
+            helper.setAssigned(false);
+            MainClass.assignedHelperList.remove(helper);
+        }
+        updateUI();
+        MainClass.gameUI.updateHelper();
+    }//GEN-LAST:event_btnHire1ActionPerformed
+
+    private void btnUpgrade1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade1ActionPerformed
+        // TODO add your handling code here:
+        MainClass.player.deductGold(Double.parseDouble(lblDamageValue1.getText()));
+        MainClass.helperList.get(page * 4 - 3).upgrade();
+        updateUI();
+    }//GEN-LAST:event_btnUpgrade1ActionPerformed
 
     private void btnHireActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHireActionPerformed
         // TODO add your handling code here:
         Helper helper = MainClass.helperList.get(page * 4 - 4);
 
         if (btnHire.getText() == "Hire") {
-            if (MainClass.player.getGold() >= Double.parseDouble(lblHireCostValue.getText())) {
-                MainClass.player.deductGold(Double.parseDouble(lblHireCostValue.getText()));
+            if (MainClass.player.getGold() >= Double.parseDouble(lblCostValue.getText())) {
+                MainClass.player.deductGold(Double.parseDouble(lblCostValue.getText()));
                 helper.setHired(true);
             }
         } else if (btnHire.getText() == "Assign") {
             helper.setAssigned(true);
+            MainClass.assignedHelperList.add(helper);
         } else {
-            btnHire.setText("Assign");
             helper.setAssigned(false);
+            MainClass.assignedHelperList.remove(helper);
         }
         updateUI();
+        MainClass.gameUI.updateHelper();
     }//GEN-LAST:event_btnHireActionPerformed
+
+    private void btnUpgradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgradeActionPerformed
+        // TODO add your handling code here:
+        MainClass.player.deductGold(Double.parseDouble(lblDamageValue.getText()));
+        MainClass.helperList.get(page * 4 - 4).upgrade();
+        updateUI();
+    }//GEN-LAST:event_btnUpgradeActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
     }//GEN-LAST:event_btnBackActionPerformed
-
-    private void btnPrevPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrevPageActionPerformed
-        // TODO add your handling code here:
-        if (page == 2) {
-            page--;
-            updateUI();
-        }
-    }//GEN-LAST:event_btnPrevPageActionPerformed
-
-    private void btnUpgrade5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade5ActionPerformed
-        // TODO add your handling code here:
-        MainClass.player.deductGold(Double.parseDouble(lblUpgradeCostValue5.getText()));
-        MainClass.helperList.get(page * 4 - 3).upgrade();
-        updateUI();
-
-    }//GEN-LAST:event_btnUpgrade5ActionPerformed
-
-    private void btnHire5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire5ActionPerformed
-        // TODO add your handling code here:
-        Helper helper = MainClass.helperList.get(page * 4 - 3);
-
-        if (btnHire5.getText() == "Hire") {
-            if (MainClass.player.getGold() >= Double.parseDouble(lblHireCostValue5.getText())) {
-                MainClass.player.deductGold(Double.parseDouble(lblHireCostValue5.getText()));
-                helper.setHired(true);
-            }
-        } else if (btnHire5.getText() == "Assign") {
-            helper.setAssigned(true);
-        } else {
-            btnHire5.setText("Assign");
-            helper.setAssigned(false);
-        }
-        updateUI();
-    }//GEN-LAST:event_btnHire5ActionPerformed
-
-    private void btnUpgrade6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade6ActionPerformed
-        // TODO add your handling code here:
-        MainClass.player.deductGold(Double.parseDouble(lblUpgradeCostValue6.getText()));
-        MainClass.helperList.get(page * 4 - 2).upgrade();
-        updateUI();
-
-    }//GEN-LAST:event_btnUpgrade6ActionPerformed
-
-    private void btnHire6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire6ActionPerformed
-        // TODO add your handling code here:
-        Helper helper = MainClass.helperList.get(page * 4 - 2);
-
-        if (btnHire6.getText() == "Hire") {
-            if (MainClass.player.getGold() >= Double.parseDouble(lblHireCostValue6.getText())) {
-                MainClass.player.deductGold(Double.parseDouble(lblHireCostValue6.getText()));
-                helper.setHired(true);
-            }
-        } else if (btnHire6.getText() == "Assign") {
-            helper.setAssigned(true);
-        } else {
-            btnHire6.setText("Assign");
-            helper.setAssigned(false);
-        }
-        updateUI();
-    }//GEN-LAST:event_btnHire6ActionPerformed
-
-    private void btnUpgrade7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpgrade7ActionPerformed
-        // TODO add your handling code here:
-        MainClass.player.deductGold(Double.parseDouble(lblUpgradeCostValue7.getText()));
-        MainClass.helperList.get(page * 4 - 1).upgrade();
-        updateUI();
-
-    }//GEN-LAST:event_btnUpgrade7ActionPerformed
-
-    private void btnHire7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHire7ActionPerformed
-        // TODO add your handling code here:
-        Helper helper = MainClass.helperList.get(page * 4 - 1);
-
-        if (btnHire7.getText() == "Hire") {
-            if (MainClass.player.getGold() >= Double.parseDouble(lblHireCostValue7.getText())) {
-                MainClass.player.deductGold(Double.parseDouble(lblHireCostValue7.getText()));
-                helper.setHired(true);
-            }
-        } else if (btnHire7.getText() == "Assign") {
-            helper.setAssigned(true);
-        } else {
-            btnHire7.setText("Assign");
-            helper.setAssigned(false);
-        }
-        updateUI();
-    }//GEN-LAST:event_btnHire7ActionPerformed
 
     private void btnNextPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextPageActionPerformed
         // TODO add your handling code here:
@@ -810,6 +798,14 @@ public class HelperUI extends javax.swing.JFrame {
             updateUI();
         }
     }//GEN-LAST:event_btnNextPageActionPerformed
+
+    private void btnPrevPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrevPageActionPerformed
+        // TODO add your handling code here:
+        if (page == 2) {
+            page--;
+            updateUI();
+        }
+    }//GEN-LAST:event_btnPrevPageActionPerformed
 
     /**
      * @param args the command line arguments
@@ -860,23 +856,40 @@ public class HelperUI extends javax.swing.JFrame {
         updatePanel2Control(MainClass.helperList.get(page * 4 - 3));
         updatePanel3Control(MainClass.helperList.get(page * 4 - 2));
         updatePanel4Control(MainClass.helperList.get(page * 4 - 1));
+        if (page == 1) {
+            btnPrevPage.setEnabled(false);
+            btnNextPage.setEnabled(true);
+        } else {
+            btnPrevPage.setEnabled(true);
+            btnNextPage.setEnabled(false);
+        }
     }
-
+    
     private void updatePanel1Control(Helper helper) {
+        lblIcon.setIcon(new ImageIcon(imageFolderPath + helper.getImageUrl()));
         lblName.setText(helper.getName());
+        lblLevelValue.setText(String.format("%d", helper.getLevel()));
         lblDamageValue.setText(String.format("%.2f", helper.getDamage()));
-        lblHireCostValue.setText(String.format("%.2f", helper.getHireCost()));
-        lblUpgradeCostValue.setText(String.format("%.2f", helper.getUpgradeCost()));
-        lblIcon.setIcon(new ImageIcon(imageFolderPath + "HelperWaikit.png"));
+
         if (helper.isHired()) {
+            lblCost.setText("Upgrade Cost: $");
+            lblCostValue.setText(String.format("%.2f", helper.getUpgradeCost()));
             btnUpgrade.setEnabled(true);
             btnHire.setEnabled(true);
             if (helper.isAssigned()) {
                 btnHire.setText("Unassign");
             } else {
                 btnHire.setText("Assign");
+                if (MainClass.assignedHelperList.size() == 3){
+                    btnHire.setEnabled(false);
+                }
+            }
+            if (MainClass.player.getGold() < helper.getUpgradeCost()) {
+                btnUpgrade.setEnabled(false);
             }
         } else {
+            lblCost.setText("Hire Cost: $");
+            lblCostValue.setText(String.format("%.2f", helper.getHireCost()));
             btnHire.setText("Hire");
             btnUpgrade.setEnabled(false);
             if (MainClass.player.getGold() < helper.getHireCost()) {
@@ -885,148 +898,162 @@ public class HelperUI extends javax.swing.JFrame {
                 btnHire.setEnabled(true);
             }
         }
-
-        if (MainClass.player.getGold() < helper.getUpgradeCost()) {
-            btnUpgrade.setEnabled(false);
-        }
     }
 
     private void updatePanel2Control(Helper helper) {
-        lblName5.setText(helper.getName());
-        lblDamageValue5.setText(String.format("%.2f", helper.getDamage()));
-        lblHireCostValue5.setText(String.format("%.2f", helper.getHireCost()));
-        lblUpgradeCostValue5.setText(String.format("%.2f", helper.getUpgradeCost()));
-        lblIcon5.setIcon(new ImageIcon(imageFolderPath + "HelperWaikit.png"));
+        lblIcon1.setIcon(new ImageIcon(imageFolderPath + helper.getImageUrl()));
+        lblName1.setText(helper.getName());
+        lblLevelValue1.setText(String.format("%d", helper.getLevel()));
+        lblDamageValue1.setText(String.format("%.2f", helper.getDamage()));
+
         if (helper.isHired()) {
-            btnUpgrade5.setEnabled(true);
-            btnHire5.setEnabled(true);
+            lblCost1.setText("Upgrade Cost: $");
+            lblCostValue1.setText(String.format("%.2f", helper.getUpgradeCost()));
+            btnUpgrade1.setEnabled(true);
+            btnHire1.setEnabled(true);
             if (helper.isAssigned()) {
-                btnHire5.setText("Unassign");
+                btnHire1.setText("Unassign");
             } else {
-                btnHire5.setText("Assign");
+                btnHire1.setText("Assign");
+                if (MainClass.assignedHelperList.size() == 3){
+                    btnHire1.setEnabled(false);
+                }
+            }
+            if (MainClass.player.getGold() < helper.getUpgradeCost()) {
+                btnUpgrade1.setEnabled(false);
             }
         } else {
-            btnHire5.setText("Hire");
-            btnUpgrade5.setEnabled(false);
+            lblCost1.setText("Hire Cost: $");
+            lblCostValue1.setText(String.format("%.2f", helper.getHireCost()));
+            btnHire1.setText("Hire");
+            btnUpgrade1.setEnabled(false);
             if (MainClass.player.getGold() < helper.getHireCost()) {
-                btnHire5.setEnabled(false);
+                btnHire1.setEnabled(false);
             } else {
-                btnHire5.setEnabled(true);
+                btnHire1.setEnabled(true);
             }
-        }
-
-        if (MainClass.player.getGold() < helper.getUpgradeCost()) {
-            btnUpgrade5.setEnabled(false);
         }
     }
 
     private void updatePanel3Control(Helper helper) {
-        lblName6.setText(helper.getName());
-        lblDamageValue6.setText(String.format("%.2f", helper.getDamage()));
-        lblHireCostValue6.setText(String.format("%.2f", helper.getHireCost()));
-        lblUpgradeCostValue6.setText(String.format("%.2f", helper.getUpgradeCost()));
-        lblIcon6.setIcon(new ImageIcon(imageFolderPath + "HelperWaikit.png"));
+        lblIcon2.setIcon(new ImageIcon(imageFolderPath + helper.getImageUrl()));
+        lblName2.setText(helper.getName());
+        lblLevelValue2.setText(String.format("%d", helper.getLevel()));
+        lblDamageValue2.setText(String.format("%.2f", helper.getDamage()));
+
         if (helper.isHired()) {
-            btnUpgrade6.setEnabled(true);
-            btnHire6.setEnabled(true);
+            lblCost2.setText("Upgrade Cost: $");
+            lblCostValue2.setText(String.format("%.2f", helper.getUpgradeCost()));
+            btnUpgrade2.setEnabled(true);
+            btnHire2.setEnabled(true);
             if (helper.isAssigned()) {
-                btnHire6.setText("Unassign");
+                btnHire2.setText("Unassign");
             } else {
-                btnHire6.setText("Assign");
+                btnHire2.setText("Assign");
+                if (MainClass.assignedHelperList.size() == 3){
+                    btnHire2.setEnabled(false);
+                }
+            }
+            if (MainClass.player.getGold() < helper.getUpgradeCost()) {
+                btnUpgrade2.setEnabled(false);
             }
         } else {
-            btnHire6.setText("Hire");
-            btnUpgrade6.setEnabled(false);
+            lblCost2.setText("Hire Cost: $");
+            lblCostValue2.setText(String.format("%.2f", helper.getHireCost()));
+            btnHire2.setText("Hire");
+            btnUpgrade2.setEnabled(false);
             if (MainClass.player.getGold() < helper.getHireCost()) {
-                btnHire6.setEnabled(false);
+                btnHire2.setEnabled(false);
             } else {
-                btnHire6.setEnabled(true);
+                btnHire2.setEnabled(true);
             }
-        }
-
-        if (MainClass.player.getGold() < helper.getUpgradeCost()) {
-            btnUpgrade6.setEnabled(false);
         }
     }
 
     private void updatePanel4Control(Helper helper) {
-        lblName7.setText(helper.getName());
-        lblDamageValue7.setText(String.format("%.2f", helper.getDamage()));
-        lblHireCostValue7.setText(String.format("%.2f", helper.getHireCost()));
-        lblUpgradeCostValue7.setText(String.format("%.2f", helper.getUpgradeCost()));
-        lblIcon7.setIcon(new ImageIcon(imageFolderPath + "HelperWaikit.png"));
+        lblIcon3.setIcon(new ImageIcon(imageFolderPath + helper.getImageUrl()));
+        lblName3.setText(helper.getName());
+        lblLevelValue3.setText(String.format("%d", helper.getLevel()));
+        lblDamageValue3.setText(String.format("%.2f", helper.getDamage()));
+
         if (helper.isHired()) {
-            btnUpgrade7.setEnabled(true);
-            btnHire7.setEnabled(true);
+            lblCost3.setText("Upgrade Cost: $");
+            lblCostValue3.setText(String.format("%.2f", helper.getUpgradeCost()));
+            btnUpgrade3.setEnabled(true);
+            btnHire3.setEnabled(true);
             if (helper.isAssigned()) {
-                btnHire7.setText("Unassign");
+                btnHire3.setText("Unassign");
             } else {
-                btnHire7.setText("Assign");
+                btnHire3.setText("Assign");
+                if (MainClass.assignedHelperList.size() == 3){
+                    btnHire3.setEnabled(false);
+                }
+            }
+            if (MainClass.player.getGold() < helper.getUpgradeCost()) {
+                btnUpgrade3.setEnabled(false);
             }
         } else {
-            btnHire7.setText("Hire");
-            btnUpgrade7.setEnabled(false);
+            lblCost3.setText("Hire Cost: $");
+            lblCostValue3.setText(String.format("%.2f", helper.getHireCost()));
+            btnHire3.setText("Hire");
+            btnUpgrade3.setEnabled(false);
             if (MainClass.player.getGold() < helper.getHireCost()) {
-                btnHire7.setEnabled(false);
+                btnHire3.setEnabled(false);
             } else {
-                btnHire7.setEnabled(true);
+                btnHire3.setEnabled(true);
             }
-        }
-
-        if (MainClass.player.getGold() < helper.getUpgradeCost()) {
-            btnUpgrade7.setEnabled(false);
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
     private javax.swing.JButton btnHire;
-    private javax.swing.JButton btnHire5;
-    private javax.swing.JButton btnHire6;
-    private javax.swing.JButton btnHire7;
+    private javax.swing.JButton btnHire1;
+    private javax.swing.JButton btnHire2;
+    private javax.swing.JButton btnHire3;
     private javax.swing.JButton btnNextPage;
     private javax.swing.JButton btnPrevPage;
     private javax.swing.JButton btnUpgrade;
-    private javax.swing.JButton btnUpgrade5;
-    private javax.swing.JButton btnUpgrade6;
-    private javax.swing.JButton btnUpgrade7;
+    private javax.swing.JButton btnUpgrade1;
+    private javax.swing.JButton btnUpgrade2;
+    private javax.swing.JButton btnUpgrade3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel labelGold;
+    private javax.swing.JLabel lblCost;
+    private javax.swing.JLabel lblCost1;
+    private javax.swing.JLabel lblCost2;
+    private javax.swing.JLabel lblCost3;
+    private javax.swing.JLabel lblCostValue;
+    private javax.swing.JLabel lblCostValue1;
+    private javax.swing.JLabel lblCostValue2;
+    private javax.swing.JLabel lblCostValue3;
     private javax.swing.JLabel lblDamage;
-    private javax.swing.JLabel lblDamage5;
-    private javax.swing.JLabel lblDamage6;
-    private javax.swing.JLabel lblDamage7;
+    private javax.swing.JLabel lblDamage1;
+    private javax.swing.JLabel lblDamage2;
+    private javax.swing.JLabel lblDamage3;
     private javax.swing.JLabel lblDamageValue;
-    private javax.swing.JLabel lblDamageValue5;
-    private javax.swing.JLabel lblDamageValue6;
-    private javax.swing.JLabel lblDamageValue7;
-    private javax.swing.JLabel lblHireCost;
-    private javax.swing.JLabel lblHireCost5;
-    private javax.swing.JLabel lblHireCost6;
-    private javax.swing.JLabel lblHireCost7;
-    private javax.swing.JLabel lblHireCostValue;
-    private javax.swing.JLabel lblHireCostValue5;
-    private javax.swing.JLabel lblHireCostValue6;
-    private javax.swing.JLabel lblHireCostValue7;
+    private javax.swing.JLabel lblDamageValue1;
+    private javax.swing.JLabel lblDamageValue2;
+    private javax.swing.JLabel lblDamageValue3;
     private javax.swing.JLabel lblIcon;
-    private javax.swing.JLabel lblIcon5;
-    private javax.swing.JLabel lblIcon6;
-    private javax.swing.JLabel lblIcon7;
+    private javax.swing.JLabel lblIcon1;
+    private javax.swing.JLabel lblIcon2;
+    private javax.swing.JLabel lblIcon3;
+    private javax.swing.JLabel lblLevel;
+    private javax.swing.JLabel lblLevel1;
+    private javax.swing.JLabel lblLevel2;
+    private javax.swing.JLabel lblLevel3;
+    private javax.swing.JLabel lblLevelValue;
+    private javax.swing.JLabel lblLevelValue1;
+    private javax.swing.JLabel lblLevelValue2;
+    private javax.swing.JLabel lblLevelValue3;
     private javax.swing.JLabel lblName;
-    private javax.swing.JLabel lblName5;
-    private javax.swing.JLabel lblName6;
-    private javax.swing.JLabel lblName7;
-    private javax.swing.JLabel lblUpgradeCost;
-    private javax.swing.JLabel lblUpgradeCost5;
-    private javax.swing.JLabel lblUpgradeCost6;
-    private javax.swing.JLabel lblUpgradeCost7;
-    private javax.swing.JLabel lblUpgradeCostValue;
-    private javax.swing.JLabel lblUpgradeCostValue5;
-    private javax.swing.JLabel lblUpgradeCostValue6;
-    private javax.swing.JLabel lblUpgradeCostValue7;
+    private javax.swing.JLabel lblName1;
+    private javax.swing.JLabel lblName2;
+    private javax.swing.JLabel lblName3;
     // End of variables declaration//GEN-END:variables
 }
