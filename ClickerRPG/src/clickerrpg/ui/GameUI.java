@@ -401,17 +401,16 @@ public class GameUI extends javax.swing.JFrame {
         setVisible(true);
     }
 
-    public void updateGameUI(Player player, Enemy enemy){
-        labelPlayerName.setText(player.getName());
-        playerHealthBar.setMaximum((int)player.getMaxHealth());
-        playerHealthBar.setValue((int)player.getCurHealth());
+    public void updateGameUI(){
+        labelPlayerName.setText(MainClass.player.getName());
+        playerHealthBar.setMaximum((int)MainClass.player.getMaxHealth());
+        playerHealthBar.setValue((int)MainClass.player.getCurHealth());
         
-        labelEnemyName.setText(enemy.getName());
-        enemyHealthBar.setMaximum((int)enemy.getMaxHealth());
-        enemyHealthBar.setValue((int)enemy.getCurHealth());
+        labelEnemyName.setText(MainClass.enemy.getName());
+        enemyHealthBar.setMaximum((int)MainClass.enemy.getMaxHealth());
+        enemyHealthBar.setValue((int)MainClass.enemy.getCurHealth());
         
-        labelGold.setText(String.valueOf(player.getGold()));
-        
+        labelGold.setText(String.format("%.2f",MainClass.player.getGold()));
     }
     
     public void updateHelper(){
