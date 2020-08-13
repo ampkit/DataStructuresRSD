@@ -360,6 +360,7 @@ public class GameUI extends javax.swing.JFrame {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         HelperUI helperUI = new HelperUI();
         helperUI.startUp();
+        this.setEnabled(false);
     }//GEN-LAST:event_jButton6ActionPerformed
     // </editor-fold>
     public static void main(String args[]) {
@@ -415,6 +416,11 @@ public class GameUI extends javax.swing.JFrame {
     
     public void updateHelper(){
         switch (MainClass.assignedHelperList.size()){
+            case 0:
+                lblHelper1.setIcon(null);
+                lblHelper2.setIcon(null);
+                lblHelper3.setIcon(null);
+                break;
             case 1:
                 lblHelper1.setIcon(new ImageIcon(imageFolderPath + MainClass.assignedHelperList.get(0).getImageUrl()));
                 lblHelper2.setIcon(null);

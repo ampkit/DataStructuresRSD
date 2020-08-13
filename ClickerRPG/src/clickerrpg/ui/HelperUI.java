@@ -92,7 +92,6 @@ public class HelperUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 102, 102));
-        setMaximumSize(new java.awt.Dimension(705, 550));
         setMinimumSize(new java.awt.Dimension(705, 550));
         setUndecorated(true);
         setResizable(false);
@@ -721,7 +720,9 @@ public class HelperUI extends javax.swing.JFrame {
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
+        MainClass.gameUI.setEnabled(true);
         this.setVisible(false);
+        
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnNextPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextPageActionPerformed
@@ -776,7 +777,6 @@ public class HelperUI extends javax.swing.JFrame {
     }
 
     public void startUp() {
-        MainClass.player.setGold(1000);
         updateUI();
         setResizable(false);
         setLocationRelativeTo(null);

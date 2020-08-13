@@ -35,17 +35,20 @@ public class MainClass {
     }
 
     public static void attack(double damage) {
-        enemy.curHealth = enemy.curHealth - (damage - enemy.defense);
+        if (damage - enemy.defense >= 0) {
+            enemy.curHealth = enemy.curHealth - (damage - enemy.defense);
 
-        if (enemy.curHealth <= 0) {
-            player.gold += 10;
+            if (enemy.curHealth <= 0) {
+                player.gold += 10;
 
-            //SUPPOSED FUNCTION : load next Enemy
-            //below is placeholder
-            enemy.curHealth = enemy.maxHealth;
+                //SUPPOSED FUNCTION : load next Enemy
+                //below is placeholder
+                enemy.curHealth = enemy.maxHealth;
+            }
+
+            gameUI.updateGameUI();
         }
 
-        gameUI.updateGameUI();
     }
 
     public static void initializeData() {
@@ -94,7 +97,9 @@ public class MainClass {
     static class HelperAttack extends TimerTask {
 
         public void run() {
-            attack(helperTotalDamage);
+            if (helperTotalDamage > 0) {
+                attack(helperTotalDamage);
+            }
         }
     }
 }
