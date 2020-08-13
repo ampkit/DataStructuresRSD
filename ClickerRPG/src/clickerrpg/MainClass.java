@@ -1,9 +1,11 @@
 package clickerrpg;
 
+
 import ChongWaiKit.*;
 import CheongKaMeng.*;
 import IsabelLai.*;
 import OoiPingXiu.*;
+import ChongJingYi.*;
 
 import clickerrpg.ui.GameUI;
 
@@ -11,6 +13,7 @@ public class MainClass {
 
     public static Player player;
     public static Enemy enemy;
+    public static PlayerListInterface<Player> playerList = new PlayerList<Player>();
     public static QueueEnemyInterface<Enemy> enemyQueue = new QueueEnemy<Enemy>();
     public static SortedHelperListInterface<Helper> helperList = new SortedHelperList<Helper>();
     public static SortedHelperListInterface<Helper> assignedHelperList = new SortedHelperList<Helper>();
@@ -44,6 +47,8 @@ public class MainClass {
         upgradeList.add(new Upgrade("Hp+10", 0, 10, 0, 30));
         upgradeList.add(new Upgrade("Att+10", 10, 0, 0, 50));
         upgradeList.add(new Upgrade("Df+10", 0, 0, 10, 50));
+        
+        
 
         // <editor-fold defaultstate="collapsed" desc="Helpers">
         helperList.add(new Helper(2, "Helper2", 20, 200, 1, 100, "HelperWaikit.png"));

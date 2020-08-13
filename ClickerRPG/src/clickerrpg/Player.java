@@ -1,10 +1,8 @@
 package clickerrpg;
 
-/**
- *
- * @author Chong Wai Kit
- */
 public class Player {
+    
+    int id;
     String name;
     
     double curHealth;
@@ -31,6 +29,34 @@ public class Player {
         this.defense = 1;
         
         this.gold = 0;
+    }
+
+    public Player(int id, String name){
+        this.id = id;
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Player{" + "id=" + id + ", name=" + name + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", helmet=" + helmet + ", chest=" + chest + ", leggings=" + leggings + ", boots=" + boots + ", weapon=" + weapon + ", gold=" + gold + '}';
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Player other = (Player) obj;
+        if (this.id != other.id) {
+            return false;
+        }
+        return true;
     }
     
     //add function for increase gold
@@ -77,6 +103,14 @@ public class Player {
     
     public void deductGold(double deduction){
         this.gold -= deduction;
+    }
+    
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
     
     public String getName() {

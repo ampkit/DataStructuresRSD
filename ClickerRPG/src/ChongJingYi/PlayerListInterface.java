@@ -7,7 +7,7 @@ public interface PlayerListInterface<T> {
     
     public T remove(int position);
     
-    public boolean contains(T anEntry);
+    public void clear();
     
     public boolean isEmpty();
     

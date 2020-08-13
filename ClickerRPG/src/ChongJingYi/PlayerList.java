@@ -2,7 +2,6 @@ package ChongJingYi;
 
 
 public class PlayerList<T> implements PlayerListInterface<T> {
-
     
     private Node firstNode;
     private int length;
@@ -38,7 +37,7 @@ public class PlayerList<T> implements PlayerListInterface<T> {
                 result = firstNode.data;
                 firstNode = firstNode.next;
             }
-            //case 2: position > 
+            //case 2: position > 1
             else{
                 Node nodeBefore = firstNode;
                 for(int i = 1; i < position - 1; ++i){
@@ -50,22 +49,10 @@ public class PlayerList<T> implements PlayerListInterface<T> {
         }
         return result;
     }
-
-    @Override
-    public boolean contains(T anEntry) {
-        boolean found = false;
-        
-        Node currentNode = firstNode;
-        
-        while(!found && (currentNode != null)){
-            if(currentNode.equals(currentNode.data)){
-                found = true;
-            }
-            else{
-                currentNode = currentNode.next;
-            }
-        }
-        return found;
+    
+    public void clear() {
+        firstNode = null;
+        length = 0;
     }
 
     @Override
