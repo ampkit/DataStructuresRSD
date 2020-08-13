@@ -19,7 +19,9 @@ public class Equipment implements Comparable<Equipment> {
     private double health;
     private double defense;
 
-    public Equipment(String eqName, String eqSlot, double attack, double health, double defense) {
+    private double price;
+
+    public Equipment(String eqName, String eqSlot, double attack, double health, double defense, double price) {
         this.eqName = eqName;
         this.eqSlot = eqSlot;
         this.attack = attack;
@@ -31,15 +33,15 @@ public class Equipment implements Comparable<Equipment> {
     public Equipment(String eqName) {
         switch (eqName) {
             case "Wooden Sword":
-                setEquipmentAttributes("Wooden Sword", "Weapon", 1, 0, 0);
+                setEquipmentAttributes("Wooden Sword", "Weapon", 1, 0, 0, 5);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Wooden_Sword.png"));
                 break;
             case "Tin Sword":
-                setEquipmentAttributes("Tin Sword", "Weapon", 2, 0, 0);
+                setEquipmentAttributes("Tin Sword", "Weapon", 2, 0, 0, 10);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Tin_Sword.png"));
                 break;
             default:
-                setEquipmentAttributes("Error", "Error", 0, 0, 0);
+                setEquipmentAttributes("Error", "Error", 0, 0, 0, 0);
                 break;
         }
     }
@@ -52,12 +54,14 @@ public class Equipment implements Comparable<Equipment> {
         equipped = false;
     }
 
-    private void setEquipmentAttributes(String eqName, String eqSlot, double attack, double health, double defense) {
+    private void setEquipmentAttributes(String eqName, String eqSlot, double attack, double health, double defense, double price) {
         this.eqName = eqName;
         this.eqSlot = eqSlot;
         this.attack = attack;
         this.health = health;
         this.defense = defense;
+        this.price = price;
+
     }
 
     @Override
@@ -140,6 +144,14 @@ public class Equipment implements Comparable<Equipment> {
 
     public void setDefense(double defense) {
         this.defense = defense;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
     // </editor-fold>
 

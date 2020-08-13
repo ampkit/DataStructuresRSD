@@ -24,4 +24,6 @@ public interface SLListInterface<T extends Comparable<T>> {
     
     public boolean isEmpty();
     
+    public void sortItem(T anEntry);
+
 }

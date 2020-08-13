@@ -75,6 +75,7 @@ public class SortedLinkedList<T extends Comparable<T>> implements SLListInterfac
                 //Case 2 : Remove non-first node
                 }
                 
+                length--;
                 return true;
             }
             else
@@ -109,7 +110,7 @@ public class SortedLinkedList<T extends Comparable<T>> implements SLListInterfac
         //Case 1 : Remove first node
         if (prevNode == null)
         {
-            firstNode = currentNode.next;
+            firstNode = currentNode.next;        
         }
         //Case 2 : Remove not first node
         else
@@ -117,6 +118,7 @@ public class SortedLinkedList<T extends Comparable<T>> implements SLListInterfac
             prevNode.next = currentNode.next;
         }
         
+        length--;
         return currentNode.data;
     }
 
@@ -200,6 +202,12 @@ public class SortedLinkedList<T extends Comparable<T>> implements SLListInterfac
         return (length == 0);    
     }
     
+    public void sortItem(T anEntry){
+        remove(anEntry);
+        add(anEntry);
+    }
+
+
     private class Node{
         private T data;
         private Node next;

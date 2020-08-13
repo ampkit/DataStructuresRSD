@@ -1,7 +1,11 @@
 package clickerrpg.ui;
 
+import clickerrpg.Equipment;
 import clickerrpg.MainClass;
+import java.awt.Font;
+import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 
 /**
@@ -9,7 +13,7 @@ import javax.swing.JLabel;
  * @author Chong Wai Kit
  */
 public class InventoryUI extends javax.swing.JFrame {
-
+    
     private static int page = 1;
 
     /**
@@ -28,11 +32,16 @@ public class InventoryUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        buttonGroup1 = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        lblItemName = new javax.swing.JLabel();
+        lblItemIcon = new javax.swing.JLabel();
+        lblItemStats = new javax.swing.JLabel();
+        btnEquip = new javax.swing.JButton();
+        btnSell = new javax.swing.JButton();
+        lblSellPrice = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         btnPrevPage = new javax.swing.JButton();
         btnNextPage = new javax.swing.JButton();
@@ -66,6 +75,7 @@ public class InventoryUI extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
         backButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -83,24 +93,101 @@ public class InventoryUI extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.setMaximumSize(new java.awt.Dimension(335, 453));
+        jPanel1.setMinimumSize(new java.awt.Dimension(335, 453));
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Details");
 
+        lblItemName.setBackground(new java.awt.Color(0, 0, 0));
+        lblItemName.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblItemName.setText("Item Name");
+
+        lblItemIcon.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblItemIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblItemIcon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblItemIcon.setMaximumSize(new java.awt.Dimension(160, 160));
+        lblItemIcon.setMinimumSize(new java.awt.Dimension(160, 160));
+        lblItemIcon.setPreferredSize(new java.awt.Dimension(160, 160));
+
+        lblItemStats.setBackground(new java.awt.Color(0, 0, 0));
+        lblItemStats.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblItemStats.setText("Stats");
+        lblItemStats.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        btnEquip.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnEquip.setText("Equip");
+        btnEquip.setMaximumSize(new java.awt.Dimension(150, 35));
+        btnEquip.setMinimumSize(new java.awt.Dimension(150, 35));
+        btnEquip.setPreferredSize(new java.awt.Dimension(150, 35));
+        btnEquip.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEquipActionPerformed(evt);
+            }
+        });
+
+        btnSell.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSell.setText("Sell");
+        btnSell.setMaximumSize(new java.awt.Dimension(150, 35));
+        btnSell.setMinimumSize(new java.awt.Dimension(150, 35));
+        btnSell.setPreferredSize(new java.awt.Dimension(150, 35));
+        btnSell.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSellActionPerformed(evt);
+            }
+        });
+
+        lblSellPrice.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblSellPrice.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        lblSellPrice.setText("Sell Price");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblItemName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblItemStats, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblItemIcon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(82, 82, 82))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(btnEquip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(lblSellPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnSell, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap())))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lblItemIcon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblItemName, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblItemStats, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnEquip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSell, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSellPrice))
+                .addContainerGap())
         );
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
@@ -130,6 +217,11 @@ public class InventoryUI extends javax.swing.JFrame {
         lblItem1x1.setMinimumSize(new java.awt.Dimension(70, 70));
         lblItem1x1.setNextFocusableComponent(lblItem1x2);
         lblItem1x1.setPreferredSize(new java.awt.Dimension(80, 80));
+        lblItem1x1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                itemClicked(evt);
+            }
+        });
 
         lblItem1x2.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblItem1x2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -465,6 +557,22 @@ public class InventoryUI extends javax.swing.JFrame {
             }
         });
 
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -480,15 +588,11 @@ public class InventoryUI extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(0, 185, Short.MAX_VALUE)
-                                .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jLabel1))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -501,20 +605,54 @@ public class InventoryUI extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(backButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(47, Short.MAX_VALUE))
+                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
+        MainClass.gameUI.updateGameUI();
         this.setVisible(false);
     }//GEN-LAST:event_backButtonActionPerformed
+
+    private void itemClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemClicked
+        JLabel jLabel = (JLabel) evt.getSource();
+        showDetails((Equipment) jLabel.getClientProperty("equipment"));
+    }//GEN-LAST:event_itemClicked
+
+    private void btnEquipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEquipActionPerformed
+        JButton jButton = (JButton) evt.getSource();
+        Equipment equipment = (Equipment) jButton.getClientProperty("equipment");
+        
+        if (equipment.isEquipped()) {
+            MainClass.player.unequipEquipment(equipment);
+        } else {
+            MainClass.player.equipEquipment(equipment);
+        }
+        
+        MainClass.equipmentInventory.sortItem(equipment);
+        
+        loadData();
+        showDetails(equipment);
+    }//GEN-LAST:event_btnEquipActionPerformed
+
+    private void btnSellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSellActionPerformed
+        JButton jButton = (JButton) evt.getSource();
+        Equipment equipment = (Equipment) jButton.getClientProperty("equipment");
+        
+        equipment.unequip();
+        MainClass.equipmentInventory.remove(equipment);
+        MainClass.player.addGold(equipment.getPrice());
+        
+        clearData();
+        loadData();
+    }//GEN-LAST:event_btnSellActionPerformed
 
     /**
      * @param args the command line arguments
@@ -550,15 +688,96 @@ public class InventoryUI extends javax.swing.JFrame {
             }
         });
     }
-
+    
     public void startUp() {
         setAlwaysOnTop(true);
         setLocationRelativeTo(null);
+        setMouseListeners();
         loadData();
         setVisible(true);
     }
-
+    
+    private void setMouseListeners() {
+        JLabel[] labels
+                = {lblItem1x1, lblItem1x2, lblItem1x3, lblItem1x4, lblItem1x5,
+                    lblItem2x1, lblItem2x2, lblItem2x3, lblItem2x4, lblItem2x5,
+                    lblItem3x1, lblItem3x2, lblItem3x3, lblItem3x4, lblItem3x5,
+                    lblItem4x1, lblItem4x2, lblItem4x3, lblItem4x4, lblItem4x5};
+        
+        for (JLabel label : labels) {
+            label.addMouseListener(new java.awt.event.MouseAdapter() {
+                public void mouseClicked(java.awt.event.MouseEvent evt) {
+                    itemClicked(evt);
+                }
+            });
+        }
+    }
+    
+    private void showDetails(Equipment equipment) {
+        lblItemIcon.setIcon(new ImageIcon(equipment.getImageIcon().getImage().getScaledInstance(160, 160, Image.SCALE_SMOOTH)));
+        lblItemName.setText(equipment.getEqName());
+        
+        btnEquip.setVisible(true);
+        btnSell.setVisible(true);
+        
+        String itemStats = "";
+        
+        itemStats += "<html><p>" + equipment.getEqSlot();
+        if (equipment.isEquipped()) {
+            itemStats += " ( EQUIPPED )";
+        }
+        if (equipment.getAttack() != 0) {
+            itemStats += "<br>Attack : " + equipment.getAttack();
+        }
+        if (equipment.getDefense() != 0) {
+            itemStats += "<br>Defense : " + equipment.getDefense();
+        }
+        if (equipment.getHealth() != 0) {
+            itemStats += "<br>Health : " + equipment.getHealth();
+        }
+        
+        itemStats += "</p></html>";
+        
+        lblItemStats.setText(itemStats);
+        
+        if (equipment.isEquipped()) {
+            btnEquip.setText("Unequip");
+        } else {
+            btnEquip.setText("Equip");
+        }
+        
+        btnEquip.putClientProperty("equipment", equipment);
+        btnSell.putClientProperty("equipment", equipment);
+        
+        lblSellPrice.setText(String.valueOf(equipment.getPrice()));
+    }
+    
+    private void clearData() {
+        JLabel[] labels
+                = {lblItem1x1, lblItem1x2, lblItem1x3, lblItem1x4, lblItem1x5,
+                    lblItem2x1, lblItem2x2, lblItem2x3, lblItem2x4, lblItem2x5,
+                    lblItem3x1, lblItem3x2, lblItem3x3, lblItem3x4, lblItem3x5,
+                    lblItem4x1, lblItem4x2, lblItem4x3, lblItem4x4, lblItem4x5};
+        
+        for (int i = 0; i < 20; i++) {
+            JLabel label = labels[i];
+            label.setIcon(null);
+            label.setText(null);
+        }
+        
+    }
+    
     private void loadData() {
+        lblItemIcon.setIcon(null);
+        lblItemName.setText(null);
+        lblItemStats.setText(null);
+        btnEquip.setVisible(false);
+        btnSell.setVisible(false);
+        lblSellPrice.setText(null);
+        
+        btnEquip.putClientProperty("equipment", null);
+        btnSell.putClientProperty("equipment", null);
+        
         JLabel[] labels
                 = {lblItem1x1, lblItem1x2, lblItem1x3, lblItem1x4, lblItem1x5,
                     lblItem2x1, lblItem2x2, lblItem2x3, lblItem2x4, lblItem2x5,
@@ -566,18 +785,41 @@ public class InventoryUI extends javax.swing.JFrame {
                     lblItem4x1, lblItem4x2, lblItem4x3, lblItem4x4, lblItem4x5};
 
         // i = iterator for Equipment, j = iterator for jlabel
-        for (int i = (page * 20) - 20, j = 0;
-                i < MainClass.equipmentInventory.getLength() && i < (page * 20) - 1;
+        for (int i = (page * 20) - 20, j = (page - 1) * -20;
+                i < MainClass.equipmentInventory.getLength() && j < 20;
                 i++, j++) {
-            labels[j].setIcon(MainClass.equipmentInventory.getEntry(i).getImageIcon());
+            if (j < 0) {
+                break;
+            }
+            JLabel label = labels[j];
+            Equipment equipment = MainClass.equipmentInventory.getEntry(i);
+            
+            label.putClientProperty("equipment", equipment);
+            label.setIcon(equipment.getImageIcon());
+            
+            if (equipment.isEquipped()) {
+                label.setHorizontalTextPosition(JLabel.LEFT);
+                label.setVerticalTextPosition(JLabel.TOP);
+                
+                label.setIcon(equipment.getImageIcon());
+                label.setIconTextGap(-75);
+                
+                label.setFont(new Font("Arial", Font.BOLD, 25));
+                label.setText("E");
+                
+            } else {
+                label.setText("");
+            }
         }
     }
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
+    private javax.swing.JButton btnEquip;
     private javax.swing.JButton btnNextPage;
     private javax.swing.JButton btnPrevPage;
-    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton btnSell;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
@@ -586,6 +828,7 @@ public class InventoryUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JLabel lblItem1x1;
     private javax.swing.JLabel lblItem1x2;
     private javax.swing.JLabel lblItem1x3;
@@ -606,7 +849,11 @@ public class InventoryUI extends javax.swing.JFrame {
     private javax.swing.JLabel lblItem4x3;
     private javax.swing.JLabel lblItem4x4;
     private javax.swing.JLabel lblItem4x5;
+    private javax.swing.JLabel lblItemIcon;
+    private javax.swing.JLabel lblItemName;
+    private javax.swing.JLabel lblItemStats;
     private javax.swing.JLabel lblPage;
+    private javax.swing.JLabel lblSellPrice;
     private javax.swing.JLabel lblSortAll;
     private javax.swing.JLabel lblSortBoots;
     private javax.swing.JLabel lblSortChest;

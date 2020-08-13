@@ -100,6 +100,49 @@ public class Player {
                 break;
         }
     }
+     public void unequipEquipment(Equipment equipment){
+        switch (equipment.getEqSlot()){
+            case "Helmet":
+                if (helmet != null) {
+                    helmet.unequip();
+                    equipment.unequip();
+                    helmet = null;
+                }
+                break;            
+            case "Chest":
+                if (chest != null) {
+                    chest.unequip();                    
+                    equipment.unequip();
+                    chest = null;
+                }
+                break;         
+            case "Leggings":
+                if (leggings != null) {
+                    leggings.unequip();                    
+                    equipment.unequip();
+                    leggings = null;
+                }
+                break;         
+            case "Boots":
+                if (boots != null) {
+                    boots.unequip();
+                    equipment.unequip();
+                    boots = null;
+                }
+                break;         
+            case "Weapon":
+                if (weapon != null) {
+                    weapon.unequip();
+                    equipment.unequip();
+                    weapon = null;
+                }
+                break;
+        }
+    }
+    
+    public void addGold(double increase){
+        this.gold += increase;
+    }
     
     public void deductGold(double deduction){
         this.gold -= deduction;
