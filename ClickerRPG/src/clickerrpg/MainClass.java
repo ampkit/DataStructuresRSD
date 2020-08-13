@@ -25,11 +25,10 @@ public class MainClass {
     public static double helperTotalDamage;
 
     public static void main(String args[]) {
-        player = new Player();
-        enemy = new Enemy("test", 100, 100, 1, 1, 10);
         initializeData();
         gameUI.updateGameUI();
         gameUI.startUp();
+        
         Timer timer = new Timer();
         timer.schedule(new HelperAttack(), 0, 1000);
     }
@@ -48,10 +47,13 @@ public class MainClass {
 
             gameUI.updateGameUI();
         }
-
     }
 
     public static void initializeData() {
+        player = new Player();
+        enemy = new Enemy("test", 100, 100, 1, 1, 10);
+
+        
         upgradeList.add(new Upgrade("Hp+10", 0, 10, 0, 30));
         upgradeList.add(new Upgrade("Att+10", 10, 0, 0, 50));
         upgradeList.add(new Upgrade("Df+10", 0, 0, 10, 50));
@@ -67,6 +69,7 @@ public class MainClass {
         helperList.add(new Helper(1, "Waikit, the xueba", 10, 100, 1, 50, "HelperWaikit.png"));
 
         // </editor-fold>
+        
         // <editor-fold defaultstate="collapsed" desc="Enemies">
         enemyQueue.enqueue(new Enemy("Test1", 100, 100, 10, 1, 10));
         enemyQueue.enqueue(new Enemy("Test2", 100, 100, 10, 2, 30));
@@ -80,9 +83,10 @@ public class MainClass {
         enemyQueue.enqueue(new Enemy("Test10", 100, 100, 60, 10, 60));
         // </editor-fold>
 
-        //add test inventory data
+        // <editor-fold defaultstate="collapsed" desc="Starting Items">
         equipmentInventory.add(new Equipment("Wooden Sword"));
-        equipmentInventory.add(new Equipment("Tin Sword"));
+        // </editor-fold>
+
 
     }
 

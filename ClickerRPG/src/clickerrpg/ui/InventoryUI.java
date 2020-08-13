@@ -13,8 +13,9 @@ import javax.swing.JLabel;
  * @author Chong Wai Kit
  */
 public class InventoryUI extends javax.swing.JFrame {
-    
+
     private static int page = 1;
+    private String sortMode = "All";
 
     /**
      * Creates new form InventoryUI
@@ -198,12 +199,22 @@ public class InventoryUI extends javax.swing.JFrame {
         btnPrevPage.setMaximumSize(new java.awt.Dimension(150, 35));
         btnPrevPage.setMinimumSize(new java.awt.Dimension(150, 35));
         btnPrevPage.setPreferredSize(new java.awt.Dimension(150, 35));
+        btnPrevPage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPrevPageActionPerformed(evt);
+            }
+        });
 
         btnNextPage.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnNextPage.setLabel("Next Page");
         btnNextPage.setMaximumSize(new java.awt.Dimension(150, 35));
         btnNextPage.setMinimumSize(new java.awt.Dimension(150, 35));
         btnNextPage.setPreferredSize(new java.awt.Dimension(150, 35));
+        btnNextPage.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextPageActionPerformed(evt);
+            }
+        });
 
         lblPage.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblPage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -358,6 +369,7 @@ public class InventoryUI extends javax.swing.JFrame {
 
         lblSortAll.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblSortAll.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_All.png"))); // NOI18N
         lblSortAll.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lblSortAll.setMaximumSize(new java.awt.Dimension(70, 70));
         lblSortAll.setMinimumSize(new java.awt.Dimension(70, 70));
@@ -365,6 +377,7 @@ public class InventoryUI extends javax.swing.JFrame {
 
         lblSortWeapon.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblSortWeapon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortWeapon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Weapon.png"))); // NOI18N
         lblSortWeapon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lblSortWeapon.setMaximumSize(new java.awt.Dimension(70, 70));
         lblSortWeapon.setMinimumSize(new java.awt.Dimension(70, 70));
@@ -372,6 +385,7 @@ public class InventoryUI extends javax.swing.JFrame {
 
         lblSortHelmet.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblSortHelmet.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortHelmet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Helmet.png"))); // NOI18N
         lblSortHelmet.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lblSortHelmet.setMaximumSize(new java.awt.Dimension(70, 70));
         lblSortHelmet.setMinimumSize(new java.awt.Dimension(70, 70));
@@ -379,6 +393,7 @@ public class InventoryUI extends javax.swing.JFrame {
 
         lblSortChest.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblSortChest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortChest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Chest.png"))); // NOI18N
         lblSortChest.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lblSortChest.setMaximumSize(new java.awt.Dimension(70, 70));
         lblSortChest.setMinimumSize(new java.awt.Dimension(70, 70));
@@ -386,6 +401,7 @@ public class InventoryUI extends javax.swing.JFrame {
 
         lblSortLeggings.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblSortLeggings.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortLeggings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Leggings.png"))); // NOI18N
         lblSortLeggings.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lblSortLeggings.setMaximumSize(new java.awt.Dimension(70, 70));
         lblSortLeggings.setMinimumSize(new java.awt.Dimension(70, 70));
@@ -393,6 +409,7 @@ public class InventoryUI extends javax.swing.JFrame {
 
         lblSortBoots.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblSortBoots.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortBoots.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Boots.png"))); // NOI18N
         lblSortBoots.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lblSortBoots.setMaximumSize(new java.awt.Dimension(70, 70));
         lblSortBoots.setMinimumSize(new java.awt.Dimension(70, 70));
@@ -629,15 +646,18 @@ public class InventoryUI extends javax.swing.JFrame {
     private void btnEquipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEquipActionPerformed
         JButton jButton = (JButton) evt.getSource();
         Equipment equipment = (Equipment) jButton.getClientProperty("equipment");
-        
+
         if (equipment.isEquipped()) {
             MainClass.player.unequipEquipment(equipment);
         } else {
-            MainClass.player.equipEquipment(equipment);
+            Equipment unequippedItem = MainClass.player.equipEquipment(equipment);
+            if (unequippedItem != null) {
+                MainClass.equipmentInventory.sortItem(unequippedItem);
+            }
         }
-        
+
         MainClass.equipmentInventory.sortItem(equipment);
-        
+
         loadData();
         showDetails(equipment);
     }//GEN-LAST:event_btnEquipActionPerformed
@@ -645,14 +665,24 @@ public class InventoryUI extends javax.swing.JFrame {
     private void btnSellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSellActionPerformed
         JButton jButton = (JButton) evt.getSource();
         Equipment equipment = (Equipment) jButton.getClientProperty("equipment");
-        
+
         equipment.unequip();
         MainClass.equipmentInventory.remove(equipment);
         MainClass.player.addGold(equipment.getPrice());
-        
+
         clearData();
         loadData();
     }//GEN-LAST:event_btnSellActionPerformed
+
+    private void btnNextPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextPageActionPerformed
+        page++;
+        loadData();
+    }//GEN-LAST:event_btnNextPageActionPerformed
+
+    private void btnPrevPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrevPageActionPerformed
+        page--;
+        loadData();
+    }//GEN-LAST:event_btnPrevPageActionPerformed
 
     /**
      * @param args the command line arguments
@@ -688,22 +718,24 @@ public class InventoryUI extends javax.swing.JFrame {
             }
         });
     }
-    
+
     public void startUp() {
+        page = 1;
+        sortMode = "All";
         setAlwaysOnTop(true);
         setLocationRelativeTo(null);
         setMouseListeners();
         loadData();
         setVisible(true);
     }
-    
+
     private void setMouseListeners() {
         JLabel[] labels
                 = {lblItem1x1, lblItem1x2, lblItem1x3, lblItem1x4, lblItem1x5,
                     lblItem2x1, lblItem2x2, lblItem2x3, lblItem2x4, lblItem2x5,
                     lblItem3x1, lblItem3x2, lblItem3x3, lblItem3x4, lblItem3x5,
                     lblItem4x1, lblItem4x2, lblItem4x3, lblItem4x4, lblItem4x5};
-        
+
         for (JLabel label : labels) {
             label.addMouseListener(new java.awt.event.MouseAdapter() {
                 public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -711,17 +743,64 @@ public class InventoryUI extends javax.swing.JFrame {
                 }
             });
         }
+
+        lblSortAll.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sortMode = "All";
+                page = 1;
+                loadData();
+            }
+        });
+
+        lblSortWeapon.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sortMode = "Weapon";
+                page = 1;
+                loadData();
+            }
+        });
+
+        lblSortHelmet.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sortMode = "Helemt";
+                page = 1;
+                loadData();
+            }
+        });
+        lblSortChest.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sortMode = "Chest";
+                page = 1;
+                loadData();
+            }
+        });
+
+        lblSortLeggings.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sortMode = "Leggings";
+                page = 1;
+                loadData();
+            }
+        });
+
+        lblSortBoots.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sortMode = "Boots";
+                page = 1;
+                loadData();
+            }
+        });
     }
-    
+
     private void showDetails(Equipment equipment) {
         lblItemIcon.setIcon(new ImageIcon(equipment.getImageIcon().getImage().getScaledInstance(160, 160, Image.SCALE_SMOOTH)));
         lblItemName.setText(equipment.getEqName());
-        
+
         btnEquip.setVisible(true);
         btnSell.setVisible(true);
-        
+
         String itemStats = "";
-        
+
         itemStats += "<html><p>" + equipment.getEqSlot();
         if (equipment.isEquipped()) {
             itemStats += " ( EQUIPPED )";
@@ -735,48 +814,51 @@ public class InventoryUI extends javax.swing.JFrame {
         if (equipment.getHealth() != 0) {
             itemStats += "<br>Health : " + equipment.getHealth();
         }
-        
+
         itemStats += "</p></html>";
-        
+
         lblItemStats.setText(itemStats);
-        
+
         if (equipment.isEquipped()) {
             btnEquip.setText("Unequip");
         } else {
             btnEquip.setText("Equip");
         }
-        
+
         btnEquip.putClientProperty("equipment", equipment);
         btnSell.putClientProperty("equipment", equipment);
-        
+
         lblSellPrice.setText(String.valueOf(equipment.getPrice()));
     }
-    
+
     private void clearData() {
         JLabel[] labels
                 = {lblItem1x1, lblItem1x2, lblItem1x3, lblItem1x4, lblItem1x5,
                     lblItem2x1, lblItem2x2, lblItem2x3, lblItem2x4, lblItem2x5,
                     lblItem3x1, lblItem3x2, lblItem3x3, lblItem3x4, lblItem3x5,
                     lblItem4x1, lblItem4x2, lblItem4x3, lblItem4x4, lblItem4x5};
-        
+
         for (int i = 0; i < 20; i++) {
             JLabel label = labels[i];
             label.setIcon(null);
             label.setText(null);
         }
-        
-    }
-    
-    private void loadData() {
+
         lblItemIcon.setIcon(null);
         lblItemName.setText(null);
         lblItemStats.setText(null);
         btnEquip.setVisible(false);
         btnSell.setVisible(false);
         lblSellPrice.setText(null);
-        
+
         btnEquip.putClientProperty("equipment", null);
         btnSell.putClientProperty("equipment", null);
+    }
+
+    private void loadData() {
+        clearData();
+
+        lblPage.setText("Page " + String.valueOf(page));
         
         JLabel[] labels
                 = {lblItem1x1, lblItem1x2, lblItem1x3, lblItem1x4, lblItem1x5,
@@ -785,32 +867,50 @@ public class InventoryUI extends javax.swing.JFrame {
                     lblItem4x1, lblItem4x2, lblItem4x3, lblItem4x4, lblItem4x5};
 
         // i = iterator for Equipment, j = iterator for jlabel
-        for (int i = (page * 20) - 20, j = (page - 1) * -20;
+        for (int i = (page * 20) - 20, j = 0;
                 i < MainClass.equipmentInventory.getLength() && j < 20;
                 i++, j++) {
-            if (j < 0) {
-                break;
-            }
             JLabel label = labels[j];
             Equipment equipment = MainClass.equipmentInventory.getEntry(i);
-            
+
+            // if eqSlot is not All & eqSlot not equal, skip to next i
+            if (!sortMode.equals("All") && !sortMode.equals(equipment.getEqSlot())) {
+                j--;
+                break;
+            }
+
             label.putClientProperty("equipment", equipment);
             label.setIcon(equipment.getImageIcon());
-            
+
             if (equipment.isEquipped()) {
                 label.setHorizontalTextPosition(JLabel.LEFT);
                 label.setVerticalTextPosition(JLabel.TOP);
-                
+
                 label.setIcon(equipment.getImageIcon());
                 label.setIconTextGap(-75);
-                
+
                 label.setFont(new Font("Arial", Font.BOLD, 25));
                 label.setText("E");
-                
+
             } else {
                 label.setText("");
             }
+
+            //disable next page if j is not full
+            if (j == 19) {
+                btnNextPage.setEnabled(true);
+            } else {
+                btnNextPage.setEnabled(false);
+            }
+
         }
+
+        if (page == 1) {
+            btnPrevPage.setEnabled(false);
+        } else {
+            btnPrevPage.setEnabled(true);
+        }
+
     }
 
 

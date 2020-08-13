@@ -1,37 +1,37 @@
 package clickerrpg;
 
 public class Player {
-    
+
     int id;
     String name;
-    
+
     double curHealth;
     double maxHealth;
     double attack;
     double defense;
-    
+
     Equipment helmet;
     Equipment chest;
     Equipment leggings;
     Equipment boots;
-    
+
     Equipment weapon;
-    
+
     double gold;
-    
+
     public Player() {
         this.name = "testPlayer";
-        
+
         this.curHealth = 100;
         this.maxHealth = 100;
-        
+
         this.attack = 10;
         this.defense = 1;
-        
+
         this.gold = 0;
     }
 
-    public Player(int id, String name){
+    public Player(int id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -58,78 +58,90 @@ public class Player {
         }
         return true;
     }
-    
-    //add function for increase gold
-    
-    public void equipEquipment(Equipment equipment){
-        switch (equipment.getEqSlot()){
+
+    //returns unequippedItem, if any
+    public Equipment equipEquipment(Equipment equipment) {
+        Equipment unequippedItem = null;
+        switch (equipment.getEqSlot()) {
             case "Helmet":
                 if (helmet != null) {
                     helmet.unequip();
+                    unequippedItem = helmet;
                 }
                 equipment.equip();
                 helmet = equipment;
-                break;            
+                break;
             case "Chest":
                 if (chest != null) {
                     chest.unequip();
+                    unequippedItem = chest;
+
                 }
                 equipment.equip();
                 chest = equipment;
-                break;         
+                break;
             case "Leggings":
                 if (leggings != null) {
                     leggings.unequip();
+                    unequippedItem = leggings;
+
                 }
                 equipment.equip();
                 helmet = equipment;
-                break;         
+                break;
             case "Boots":
                 if (boots != null) {
                     boots.unequip();
+                    unequippedItem = boots;
+
                 }
                 equipment.equip();
                 boots = equipment;
-                break;         
+                break;
             case "Weapon":
                 if (weapon != null) {
                     weapon.unequip();
+                    unequippedItem = weapon;
+
                 }
                 equipment.equip();
                 weapon = equipment;
                 break;
         }
+        
+        return unequippedItem;
     }
-     public void unequipEquipment(Equipment equipment){
-        switch (equipment.getEqSlot()){
+
+    public void unequipEquipment(Equipment equipment) {
+        switch (equipment.getEqSlot()) {
             case "Helmet":
                 if (helmet != null) {
                     helmet.unequip();
                     equipment.unequip();
                     helmet = null;
                 }
-                break;            
+                break;
             case "Chest":
                 if (chest != null) {
-                    chest.unequip();                    
+                    chest.unequip();
                     equipment.unequip();
                     chest = null;
                 }
-                break;         
+                break;
             case "Leggings":
                 if (leggings != null) {
-                    leggings.unequip();                    
+                    leggings.unequip();
                     equipment.unequip();
                     leggings = null;
                 }
-                break;         
+                break;
             case "Boots":
                 if (boots != null) {
                     boots.unequip();
                     equipment.unequip();
                     boots = null;
                 }
-                break;         
+                break;
             case "Weapon":
                 if (weapon != null) {
                     weapon.unequip();
@@ -139,15 +151,15 @@ public class Player {
                 break;
         }
     }
-    
-    public void addGold(double increase){
+
+    public void addGold(double increase) {
         this.gold += increase;
     }
-    
-    public void deductGold(double deduction){
+
+    public void deductGold(double deduction) {
         this.gold -= deduction;
     }
-    
+
     public void setId(int id) {
         this.id = id;
     }
@@ -155,7 +167,7 @@ public class Player {
     public int getId() {
         return id;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -203,5 +215,5 @@ public class Player {
     public void setGold(double gold) {
         this.gold = gold;
     }
-    
+
 }
