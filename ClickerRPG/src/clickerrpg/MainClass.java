@@ -97,6 +97,11 @@ public class MainClass {
 
         // <editor-fold defaultstate="collapsed" desc="Starting Items">
         equipmentInventory.add(new Equipment("Wooden Sword"));
+        equipmentInventory.add(new Equipment("Leather Helmet"));
+        equipmentInventory.add(new Equipment("Leather Chestplate"));
+        equipmentInventory.add(new Equipment("Leather Leggings"));
+        equipmentInventory.add(new Equipment("Leather Boots"));
+
         // </editor-fold>
 
 
@@ -112,7 +117,6 @@ public class MainClass {
 
     
     static class HelperAttack extends TimerTask {
-
         public void run() {
             if (helperTotalDamage > 0) {
                 attack(helperTotalDamage);

@@ -2,10 +2,6 @@ package clickerrpg;
 
 import javax.swing.ImageIcon;
 
-/**
- *
- * @author Chong Wai Kit
- */
 public class Equipment implements Comparable<Equipment> {
 
     private String eqName;
@@ -32,14 +28,41 @@ public class Equipment implements Comparable<Equipment> {
     //create item based on name
     public Equipment(String eqName) {
         switch (eqName) {
+// <editor-fold defaultstate="collapsed" desc="Weapons">
             case "Wooden Sword":
                 setEquipmentAttributes("Wooden Sword", "Weapon", 1, 0, 0, 5);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Wooden_Sword.png"));
                 break;
-            case "Tin Sword":
+            case "Iron Sword":
                 setEquipmentAttributes("Tin Sword", "Weapon", 2, 0, 0, 10);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Tin_Sword.png"));
                 break;
+
+// </editor-fold>
+// <editor-fold defaultstate="collapsed" desc="Helmets">
+            case "Leather Helmet":
+                setEquipmentAttributes("Leather Helmet", "Helmet", 0, 10, 1, 5);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Leather_Helmet.png"));
+                break;
+// </editor-fold>
+// <editor-fold defaultstate="collapsed" desc="Chests">
+            case "Leather Chestplate":
+                setEquipmentAttributes("Leather Chestplate", "Chest", 0, 10, 1, 5);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Leather_Chestplate.png"));
+                break;
+// </editor-fold>
+// <editor-fold defaultstate="collapsed" desc="Leggings">
+            case "Leather Leggings":
+                setEquipmentAttributes("Leather Leggings", "Leggings", 0, 10, 1, 5);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Leather_Leggings.png"));
+                break;
+// </editor-fold>
+// <editor-fold defaultstate="collapsed" desc="Boots">
+            case "Leather Boots":
+                setEquipmentAttributes("Leather Boots", "Boots", 0, 10, 1, 5);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Leather_Boots.png"));
+                break;
+// </editor-fold>
             default:
                 setEquipmentAttributes("Error", "Error", 0, 0, 0, 0);
                 break;
@@ -75,8 +98,48 @@ public class Equipment implements Comparable<Equipment> {
         }
 
         //compare by slot
-        if (this.eqSlot != comparedEquipment.eqSlot) {
-            return this.eqSlot.compareTo(comparedEquipment.eqSlot);
+        // Order : Weapon -> Helmet -> Chest -> Leggings -> Boots
+        int thisSlotValue = 0;
+        int comparedSlotValue = 0;
+        ;
+        switch (this.eqSlot) {
+            case "Weapon":
+                thisSlotValue = 1;
+                break;
+            case "Helmet":
+                thisSlotValue = 2;
+                break;
+            case "Chest":
+                thisSlotValue = 3;
+                break;
+            case "Leggings":
+                thisSlotValue = 4;
+                break;
+            case "Boots":
+                thisSlotValue = 5;
+                break;
+        }
+
+        switch (comparedEquipment.eqSlot) {
+            case "Weapon":
+                comparedSlotValue = 1;
+                break;
+            case "Helmet":
+                comparedSlotValue = 2;
+                break;
+            case "Chest":
+                comparedSlotValue = 3;
+                break;
+            case "Leggings":
+                comparedSlotValue = 4;
+                break;
+            case "Boots":
+                comparedSlotValue = 5;
+                break;
+        }
+
+        if ((thisSlotValue - comparedSlotValue) != 0) {
+            return thisSlotValue - comparedSlotValue;
         }
 
         //compare by stats

@@ -235,7 +235,7 @@ public class GameUI extends javax.swing.JFrame {
         jButton4.setBackground(new java.awt.Color(51, 51, 51));
         jButton4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton4.setForeground(new java.awt.Color(153, 153, 153));
-        jButton4.setText("Options");
+        jButton4.setText("Stats");
         jButton4.setFocusPainted(false);
         jButton4.setMaximumSize(new java.awt.Dimension(200, 100));
         jButton4.setMinimumSize(new java.awt.Dimension(200, 100));
@@ -359,7 +359,8 @@ public class GameUI extends javax.swing.JFrame {
 
     private void btnInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventoryActionPerformed
         InventoryUI inventoryUI = new InventoryUI();
-        inventoryUI.startUp();
+        inventoryUI.startUp();        
+        this.setEnabled(false);
     }//GEN-LAST:event_btnInventoryActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed

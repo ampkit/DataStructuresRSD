@@ -224,8 +224,8 @@ public class InventoryUI extends javax.swing.JFrame {
         lblItem1x1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblItem1x1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblItem1x1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lblItem1x1.setMaximumSize(new java.awt.Dimension(70, 70));
-        lblItem1x1.setMinimumSize(new java.awt.Dimension(70, 70));
+        lblItem1x1.setMaximumSize(new java.awt.Dimension(80, 80));
+        lblItem1x1.setMinimumSize(new java.awt.Dimension(80, 80));
         lblItem1x1.setNextFocusableComponent(lblItem1x2);
         lblItem1x1.setPreferredSize(new java.awt.Dimension(80, 80));
         lblItem1x1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -635,6 +635,7 @@ public class InventoryUI extends javax.swing.JFrame {
 
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         MainClass.gameUI.updateGameUI();
+        MainClass.gameUI.setEnabled(true);
         this.setVisible(false);
     }//GEN-LAST:event_backButtonActionPerformed
 
@@ -722,7 +723,6 @@ public class InventoryUI extends javax.swing.JFrame {
     public void startUp() {
         page = 1;
         sortMode = "All";
-        setAlwaysOnTop(true);
         setLocationRelativeTo(null);
         setMouseListeners();
         loadData();
