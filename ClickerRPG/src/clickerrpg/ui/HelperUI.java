@@ -796,6 +796,7 @@ public class HelperUI extends javax.swing.JFrame {
             btnPrevPage.setEnabled(true);
             btnNextPage.setEnabled(false);
         }
+        
     }
 
     private void hireBtnEvent(Helper helper) {
@@ -807,12 +808,14 @@ public class HelperUI extends javax.swing.JFrame {
         } else if (helper.isAssigned() == false) {
             helper.setAssigned(true);
             MainClass.assignedHelperList.add(helper);
+            
         } else {
             helper.setAssigned(false);
             MainClass.assignedHelperList.remove(helper);
         }
         MainClass.gameUI.updateHelper();
         MainClass.gameUI.updateGameUI();
+        MainClass.updateHelperDamage();
         updateUI();
     }
 
@@ -821,6 +824,7 @@ public class HelperUI extends javax.swing.JFrame {
         helper.upgrade();
         MainClass.gameUI.updateGameUI();
         updateUI();
+        MainClass.updateHelperDamage();
     }
 
     private void updatePanel1Control(Helper helper) {

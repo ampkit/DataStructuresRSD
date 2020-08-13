@@ -1,6 +1,5 @@
 package clickerrpg;
 
-
 import ChongWaiKit.*;
 import CheongKaMeng.*;
 import IsabelLai.*;
@@ -8,6 +7,9 @@ import OoiPingXiu.*;
 import ChongJingYi.*;
 
 import clickerrpg.ui.GameUI;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class MainClass {
 
@@ -20,6 +22,7 @@ public class MainClass {
     public static SLListInterface<Equipment> equipmentInventory = new SortedLinkedList<Equipment>();
     public static UpgradeListInterface<Upgrade> upgradeList = new UpgradeList<Upgrade>();
     public static GameUI gameUI = new GameUI();
+    public static double helperTotalDamage;
 
     public static void main(String args[]) {
         player = new Player();
@@ -27,10 +30,12 @@ public class MainClass {
         initializeData();
         gameUI.updateGameUI();
         gameUI.startUp();
+        Timer timer = new Timer();
+        timer.schedule(new HelperAttack(), 0, 1000);
     }
 
-    public static void attack() {
-        enemy.curHealth = enemy.curHealth - (player.attack - enemy.defense);
+    public static void attack(double damage) {
+        enemy.curHealth = enemy.curHealth - (damage - enemy.defense);
 
         if (enemy.curHealth <= 0) {
             player.gold += 10;
@@ -47,8 +52,6 @@ public class MainClass {
         upgradeList.add(new Upgrade("Hp+10", 0, 10, 0, 30));
         upgradeList.add(new Upgrade("Att+10", 10, 0, 0, 50));
         upgradeList.add(new Upgrade("Df+10", 0, 0, 10, 50));
-        
-        
 
         // <editor-fold defaultstate="collapsed" desc="Helpers">
         helperList.add(new Helper(2, "Helper2", 20, 200, 1, 100, "HelperWaikit.png"));
@@ -78,5 +81,20 @@ public class MainClass {
         equipmentInventory.add(new Equipment("Wooden Sword"));
         equipmentInventory.add(new Equipment("Tin Sword"));
 
+    }
+
+    public static void updateHelperDamage() {
+        helperTotalDamage = 0;
+        for (int i = 0; i < assignedHelperList.size(); i++) {
+            helperTotalDamage += assignedHelperList.get(i).getDamage();
+            System.out.println(assignedHelperList.get(i).getDamage());
+        }
+    }
+
+    static class HelperAttack extends TimerTask {
+
+        public void run() {
+            attack(helperTotalDamage);
+        }
     }
 }

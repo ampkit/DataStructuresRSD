@@ -349,7 +349,7 @@ public class GameUI extends javax.swing.JFrame {
     
     // <editor-fold defaultstate="collapsed" desc="Events">                          
     private void gameScreenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gameScreenMouseClicked
-        MainClass.attack();
+        MainClass.attack(MainClass.player.getAttack());
     }//GEN-LAST:event_gameScreenMouseClicked
 
     private void btnInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventoryActionPerformed
@@ -431,6 +431,7 @@ public class GameUI extends javax.swing.JFrame {
                 lblHelper3.setIcon(new ImageIcon(imageFolderPath + MainClass.assignedHelperList.get(2).getImageUrl()));
                 break;
         }
+        
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
