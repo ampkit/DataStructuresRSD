@@ -1,7 +1,5 @@
 package clickerrpg.ui;
-import clickerrpg.Enemy;
 import clickerrpg.MainClass;
-import clickerrpg.Player;
 import javax.swing.ImageIcon;
 
 public class GameUI extends javax.swing.JFrame {
@@ -19,7 +17,7 @@ public class GameUI extends javax.swing.JFrame {
         gameUIPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        lblStage = new javax.swing.JLabel();
         labelGold = new javax.swing.JLabel();
         gameScreen = new javax.swing.JLayeredPane();
         jLabel5 = new javax.swing.JLabel();
@@ -55,13 +53,13 @@ public class GameUI extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(255, 215, 0));
         jLabel1.setText("$");
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 255, 255));
-        jLabel2.setText("D");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Stage");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 255, 255));
-        jLabel3.setText("999 999 999");
+        lblStage.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lblStage.setForeground(new java.awt.Color(255, 255, 255));
+        lblStage.setText("999");
 
         labelGold.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         labelGold.setForeground(new java.awt.Color(255, 215, 0));
@@ -305,24 +303,26 @@ public class GameUI extends javax.swing.JFrame {
                         .addGap(0, 8, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameUIPanelLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(gameScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 932, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(gameUIPanelLayout.createSequentialGroup()
+                                .addComponent(gameScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 932, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(14, 14, 14))
                             .addGroup(gameUIPanelLayout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(labelGold)
-                                .addGap(37, 37, 37)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel2)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel3)))
-                        .addGap(14, 14, 14))))
+                                .addComponent(lblStage)
+                                .addGap(28, 28, 28))))))
         );
         gameUIPanelLayout.setVerticalGroup(
             gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(gameUIPanelLayout.createSequentialGroup()
                 .addGroup(gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel3)
+                    .addComponent(lblStage)
                     .addComponent(labelGold)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
@@ -412,6 +412,8 @@ public class GameUI extends javax.swing.JFrame {
         enemyHealthBar.setValue((int)MainClass.enemy.getCurHealth());
         
         labelGold.setText(String.format("%.2f",MainClass.player.getGold()));
+        
+        lblStage.setText(String.valueOf(MainClass.stage));
     }
     
     public void updateHelper(){
@@ -452,7 +454,6 @@ public class GameUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -464,6 +465,7 @@ public class GameUI extends javax.swing.JFrame {
     private javax.swing.JLabel lblHelper1;
     private javax.swing.JLabel lblHelper2;
     private javax.swing.JLabel lblHelper3;
+    private javax.swing.JLabel lblStage;
     private javax.swing.JProgressBar playerHealthBar;
     // End of variables declaration//GEN-END:variables
 }
