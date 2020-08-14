@@ -7,6 +7,7 @@ import OoiPingXiu.*;
 import ChongJingYi.*;
 
 import clickerrpg.ui.GameUI;
+import clickerrpg.ui.LoginUI;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -21,10 +22,12 @@ public class MainClass {
     public static SortedHelperListInterface<Helper> assignedHelperList = new SortedHelperList<Helper>();
     public static SLListInterface<Equipment> equipmentInventory = new SortedLinkedList<Equipment>();
     public static UpgradeListInterface<Upgrade> upgradeList = new UpgradeList<Upgrade>();
+    public static LoginUI loginUI = new LoginUI();
     public static GameUI gameUI = new GameUI();
     public static double helperTotalDamage;
 
     public static void main(String args[]) {
+        loginUI.setVisible(true);
         initializeData();
         gameUI.updateGameUI();
         gameUI.startUp();
@@ -98,6 +101,7 @@ public class MainClass {
         }
     }
 
+    
     static class HelperAttack extends TimerTask {
 
         public void run() {

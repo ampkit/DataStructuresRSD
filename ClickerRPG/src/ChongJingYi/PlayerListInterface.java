@@ -15,4 +15,6 @@ public interface PlayerListInterface<T> {
     
     public int getLength();
     
+    public boolean contains(T anEntry);
+    
 }

@@ -79,6 +79,22 @@ public class PlayerList<T> implements PlayerListInterface<T> {
         return length;
     }
     
+    public boolean contains(T anEntry) {
+        boolean found = false;
+        
+        Node currentNode = firstNode;
+        
+        while(!found && (currentNode != null)){
+            if(currentNode.equals(currentNode.data)){
+                found = true;
+            }
+            else{
+                currentNode = currentNode.next;
+            }
+        }
+        return found;
+    }
+    
     //inner class
   private class Node {
 

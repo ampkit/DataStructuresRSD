@@ -1,8 +1,9 @@
 package clickerrpg;
 
+import java.util.Objects;
+
 public class Player {
 
-    int id;
     String name;
 
     double curHealth;
@@ -17,8 +18,8 @@ public class Player {
 
     Equipment weapon;
 
-    double gold;
-
+    double gold;   
+    
     public Player() {
         this.name = "testPlayer";
 
@@ -31,14 +32,30 @@ public class Player {
         this.gold = 0;
     }
 
-    public Player(int id, String name) {
-        this.id = id;
+    public Player(String name, double curHealth, double maxHealth, double attack, double defense, Equipment helmet, Equipment chest, Equipment leggings, Equipment boots, Equipment weapon, double gold) {
         this.name = name;
+        this.curHealth = curHealth;
+        this.maxHealth = maxHealth;
+        this.attack = attack;
+        this.defense = defense;
+        this.helmet = helmet;
+        this.chest = chest;
+        this.leggings = leggings;
+        this.boots = boots;
+        this.weapon = weapon;
+        this.gold = gold;
     }
+    
 
     @Override
     public String toString() {
-        return "Player{" + "id=" + id + ", name=" + name + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", helmet=" + helmet + ", chest=" + chest + ", leggings=" + leggings + ", boots=" + boots + ", weapon=" + weapon + ", gold=" + gold + '}';
+        return "Player{" + "name=" + name + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", helmet=" + helmet + ", chest=" + chest + ", leggings=" + leggings + ", boots=" + boots + ", weapon=" + weapon + ", gold=" + gold + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        return hash;
     }
 
     @Override
@@ -53,7 +70,7 @@ public class Player {
             return false;
         }
         final Player other = (Player) obj;
-        if (this.id != other.id) {
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
         return true;
@@ -160,14 +177,6 @@ public class Player {
         this.gold -= deduction;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public int getId() {
-        return id;
-    }
-
     public String getName() {
         return name;
     }
@@ -215,5 +224,47 @@ public class Player {
     public void setGold(double gold) {
         this.gold = gold;
     }
+
+    public Equipment getHelmet() {
+        return helmet;
+    }
+
+    public void setHelmet(Equipment helmet) {
+        this.helmet = helmet;
+    }
+
+    public Equipment getChest() {
+        return chest;
+    }
+
+    public void setChest(Equipment chest) {
+        this.chest = chest;
+    }
+
+    public Equipment getLeggings() {
+        return leggings;
+    }
+
+    public void setLeggings(Equipment leggings) {
+        this.leggings = leggings;
+    }
+
+    public Equipment getBoots() {
+        return boots;
+    }
+
+    public void setBoots(Equipment boots) {
+        this.boots = boots;
+    }
+
+    public Equipment getWeapon() {
+        return weapon;
+    }
+
+    public void setWeapon(Equipment weapon) {
+        this.weapon = weapon;
+    }
+    
+    
 
 }
