@@ -186,7 +186,6 @@ public class HelperUI extends javax.swing.JFrame {
         lblDamageValue.setForeground(new java.awt.Color(204, 204, 204));
         lblDamageValue.setText("100");
 
-        lblIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/HelperWaikit.png"))); // NOI18N
         lblIcon.setText("icon");
 
         lblCost.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -301,7 +300,6 @@ public class HelperUI extends javax.swing.JFrame {
         lblDamageValue1.setForeground(new java.awt.Color(204, 204, 204));
         lblDamageValue1.setText("100");
 
-        lblIcon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/HelperWaikit.png"))); // NOI18N
         lblIcon1.setText("icon");
 
         lblCost1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -418,7 +416,6 @@ public class HelperUI extends javax.swing.JFrame {
         lblDamageValue2.setForeground(new java.awt.Color(204, 204, 204));
         lblDamageValue2.setText("100");
 
-        lblIcon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/HelperWaikit.png"))); // NOI18N
         lblIcon2.setText("icon");
 
         lblCost2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -535,7 +532,6 @@ public class HelperUI extends javax.swing.JFrame {
         lblDamageValue3.setForeground(new java.awt.Color(204, 204, 204));
         lblDamageValue3.setText("100");
 
-        lblIcon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/HelperWaikit.png"))); // NOI18N
         lblIcon3.setText("icon");
 
         lblCost3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N

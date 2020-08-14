@@ -25,7 +25,8 @@ public class MainClass {
     public static LoginUI loginUI = new LoginUI();
     public static GameUI gameUI = new GameUI();
     public static double helperTotalDamage;
-
+    public static int stage = 1;
+    
     public static void main(String args[]) {
         loginUI.setVisible(true);
         initializeData();
@@ -42,7 +43,7 @@ public class MainClass {
 
             if (enemy.curHealth <= 0) {
                 player.gold += 10;
-
+                stage++;
                 //SUPPOSED FUNCTION : load next Enemy
                 //below is placeholder
                 enemy.curHealth = enemy.maxHealth;
@@ -62,13 +63,13 @@ public class MainClass {
         upgradeList.add(new Upgrade("Df+10", 0, 0, 10, 50));
 
         // <editor-fold defaultstate="collapsed" desc="Helpers">
-        helperList.add(new Helper(2, "Helper2", 20, 200, 1, 100, "HelperWaikit.png"));
-        helperList.add(new Helper(5, "Helper5", 50, 500, 1, 250, "HelperWaikit.png"));
-        helperList.add(new Helper(3, "Helper3", 30, 300, 1, 150, "player150x90.png"));
-        helperList.add(new Helper(8, "Helper8", 80, 800, 1, 400, "player150x90.png"));
-        helperList.add(new Helper(6, "Helper6", 60, 600, 1, 300, "HelperWaikit.png"));
-        helperList.add(new Helper(7, "Helper7", 70, 700, 1, 350, "player150x90.png"));
-        helperList.add(new Helper(4, "Helper4", 40, 400, 1, 200, "player150x90.png"));
+        helperList.add(new Helper(2, "Mario", 20, 200, 1, 100, "HelperMario.png"));
+        helperList.add(new Helper(5, "Finn", 50, 500, 1, 250, "HelperFinn.png"));
+        helperList.add(new Helper(3, "SpongeBob", 30, 300, 1, 150, "HelperSpongeBob.png"));
+        helperList.add(new Helper(8, "StarWar", 80, 800, 1, 400, "HelperStarwar.png"));
+        helperList.add(new Helper(6, "Minion", 60, 600, 1, 300, "HelperMinion.png"));
+        helperList.add(new Helper(7, "Pusheen", 70, 700, 1, 350, "HelperPusheen.png"));
+        helperList.add(new Helper(4, "Patrick", 40, 400, 1, 200, "HelperPatrick.png"));
         helperList.add(new Helper(1, "Waikit, the xueba", 10, 100, 1, 50, "HelperWaikit.png"));
 
         // </editor-fold>
