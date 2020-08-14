@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Player {
 
-    String name;
+    String playerName;
 
     double curHealth;
     double maxHealth;
@@ -21,7 +21,7 @@ public class Player {
     double gold;   
     
     public Player() {
-        this.name = "testPlayer";
+        this.playerName = "testPlayer";
 
         this.curHealth = 100;
         this.maxHealth = 100;
@@ -32,8 +32,8 @@ public class Player {
         this.gold = 0;
     }
 
-    public Player(String name, double curHealth, double maxHealth, double attack, double defense, Equipment helmet, Equipment chest, Equipment leggings, Equipment boots, Equipment weapon, double gold) {
-        this.name = name;
+    public Player(String playerName, double curHealth, double maxHealth, double attack, double defense, Equipment helmet, Equipment chest, Equipment leggings, Equipment boots, Equipment weapon, double gold) {
+        this.playerName = playerName;
         this.curHealth = curHealth;
         this.maxHealth = maxHealth;
         this.attack = attack;
@@ -45,12 +45,14 @@ public class Player {
         this.weapon = weapon;
         this.gold = gold;
     }
-    
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", helmet=" + helmet + ", chest=" + chest + ", leggings=" + leggings + ", boots=" + boots + ", weapon=" + weapon + ", gold=" + gold + '}';
+        return "Player{" + "playerName=" + playerName + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", helmet=" + helmet + ", chest=" + chest + ", leggings=" + leggings + ", boots=" + boots + ", weapon=" + weapon + ", gold=" + gold + '}';
     }
+    
+
+    
 
     @Override
     public int hashCode() {
@@ -70,7 +72,7 @@ public class Player {
             return false;
         }
         final Player other = (Player) obj;
-        if (!Objects.equals(this.name, other.name)) {
+        if (!Objects.equals(this.playerName, other.playerName)) {
             return false;
         }
         return true;
@@ -178,11 +180,11 @@ public class Player {
     }
 
     public String getName() {
-        return name;
+        return playerName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String playerName) {
+        this.playerName = playerName;
     }
 
     public double getCurHealth() {
