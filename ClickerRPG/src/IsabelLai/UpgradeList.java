@@ -10,7 +10,7 @@ package IsabelLai;
  * @author User
  */
 public class UpgradeList<T> implements UpgradeListInterface<T> {
-    private T[] array = (T[]) new Object[10];
+    private T[] array = (T[]) new Object[50];
     private int length =0 ;
     
      public void add(T newElement)
@@ -67,8 +67,8 @@ public class UpgradeList<T> implements UpgradeListInterface<T> {
     }
     
     public T getEntry(int selection) {
-        if ((selection >= 1) && (selection <= length)) {
-          return array[selection - 1];
+        if ((selection >=0) && (selection <= length)) {
+          return array[selection];
         }
         else 
         {

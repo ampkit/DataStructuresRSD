@@ -58,10 +58,18 @@ public class MainClass {
         enemy = new Enemy("test", 100, 100, 1, 1, 10);
 
         
-        upgradeList.add(new Upgrade("Hp+10", 0, 10, 0, 30));
-        upgradeList.add(new Upgrade("Att+10", 10, 0, 0, 50));
-        upgradeList.add(new Upgrade("Df+10", 0, 0, 10, 50));
-
+        upgradeList.add(new Upgrade("Hp+10"));
+        upgradeList.add(new Upgrade("Att+10"));
+        upgradeList.add(new Upgrade("Df+10"));
+        upgradeList.add(new Upgrade("Hp+20"));
+        upgradeList.add(new Upgrade("Att+20"));
+        upgradeList.add(new Upgrade("Df+20"));
+        upgradeList.add(new Upgrade("Hp+30"));
+        upgradeList.add(new Upgrade("Att+30"));
+        upgradeList.add(new Upgrade("Df+30"));
+        upgradeList.add(new Upgrade("Hp+40"));
+        upgradeList.add(new Upgrade("Att+40"));
+        upgradeList.add(new Upgrade("Df+40"));
         // <editor-fold defaultstate="collapsed" desc="Helpers">
         helperList.add(new Helper(2, "Mario", 20, 200, 1, 100, "HelperMario.png"));
         helperList.add(new Helper(5, "Finn", 50, 500, 1, 250, "HelperFinn.png"));

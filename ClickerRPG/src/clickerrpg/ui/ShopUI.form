@@ -81,7 +81,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="button2" min="-2" pref="115" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
-                  <Component id="label1" min="-2" pref="169" max="-2" attributes="0"/>
+                  <Component id="lblGold" min="-2" pref="169" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -91,7 +91,7 @@
               <Component id="button1" alignment="0" max="32767" attributes="0"/>
               <Component id="button2" alignment="0" max="32767" attributes="0"/>
               <Component id="jLabel1" alignment="0" pref="91" max="32767" attributes="0"/>
-              <Component id="label1" alignment="0" max="32767" attributes="0"/>
+              <Component id="lblGold" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -106,9 +106,6 @@
             </Property>
             <Property name="text" type="java.lang.String" value=" Store"/>
           </Properties>
-          <AccessibilityProperties>
-            <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=" Store"/>
-          </AccessibilityProperties>
         </Component>
         <Component class="java.awt.Button" name="button1">
           <Properties>
@@ -149,7 +146,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonUpgradeActionPerformed"/>
           </Events>
         </Component>
-        <Component class="java.awt.Label" name="label1">
+        <Component class="java.awt.Label" name="lblGold">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Dialog" size="48" style="0"/>
@@ -230,21 +227,34 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
-                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel4" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                      <Component id="jLabel3" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                      <Component id="jLabel6" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
-                      <Component id="jLabel8" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lblItem2a" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
+                              <Component id="lblItem1a" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
+                              <Component id="lblItem3a" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
+                              <Component id="lblItem4a" alignment="0" min="-2" pref="161" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="lblItem4b" min="-2" pref="161" max="-2" attributes="0"/>
+                              <Component id="lblItem3b" min="-2" pref="161" max="-2" attributes="0"/>
+                              <Component id="lblItem2b" min="-2" pref="161" max="-2" attributes="0"/>
+                              <Component id="lblItem1b" min="-2" pref="161" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="65" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jbPrevious" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jbNext" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                          <Component id="jButtonBack" min="-2" pref="94" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="64" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel9" min="-2" pref="161" max="-2" attributes="0"/>
-                      <Component id="jLabel7" min="-2" pref="161" max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" pref="161" max="-2" attributes="0"/>
-                      <Component id="jLabel10" min="-2" pref="161" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace pref="65" max="32767" attributes="0"/>
                   <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -255,25 +265,33 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel10" min="-2" pref="104" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="104" max="-2" attributes="0"/>
+                      <Component id="lblItem1b" min="-2" pref="104" max="-2" attributes="0"/>
+                      <Component id="lblItem1a" min="-2" pref="104" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel4" min="-2" pref="104" max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" pref="104" max="-2" attributes="0"/>
+                      <Component id="lblItem2a" min="-2" pref="104" max="-2" attributes="0"/>
+                      <Component id="lblItem2b" min="-2" pref="104" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jLabel6" min="-2" pref="104" max="-2" attributes="0"/>
-                      <Component id="jLabel7" min="-2" pref="104" max="-2" attributes="0"/>
+                      <Component id="lblItem3a" min="-2" pref="104" max="-2" attributes="0"/>
+                      <Component id="lblItem3b" min="-2" pref="104" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel8" min="-2" pref="104" max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" pref="104" max="-2" attributes="0"/>
+                      <Component id="lblItem4a" min="-2" pref="104" max="-2" attributes="0"/>
+                      <Component id="lblItem4b" min="-2" pref="104" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jButtonBack" alignment="1" min="-2" pref="52" max="-2" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                          <Component id="jbNext" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jbPrevious" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -289,7 +307,7 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel2" alignment="1" max="32767" attributes="0"/>
+                  <Component id="lblItemPic" alignment="1" max="32767" attributes="0"/>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
@@ -304,30 +322,22 @@
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="label7" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="label13" min="-2" pref="127" max="-2" attributes="0"/>
+                                      <Component id="lblCost" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
                                       <EmptySpace max="-2" attributes="0"/>
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="label4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="label5" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="label6" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="label12" min="-2" pref="127" max="-2" attributes="0"/>
-                                          <Component id="label11" min="-2" pref="127" max="-2" attributes="0"/>
-                                          <Component id="label9" min="-2" pref="127" max="-2" attributes="0"/>
+                                          <Component id="lblAttck" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblHealth" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="lblDefense" alignment="0" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              <EmptySpace min="0" pref="60" max="32767" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="label10" max="32767" attributes="0"/>
+                              <Component id="lblItemName" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -337,32 +347,22 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel2" min="-2" pref="292" max="-2" attributes="0"/>
+                      <Component id="lblItemPic" min="-2" pref="292" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="label2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="label10" pref="60" max="32767" attributes="0"/>
+                      <Component id="lblItemName" pref="60" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="label4" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="label9" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="lblAttck" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Component id="label5" min="-2" max="-2" attributes="0"/>
-                                  <Component id="label11" min="-2" pref="26" max="-2" attributes="0"/>
-                              </Group>
+                              <Component id="lblHealth" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="label6" alignment="1" min="-2" max="-2" attributes="0"/>
-                                  <Component id="label12" alignment="1" min="-2" pref="26" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                              <Component id="label13" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblDefense" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="76" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="label7" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="lblCost" alignment="1" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                       <Component id="button5" min="-2" pref="53" max="-2" attributes="0"/>
@@ -372,7 +372,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="lblItemPic">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="99" green="99" red="99" type="rgb"/>
@@ -392,7 +392,7 @@
                 <Property name="text" type="java.lang.String" value="Details"/>
               </Properties>
             </Component>
-            <Component class="java.awt.Label" name="label4">
+            <Component class="java.awt.Label" name="lblAttck">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Eras Demi ITC" size="18" style="2"/>
@@ -400,7 +400,7 @@
                 <Property name="text" type="java.lang.String" value="Attack : +"/>
               </Properties>
               <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="Attack : "/>
+                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value=""/>
               </AccessibilityProperties>
             </Component>
             <Component class="java.awt.Button" name="button5">
@@ -408,7 +408,7 @@
                 <Property name="label" type="java.lang.String" value="Purchase"/>
               </Properties>
             </Component>
-            <Component class="java.awt.Label" name="label5">
+            <Component class="java.awt.Label" name="lblHealth">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Eras Demi ITC" size="18" style="2"/>
@@ -420,7 +420,7 @@
                 <Property name="AccessibleContext.accessibleDescription" type="java.lang.String" value=""/>
               </AccessibilityProperties>
             </Component>
-            <Component class="java.awt.Label" name="label6">
+            <Component class="java.awt.Label" name="lblDefense">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Eras Demi ITC" size="18" style="2"/>
@@ -428,7 +428,7 @@
                 <Property name="text" type="java.lang.String" value="Defense : +"/>
               </Properties>
             </Component>
-            <Component class="java.awt.Label" name="label7">
+            <Component class="java.awt.Label" name="lblCost">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Eras Demi ITC" size="18" style="2"/>
@@ -436,18 +436,7 @@
                 <Property name="text" type="java.lang.String" value="Cost : $"/>
               </Properties>
             </Component>
-            <Component class="java.awt.Label" name="label9">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Nirmala UI" size="18" style="3"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Attack"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="labelAttack"/>
-              </AccessibilityProperties>
-            </Component>
-            <Component class="java.awt.Label" name="label10">
+            <Component class="java.awt.Label" name="lblItemName">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Nirmala UI" size="36" style="3"/>
@@ -455,42 +444,9 @@
                 <Property name="text" type="java.lang.String" value="label9"/>
               </Properties>
             </Component>
-            <Component class="java.awt.Label" name="label11">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Nirmala UI" size="18" style="3"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Health"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="labelHealth"/>
-              </AccessibilityProperties>
-            </Component>
-            <Component class="java.awt.Label" name="label12">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Nirmala UI" size="18" style="3"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="Defense"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="labelDefense"/>
-              </AccessibilityProperties>
-            </Component>
-            <Component class="java.awt.Label" name="label13">
-              <Properties>
-                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-                  <Font name="Nirmala UI" size="24" style="3"/>
-                </Property>
-                <Property name="text" type="java.lang.String" value="0.00"/>
-              </Properties>
-              <AccessibilityProperties>
-                <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="labelCost"/>
-              </AccessibilityProperties>
-            </Component>
           </SubComponents>
         </Container>
-        <Component class="javax.swing.JLabel" name="jLabel3">
+        <Component class="javax.swing.JLabel" name="lblItem1a">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -499,7 +455,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel4">
+        <Component class="javax.swing.JLabel" name="lblItem2a">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -508,7 +464,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel5">
+        <Component class="javax.swing.JLabel" name="lblItem2b">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -517,7 +473,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel6">
+        <Component class="javax.swing.JLabel" name="lblItem3a">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -526,7 +482,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel7">
+        <Component class="javax.swing.JLabel" name="lblItem3b">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -535,7 +491,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel8">
+        <Component class="javax.swing.JLabel" name="lblItem4a">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -544,7 +500,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel9">
+        <Component class="javax.swing.JLabel" name="lblItem4b">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
@@ -553,13 +509,34 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel10">
+        <Component class="javax.swing.JLabel" name="lblItem1b">
           <Properties>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                 <LineBorder/>
               </Border>
             </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButtonBack">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Back"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonBackActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbNext">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&gt;"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbNextActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="jbPrevious">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&lt;"/>
           </Properties>
         </Component>
       </SubComponents>
