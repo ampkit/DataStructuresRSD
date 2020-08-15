@@ -171,6 +171,13 @@ public class Player {
         }
     }
 
+    public void heal(double amount){
+        curHealth += amount;
+        if (curHealth > maxHealth) {
+            curHealth = maxHealth;
+        }
+    }
+    
     public void addGold(double increase) {
         this.gold += increase;
     }

@@ -1,6 +1,7 @@
 package clickerrpg.ui;
 
 import clickerrpg.Equipment;
+import clickerrpg.Consumable;
 import clickerrpg.MainClass;
 import java.awt.Font;
 import java.awt.Image;
@@ -16,6 +17,7 @@ public class InventoryUI extends javax.swing.JFrame {
 
     private static int page = 1;
     private String sortMode = "All";
+    private String viewType = "Equipment";
 
     /**
      * Creates new form InventoryUI
@@ -34,7 +36,6 @@ public class InventoryUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         lblItemName = new javax.swing.JLabel();
@@ -47,6 +48,13 @@ public class InventoryUI extends javax.swing.JFrame {
         btnPrevPage = new javax.swing.JButton();
         btnNextPage = new javax.swing.JButton();
         lblPage = new javax.swing.JLabel();
+        lblSortAll = new javax.swing.JLabel();
+        lblSortWeapon = new javax.swing.JLabel();
+        lblSortHelmet = new javax.swing.JLabel();
+        lblSortChest = new javax.swing.JLabel();
+        lblSortLeggings = new javax.swing.JLabel();
+        lblSortBoots = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
         lblItem1x1 = new javax.swing.JLabel();
         lblItem1x2 = new javax.swing.JLabel();
         lblItem1x3 = new javax.swing.JLabel();
@@ -58,26 +66,23 @@ public class InventoryUI extends javax.swing.JFrame {
         lblItem2x4 = new javax.swing.JLabel();
         lblItem2x5 = new javax.swing.JLabel();
         lblItem3x1 = new javax.swing.JLabel();
-        lblItem3x2 = new javax.swing.JLabel();
-        lblItem3x3 = new javax.swing.JLabel();
-        lblItem3x4 = new javax.swing.JLabel();
-        lblItem3x5 = new javax.swing.JLabel();
         lblItem4x1 = new javax.swing.JLabel();
         lblItem4x2 = new javax.swing.JLabel();
+        lblItem3x2 = new javax.swing.JLabel();
+        lblItem3x3 = new javax.swing.JLabel();
         lblItem4x3 = new javax.swing.JLabel();
+        lblItem3x4 = new javax.swing.JLabel();
         lblItem4x4 = new javax.swing.JLabel();
+        lblItem3x5 = new javax.swing.JLabel();
         lblItem4x5 = new javax.swing.JLabel();
-        lblSortAll = new javax.swing.JLabel();
-        lblSortWeapon = new javax.swing.JLabel();
-        lblSortHelmet = new javax.swing.JLabel();
-        lblSortChest = new javax.swing.JLabel();
-        lblSortLeggings = new javax.swing.JLabel();
-        lblSortBoots = new javax.swing.JLabel();
+        lblSortBoots1 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        btnShowEquipment = new javax.swing.JButton();
+        btnShowConsumables = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         backButton = new javax.swing.JButton();
+        lblGoldIcon = new javax.swing.JLabel();
+        lblGold = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(850, 660));
@@ -87,10 +92,6 @@ public class InventoryUI extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
         jLabel1.setText("Inventory");
-
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel2.setText("9999 / 9999");
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -193,6 +194,9 @@ public class InventoryUI extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(153, 153, 153));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.setMaximumSize(new java.awt.Dimension(482, 492));
+        jPanel2.setMinimumSize(new java.awt.Dimension(482, 492));
+        jPanel2.setOpaque(false);
 
         btnPrevPage.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnPrevPage.setText("Previous Page");
@@ -220,6 +224,54 @@ public class InventoryUI extends javax.swing.JFrame {
         lblPage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPage.setText("0 / 0");
         lblPage.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        lblSortAll.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortAll.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_All.png"))); // NOI18N
+        lblSortAll.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblSortAll.setMaximumSize(new java.awt.Dimension(70, 70));
+        lblSortAll.setMinimumSize(new java.awt.Dimension(70, 70));
+        lblSortAll.setPreferredSize(new java.awt.Dimension(40, 40));
+
+        lblSortWeapon.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortWeapon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortWeapon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Weapon.png"))); // NOI18N
+        lblSortWeapon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblSortWeapon.setMaximumSize(new java.awt.Dimension(70, 70));
+        lblSortWeapon.setMinimumSize(new java.awt.Dimension(70, 70));
+        lblSortWeapon.setPreferredSize(new java.awt.Dimension(40, 40));
+
+        lblSortHelmet.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortHelmet.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortHelmet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Helmet.png"))); // NOI18N
+        lblSortHelmet.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblSortHelmet.setMaximumSize(new java.awt.Dimension(70, 70));
+        lblSortHelmet.setMinimumSize(new java.awt.Dimension(70, 70));
+        lblSortHelmet.setPreferredSize(new java.awt.Dimension(40, 40));
+
+        lblSortChest.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortChest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortChest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Chest.png"))); // NOI18N
+        lblSortChest.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblSortChest.setMaximumSize(new java.awt.Dimension(70, 70));
+        lblSortChest.setMinimumSize(new java.awt.Dimension(70, 70));
+        lblSortChest.setPreferredSize(new java.awt.Dimension(40, 40));
+
+        lblSortLeggings.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortLeggings.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortLeggings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Leggings.png"))); // NOI18N
+        lblSortLeggings.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblSortLeggings.setMaximumSize(new java.awt.Dimension(70, 70));
+        lblSortLeggings.setMinimumSize(new java.awt.Dimension(70, 70));
+        lblSortLeggings.setPreferredSize(new java.awt.Dimension(40, 40));
+
+        lblSortBoots.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortBoots.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortBoots.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Boots.png"))); // NOI18N
+        lblSortBoots.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblSortBoots.setMaximumSize(new java.awt.Dimension(70, 70));
+        lblSortBoots.setMinimumSize(new java.awt.Dimension(70, 70));
+        lblSortBoots.setPreferredSize(new java.awt.Dimension(40, 40));
 
         lblItem1x1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblItem1x1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -304,34 +356,6 @@ public class InventoryUI extends javax.swing.JFrame {
         lblItem3x1.setMinimumSize(new java.awt.Dimension(70, 70));
         lblItem3x1.setPreferredSize(new java.awt.Dimension(80, 80));
 
-        lblItem3x2.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        lblItem3x2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblItem3x2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lblItem3x2.setMaximumSize(new java.awt.Dimension(70, 70));
-        lblItem3x2.setMinimumSize(new java.awt.Dimension(70, 70));
-        lblItem3x2.setPreferredSize(new java.awt.Dimension(80, 80));
-
-        lblItem3x3.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        lblItem3x3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblItem3x3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lblItem3x3.setMaximumSize(new java.awt.Dimension(70, 70));
-        lblItem3x3.setMinimumSize(new java.awt.Dimension(70, 70));
-        lblItem3x3.setPreferredSize(new java.awt.Dimension(80, 80));
-
-        lblItem3x4.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        lblItem3x4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblItem3x4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lblItem3x4.setMaximumSize(new java.awt.Dimension(70, 70));
-        lblItem3x4.setMinimumSize(new java.awt.Dimension(70, 70));
-        lblItem3x4.setPreferredSize(new java.awt.Dimension(80, 80));
-
-        lblItem3x5.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        lblItem3x5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblItem3x5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lblItem3x5.setMaximumSize(new java.awt.Dimension(70, 70));
-        lblItem3x5.setMinimumSize(new java.awt.Dimension(70, 70));
-        lblItem3x5.setPreferredSize(new java.awt.Dimension(80, 80));
-
         lblItem4x1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblItem4x1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblItem4x1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -346,12 +370,33 @@ public class InventoryUI extends javax.swing.JFrame {
         lblItem4x2.setMinimumSize(new java.awt.Dimension(70, 70));
         lblItem4x2.setPreferredSize(new java.awt.Dimension(80, 80));
 
+        lblItem3x2.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblItem3x2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblItem3x2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblItem3x2.setMaximumSize(new java.awt.Dimension(70, 70));
+        lblItem3x2.setMinimumSize(new java.awt.Dimension(70, 70));
+        lblItem3x2.setPreferredSize(new java.awt.Dimension(80, 80));
+
+        lblItem3x3.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblItem3x3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblItem3x3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblItem3x3.setMaximumSize(new java.awt.Dimension(70, 70));
+        lblItem3x3.setMinimumSize(new java.awt.Dimension(70, 70));
+        lblItem3x3.setPreferredSize(new java.awt.Dimension(80, 80));
+
         lblItem4x3.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblItem4x3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblItem4x3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lblItem4x3.setMaximumSize(new java.awt.Dimension(70, 70));
         lblItem4x3.setMinimumSize(new java.awt.Dimension(70, 70));
         lblItem4x3.setPreferredSize(new java.awt.Dimension(80, 80));
+
+        lblItem3x4.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblItem3x4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblItem3x4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblItem3x4.setMaximumSize(new java.awt.Dimension(70, 70));
+        lblItem3x4.setMinimumSize(new java.awt.Dimension(70, 70));
+        lblItem3x4.setPreferredSize(new java.awt.Dimension(80, 80));
 
         lblItem4x4.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblItem4x4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -360,6 +405,13 @@ public class InventoryUI extends javax.swing.JFrame {
         lblItem4x4.setMinimumSize(new java.awt.Dimension(70, 70));
         lblItem4x4.setPreferredSize(new java.awt.Dimension(80, 80));
 
+        lblItem3x5.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblItem3x5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblItem3x5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lblItem3x5.setMaximumSize(new java.awt.Dimension(70, 70));
+        lblItem3x5.setMinimumSize(new java.awt.Dimension(70, 70));
+        lblItem3x5.setPreferredSize(new java.awt.Dimension(80, 80));
+
         lblItem4x5.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblItem4x5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblItem4x5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -367,116 +419,134 @@ public class InventoryUI extends javax.swing.JFrame {
         lblItem4x5.setMinimumSize(new java.awt.Dimension(70, 70));
         lblItem4x5.setPreferredSize(new java.awt.Dimension(80, 80));
 
-        lblSortAll.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        lblSortAll.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSortAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_All.png"))); // NOI18N
-        lblSortAll.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lblSortAll.setMaximumSize(new java.awt.Dimension(70, 70));
-        lblSortAll.setMinimumSize(new java.awt.Dimension(70, 70));
-        lblSortAll.setPreferredSize(new java.awt.Dimension(40, 40));
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(lblItem2x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblItem2x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblItem2x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblItem2x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(lblItem1x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblItem1x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblItem1x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblItem1x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblItem2x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem1x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15))
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblItem3x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem4x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(lblItem3x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblItem3x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblItem3x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(lblItem4x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblItem4x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblItem4x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblItem4x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem3x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblItem1x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem1x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem1x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem1x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem1x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblItem2x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem2x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem2x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem2x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem2x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(12, 12, 12)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(lblItem3x2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblItem3x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblItem3x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem3x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblItem3x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblItem4x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblItem4x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblItem4x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblItem4x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(lblItem4x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(12, Short.MAX_VALUE))))
+        );
 
-        lblSortWeapon.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        lblSortWeapon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSortWeapon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Weapon.png"))); // NOI18N
-        lblSortWeapon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lblSortWeapon.setMaximumSize(new java.awt.Dimension(70, 70));
-        lblSortWeapon.setMinimumSize(new java.awt.Dimension(70, 70));
-        lblSortWeapon.setPreferredSize(new java.awt.Dimension(40, 40));
-
-        lblSortHelmet.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        lblSortHelmet.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSortHelmet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Helmet.png"))); // NOI18N
-        lblSortHelmet.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lblSortHelmet.setMaximumSize(new java.awt.Dimension(70, 70));
-        lblSortHelmet.setMinimumSize(new java.awt.Dimension(70, 70));
-        lblSortHelmet.setPreferredSize(new java.awt.Dimension(40, 40));
-
-        lblSortChest.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        lblSortChest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSortChest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Chest.png"))); // NOI18N
-        lblSortChest.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lblSortChest.setMaximumSize(new java.awt.Dimension(70, 70));
-        lblSortChest.setMinimumSize(new java.awt.Dimension(70, 70));
-        lblSortChest.setPreferredSize(new java.awt.Dimension(40, 40));
-
-        lblSortLeggings.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        lblSortLeggings.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSortLeggings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Leggings.png"))); // NOI18N
-        lblSortLeggings.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lblSortLeggings.setMaximumSize(new java.awt.Dimension(70, 70));
-        lblSortLeggings.setMinimumSize(new java.awt.Dimension(70, 70));
-        lblSortLeggings.setPreferredSize(new java.awt.Dimension(40, 40));
-
-        lblSortBoots.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        lblSortBoots.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblSortBoots.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Boots.png"))); // NOI18N
-        lblSortBoots.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lblSortBoots.setMaximumSize(new java.awt.Dimension(70, 70));
-        lblSortBoots.setMinimumSize(new java.awt.Dimension(70, 70));
-        lblSortBoots.setPreferredSize(new java.awt.Dimension(40, 40));
+        lblSortBoots1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortBoots1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblSortBoots1.setMaximumSize(new java.awt.Dimension(70, 70));
+        lblSortBoots1.setMinimumSize(new java.awt.Dimension(70, 70));
+        lblSortBoots1.setPreferredSize(new java.awt.Dimension(40, 40));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(btnPrevPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblPage, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnNextPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btnNextPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(lblSortAll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblSortWeapon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lblItem1x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblItem2x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblItem3x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblItem4x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lblSortAll, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(lblItem1x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblItem1x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblItem1x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblItem1x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(lblSortHelmet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblSortChest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblSortLeggings, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblSortBoots, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblItem2x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblItem3x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblItem4x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblItem2x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblItem3x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblItem4x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblItem2x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblItem3x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblItem4x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(lblItem2x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblItem3x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblItem4x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(11, Short.MAX_VALUE))
+                        .addComponent(lblSortWeapon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblSortHelmet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblSortChest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblSortLeggings, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblSortBoots, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblSortBoots1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -488,47 +558,11 @@ public class InventoryUI extends javax.swing.JFrame {
                     .addComponent(lblSortHelmet, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblSortChest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lblSortLeggings, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSortBoots, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lblSortBoots, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblSortBoots1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblItem1x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblItem1x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblItem1x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblItem1x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblItem1x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblItem2x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblItem3x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblItem4x1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblItem2x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblItem3x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblItem4x2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblItem2x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblItem3x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblItem4x3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblItem2x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblItem3x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblItem4x4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(lblItem2x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblItem3x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lblItem4x5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnPrevPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnNextPage, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -536,11 +570,23 @@ public class InventoryUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton1.setText("Equipment");
+        btnShowEquipment.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnShowEquipment.setText("Equipment");
+        btnShowEquipment.setFocusable(false);
+        btnShowEquipment.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnShowEquipmentActionPerformed(evt);
+            }
+        });
 
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jButton3.setText("Consumables");
+        btnShowConsumables.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnShowConsumables.setText("Consumables");
+        btnShowConsumables.setFocusable(false);
+        btnShowConsumables.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnShowConsumablesActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -548,9 +594,9 @@ public class InventoryUI extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnShowEquipment, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton3)
+                .addComponent(btnShowConsumables)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -558,8 +604,8 @@ public class InventoryUI extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3))
+                    .addComponent(btnShowEquipment, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnShowConsumables))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -590,14 +636,21 @@ public class InventoryUI extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
+        lblGoldIcon.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        lblGoldIcon.setForeground(new java.awt.Color(255, 215, 0));
+        lblGoldIcon.setText("$");
+
+        lblGold.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        lblGold.setForeground(new java.awt.Color(255, 215, 0));
+        lblGold.setText("999 999 999");
+        lblGold.setName(""); // NOI18N
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel2)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
@@ -607,19 +660,27 @@ public class InventoryUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(jLabel1))
+                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblGoldIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblGold)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblGoldIcon)
+                        .addComponent(lblGold)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -641,12 +702,20 @@ public class InventoryUI extends javax.swing.JFrame {
 
     private void itemClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemClicked
         JLabel jLabel = (JLabel) evt.getSource();
-        showDetails((Equipment) jLabel.getClientProperty("equipment"));
+
+        switch (viewType) {
+            case "Equipment":
+                showDetails((Equipment) jLabel.getClientProperty("item"));
+                break;
+            case "Consumables":
+                showDetails((Consumable) jLabel.getClientProperty("item"));
+                break;
+        }
     }//GEN-LAST:event_itemClicked
 
     private void btnEquipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEquipActionPerformed
         JButton jButton = (JButton) evt.getSource();
-        Equipment equipment = (Equipment) jButton.getClientProperty("equipment");
+        Equipment equipment = (Equipment) jButton.getClientProperty("item");
 
         if (equipment.isEquipped()) {
             MainClass.player.unequipEquipment(equipment);
@@ -659,31 +728,53 @@ public class InventoryUI extends javax.swing.JFrame {
 
         MainClass.equipmentInventory.sortItem(equipment);
 
-        loadData();
+        loadEquipment();
         showDetails(equipment);
     }//GEN-LAST:event_btnEquipActionPerformed
 
     private void btnSellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSellActionPerformed
         JButton jButton = (JButton) evt.getSource();
-        Equipment equipment = (Equipment) jButton.getClientProperty("equipment");
+        switch (viewType) {
+            case "Equipment":
+                Equipment equipment = (Equipment) jButton.getClientProperty("item");
+                equipment.unequip();
+                MainClass.equipmentInventory.remove(equipment);
+                MainClass.player.addGold(equipment.getPrice());
+                clearData();
+                loadEquipment();
+                break;
+            case "Consumables":
+                Consumable consumable = (Consumable) jButton.getClientProperty("item");
+                MainClass.consumableInventory.remove(consumable);
+                MainClass.player.addGold(consumable.getPrice());
+                clearData();
+                loadConsumables();
+                break;
 
-        equipment.unequip();
-        MainClass.equipmentInventory.remove(equipment);
-        MainClass.player.addGold(equipment.getPrice());
+        }
 
-        clearData();
-        loadData();
+
     }//GEN-LAST:event_btnSellActionPerformed
 
     private void btnNextPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextPageActionPerformed
         page++;
-        loadData();
+        loadEquipment();
     }//GEN-LAST:event_btnNextPageActionPerformed
 
     private void btnPrevPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrevPageActionPerformed
         page--;
-        loadData();
+        loadEquipment();
     }//GEN-LAST:event_btnPrevPageActionPerformed
+
+    private void btnShowEquipmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowEquipmentActionPerformed
+        viewType = "Equipment";
+        loadEquipment();
+    }//GEN-LAST:event_btnShowEquipmentActionPerformed
+
+    private void btnShowConsumablesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnShowConsumablesActionPerformed
+        viewType = "Consumables";
+        loadConsumables();
+    }//GEN-LAST:event_btnShowConsumablesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -725,7 +816,7 @@ public class InventoryUI extends javax.swing.JFrame {
         sortMode = "All";
         setLocationRelativeTo(null);
         setMouseListeners();
-        loadData();
+        loadEquipment();
         setVisible(true);
     }
 
@@ -748,7 +839,7 @@ public class InventoryUI extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 sortMode = "All";
                 page = 1;
-                loadData();
+                loadEquipment();
             }
         });
 
@@ -756,22 +847,22 @@ public class InventoryUI extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 sortMode = "Weapon";
                 page = 1;
-                loadData();
+                loadEquipment();
             }
         });
 
         lblSortHelmet.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                sortMode = "Helemt";
+                sortMode = "Helmet";
                 page = 1;
-                loadData();
+                loadEquipment();
             }
         });
         lblSortChest.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 sortMode = "Chest";
                 page = 1;
-                loadData();
+                loadEquipment();
             }
         });
 
@@ -779,7 +870,7 @@ public class InventoryUI extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 sortMode = "Leggings";
                 page = 1;
-                loadData();
+                loadEquipment();
             }
         });
 
@@ -787,7 +878,7 @@ public class InventoryUI extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 sortMode = "Boots";
                 page = 1;
-                loadData();
+                loadEquipment();
             }
         });
     }
@@ -825,13 +916,40 @@ public class InventoryUI extends javax.swing.JFrame {
             btnEquip.setText("Equip");
         }
 
-        btnEquip.putClientProperty("equipment", equipment);
-        btnSell.putClientProperty("equipment", equipment);
+        btnEquip.putClientProperty("item", equipment);
+        btnSell.putClientProperty("item", equipment);
 
         lblSellPrice.setText(String.valueOf(equipment.getPrice()));
     }
 
+    private void showDetails(Consumable consumable) {
+        lblItemIcon.setIcon(new ImageIcon(consumable.getImageIcon().getImage().getScaledInstance(160, 160, Image.SCALE_SMOOTH)));
+        lblItemName.setText(consumable.getConsName());
+
+        String itemStats = "";
+        itemStats += "<html><p>";
+        if (consumable.getHealthIncreased() > 0) {
+            itemStats += "Heals for " + String.valueOf(consumable.getHealthIncreased()) + " health.";
+        }
+
+        itemStats += "</p></html>";
+
+        lblItemStats.setText(itemStats);
+        
+        btnEquip.putClientProperty("item", consumable);
+        btnSell.putClientProperty("item", consumable);
+
+        lblSellPrice.setText(String.valueOf(consumable.getPrice()));
+
+        btnEquip.setText("Use");
+        btnEquip.setVisible(true);
+        btnSell.setVisible(true);
+
+    }
+
     private void clearData() {
+        lblGold.setText(String.format("%d",(int)MainClass.player.getGold()));
+
         JLabel[] labels
                 = {lblItem1x1, lblItem1x2, lblItem1x3, lblItem1x4, lblItem1x5,
                     lblItem2x1, lblItem2x2, lblItem2x3, lblItem2x4, lblItem2x5,
@@ -855,11 +973,13 @@ public class InventoryUI extends javax.swing.JFrame {
         btnSell.putClientProperty("equipment", null);
     }
 
-    private void loadData() {
+    private void loadEquipment() {
         clearData();
 
+        changeEqSortButtonVisibility(true);
+
         lblPage.setText("Page " + String.valueOf(page));
-        
+
         JLabel[] labels
                 = {lblItem1x1, lblItem1x2, lblItem1x3, lblItem1x4, lblItem1x5,
                     lblItem2x1, lblItem2x2, lblItem2x3, lblItem2x4, lblItem2x5,
@@ -879,7 +999,7 @@ public class InventoryUI extends javax.swing.JFrame {
                 break;
             }
 
-            label.putClientProperty("equipment", equipment);
+            label.putClientProperty("item", equipment);
             label.setIcon(equipment.getImageIcon());
 
             if (equipment.isEquipped()) {
@@ -913,6 +1033,53 @@ public class InventoryUI extends javax.swing.JFrame {
 
     }
 
+    private void loadConsumables() {
+        clearData();
+        changeEqSortButtonVisibility(false);
+
+        lblPage.setText("Page " + String.valueOf(page));
+
+        JLabel[] labels
+                = {lblItem1x1, lblItem1x2, lblItem1x3, lblItem1x4, lblItem1x5,
+                    lblItem2x1, lblItem2x2, lblItem2x3, lblItem2x4, lblItem2x5,
+                    lblItem3x1, lblItem3x2, lblItem3x3, lblItem3x4, lblItem3x5,
+                    lblItem4x1, lblItem4x2, lblItem4x3, lblItem4x4, lblItem4x5};
+
+        // i = iterator for Consumable, j = iterator for jlabel
+        for (int i = (page * 20) - 20, j = 0;
+                i < MainClass.consumableInventory.getLength() && j < 20;
+                i++, j++) {
+            JLabel label = labels[j];
+            Consumable consumable = MainClass.consumableInventory.getEntry(i);
+
+            label.putClientProperty("item", consumable);
+            label.setIcon(consumable.getImageIcon());
+
+            //disable next page if j is not full
+            if (j == 19) {
+                btnNextPage.setEnabled(true);
+            } else {
+                btnNextPage.setEnabled(false);
+            }
+
+        }
+
+        if (page == 1) {
+            btnPrevPage.setEnabled(false);
+        } else {
+            btnPrevPage.setEnabled(true);
+        }
+
+    }
+
+    private void changeEqSortButtonVisibility(Boolean visibility) {
+        lblSortAll.setVisible(visibility);
+        lblSortHelmet.setVisible(visibility);
+        lblSortBoots.setVisible(visibility);
+        lblSortWeapon.setVisible(visibility);
+        lblSortChest.setVisible(visibility);
+        lblSortLeggings.setVisible(visibility);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
@@ -920,15 +1087,17 @@ public class InventoryUI extends javax.swing.JFrame {
     private javax.swing.JButton btnNextPage;
     private javax.swing.JButton btnPrevPage;
     private javax.swing.JButton btnSell;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btnShowConsumables;
+    private javax.swing.JButton btnShowEquipment;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JLabel lblGold;
+    private javax.swing.JLabel lblGoldIcon;
     private javax.swing.JLabel lblItem1x1;
     private javax.swing.JLabel lblItem1x2;
     private javax.swing.JLabel lblItem1x3;
@@ -956,6 +1125,7 @@ public class InventoryUI extends javax.swing.JFrame {
     private javax.swing.JLabel lblSellPrice;
     private javax.swing.JLabel lblSortAll;
     private javax.swing.JLabel lblSortBoots;
+    private javax.swing.JLabel lblSortBoots1;
     private javax.swing.JLabel lblSortChest;
     private javax.swing.JLabel lblSortHelmet;
     private javax.swing.JLabel lblSortLeggings;

@@ -20,7 +20,8 @@ public class MainClass {
     public static QueueEnemyInterface<Enemy> enemyQueue = new QueueEnemy<Enemy>();
     public static SortedHelperListInterface<Helper> helperList = new SortedHelperList<Helper>();
     public static SortedHelperListInterface<Helper> assignedHelperList = new SortedHelperList<Helper>();
-    public static SLListInterface<Equipment> equipmentInventory = new SortedLinkedList<Equipment>();
+    public static SLListInterface<Equipment> equipmentInventory = new SortedLinkedList<Equipment>();    
+    public static SLListInterface<Consumable> consumableInventory = new SortedLinkedList<Consumable>();
     public static UpgradeListInterface<Upgrade> upgradeList = new UpgradeList<Upgrade>();
     public static LoginUI loginUI = new LoginUI();
     public static GameUI gameUI = new GameUI();
@@ -70,6 +71,7 @@ public class MainClass {
         upgradeList.add(new Upgrade("Hp+40"));
         upgradeList.add(new Upgrade("Att+40"));
         upgradeList.add(new Upgrade("Df+40"));
+        
         // <editor-fold defaultstate="collapsed" desc="Helpers">
         helperList.add(new Helper(2, "Mario", 20, 200, 1, 100, "HelperMario.png"));
         helperList.add(new Helper(5, "Finn", 50, 500, 1, 250, "HelperFinn.png"));
@@ -101,7 +103,8 @@ public class MainClass {
         equipmentInventory.add(new Equipment("Leather Chestplate"));
         equipmentInventory.add(new Equipment("Leather Leggings"));
         equipmentInventory.add(new Equipment("Leather Boots"));
-
+        
+        consumableInventory.add(new Consumable("Health Potion"));
         // </editor-fold>
 
 
