@@ -24,7 +24,6 @@ public class MainClass {
     public static UpgradeListInterface<Upgrade> upgradeList;
     public static LoginUI loginUI = new LoginUI();
     public static GameUI gameUI = new GameUI();
-    public static double helperTotalDamage;
     public static int stage = 1;
 
     public static void main(String args[]) throws InterruptedException {
@@ -111,13 +110,6 @@ public class MainClass {
         consumableInventory.add(new Consumable("Health Potion"));
         // </editor-fold>
 
-    }
-
-    public static void updateHelperDamage() {
-        helperTotalDamage = 0;
-        for (int i = 0; i < assignedHelperList.size(); i++) {
-            helperTotalDamage += assignedHelperList.get(i).getDamage();
-        }
     }
 
     public static void helperAttack(Helper helper) {

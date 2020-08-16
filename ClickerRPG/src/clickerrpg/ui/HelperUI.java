@@ -812,7 +812,6 @@ public class HelperUI extends javax.swing.JFrame {
         }
         MainClass.gameUI.updateHelper();
         MainClass.gameUI.updateGameUI();
-        MainClass.updateHelperDamage();
         updateUI();
     }
 
@@ -821,7 +820,6 @@ public class HelperUI extends javax.swing.JFrame {
         helper.upgrade();
         MainClass.gameUI.updateGameUI();
         updateUI();
-        MainClass.updateHelperDamage();
     }
 
     private void updatePanel1Control(Helper helper) {
