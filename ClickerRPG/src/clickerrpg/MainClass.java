@@ -16,7 +16,6 @@ public class MainClass {
 
     public static Player player;
     public static Enemy enemy;
-    public static PlayerListInterface<Player> playerList;
     public static QueueEnemyInterface<Enemy> enemyQueue;
     public static SortedHelperListInterface<Helper> helperList;
     public static SortedHelperListInterface<Helper> assignedHelperList;
@@ -54,7 +53,7 @@ public class MainClass {
             //enemy.getCurHealth()= enemy.setCurHealth(enemy.getCurHealth() - (damage - enemy.getDefense()));
             if (enemy.getCurHealth() <= 0) {
                 //player.gold += 10;
-                player.addGold(enemy.getGoldDropped());
+                player.addGold(enemy.getGoldDropped() * player.getGoldMultiplier());
                 stage++;
                 enemyQueue.dequeue();
                 if (enemyQueue.isEmpty()) {
@@ -71,7 +70,6 @@ public class MainClass {
 
     public static void initializeData() {
         // <editor-fold defaultstate="collapsed" desc="Collections">
-        playerList = new PlayerList<>();
         enemyQueue = new QueueEnemy<>();
         helperList = new SortedHelperList<>();
         assignedHelperList = new SortedHelperList<>();

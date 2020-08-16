@@ -73,10 +73,9 @@ public class LoginUI extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         String playerName = txtPlayerName.getText();
-        Player player = new Player(playerName);
+        Player player = new Player(playerName, 100, 100, 10, 1, null, null, null, null, null, 0, 1);
         MainClass.player = player;
-        MainClass.playerList.add(player);
-        
+
         this.setVisible(false);
     }//GEN-LAST:event_btnLoginActionPerformed
 
@@ -115,8 +114,8 @@ public class LoginUI extends javax.swing.JFrame {
             }
         });
     }
-    
-    public void startUp(){
+
+    public void startUp() {
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
