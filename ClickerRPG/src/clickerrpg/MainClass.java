@@ -29,10 +29,10 @@ public class MainClass {
     public static int stage = 1;
 
     public static void main(String args[]) {
-        loginUI.setVisible(true);
+        loginUI.startUp();
         initializeData();
         gameUI.updateGameUI();
-        gameUI.startUp();
+        //gameUI.startUp();
 
         Timer timer = new Timer();
         timer.schedule(new HelperAttack(), 0, 1000);      

@@ -1,5 +1,6 @@
 package clickerrpg.ui;
 
+import clickerrpg.AllPlayerList;
 import clickerrpg.MainClass;
 import clickerrpg.Player;
 
@@ -18,7 +19,7 @@ public class LoginUI extends javax.swing.JFrame {
 
         lblPlayerName = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        txtPlayerID = new javax.swing.JTextField();
+        txtPlayerName = new javax.swing.JTextField();
         btnLogin = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -29,7 +30,7 @@ public class LoginUI extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Bahnschrift", 1, 48)); // NOI18N
         jLabel1.setText("LOGIN");
 
-        txtPlayerID.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        txtPlayerName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
         btnLogin.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         btnLogin.setText("LOGIN");
@@ -54,7 +55,7 @@ public class LoginUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblPlayerName)
                 .addGap(18, 18, 18)
-                .addComponent(txtPlayerID, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -64,7 +65,7 @@ public class LoginUI extends javax.swing.JFrame {
                 .addGap(55, 55, 55)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPlayerID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                 .addComponent(btnLogin)
                 .addGap(44, 44, 44))
@@ -74,8 +75,18 @@ public class LoginUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        Player player = new Player();
+        //Player player = new Player();
+        //this.setVisible(false);
+        
+        LoginUI loginUI = new LoginUI();
         this.setVisible(false);
+        
+        String playerName = txtPlayerName.getText();
+        Player player = new Player(playerName);
+        AllPlayerList.getPlayerlist().add(player);
+        //System.out.println(AllPlayerList.getPlayerlist().getEntry(1));
+        
+        new GameUI(playerName).setVisible(true);
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
@@ -113,11 +124,17 @@ public class LoginUI extends javax.swing.JFrame {
             }
         });
     }
+    
+    public void startUp(){
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lblPlayerName;
-    private javax.swing.JTextField txtPlayerID;
+    private javax.swing.JTextField txtPlayerName;
     // End of variables declaration//GEN-END:variables
 }

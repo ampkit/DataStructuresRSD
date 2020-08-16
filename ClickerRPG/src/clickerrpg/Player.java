@@ -31,6 +31,17 @@ public class Player {
 
         this.gold = 0;
     }
+    
+    public Player(String playerName){
+        this.playerName = playerName;
+        this.curHealth = 100;
+        this.maxHealth = 100;
+
+        this.attack = 10;
+        this.defense = 1;
+
+        this.gold = 0;
+    }
 
     public Player(String playerName, double curHealth, double maxHealth, double attack, double defense, Equipment helmet, Equipment chest, Equipment leggings, Equipment boots, Equipment weapon, double gold) {
         this.playerName = playerName;
