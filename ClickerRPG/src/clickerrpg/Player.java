@@ -1,26 +1,32 @@
 package clickerrpg;
 
 import java.util.Objects;
+import javax.swing.ImageIcon;
 
 public class Player {
-
+    ImageIcon playerIcon;
     String playerName;
 
+    double baseHealth;
     double curHealth;
     double maxHealth;
+    double baseAttack;
     double attack;
+    double baseDefense;
     double defense;
 
     Equipment helmet;
     Equipment chest;
     Equipment leggings;
     Equipment boots;
-
     Equipment weapon;
+    
+    
 
     double gold;   
     
     public Player() {
+        this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"));
         this.playerName = "testPlayer";
 
         this.curHealth = 100;
