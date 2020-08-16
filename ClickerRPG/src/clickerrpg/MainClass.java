@@ -72,7 +72,7 @@ public class MainClass {
         // </editor-fold>
 
         player = new Player();
-        enemy = new Enemy("test", 100, 100, 10, 1, 10);
+        enemy = new Enemy("test", 100, 100, 10, 1, 10,0,1000);
 
         upgradeList.add(new Upgrade("Hp+10"));
         upgradeList.add(new Upgrade("Att+10"));
@@ -99,16 +99,16 @@ public class MainClass {
         // </editor-fold>
 
         // <editor-fold defaultstate="collapsed" desc="Enemies">
-        enemyQueue.enqueue(new Enemy("Test1", 100, 100, 10, 1, 10));
-        enemyQueue.enqueue(new Enemy("Test2", 100, 100, 10, 2, 30));
-        enemyQueue.enqueue(new Enemy("Test3", 100, 100, 30, 3, 30));
-        enemyQueue.enqueue(new Enemy("Test4", 100, 100, 30, 4, 30));
-        enemyQueue.enqueue(new Enemy("Test5", 100, 100, 40, 5, 40));
-        enemyQueue.enqueue(new Enemy("Test6", 100, 100, 40, 6, 40));
-        enemyQueue.enqueue(new Enemy("Test7", 100, 100, 50, 7, 40));
-        enemyQueue.enqueue(new Enemy("Test8", 100, 100, 50, 8, 60));
-        enemyQueue.enqueue(new Enemy("Test9", 100, 100, 60, 9, 60));
-        enemyQueue.enqueue(new Enemy("Test10", 100, 100, 60, 10, 60));
+        enemyQueue.enqueue(new Enemy("Murlocs", 100, 100, 10, 1, 10,0,1000));
+        enemyQueue.enqueue(new Enemy("Reapers", 100, 100, 10, 2, 30,0,1000));
+        enemyQueue.enqueue(new Enemy("Dark Ganon", 100, 100, 30, 3, 30,0,1000));
+        enemyQueue.enqueue(new Enemy("Frieza", 100, 100, 30, 4, 30,0,1000));
+        enemyQueue.enqueue(new Enemy("Zinyak", 100, 100, 40, 5, 40,0,1000));
+        enemyQueue.enqueue(new Enemy("Brutalisks", 100, 100, 40, 6, 40,0,1000));
+        enemyQueue.enqueue(new Enemy("Spriggans", 100, 100, 50, 7, 40,0,1000));
+        enemyQueue.enqueue(new Enemy("Sephiroth", 100, 100, 50, 8, 60,0,1000));
+        enemyQueue.enqueue(new Enemy("Straga", 100, 100, 60, 9, 60,0,1000));
+        enemyQueue.enqueue(new Enemy("Deathclaws", 100, 100, 60, 10, 60,0,1000));
         // </editor-fold>
 
         // <editor-fold defaultstate="collapsed" desc="Starting Items">
@@ -204,5 +204,36 @@ public class MainClass {
             gameUI.updateGameUI();
         }
     }
-
+    
+    public static void enemyDie(){
+        double gold = 0;
+        
+        if(enemy.curHealth == 0)
+        {
+            gold += enemy.getGoldDropped();
+            //add gold for player
+            player.addGold(gold);
+            
+            // add score
+            //player.score += 50;
+        
+            enemyQueue.dequeue();
+            enemyQueue.getFront();
+        }
+    }
+    
+    public static void reloadEnemy(){
+        enemyQueue.clear();
+        
+        enemyQueue.enqueue(new Enemy("Murlocs", 100, 100, 10, 1, 10,0,1000));
+        enemyQueue.enqueue(new Enemy("Reapers", 100, 100, 10, 2, 30,0,1000));
+        enemyQueue.enqueue(new Enemy("Dark Ganon", 100, 100, 30, 3, 30,0,1000));
+        enemyQueue.enqueue(new Enemy("Frieza", 100, 100, 30, 4, 30,0,1000));
+        enemyQueue.enqueue(new Enemy("Zinyak", 100, 100, 40, 5, 40,0,1000));
+        enemyQueue.enqueue(new Enemy("Brutalisks", 100, 100, 40, 6, 40,0,1000));
+        enemyQueue.enqueue(new Enemy("Spriggans", 100, 100, 50, 7, 40,0,1000));
+        enemyQueue.enqueue(new Enemy("Sephiroth", 100, 100, 50, 8, 60,0,1000));
+        enemyQueue.enqueue(new Enemy("Straga", 100, 100, 60, 9, 60,0,1000));
+        enemyQueue.enqueue(new Enemy("Deathclaws", 100, 100, 60, 10, 60,0,1000));
+    }
 }
