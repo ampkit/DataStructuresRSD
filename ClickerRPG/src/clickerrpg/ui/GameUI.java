@@ -1,5 +1,6 @@
 package clickerrpg.ui;
 import clickerrpg.MainClass;
+import java.awt.Font;
 import javax.swing.ImageIcon;
 
 public class GameUI extends javax.swing.JFrame {
@@ -33,6 +34,7 @@ public class GameUI extends javax.swing.JFrame {
         lblHelper2 = new javax.swing.JLabel();
         lblHelper3 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        enemyAttackBar = new javax.swing.JProgressBar();
         jPanel2 = new javax.swing.JPanel();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
@@ -94,14 +96,19 @@ public class GameUI extends javax.swing.JFrame {
         jPanel3.setRequestFocusEnabled(false);
         jPanel3.setVerifyInputWhenFocusTarget(false);
 
+        labelPlayerName.setBackground(new java.awt.Color(0, 0, 0));
         labelPlayerName.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         labelPlayerName.setText("Player Name");
 
+        playerHealthBar.setForeground(new java.awt.Color(0, 204, 0));
         playerHealthBar.setName(""); // NOI18N
 
+        labelEnemyName.setBackground(new java.awt.Color(0, 0, 0));
         labelEnemyName.setFont(new java.awt.Font("Times New Roman", 0, 24)); // NOI18N
         labelEnemyName.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         labelEnemyName.setText("Enemy Name");
+
+        enemyHealthBar.setForeground(new java.awt.Color(255, 0, 0));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -139,6 +146,12 @@ public class GameUI extends javax.swing.JFrame {
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
 
+        enemyAttackBar.setForeground(new java.awt.Color(204, 204, 0));
+        enemyAttackBar.setMaximumSize(new java.awt.Dimension(300, 10));
+        enemyAttackBar.setMinimumSize(new java.awt.Dimension(300, 10));
+        enemyAttackBar.setOpaque(true);
+        enemyAttackBar.setPreferredSize(new java.awt.Dimension(300, 10));
+
         gameScreen.setLayer(jLabel5, -1);
         gameScreen.setLayer(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
         gameScreen.setLayer(jLabel12, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -148,15 +161,12 @@ public class GameUI extends javax.swing.JFrame {
         gameScreen.setLayer(lblHelper2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         gameScreen.setLayer(lblHelper3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         gameScreen.setLayer(jLabel10, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        gameScreen.setLayer(enemyAttackBar, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout gameScreenLayout = new javax.swing.GroupLayout(gameScreen);
         gameScreen.setLayout(gameScreenLayout);
         gameScreenLayout.setHorizontalGroup(
             gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(gameScreenLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(gameScreenLayout.createSequentialGroup()
                 .addGap(5, 5, 5)
                 .addComponent(lblHelper2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -177,6 +187,14 @@ public class GameUI extends javax.swing.JFrame {
                         .addGap(179, 179, 179)
                         .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(gameScreenLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameScreenLayout.createSequentialGroup()
+                        .addComponent(enemyAttackBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(8, 8, 8)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(gameScreenLayout.createSequentialGroup()
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 931, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -187,7 +205,9 @@ public class GameUI extends javax.swing.JFrame {
             .addGroup(gameScreenLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(enemyAttackBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
                 .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameScreenLayout.createSequentialGroup()
                         .addComponent(lblHelper1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -416,14 +436,26 @@ public class GameUI extends javax.swing.JFrame {
         labelPlayerName.setText(MainClass.player.getName());
         playerHealthBar.setMaximum((int)MainClass.player.getMaxHealth());
         playerHealthBar.setValue((int)MainClass.player.getCurHealth());
+        playerHealthBar.setString(playerHealthBar.getValue() + " / " + playerHealthBar.getMaximum() + " Health");
+        playerHealthBar.setStringPainted(true);
+        playerHealthBar.setFont(new Font("Arial", Font.PLAIN , 18));
         
+
         labelEnemyName.setText(MainClass.enemy.getName());
         enemyHealthBar.setMaximum((int)MainClass.enemy.getMaxHealth());
         enemyHealthBar.setValue((int)MainClass.enemy.getCurHealth());
+        enemyHealthBar.setString(enemyHealthBar.getValue() + " / " + enemyHealthBar.getMaximum() + " Health");
+        enemyHealthBar.setStringPainted(true);
+        enemyHealthBar.setFont(new Font("Arial", Font.PLAIN , 18));
         
         lblGold.setText(String.format("%d",(int)MainClass.player.getGold()));
         
         lblStage.setText(String.valueOf(MainClass.stage));
+    }
+    
+    public void updateAttackBars(){
+        enemyAttackBar.setMaximum(MainClass.enemy.getAttackPeriod());
+        enemyAttackBar.setValue(MainClass.enemy.getCurrentAttackPeriod());
     }
     
     public void updateHelper(){
@@ -454,6 +486,7 @@ public class GameUI extends javax.swing.JFrame {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInventory;
+    private javax.swing.JProgressBar enemyAttackBar;
     private javax.swing.JProgressBar enemyHealthBar;
     private javax.swing.JLayeredPane gameScreen;
     private javax.swing.JPanel gameUIPanel;

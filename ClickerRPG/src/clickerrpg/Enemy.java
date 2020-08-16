@@ -8,6 +8,10 @@ public class Enemy{
     double attack;
     double defense;
     double goldDropped;
+    
+    int currentAttackPeriod = 0;
+    int attackPeriod = 1000; //milliseconds
+    
 
     public Enemy(String name, double curHealth, double maxHealth, double attack, double defense, double goldDropped) {
         this.name = name;
@@ -78,6 +82,24 @@ public class Enemy{
         this.goldDropped = goldDropped;
     }
 
+    public int getCurrentAttackPeriod() {
+        return currentAttackPeriod;
+    }
+
+    public void setCurrentAttackPeriod(int currentAttackPeriod) {
+        this.currentAttackPeriod = currentAttackPeriod;
+    }
+
+    public int getAttackPeriod() {
+        return attackPeriod;
+    }
+
+    public void setAttackPeriod(int attackPeriod) {
+        this.attackPeriod = attackPeriod;
+    }
+
+    
+    
     @Override
     public String toString() {
         return "Enemy{" + "name=" + name + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", goldDropped=" + goldDropped + '}';

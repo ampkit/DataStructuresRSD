@@ -16,26 +16,30 @@ public class MainClass {
 
     public static Player player;
     public static Enemy enemy;
-    public static PlayerListInterface<Player> playerList = new PlayerList<Player>();
-    public static QueueEnemyInterface<Enemy> enemyQueue = new QueueEnemy<Enemy>();
-    public static SortedHelperListInterface<Helper> helperList = new SortedHelperList<Helper>();
-    public static SortedHelperListInterface<Helper> assignedHelperList = new SortedHelperList<Helper>();
-    public static SLListInterface<Equipment> equipmentInventory = new SortedLinkedList<Equipment>();    
-    public static SLListInterface<Consumable> consumableInventory = new SortedLinkedList<Consumable>();
-    public static UpgradeListInterface<Upgrade> upgradeList = new UpgradeList<Upgrade>();
+    public static PlayerListInterface<Player> playerList;
+    public static QueueEnemyInterface<Enemy> enemyQueue;
+    public static SortedHelperListInterface<Helper> helperList;
+    public static SortedHelperListInterface<Helper> assignedHelperList;
+    public static SLListInterface<Equipment> equipmentInventory;
+    public static SLListInterface<Consumable> consumableInventory ;
+    public static UpgradeListInterface<Upgrade> upgradeList;
     public static LoginUI loginUI = new LoginUI();
     public static GameUI gameUI = new GameUI();
     public static double helperTotalDamage;
     public static int stage = 1;
-    
+
     public static void main(String args[]) {
         loginUI.setVisible(true);
         initializeData();
         gameUI.updateGameUI();
         gameUI.startUp();
-        
+
         Timer timer = new Timer();
-        timer.schedule(new HelperAttack(), 0, 1000);
+        timer.schedule(new HelperAttack(), 0, 1000);      
+        
+        Timer enemyAttackTimer = new Timer();
+        timer.schedule(new AutoAttacks(), 0, 100);
+
     }
 
     public static void attack(double damage) {
@@ -53,12 +57,21 @@ public class MainClass {
             gameUI.updateGameUI();
         }
     }
-
+    
     public static void initializeData() {
-        player = new Player();
-        enemy = new Enemy("test", 100, 100, 1, 1, 10);
+        // <editor-fold defaultstate="collapsed" desc="Collections">
+        playerList = new PlayerList<>();
+        enemyQueue = new QueueEnemy<>();
+        helperList = new SortedHelperList<>();
+        assignedHelperList = new SortedHelperList<>();
+        equipmentInventory = new SortedLinkedList<>();
+        consumableInventory = new SortedLinkedList<>();
+        upgradeList = new UpgradeList<>();
+        // </editor-fold>
 
-        
+        player = new Player();
+        enemy = new Enemy("test", 100, 100, 10, 1, 10);
+
         upgradeList.add(new Upgrade("Hp+10"));
         upgradeList.add(new Upgrade("Att+10"));
         upgradeList.add(new Upgrade("Df+10"));
@@ -71,7 +84,7 @@ public class MainClass {
         upgradeList.add(new Upgrade("Hp+40"));
         upgradeList.add(new Upgrade("Att+40"));
         upgradeList.add(new Upgrade("Df+40"));
-        
+
         // <editor-fold defaultstate="collapsed" desc="Helpers">
         helperList.add(new Helper(2, "Mario", 20, 200, 1, 100, "HelperMario.png"));
         helperList.add(new Helper(5, "Finn", 50, 500, 1, 250, "HelperFinn.png"));
@@ -81,9 +94,8 @@ public class MainClass {
         helperList.add(new Helper(7, "Pusheen", 70, 700, 1, 350, "HelperPusheen.png"));
         helperList.add(new Helper(4, "Patrick", 40, 400, 1, 200, "HelperPatrick.png"));
         helperList.add(new Helper(1, "Waikit, the xueba", 10, 100, 1, 50, "HelperWaikit.png"));
-
         // </editor-fold>
-        
+
         // <editor-fold defaultstate="collapsed" desc="Enemies">
         enemyQueue.enqueue(new Enemy("Test1", 100, 100, 10, 1, 10));
         enemyQueue.enqueue(new Enemy("Test2", 100, 100, 10, 2, 30));
@@ -103,10 +115,9 @@ public class MainClass {
         equipmentInventory.add(new Equipment("Leather Chestplate"));
         equipmentInventory.add(new Equipment("Leather Leggings"));
         equipmentInventory.add(new Equipment("Leather Boots"));
-        
+
         consumableInventory.add(new Consumable("Health Potion"));
         // </editor-fold>
-
 
     }
 
@@ -114,11 +125,9 @@ public class MainClass {
         helperTotalDamage = 0;
         for (int i = 0; i < assignedHelperList.size(); i++) {
             helperTotalDamage += assignedHelperList.get(i).getDamage();
-            System.out.println(assignedHelperList.get(i).getDamage());
         }
     }
 
-    
     static class HelperAttack extends TimerTask {
         public void run() {
             if (helperTotalDamage > 0) {
@@ -126,4 +135,22 @@ public class MainClass {
             }
         }
     }
+    
+    static class AutoAttacks extends TimerTask {
+        public void run(){
+            //enemy attack
+            if (enemy.currentAttackPeriod < enemy.attackPeriod) {
+                enemy.currentAttackPeriod += 100;
+            } else {
+                if (enemy.attack - player.defense > 0) {
+                    player.takeDamage(enemy.attack - player.defense);
+                    enemy.currentAttackPeriod = 0;
+                }
+            }
+            
+            gameUI.updateAttackBars();
+            gameUI.updateGameUI();
+        }
+    }
+    
 }

@@ -176,6 +176,10 @@ public class Player {
         if (curHealth > maxHealth) {
             curHealth = maxHealth;
         }
+    }    
+    
+    public void takeDamage(double amount){
+        curHealth -= amount;
     }
     
     public void addGold(double increase) {
