@@ -38,9 +38,6 @@ public class MainClass {
         gameUI.startUp();
 
         Timer timer = new Timer();
-        timer.schedule(new Helper1Attack(), 0, 100);
-        timer.schedule(new Helper2Attack(), 0, 100);
-        timer.schedule(new Helper3Attack(), 0, 100);
         timer.schedule(new AutoAttacks(), 0, 100);
 
     }
@@ -134,36 +131,6 @@ public class MainClass {
         }
     }
 
-    static class Helper1Attack extends TimerTask {
-
-        public void run() {
-            if (assignedHelperList.get(0) != null) {
-                helperAttack(assignedHelperList.get(0));
-                gameUI.updateHelperAttackBars(1);
-            }
-        }
-    }
-
-    static class Helper2Attack extends TimerTask {
-
-        public void run() {
-            if (assignedHelperList.get(1) != null) {
-                helperAttack(assignedHelperList.get(1));
-                gameUI.updateHelperAttackBars(2);
-            }
-        }
-    }
-
-    static class Helper3Attack extends TimerTask {
-
-        public void run() {
-            if (assignedHelperList.get(2) != null) {
-                helperAttack(assignedHelperList.get(2));
-                gameUI.updateHelperAttackBars(3);
-            }
-        }
-    }
-
     static class AutoAttacks extends TimerTask {
 
         public void run() {
@@ -176,7 +143,21 @@ public class MainClass {
                     enemy.setCurrentAttackPeriod(0); //=0
                 }
             }
-
+            
+            if (assignedHelperList.get(0) != null) {
+                helperAttack(assignedHelperList.get(0));
+                gameUI.updateHelperAttackBars(1);
+            }
+            
+            if (assignedHelperList.get(1) != null) {
+                helperAttack(assignedHelperList.get(1));
+                gameUI.updateHelperAttackBars(2);
+            }
+            
+            if (assignedHelperList.get(2) != null) {
+                helperAttack(assignedHelperList.get(2));
+                gameUI.updateHelperAttackBars(3);
+            }
             gameUI.updateAttackBars();
             gameUI.updateGameUI();
         }
