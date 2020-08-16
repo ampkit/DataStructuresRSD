@@ -6,9 +6,6 @@ import clickerrpg.Player;
 
 public class LoginUI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form LoginUI
-     */
     public LoginUI() {
         initComponents();
     }
@@ -75,18 +72,12 @@ public class LoginUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        //Player player = new Player();
-        //this.setVisible(false);
-        
-        LoginUI loginUI = new LoginUI();
-        this.setVisible(false);
-        
         String playerName = txtPlayerName.getText();
         Player player = new Player(playerName);
-        AllPlayerList.getPlayerlist().add(player);
-        //System.out.println(AllPlayerList.getPlayerlist().getEntry(1));
+        MainClass.player = player;
+        MainClass.playerList.add(player);
         
-        new GameUI(playerName).setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**

@@ -25,14 +25,18 @@ public class MainClass {
     public static UpgradeListInterface<Upgrade> upgradeList;
     public static LoginUI loginUI = new LoginUI();
     public static GameUI gameUI = new GameUI();
-    public static double helperTotalDamage;
+    public static double helperTotalDamage; 
     public static int stage = 1;
 
-    public static void main(String args[]) {
-        loginUI.startUp();
+    public static void main(String args[]) throws InterruptedException {
         initializeData();
+
+        loginUI.startUp();
+        while (player == null) {
+            Thread.sleep(1000);
+        }
         gameUI.updateGameUI();
-        //gameUI.startUp();
+        gameUI.startUp();
 
         Timer timer = new Timer();
         timer.schedule(new HelperAttack(), 0, 1000);      
@@ -69,7 +73,6 @@ public class MainClass {
         upgradeList = new UpgradeList<>();
         // </editor-fold>
 
-        player = new Player();
         enemy = new Enemy("test", 100, 100, 10, 1, 10,0,1000);
 
         upgradeList.add(new Upgrade("Hp+10"));
