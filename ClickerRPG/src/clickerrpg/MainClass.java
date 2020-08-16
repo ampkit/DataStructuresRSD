@@ -49,15 +49,20 @@ public class MainClass {
     }
 
     public static void attack(double damage) {
-        if (damage - enemy.defense >= 0) {
-            enemy.curHealth = enemy.curHealth - (damage - enemy.defense);
+        if (damage - enemy.getDefense() >= 0) {
+            
+            enemy.setCurHealth(enemy.getCurHealth() - (damage - enemy.getDefense()));
+            
+            //enemy.getCurHealth()= enemy.setCurHealth(enemy.getCurHealth() - (damage - enemy.getDefense()));
 
-            if (enemy.curHealth <= 0) {
-                player.gold += 10;
+            if (enemy.getCurHealth() <= 0) {
+                //player.gold += 10;
+                player.addGold(enemy.getGoldDropped());
                 stage++;
-                //SUPPOSED FUNCTION : load next Enemy
+                enemyQueue.dequeue();
+                enemy = enemyQueue.getFront();
                 //below is placeholder
-                enemy.curHealth = enemy.maxHealth;
+                enemy.getCurHealth() = enemy.getMaxHealth();
             }
 
             gameUI.updateGameUI();
@@ -141,7 +146,7 @@ public class MainClass {
                 if (helper.getCurrentAttackPeriod() < helper.getAttackPeriod()) {
                     helper.addCurrentAttackPeriod(100);
                 } else {
-                    if (helper.getDamage() - enemy.defense > 0) {
+                    if (helper.getDamage() - enemy.getDefense() > 0) {
                         attack(helper.getDamage());
                         helper.setCurrentAttackPeriod(0);
                     }
@@ -160,7 +165,7 @@ public class MainClass {
                 if (helper.getCurrentAttackPeriod() < helper.getAttackPeriod()) {
                     helper.addCurrentAttackPeriod(100);
                 } else {
-                    if (helper.getDamage() - enemy.defense > 0) {
+                    if (helper.getDamage() - enemy.getDefense() > 0) {
                         attack(helper.getDamage());
                         helper.setCurrentAttackPeriod(0);
                     }
@@ -179,7 +184,7 @@ public class MainClass {
                 if (helper.getCurrentAttackPeriod() < helper.getAttackPeriod()) {
                     helper.addCurrentAttackPeriod(100);
                 } else {
-                    if (helper.getDamage() - enemy.defense > 0) {
+                    if (helper.getDamage() - enemy.getDefense() > 0) {
                         attack(helper.getDamage());
                         helper.setCurrentAttackPeriod(0);
                     }
@@ -194,12 +199,12 @@ public class MainClass {
 
         public void run() {
             //enemy attack
-            if (enemy.currentAttackPeriod < enemy.attackPeriod) {
-                enemy.currentAttackPeriod += 100;
+            if (enemy.getCurrentAttackPeriod() < enemy.getAttackPeriod()) {
+                enemy.setAttackPeriod(100); //+= 100;
             } else {
-                if (enemy.attack - player.defense > 0) {
-                    player.takeDamage(enemy.attack - player.defense);
-                    enemy.currentAttackPeriod = 0;
+                if (enemy.getAttack() - player.defense > 0) {
+                    player.takeDamage(enemy.getAttack() - player.defense);
+                    enemy.setCurrentAttackPeriod(0); //=0
                 }
             }
 
@@ -208,23 +213,7 @@ public class MainClass {
         }
     }
     
-    public static void enemyDie(){
-        double gold = 0;
-        
-        if(enemy.curHealth == 0)
-        {
-            gold += enemy.getGoldDropped();
-            //add gold for player
-            player.addGold(gold);
-            
-            // add score
-            //player.score += 50;
-        
-            enemyQueue.dequeue();
-            enemyQueue.getFront();
-        }
-    }
-    
+    //game over
     public static void reloadEnemy(){
         enemyQueue.clear();
         

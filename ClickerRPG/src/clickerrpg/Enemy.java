@@ -2,14 +2,14 @@ package clickerrpg;
 
 // entity class
 public class Enemy{
-    String name;
-    double curHealth;
-    double maxHealth;
-    double attack;
-    double defense;
-    double goldDropped;
-    int currentAttackPeriod;
-    int attackPeriod;
+    private String name;
+    private double curHealth;
+    private double maxHealth;
+    private double attack;
+    private double defense;
+    private double goldDropped;
+    private int currentAttackPeriod;
+    private int attackPeriod;
     //int currentAttackPeriod = 0;
    // int attackPeriod = 1000; //milliseconds
 
