@@ -37,6 +37,11 @@ public class StatsUI extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         lblHealth = new javax.swing.JLabel();
+        lblAttack = new javax.swing.JLabel();
+        lblDefense = new javax.swing.JLabel();
+        lblKillsTotal = new javax.swing.JLabel();
+        lblEqAttack = new javax.swing.JLabel();
+        lblEqDefense = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -73,6 +78,21 @@ public class StatsUI extends javax.swing.JFrame {
         lblHealth.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblHealth.setText("100 / 100");
 
+        lblAttack.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblAttack.setText("999");
+
+        lblDefense.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblDefense.setText("999");
+
+        lblKillsTotal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblKillsTotal.setText("999");
+
+        lblEqAttack.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblEqAttack.setText("( + 99 from equipment )");
+
+        lblEqDefense.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblEqDefense.setText("( + 99 from equipment )");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -84,7 +104,17 @@ public class StatsUI extends javax.swing.JFrame {
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblHealth)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblHealth)
+                    .addComponent(lblKillsTotal)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblAttack)
+                            .addComponent(lblDefense))
+                        .addGap(88, 88, 88)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblEqDefense)
+                            .addComponent(lblEqAttack))))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -95,11 +125,19 @@ public class StatsUI extends javax.swing.JFrame {
                     .addComponent(jLabel1)
                     .addComponent(lblHealth))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(lblAttack)
+                    .addComponent(lblEqAttack))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(lblDefense)
+                    .addComponent(lblEqDefense))
                 .addGap(47, 47, 47)
-                .addComponent(jLabel4)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(lblKillsTotal))
                 .addContainerGap(188, Short.MAX_VALUE))
         );
 
@@ -194,7 +232,12 @@ public class StatsUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel lblAttack;
+    private javax.swing.JLabel lblDefense;
+    private javax.swing.JLabel lblEqAttack;
+    private javax.swing.JLabel lblEqDefense;
     private javax.swing.JLabel lblHealth;
+    private javax.swing.JLabel lblKillsTotal;
     private javax.swing.JLabel lblPlayerIcon;
     private javax.swing.JLabel lblPlayerName;
     // End of variables declaration//GEN-END:variables

@@ -39,6 +39,7 @@ public class Player {
     }
 
     public Player(String playerName) {
+        this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"));
         this.playerName = playerName;
         this.curHealth = 100;
         this.maxHealth = 100;

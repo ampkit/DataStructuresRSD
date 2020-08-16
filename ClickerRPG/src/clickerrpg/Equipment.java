@@ -30,25 +30,77 @@ public class Equipment implements Comparable<Equipment> {
         switch (eqName) {
 // <editor-fold defaultstate="collapsed" desc="Weapons">
             case "Wooden Sword":
-                setEquipmentAttributes("Wooden Sword", "Weapon", 1, 0, 0, 5);
+                setEquipmentAttributes("Wooden Sword", "Weapon", 2, 0, 0, 50);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Wooden_Sword.png"));
                 break;
             case "Iron Sword":
-                setEquipmentAttributes("Tin Sword", "Weapon", 2, 0, 0, 10);
-                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Tin_Sword.png"));
+                setEquipmentAttributes("Iron Sword", "Weapon", 5, 0, 0, 100);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Iron_Sword.png"));
+                break;
+            case "Golden Sword":
+                setEquipmentAttributes("Golden Sword", "Weapon", 20, 0, 0, 500);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Golden_Sword.png"));
+                break;
+            case "Diamond Sword":
+                setEquipmentAttributes("Diamond Sword", "Weapon", 50, 0, 0, 1000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Diamond_Sword.png"));
+                break;
+            case "Enchanted Diamond Sword":
+                setEquipmentAttributes("Enchanted Diamond Sword", "Weapon", 100, 0, 0, 5000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Enchanted_Diamond_Sword.png"));
                 break;
 
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="Helmets">
             case "Leather Helmet":
-                setEquipmentAttributes("Leather Helmet", "Helmet", 0, 10, 1, 5);
+                setEquipmentAttributes("Leather Helmet", "Helmet", 0, 10, 1, 50);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Leather_Helmet.png"));
+                break;
+            case "Chainmail Helmet":
+                setEquipmentAttributes("Chainmail Helmet", "Helmet", 0, 50, 3, 100);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Chainmail_Helmet.png"));
+                break;
+            case "Iron Helmet":
+                setEquipmentAttributes("Iron Helmet", "Helmet", 0, 200, 5, 500);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Iron_Helmet.png"));
+                break;
+            case "Golden Helmet":
+                setEquipmentAttributes("Golden Helmet", "Helmet", 0, 500, 10, 1000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Golden_Helmet.png"));
+                break;
+            case "Diamond Helmet":
+                setEquipmentAttributes("Diamond Helmet", "Helmet", 0, 1000, 15, 5000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Diamond_Helmet.png"));
+                break;
+            case "Netherite Helmet":
+                setEquipmentAttributes("Netherite Helmet", "Helmet", 0, 3000, 30, 50000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Netherite_Helmet.png"));
                 break;
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="Chests">
             case "Leather Chestplate":
-                setEquipmentAttributes("Leather Chestplate", "Chest", 0, 10, 1, 5);
+                setEquipmentAttributes("Leather Chestplate", "Chestplate", 0, 10, 1, 5);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Leather_Chestplate.png"));
+                break;
+            case "Chainmail Chestplate":
+                setEquipmentAttributes("Chainmail Chestplate", "Chestplate", 0, 50, 3, 100);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Chainmail_Chestplate.png"));
+                break;
+            case "Iron Chestplate":
+                setEquipmentAttributes("Iron Chestplate", "Chestplate", 0, 200, 5, 500);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Iron_Chestplate.png"));
+                break;
+            case "Golden Chestplate":
+                setEquipmentAttributes("Golden Chestplate", "Chestplate", 0, 500, 10, 1000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Golden_Chestplate.png"));
+                break;
+            case "Diamond Chestplate":
+                setEquipmentAttributes("Diamond Chestplate", "Chestplate", 0, 1000, 15, 5000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Diamond_Chestplate.png"));
+                break;
+            case "Netherite Chestplate":
+                setEquipmentAttributes("Netherite Chestplate", "Chestplate", 0, 3000, 30, 50000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Netherite_Chestplate.png"));
                 break;
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="Leggings">
@@ -56,11 +108,51 @@ public class Equipment implements Comparable<Equipment> {
                 setEquipmentAttributes("Leather Leggings", "Leggings", 0, 10, 1, 5);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Leather_Leggings.png"));
                 break;
+            case "Chainmail Leggings":
+                setEquipmentAttributes("Chainmail Leggings", "Leggings", 0, 50, 3, 100);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Chainmail_Leggings.png"));
+                break;
+            case "Iron Leggings":
+                setEquipmentAttributes("Iron Leggings", "Leggings", 0, 200, 5, 500);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Iron_Leggings.png"));
+                break;
+            case "Golden Leggings":
+                setEquipmentAttributes("Golden Leggings", "Leggings", 0, 500, 10, 1000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Golden_Leggings.png"));
+                break;
+            case "Diamond Leggings":
+                setEquipmentAttributes("Diamond Leggings", "Leggings", 0, 1000, 15, 5000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Diamond_Leggings.png"));
+                break;
+            case "Netherite Leggings":
+                setEquipmentAttributes("Netherite Leggings", "Leggings", 0, 3000, 30, 50000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Netherite_Leggings.png"));
+                break;
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="Boots">
             case "Leather Boots":
                 setEquipmentAttributes("Leather Boots", "Boots", 0, 10, 1, 5);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Leather_Boots.png"));
+                break;
+            case "Chainmail Boots":
+                setEquipmentAttributes("Chainmail Boots", "Boots", 0, 50, 3, 100);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Chainmail_Boots.png"));
+                break;
+            case "Iron Boots":
+                setEquipmentAttributes("Iron Boots", "Boots", 0, 200, 5, 500);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Iron_Boots.png"));
+                break;
+            case "Golden Boots":
+                setEquipmentAttributes("Golden Boots", "Boots", 0, 500, 10, 1000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Golden_Boots.png"));
+                break;
+            case "Diamond Boots":
+                setEquipmentAttributes("Diamond Boots", "Boots", 0, 1000, 15, 5000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Diamond_Boots.png"));
+                break;
+            case "Netherite Boots":
+                setEquipmentAttributes("Netherite Boots", "Boots", 0, 3000, 30, 50000);
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Netherite_Boots.png"));
                 break;
 // </editor-fold>
             default:
