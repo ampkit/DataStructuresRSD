@@ -178,6 +178,7 @@ public class HelperUI extends javax.swing.JFrame {
         lblDamage.setForeground(new java.awt.Color(204, 204, 204));
         lblDamage.setText("Damage:");
 
+        lblLevelValue.setBackground(new java.awt.Color(0, 204, 204));
         lblLevelValue.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
         lblLevelValue.setForeground(new java.awt.Color(204, 204, 204));
         lblLevelValue.setText("30");
@@ -718,7 +719,7 @@ public class HelperUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         MainClass.gameUI.setEnabled(true);
         this.setVisible(false);
-        
+
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnNextPageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextPageActionPerformed
@@ -792,7 +793,7 @@ public class HelperUI extends javax.swing.JFrame {
             btnPrevPage.setEnabled(true);
             btnNextPage.setEnabled(false);
         }
-        
+
     }
 
     private void hireBtnEvent(Helper helper) {
@@ -804,7 +805,7 @@ public class HelperUI extends javax.swing.JFrame {
         } else if (helper.isAssigned() == false) {
             helper.setAssigned(true);
             MainClass.assignedHelperList.add(helper);
-            
+
         } else {
             helper.setAssigned(false);
             MainClass.assignedHelperList.remove(helper);
@@ -836,8 +837,10 @@ public class HelperUI extends javax.swing.JFrame {
             btnHire.setEnabled(true);
             if (helper.isAssigned()) {
                 btnHire.setText("Unassign");
+                jPanel1.setBackground(new Color(102, 0, 0));
             } else {
                 btnHire.setText("Assign");
+                jPanel1.setBackground(new Color(102, 102, 102));
                 if (MainClass.assignedHelperList.size() == 3) {
                     btnHire.setEnabled(false);
                 }
@@ -846,6 +849,7 @@ public class HelperUI extends javax.swing.JFrame {
                 btnUpgrade.setEnabled(false);
             }
         } else {
+            jPanel1.setBackground(new Color(51, 51, 51));
             lblCost.setText("Hire Cost: $");
             lblCostValue.setText(String.format("%.2f", helper.getHireCost()));
             btnHire.setText("Hire");
@@ -871,8 +875,10 @@ public class HelperUI extends javax.swing.JFrame {
             btnHire1.setEnabled(true);
             if (helper.isAssigned()) {
                 btnHire1.setText("Unassign");
+                jPanel3.setBackground(new Color(102, 0, 0));
             } else {
                 btnHire1.setText("Assign");
+                jPanel3.setBackground(new Color(102, 102, 102));
                 if (MainClass.assignedHelperList.size() == 3) {
                     btnHire1.setEnabled(false);
                 }
@@ -881,6 +887,7 @@ public class HelperUI extends javax.swing.JFrame {
                 btnUpgrade1.setEnabled(false);
             }
         } else {
+            jPanel3.setBackground(new Color(51, 51, 51));
             lblCost1.setText("Hire Cost: $");
             lblCostValue1.setText(String.format("%.2f", helper.getHireCost()));
             btnHire1.setText("Hire");
@@ -906,8 +913,10 @@ public class HelperUI extends javax.swing.JFrame {
             btnHire2.setEnabled(true);
             if (helper.isAssigned()) {
                 btnHire2.setText("Unassign");
+                jPanel4.setBackground(new Color(102, 0, 0));
             } else {
                 btnHire2.setText("Assign");
+                jPanel4.setBackground(new Color(102, 102, 102));
                 if (MainClass.assignedHelperList.size() == 3) {
                     btnHire2.setEnabled(false);
                 }
@@ -916,6 +925,7 @@ public class HelperUI extends javax.swing.JFrame {
                 btnUpgrade2.setEnabled(false);
             }
         } else {
+            jPanel4.setBackground(new Color(51, 51, 51));
             lblCost2.setText("Hire Cost: $");
             lblCostValue2.setText(String.format("%.2f", helper.getHireCost()));
             btnHire2.setText("Hire");
@@ -941,8 +951,10 @@ public class HelperUI extends javax.swing.JFrame {
             btnHire3.setEnabled(true);
             if (helper.isAssigned()) {
                 btnHire3.setText("Unassign");
+                jPanel5.setBackground(new Color(102, 0, 0));
             } else {
                 btnHire3.setText("Assign");
+                jPanel5.setBackground(new Color(102, 102, 102));
                 if (MainClass.assignedHelperList.size() == 3) {
                     btnHire3.setEnabled(false);
                 }
@@ -951,6 +963,7 @@ public class HelperUI extends javax.swing.JFrame {
                 btnUpgrade3.setEnabled(false);
             }
         } else {
+            jPanel5.setBackground(new Color(51, 51, 51));
             lblCost3.setText("Hire Cost: $");
             lblCostValue3.setText(String.format("%.2f", helper.getHireCost()));
             btnHire3.setText("Hire");

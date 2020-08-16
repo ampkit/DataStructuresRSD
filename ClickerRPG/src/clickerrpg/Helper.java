@@ -12,6 +12,9 @@ public class Helper implements Comparable<Helper> {
     private String imageUrl;
     private boolean hired;
     private boolean assigned;
+    
+    private int currentAttackPeriod = 0;
+    private int attackPeriod = 1000; //milliseconds
 
     public Helper(int id, String name, double damage, double hireCost, int level, double upgradeCost, String imageUrl) {
         this.id = id;
@@ -46,6 +49,10 @@ public class Helper implements Comparable<Helper> {
         }
     }
 
+    public void addCurrentAttackPeriod(int milSec){
+        this.currentAttackPeriod += milSec;
+    }
+    
     @Override
     public String toString() {
         return "Helper{" + "id=" + id + ", name=" + name + ", damage=" + damage + ", hireCost=" + hireCost + ", level=" + level + ", levelUpCost=" + upgradeCost + '}';
@@ -114,6 +121,22 @@ public class Helper implements Comparable<Helper> {
 
     public void setAssigned(boolean assigned) {
         this.assigned = assigned;
+    }
+
+    public int getCurrentAttackPeriod() {
+        return currentAttackPeriod;
+    }
+
+    public void setCurrentAttackPeriod(int currentAttackPeriod) {
+        this.currentAttackPeriod = currentAttackPeriod;
+    }
+
+    public int getAttackPeriod() {
+        return attackPeriod;
+    }
+
+    public void setAttackPeriod(int attackPeriod) {
+        this.attackPeriod = attackPeriod;
     }
 
 

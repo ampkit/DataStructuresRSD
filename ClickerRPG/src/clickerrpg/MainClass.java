@@ -21,7 +21,7 @@ public class MainClass {
     public static SortedHelperListInterface<Helper> helperList;
     public static SortedHelperListInterface<Helper> assignedHelperList;
     public static SLListInterface<Equipment> equipmentInventory;
-    public static SLListInterface<Consumable> consumableInventory ;
+    public static SLListInterface<Consumable> consumableInventory;
     public static UpgradeListInterface<Upgrade> upgradeList;
     public static LoginUI loginUI = new LoginUI();
     public static GameUI gameUI = new GameUI();
@@ -35,8 +35,10 @@ public class MainClass {
         gameUI.startUp();
 
         Timer timer = new Timer();
-        timer.schedule(new HelperAttack(), 0, 1000);      
-        
+        timer.schedule(new Helper1Attack(), 0, 100);
+        timer.schedule(new Helper2Attack(), 0, 100);
+        timer.schedule(new Helper3Attack(), 0, 100);
+
         Timer enemyAttackTimer = new Timer();
         timer.schedule(new AutoAttacks(), 0, 100);
 
@@ -57,7 +59,7 @@ public class MainClass {
             gameUI.updateGameUI();
         }
     }
-    
+
     public static void initializeData() {
         // <editor-fold defaultstate="collapsed" desc="Collections">
         playerList = new PlayerList<>();
@@ -128,16 +130,66 @@ public class MainClass {
         }
     }
 
-    static class HelperAttack extends TimerTask {
+    static class Helper1Attack extends TimerTask {
+
         public void run() {
-            if (helperTotalDamage > 0) {
-                attack(helperTotalDamage);
+            if (assignedHelperList.get(0) != null) {
+                Helper helper = assignedHelperList.get(0);
+                if (helper.getCurrentAttackPeriod() < helper.getAttackPeriod()) {
+                    helper.addCurrentAttackPeriod(100);
+                } else {
+                    if (helper.getDamage() - enemy.defense > 0) {
+                        attack(helper.getDamage());
+                        helper.setCurrentAttackPeriod(0);
+                    }
+                }
+
+                gameUI.updateAttackBars();
             }
         }
     }
-    
+
+    static class Helper2Attack extends TimerTask {
+
+        public void run() {
+            if (assignedHelperList.get(1) != null) {
+                Helper helper = assignedHelperList.get(1);
+                if (helper.getCurrentAttackPeriod() < helper.getAttackPeriod()) {
+                    helper.addCurrentAttackPeriod(100);
+                } else {
+                    if (helper.getDamage() - enemy.defense > 0) {
+                        attack(helper.getDamage());
+                        helper.setCurrentAttackPeriod(0);
+                    }
+                }
+
+                gameUI.updateAttackBars();
+            }
+        }
+    }
+
+    static class Helper3Attack extends TimerTask {
+
+        public void run() {
+            if (assignedHelperList.get(2) != null) {
+                Helper helper = assignedHelperList.get(2);
+                if (helper.getCurrentAttackPeriod() < helper.getAttackPeriod()) {
+                    helper.addCurrentAttackPeriod(100);
+                } else {
+                    if (helper.getDamage() - enemy.defense > 0) {
+                        attack(helper.getDamage());
+                        helper.setCurrentAttackPeriod(0);
+                    }
+                }
+
+                gameUI.updateAttackBars();
+            }
+        }
+    }
+
     static class AutoAttacks extends TimerTask {
-        public void run(){
+
+        public void run() {
             //enemy attack
             if (enemy.currentAttackPeriod < enemy.attackPeriod) {
                 enemy.currentAttackPeriod += 100;
@@ -147,10 +199,10 @@ public class MainClass {
                     enemy.currentAttackPeriod = 0;
                 }
             }
-            
+
             gameUI.updateAttackBars();
             gameUI.updateGameUI();
         }
     }
-    
+
 }
