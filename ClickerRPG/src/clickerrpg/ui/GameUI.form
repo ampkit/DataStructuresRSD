@@ -178,7 +178,7 @@
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="jLabel10" min="-2" pref="124" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="179" max="-2" attributes="0"/>
-                              <Component id="jLabel6" min="-2" pref="119" max="-2" attributes="0"/>
+                              <Component id="lblEnemyIcon" min="-2" pref="119" max="-2" attributes="0"/>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -253,7 +253,7 @@
                               <EmptySpace min="-2" pref="91" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
-                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblEnemyIcon" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" alignment="1" attributes="0">
@@ -340,7 +340,7 @@
                               <Component id="labelPlayerName" alignment="0" min="-2" pref="379" max="-2" attributes="0"/>
                               <Component id="playerHealthBar" alignment="0" min="-2" pref="379" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="142" max="32767" attributes="0"/>
+                          <EmptySpace pref="150" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="labelEnemyName" alignment="1" min="-2" pref="379" max="-2" attributes="0"/>
                               <Component id="enemyHealthBar" alignment="1" min="-2" pref="379" max="-2" attributes="0"/>
@@ -414,7 +414,7 @@
             </Container>
             <Component class="javax.swing.JLabel" name="lblHelper1">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel6">
+            <Component class="javax.swing.JLabel" name="lblEnemyIcon">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="11"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">

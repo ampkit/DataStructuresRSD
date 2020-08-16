@@ -4,27 +4,27 @@ import java.util.Objects;
 import javax.swing.ImageIcon;
 
 public class Player {
-    ImageIcon playerIcon;
-    String playerName;
 
-    double baseHealth;
-    double curHealth;
-    double maxHealth;
-    double baseAttack;
-    double attack;
-    double baseDefense;
-    double defense;
+    private ImageIcon playerIcon;
+    private String playerName;
 
-    Equipment helmet;
-    Equipment chest;
-    Equipment leggings;
-    Equipment boots;
-    Equipment weapon;
-    
-    
+    private double baseHealth;
+    private double curHealth;
+    private double maxHealth;
+    private double baseAttack;
+    private double attack;
+    private double baseDefense;
+    private double defense;
+    private double goldMultiplier;
 
-    double gold;   
-    
+    private Equipment helmet;
+    private Equipment chest;
+    private Equipment leggings;
+    private Equipment boots;
+    private Equipment weapon;
+
+    double gold;
+
     public Player() {
         this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"));
         this.playerName = "testPlayer";
@@ -37,8 +37,8 @@ public class Player {
 
         this.gold = 0;
     }
-    
-    public Player(String playerName){
+
+    public Player(String playerName) {
         this.playerName = playerName;
         this.curHealth = 100;
         this.maxHealth = 100;
@@ -49,7 +49,7 @@ public class Player {
         this.gold = 0;
     }
 
-    public Player(String playerName, double curHealth, double maxHealth, double attack, double defense, Equipment helmet, Equipment chest, Equipment leggings, Equipment boots, Equipment weapon, double gold) {
+    public Player(String playerName, double curHealth, double maxHealth, double attack, double defense, Equipment helmet, Equipment chest, Equipment leggings, Equipment boots, Equipment weapon, double gold, double goldMultiplier) {
         this.playerName = playerName;
         this.curHealth = curHealth;
         this.maxHealth = maxHealth;
@@ -61,15 +61,13 @@ public class Player {
         this.boots = boots;
         this.weapon = weapon;
         this.gold = gold;
+        this.goldMultiplier = 1;
     }
 
     @Override
     public String toString() {
         return "Player{" + "playerName=" + playerName + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", helmet=" + helmet + ", chest=" + chest + ", leggings=" + leggings + ", boots=" + boots + ", weapon=" + weapon + ", gold=" + gold + '}';
     }
-    
-
-    
 
     @Override
     public int hashCode() {
@@ -144,7 +142,7 @@ public class Player {
                 weapon = equipment;
                 break;
         }
-        
+
         return unequippedItem;
     }
 
@@ -188,17 +186,17 @@ public class Player {
         }
     }
 
-    public void heal(double amount){
+    public void heal(double amount) {
         curHealth += amount;
         if (curHealth > maxHealth) {
             curHealth = maxHealth;
         }
-    }    
-    
-    public void takeDamage(double amount){
+    }
+
+    public void takeDamage(double amount) {
         curHealth -= amount;
     }
-    
+
     public void addGold(double increase) {
         this.gold += increase;
     }
@@ -294,7 +292,53 @@ public class Player {
     public void setWeapon(Equipment weapon) {
         this.weapon = weapon;
     }
-    
-    
+
+    public ImageIcon getPlayerIcon() {
+        return playerIcon;
+    }
+
+    public void setPlayerIcon(ImageIcon playerIcon) {
+        this.playerIcon = playerIcon;
+    }
+
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
+    }
+
+    public double getBaseHealth() {
+        return baseHealth;
+    }
+
+    public void setBaseHealth(double baseHealth) {
+        this.baseHealth = baseHealth;
+    }
+
+    public double getBaseAttack() {
+        return baseAttack;
+    }
+
+    public void setBaseAttack(double baseAttack) {
+        this.baseAttack = baseAttack;
+    }
+
+    public double getBaseDefense() {
+        return baseDefense;
+    }
+
+    public void setBaseDefense(double baseDefense) {
+        this.baseDefense = baseDefense;
+    }
+
+    public double getGoldMultiplier() {
+        return goldMultiplier;
+    }
+
+    public void setGoldMultiplier(double goldMultiplier) {
+        this.goldMultiplier = goldMultiplier;
+    }
 
 }

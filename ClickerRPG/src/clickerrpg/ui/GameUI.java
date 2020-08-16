@@ -36,7 +36,7 @@ public class GameUI extends javax.swing.JFrame {
         labelEnemyName = new javax.swing.JLabel();
         enemyHealthBar = new javax.swing.JProgressBar();
         lblHelper1 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        lblEnemyIcon = new javax.swing.JLabel();
         lblHelper2 = new javax.swing.JLabel();
         lblHelper3 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -131,7 +131,7 @@ public class GameUI extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(playerHealthBar, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 142, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(labelEnemyName, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(enemyHealthBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -153,8 +153,8 @@ public class GameUI extends javax.swing.JFrame {
                     .addComponent(enemyHealthBar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/enemy1.png"))); // NOI18N
+        lblEnemyIcon.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        lblEnemyIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/enemy1.png"))); // NOI18N
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"))); // NOI18N
 
@@ -202,7 +202,7 @@ public class GameUI extends javax.swing.JFrame {
         gameScreen.setLayer(jLabel12, javax.swing.JLayeredPane.DEFAULT_LAYER);
         gameScreen.setLayer(jPanel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         gameScreen.setLayer(lblHelper1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        gameScreen.setLayer(jLabel6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        gameScreen.setLayer(lblEnemyIcon, javax.swing.JLayeredPane.DEFAULT_LAYER);
         gameScreen.setLayer(lblHelper2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         gameScreen.setLayer(lblHelper3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         gameScreen.setLayer(jLabel10, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -236,7 +236,7 @@ public class GameUI extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(179, 179, 179)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblEnemyIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(gameScreenLayout.createSequentialGroup()
                 .addContainerGap()
@@ -294,7 +294,7 @@ public class GameUI extends javax.swing.JFrame {
                         .addComponent(lblHelper2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(91, 91, 91))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameScreenLayout.createSequentialGroup()
-                        .addComponent(jLabel6)
+                        .addComponent(lblEnemyIcon)
                         .addGap(107, 107, 107))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameScreenLayout.createSequentialGroup()
                         .addComponent(jLabel10)
@@ -502,6 +502,7 @@ public class GameUI extends javax.swing.JFrame {
     }
 
     public void updateGameUI() {
+        
         labelPlayerName.setText(MainClass.player.getName());
         playerHealthBar.setMaximum((int) MainClass.player.getMaxHealth());
         playerHealthBar.setValue((int) MainClass.player.getCurHealth());
@@ -509,6 +510,7 @@ public class GameUI extends javax.swing.JFrame {
         playerHealthBar.setStringPainted(true);
         playerHealthBar.setFont(new Font("Arial", Font.PLAIN, 18));
 
+        lblEnemyIcon.setIcon(new ImageIcon(imageFolderPath + MainClass.enemy.getImageIcon()));
         labelEnemyName.setText(MainClass.enemy.getName());
         enemyHealthBar.setMaximum((int) MainClass.enemy.getMaxHealth());
         enemyHealthBar.setValue((int) MainClass.enemy.getCurHealth());
@@ -612,12 +614,12 @@ public class GameUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel labelEnemyName;
     private javax.swing.JLabel labelPlayerName;
+    private javax.swing.JLabel lblEnemyIcon;
     private javax.swing.JLabel lblGold;
     private javax.swing.JLabel lblGoldIcon;
     private javax.swing.JLabel lblHelper1;

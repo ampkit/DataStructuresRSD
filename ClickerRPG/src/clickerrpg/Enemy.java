@@ -10,18 +10,18 @@ public class Enemy{
     private double goldDropped;
     private int currentAttackPeriod;
     private int attackPeriod;
-    //int currentAttackPeriod = 0;
-   // int attackPeriod = 1000; //milliseconds
+    private String imageIcon;
 
-    public Enemy(String name, double curHealth, double maxHealth, double attack, double defense, double goldDropped, int currentAttackPeriod, int attackPeriod) {
+    public Enemy(String name, double curHealth, double maxHealth, double attack, double defense, double goldDropped, int attackPeriod, String imageIcon) {
         this.name = name;
         this.curHealth = curHealth;
         this.maxHealth = maxHealth;
         this.attack = attack;
         this.defense = defense;
         this.goldDropped = goldDropped;
-        this.currentAttackPeriod = currentAttackPeriod;
+        this.currentAttackPeriod = 0;
         this.attackPeriod = attackPeriod;
+        this.imageIcon = imageIcon;
     }
 
     
@@ -36,6 +36,10 @@ public class Enemy{
         
     //}
 
+    public void addCurrentAttackPeriod(int milSec){
+        currentAttackPeriod += milSec;
+    }
+    
     public String getName() {
         return name;
     }
@@ -100,7 +104,13 @@ public class Enemy{
         this.attackPeriod = attackPeriod;
     }
 
-    
+    public String getImageIcon() {
+        return imageIcon;
+    }
+
+    public void setImageIcon(String imageIcon) {
+        this.imageIcon = imageIcon;
+    }
     
     @Override
     public String toString() {
