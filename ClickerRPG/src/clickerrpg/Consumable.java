@@ -17,9 +17,16 @@ public class Consumable implements Comparable<Consumable>{
         switch(name){
             case "Health Potion" :
                 consName = "Health Potion";
-                imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Wooden_Sword.png"));
-                healthIncreased = 50;
-                price = 5;
+                imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Health_Potion.png"));
+                healthIncreased = 100;
+                price = 5;            
+                break;
+            case "Greater Health Potion" :
+                consName = "Greater Health Potion";
+                imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Greater_Health_Potion.png"));
+                healthIncreased = 200;
+                price = 20;
+                break;
         }
     } 
     
