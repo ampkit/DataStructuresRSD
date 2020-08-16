@@ -1,4 +1,5 @@
 package clickerrpg.ui;
+
 import clickerrpg.MainClass;
 import java.awt.Font;
 import javax.swing.ImageIcon;
@@ -6,7 +7,7 @@ import javax.swing.ImageIcon;
 public class GameUI extends javax.swing.JFrame {
 
     private final String imageFolderPath = "src/clickerrpg/img/";
-    
+
     public GameUI() {
         initComponents();
     }
@@ -53,8 +54,9 @@ public class GameUI extends javax.swing.JFrame {
         setResizable(false);
 
         gameUIPanel.setBackground(new java.awt.Color(102, 102, 102));
-        gameUIPanel.setMaximumSize(new java.awt.Dimension(960, 720));
-        gameUIPanel.setMinimumSize(new java.awt.Dimension(960, 720));
+        gameUIPanel.setMaximumSize(new java.awt.Dimension(960, 670));
+        gameUIPanel.setMinimumSize(new java.awt.Dimension(960, 670));
+        gameUIPanel.setPreferredSize(new java.awt.Dimension(960, 670));
 
         lblGoldIcon.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lblGoldIcon.setForeground(new java.awt.Color(255, 215, 0));
@@ -165,7 +167,7 @@ public class GameUI extends javax.swing.JFrame {
 
         lblHelperName1.setBackground(new java.awt.Color(51, 51, 51));
         lblHelperName1.setForeground(new java.awt.Color(0, 0, 0));
-        lblHelperName1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblHelperName1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblHelperName1.setText("Waikit, the xueba");
 
         lblHelperAttackBar2.setForeground(new java.awt.Color(204, 204, 0));
@@ -176,7 +178,7 @@ public class GameUI extends javax.swing.JFrame {
 
         lblHelperName2.setBackground(new java.awt.Color(51, 51, 51));
         lblHelperName2.setForeground(new java.awt.Color(0, 0, 0));
-        lblHelperName2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblHelperName2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblHelperName2.setText("Waikit, the xueba");
 
         lblHelperAttackBar3.setForeground(new java.awt.Color(204, 204, 0));
@@ -187,7 +189,7 @@ public class GameUI extends javax.swing.JFrame {
 
         lblHelperName3.setBackground(new java.awt.Color(51, 51, 51));
         lblHelperName3.setForeground(new java.awt.Color(0, 0, 0));
-        lblHelperName3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblHelperName3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblHelperName3.setText("Waikit, the xueba");
 
         gameScreen.setLayer(jLabel5, -1);
@@ -233,30 +235,26 @@ public class GameUI extends javax.swing.JFrame {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(gameScreenLayout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(gameScreenLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
                 .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(gameScreenLayout.createSequentialGroup()
-                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(lblHelperName3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblHelperAttackBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(gameScreenLayout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(gameScreenLayout.createSequentialGroup()
-                                .addComponent(lblHelperName3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblHelperAttackBar3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(gameScreenLayout.createSequentialGroup()
-                                .addComponent(lblHelperName2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblHelperAttackBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(gameScreenLayout.createSequentialGroup()
-                                .addComponent(lblHelperName1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblHelperAttackBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(enemyAttackBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(28, 28, 28))))))
+                        .addComponent(lblHelperName2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblHelperAttackBar2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(gameScreenLayout.createSequentialGroup()
+                        .addComponent(lblHelperName1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblHelperAttackBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(enemyAttackBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28))
             .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(gameScreenLayout.createSequentialGroup()
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 931, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -268,25 +266,25 @@ public class GameUI extends javax.swing.JFrame {
                 .addGap(16, 16, 16)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(enemyAttackBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblHelperAttackBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblHelperName1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(enemyAttackBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblHelperName1)
+                    .addComponent(lblHelperAttackBar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblHelperAttackBar2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblHelperName2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblHelperName2)
+                    .addComponent(lblHelperAttackBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lblHelperAttackBar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblHelperName3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lblHelperName3)
+                    .addComponent(lblHelperAttackBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
                 .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameScreenLayout.createSequentialGroup()
                         .addComponent(lblHelper1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
+                        .addGap(26, 26, 26)
                         .addComponent(lblHelper3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
+                        .addGap(19, 19, 19))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameScreenLayout.createSequentialGroup()
                         .addComponent(lblHelper2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(91, 91, 91))
@@ -372,7 +370,7 @@ public class GameUI extends javax.swing.JFrame {
                 .addComponent(btnInventory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
@@ -385,7 +383,7 @@ public class GameUI extends javax.swing.JFrame {
                     .addComponent(btnInventory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout gameUIPanelLayout = new javax.swing.GroupLayout(gameUIPanel);
@@ -393,26 +391,21 @@ public class GameUI extends javax.swing.JFrame {
         gameUIPanelLayout.setHorizontalGroup(
             gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(gameUIPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap(14, Short.MAX_VALUE)
+                .addGroup(gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(gameUIPanelLayout.createSequentialGroup()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 946, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 8, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameUIPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(gameUIPanelLayout.createSequentialGroup()
-                                .addComponent(gameScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 932, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(14, 14, 14))
-                            .addGroup(gameUIPanelLayout.createSequentialGroup()
-                                .addComponent(lblGoldIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblGold)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel2)
-                                .addGap(18, 18, 18)
-                                .addComponent(lblStage)
-                                .addGap(28, 28, 28))))))
+                        .addComponent(gameScreen, javax.swing.GroupLayout.PREFERRED_SIZE, 932, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(14, 14, 14))
+                    .addGroup(gameUIPanelLayout.createSequentialGroup()
+                        .addComponent(lblGoldIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblGold)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel2)
+                        .addGap(18, 18, 18)
+                        .addComponent(lblStage)
+                        .addGap(28, 28, 28))))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 960, Short.MAX_VALUE)
         );
         gameUIPanelLayout.setVerticalGroup(
             gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -424,9 +417,8 @@ public class GameUI extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addComponent(gameScreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -437,13 +429,12 @@ public class GameUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(gameUIPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 655, Short.MAX_VALUE)
+            .addComponent(gameUIPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
     // <editor-fold defaultstate="collapsed" desc="Events">                          
     private void gameScreenMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gameScreenMouseClicked
         MainClass.attack(MainClass.player.getAttack());
@@ -451,7 +442,7 @@ public class GameUI extends javax.swing.JFrame {
 
     private void btnInventoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventoryActionPerformed
         InventoryUI inventoryUI = new InventoryUI();
-        inventoryUI.startUp();        
+        inventoryUI.startUp();
         this.setEnabled(false);
     }//GEN-LAST:event_btnInventoryActionPerformed
 
@@ -495,44 +486,60 @@ public class GameUI extends javax.swing.JFrame {
                 new GameUI().setVisible(true);
             }
         });
-        
+
     }
-    
-    public void startUp(){
+
+    public void startUp() {
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
         updateHelper();
     }
 
-    public void updateGameUI(){
+    public void updateGameUI() {
         labelPlayerName.setText(MainClass.player.getName());
-        playerHealthBar.setMaximum((int)MainClass.player.getMaxHealth());
-        playerHealthBar.setValue((int)MainClass.player.getCurHealth());
+        playerHealthBar.setMaximum((int) MainClass.player.getMaxHealth());
+        playerHealthBar.setValue((int) MainClass.player.getCurHealth());
         playerHealthBar.setString(playerHealthBar.getValue() + " / " + playerHealthBar.getMaximum() + " Health");
         playerHealthBar.setStringPainted(true);
-        playerHealthBar.setFont(new Font("Arial", Font.PLAIN , 18));
-        
+        playerHealthBar.setFont(new Font("Arial", Font.PLAIN, 18));
 
         labelEnemyName.setText(MainClass.enemy.getName());
-        enemyHealthBar.setMaximum((int)MainClass.enemy.getMaxHealth());
-        enemyHealthBar.setValue((int)MainClass.enemy.getCurHealth());
+        enemyHealthBar.setMaximum((int) MainClass.enemy.getMaxHealth());
+        enemyHealthBar.setValue((int) MainClass.enemy.getCurHealth());
         enemyHealthBar.setString(enemyHealthBar.getValue() + " / " + enemyHealthBar.getMaximum() + " Health");
         enemyHealthBar.setStringPainted(true);
-        enemyHealthBar.setFont(new Font("Arial", Font.PLAIN , 18));
-        
-        lblGold.setText(String.format("%d",(int)MainClass.player.getGold()));
-        
+        enemyHealthBar.setFont(new Font("Arial", Font.PLAIN, 18));
+
+        lblGold.setText(String.format("%d", (int) MainClass.player.getGold()));
+
         lblStage.setText(String.valueOf(MainClass.stage));
     }
-    
-    public void updateAttackBars(){
+
+    public void updateAttackBars() {
         enemyAttackBar.setMaximum(MainClass.enemy.getAttackPeriod());
         enemyAttackBar.setValue(MainClass.enemy.getCurrentAttackPeriod());
     }
-    
-    public void updateHelper(){
-        switch (MainClass.assignedHelperList.size()){
+
+    public void updateHelperAttackBars(int helperNo) {
+        switch (helperNo) {
+            case 1:
+                lblHelperAttackBar1.setMaximum(MainClass.assignedHelperList.get(0).getAttackPeriod());
+                lblHelperAttackBar1.setValue(MainClass.assignedHelperList.get(0).getCurrentAttackPeriod());
+                break;
+            case 2:
+                lblHelperAttackBar2.setMaximum(MainClass.assignedHelperList.get(1).getAttackPeriod());
+                lblHelperAttackBar2.setValue(MainClass.assignedHelperList.get(1).getCurrentAttackPeriod());
+                break;
+            case 3:
+                lblHelperAttackBar3.setMaximum(MainClass.assignedHelperList.get(2).getAttackPeriod());
+                lblHelperAttackBar3.setValue(MainClass.assignedHelperList.get(2).getCurrentAttackPeriod());
+                break;
+        }
+    }
+
+    public void updateHelper() {
+        switch (MainClass.assignedHelperList.size()) {
             case 0:
                 lblHelper1.setIcon(null);
                 lblHelper2.setIcon(null);
@@ -584,9 +591,9 @@ public class GameUI extends javax.swing.JFrame {
                 lblHelperName3.setText(MainClass.assignedHelperList.get(2).getName());
                 break;
         }
-        
+
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInventory;
     private javax.swing.JProgressBar enemyAttackBar;

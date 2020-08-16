@@ -144,7 +144,7 @@ public class MainClass {
                     }
                 }
 
-                gameUI.updateAttackBars();
+                gameUI.updateHelperAttackBars(1);
             }
         }
     }
@@ -163,7 +163,7 @@ public class MainClass {
                     }
                 }
 
-                gameUI.updateAttackBars();
+                gameUI.updateHelperAttackBars(2);
             }
         }
     }
@@ -182,7 +182,7 @@ public class MainClass {
                     }
                 }
 
-                gameUI.updateAttackBars();
+                gameUI.updateHelperAttackBars(3);
             }
         }
     }
