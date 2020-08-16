@@ -8,18 +8,20 @@ public class Enemy{
     double attack;
     double defense;
     double goldDropped;
-    
-    int currentAttackPeriod = 0;
-    int attackPeriod = 1000; //milliseconds
-    
+    int currentAttackPeriod;
+    int attackPeriod;
+    //int currentAttackPeriod = 0;
+   // int attackPeriod = 1000; //milliseconds
 
-    public Enemy(String name, double curHealth, double maxHealth, double attack, double defense, double goldDropped) {
+    public Enemy(String name, double curHealth, double maxHealth, double attack, double defense, double goldDropped, int currentAttackPeriod, int attackPeriod) {
         this.name = name;
         this.curHealth = curHealth;
         this.maxHealth = maxHealth;
         this.attack = attack;
         this.defense = defense;
         this.goldDropped = goldDropped;
+        this.currentAttackPeriod = currentAttackPeriod;
+        this.attackPeriod = attackPeriod;
     }
 
     
@@ -105,15 +107,5 @@ public class Enemy{
         return "Enemy{" + "name=" + name + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", goldDropped=" + goldDropped + '}';
     }
     
-    //testing
-   // @Override
-    //public int compareTo(Enemy compareEnemy) {
-        //if(this.getName() != compareEnemy.getName()){
-            //return 0;
-        //}
-        //else
-           // return 1;
-        
-    //}
  
 }
