@@ -205,6 +205,19 @@ public class Player {
     public void deductGold(double deduction) {
         this.gold -= deduction;
     }
+    
+    public void addAttack(double increase){
+        this.attack += increase;
+    }
+    
+    public void addHealth(double increase){
+        this.curHealth += increase;
+        this.maxHealth += increase;
+    }
+    
+    public void addDefense(double increase){
+        this.defense += increase;
+    }
 
     public String getName() {
         return playerName;
