@@ -65,7 +65,6 @@ public class SortedHelperList<T extends Comparable<T>> implements SortedHelperLi
         int i = 0;
         while (i < length && anEntry.compareTo(dataList[i]) > 0) {
             i++;
-//            System.out.println(i + "         " + length);
         }
         if (anEntry.equals(dataList[i])) {
             return true;
