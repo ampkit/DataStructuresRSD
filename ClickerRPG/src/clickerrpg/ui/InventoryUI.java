@@ -715,21 +715,32 @@ public class InventoryUI extends javax.swing.JFrame {
 
     private void btnEquipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEquipActionPerformed
         JButton jButton = (JButton) evt.getSource();
-        Equipment equipment = (Equipment) jButton.getClientProperty("item");
+        switch (viewType) {
+            case "Equipment":
+                Equipment equipment = (Equipment) jButton.getClientProperty("item");
+                if (equipment.isEquipped()) {
+                    MainClass.player.unequipEquipment(equipment);
+                } else {
+                    Equipment unequippedItem = MainClass.player.equipEquipment(equipment);
+                    if (unequippedItem != null) {
+                        MainClass.equipmentInventory.sortItem(unequippedItem);
+                    }
+                }
 
-        if (equipment.isEquipped()) {
-            MainClass.player.unequipEquipment(equipment);
-        } else {
-            Equipment unequippedItem = MainClass.player.equipEquipment(equipment);
-            if (unequippedItem != null) {
-                MainClass.equipmentInventory.sortItem(unequippedItem);
-            }
+                MainClass.equipmentInventory.sortItem(equipment);
+
+                loadEquipment();
+                showDetails(equipment);
+                break;
+            case "Consumables":
+                Consumable consumable = (Consumable) jButton.getClientProperty("item");
+                
+                
+                break;
+
         }
 
-        MainClass.equipmentInventory.sortItem(equipment);
 
-        loadEquipment();
-        showDetails(equipment);
     }//GEN-LAST:event_btnEquipActionPerformed
 
     private void btnSellActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSellActionPerformed
@@ -935,7 +946,7 @@ public class InventoryUI extends javax.swing.JFrame {
         itemStats += "</p></html>";
 
         lblItemStats.setText(itemStats);
-        
+
         btnEquip.putClientProperty("item", consumable);
         btnSell.putClientProperty("item", consumable);
 
@@ -948,7 +959,7 @@ public class InventoryUI extends javax.swing.JFrame {
     }
 
     private void clearData() {
-        lblGold.setText(String.format("%d",(int)MainClass.player.getGold()));
+        lblGold.setText(String.format("%d", (int) MainClass.player.getGold()));
 
         JLabel[] labels
                 = {lblItem1x1, lblItem1x2, lblItem1x3, lblItem1x4, lblItem1x5,

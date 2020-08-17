@@ -18,7 +18,9 @@ public class MainClass {
     public static Enemy enemy;
     public static QueueEnemyInterface<Enemy> enemyQueue;
     public static SortedHelperListInterface<Helper> helperList;
-    public static SortedHelperListInterface<Helper> assignedHelperList;
+    public static SortedHelperListInterface<Helper> assignedHelperList;    
+    public static SLListInterface<Equipment> equipmentList;
+    public static SLListInterface<Consumable> consumableList;
     public static SLListInterface<Equipment> equipmentInventory;
     public static SLListInterface<Consumable> consumableInventory;
     public static UpgradeListInterface<Upgrade> upgradeList;
@@ -69,6 +71,8 @@ public class MainClass {
         enemyQueue = new QueueEnemy<>();
         helperList = new SortedHelperList<>();
         assignedHelperList = new SortedHelperList<>();
+        equipmentList = new SortedLinkedList<>();
+        consumableList = new SortedLinkedList<>();
         equipmentInventory = new SortedLinkedList<>();
         consumableInventory = new SortedLinkedList<>();
         upgradeList = new UpgradeList<>();
@@ -99,6 +103,44 @@ public class MainClass {
         helperList.add(new Helper(4, "Patrick", 40, 400, 1, 200, "HelperPatrick.png"));
         helperList.add(new Helper(1, "Waikit, the xueba", 10, 100, 1, 50, "HelperWaikit.png"));
         // </editor-fold>
+        
+        // <editor-fold defaultstate="collapsed" desc="Equipment">
+        equipmentList.add(new Equipment("Wooden Sword"));
+        equipmentList.add(new Equipment("Iron Sword"));
+        equipmentList.add(new Equipment("Golden Sword"));
+        equipmentList.add(new Equipment("Diamond Sword"));
+        equipmentList.add(new Equipment("Enchanted Diamond Sword"));
+        
+        equipmentList.add(new Equipment("Leather Helmet"));
+        equipmentList.add(new Equipment("Chainmail Helmet"));
+        equipmentList.add(new Equipment("Iron Helmet"));
+        equipmentList.add(new Equipment("Golden Helmet"));
+        equipmentList.add(new Equipment("Diamond Helmet"));
+        equipmentList.add(new Equipment("Netherite Helmet"));
+        
+        equipmentList.add(new Equipment("Leather Chestplate"));
+        equipmentList.add(new Equipment("Chainmail Chestplate"));
+        equipmentList.add(new Equipment("Iron Chestplate"));
+        equipmentList.add(new Equipment("Golden Chestplate"));
+        equipmentList.add(new Equipment("Diamond Chestplate"));
+        equipmentList.add(new Equipment("Netherite Chestplate"));
+        
+        equipmentList.add(new Equipment("Leather Leggings"));
+        equipmentList.add(new Equipment("Chainmail Leggings"));
+        equipmentList.add(new Equipment("Iron Leggings"));
+        equipmentList.add(new Equipment("Golden Leggings"));
+        equipmentList.add(new Equipment("Diamond Leggings"));
+        equipmentList.add(new Equipment("Netherite Leggings"));
+        
+        equipmentList.add(new Equipment("Leather Boots"));
+        equipmentList.add(new Equipment("Chainmail Boots"));
+        equipmentList.add(new Equipment("Iron Boots"));
+        equipmentList.add(new Equipment("Golden Boots"));
+        equipmentList.add(new Equipment("Diamond Boots"));        
+        equipmentList.add(new Equipment("Netherite Boots"));
+
+        // <editor-fold>
+
 
         // <editor-fold defaultstate="collapsed" desc="Starting Items">
         equipmentInventory.add(new Equipment("Wooden Sword"));
