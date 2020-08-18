@@ -11,7 +11,12 @@ package IsabelLai;
  */
 public class UpgradeList<T> implements UpgradeListInterface<T> {
     private T[] array = (T[]) new Object[50];
-    private int length =0 ;
+    private int length;
+    
+    public UpgradeList()
+    {
+        length = 0;
+    }
     
      public void add(T newElement)
      {

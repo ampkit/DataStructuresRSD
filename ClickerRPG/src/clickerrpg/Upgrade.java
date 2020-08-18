@@ -23,6 +23,7 @@ public class Upgrade {
         this.cost = cost;
     }
     
+    //create item based on name
      public Upgrade(String name) {
         switch (name) {
             case "Hp+10":
@@ -61,7 +62,6 @@ public class Upgrade {
                 setItems("ATTACK +30","upgrade",30, 0, 0,90);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Attack+ 30.png"));
                 break;   
-            
                 default:
                 setItems("Error", "Error",0, 0, 0, 0);
                 break;

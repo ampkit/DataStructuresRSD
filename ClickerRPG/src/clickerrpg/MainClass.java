@@ -91,9 +91,6 @@ public class MainClass {
         upgradeList.add(new Upgrade("Hp+30"));
         upgradeList.add(new Upgrade("Att+30"));
         upgradeList.add(new Upgrade("Df+30"));
-        upgradeList.add(new Upgrade("Hp+40"));
-        upgradeList.add(new Upgrade("Att+40"));
-        upgradeList.add(new Upgrade("Df+40"));
 
         // <editor-fold defaultstate="collapsed" desc="Helpers">
         helperList.add(new Helper("Mario", 20, 200, 1, 100, "HelperMario.png"));

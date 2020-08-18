@@ -5,6 +5,7 @@
  */
 package clickerrpg.ui;
 import clickerrpg.Equipment;
+import clickerrpg.Consumable;
 import clickerrpg.MainClass;
 import clickerrpg.Upgrade;
 import java.awt.Font;
@@ -18,9 +19,9 @@ import javax.swing.JButton;
 
 public class ShopUI extends javax.swing.JFrame {
         
-        private static int page = 1;
-        private static String sort = "Equipt";
-        private static String view = "Equipment";
+        private static int page = 1;  //start shop's page from 1
+        private static String sort = "Equipt"; 
+        private static String view = "Equipment"; // click on equipment or upgrade button to display specific item
       
 
      
@@ -39,6 +40,7 @@ public class ShopUI extends javax.swing.JFrame {
         btnUpgrade = new java.awt.Button();
         lblGold = new java.awt.Label();
         jLabel2 = new javax.swing.JLabel();
+        button1 = new java.awt.Button();
         jPanel2 = new javax.swing.JPanel();
         buttonHelmet = new java.awt.Button();
         buttonWeapon = new java.awt.Button();
@@ -86,6 +88,7 @@ public class ShopUI extends javax.swing.JFrame {
 
         buttonEqp.setActionCommand("btnEquipment");
         buttonEqp.setBackground(new java.awt.Color(0, 51, 51));
+        buttonEqp.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         buttonEqp.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         buttonEqp.setForeground(new java.awt.Color(255, 153, 153));
         buttonEqp.setLabel("Equipment");
@@ -115,6 +118,16 @@ public class ShopUI extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 215, 0));
         jLabel2.setText("$");
 
+        button1.setBackground(new java.awt.Color(0, 51, 51));
+        button1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        button1.setForeground(new java.awt.Color(255, 153, 153));
+        button1.setLabel("Consumables");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -124,9 +137,11 @@ public class ShopUI extends javax.swing.JFrame {
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(buttonEqp, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(22, 22, 22)
+                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
                 .addComponent(btnUpgrade, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 359, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblGold, javax.swing.GroupLayout.PREFERRED_SIZE, 169, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -141,6 +156,7 @@ public class ShopUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addComponent(button1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         btnUpgrade.getAccessibleContext().setAccessibleName("");
@@ -415,9 +431,10 @@ public class ShopUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonUpgradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpgradeActionPerformed
-        view = "Upgrade";
+        view = "Upgrade"; 
         page = 1;
         loadUpgrade();
+       
         
     }//GEN-LAST:event_buttonUpgradeActionPerformed
 
@@ -425,22 +442,22 @@ public class ShopUI extends javax.swing.JFrame {
         view = "Equipment";
         page = 1;
         changeButtonVisibility(true);
-        loadData();
+        loadEquipment();
+       
       
       
     }//GEN-LAST:event_buttonEqpActionPerformed
 
     private void buttonWeaponActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonWeaponActionPerformed
-        
-        loadWeapon();
+        loadWeapon(); //display the item which is a weapon in equipment list
     }//GEN-LAST:event_buttonWeaponActionPerformed
 
     private void buttonHelmetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHelmetActionPerformed
-       loadHelmet();
+       loadHelmet(); // display the item which is a helmet in equipment list
     }//GEN-LAST:event_buttonHelmetActionPerformed
 
     private void buttonChestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonChestActionPerformed
-        loadChest();
+        loadChest(); //display the item which is a chest in equipment list
     }//GEN-LAST:event_buttonChestActionPerformed
 
     private void buttonLeggingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLeggingsActionPerformed
@@ -461,7 +478,12 @@ public class ShopUI extends javax.swing.JFrame {
         switch(view){
             case "Equipment":
             {
-                loadData();
+                loadEquipment();
+                break;
+            }
+            case "Comsumables":
+            {
+                loadConsumables();
                 break;
             }
             case "Upgrade":
@@ -479,7 +501,12 @@ public class ShopUI extends javax.swing.JFrame {
         switch(view){
             case "Equipment":
             {
-                loadData();
+                loadEquipment();
+                break;
+            }
+             case "Comsumables":
+            {
+                loadConsumables();
                 break;
             }
             case "Upgrade":
@@ -503,15 +530,11 @@ public class ShopUI extends javax.swing.JFrame {
                 if(MainClass.player.getGold() >= equipment.getPrice() )
                 {
                     buttonPurchase.setEnabled(true);
-                    if (equipment.isEquipped()) {
-                        buttonPurchase.setEnabled(false);
-                    }
-                    else
-                    {
+                    
                         MainClass.player.deductGold(equipment.getPrice());
                         lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
                         MainClass.equipmentInventory.add(equipment);
-                    }
+                    
 
                 }
 
@@ -538,8 +561,29 @@ public class ShopUI extends javax.swing.JFrame {
                     }
                 }
             }
+            case "Consumables" :
+            {
+                
+                 Consumable consumable = (Consumable) jButton.getClientProperty("items");
+                if(MainClass.player.getGold() >= consumable.getPrice() )
+                {
+                    buttonPurchase.setEnabled(true);
+                    
+                        MainClass.player.deductGold(consumable.getPrice());
+                        lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
+                        MainClass.consumableInventory.add(consumable);
+                    
+
+                }
+            }
         }
     }//GEN-LAST:event_buttonPurchaseActionPerformed
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+        view = "Comsumables";
+        page = 1;
+        loadConsumables();
+    }//GEN-LAST:event_button1ActionPerformed
 
     public static void main(String args[]) {
       
@@ -552,10 +596,11 @@ public class ShopUI extends javax.swing.JFrame {
     
      public void startUp() {
          page = 1;
+        buttonPurchase.setEnabled(false);
         setAlwaysOnTop(true);
         setLocationRelativeTo(null);
         setVisible(true);
-        loadData();
+        loadEquipment();
         setMouseListeners();
        
        
@@ -564,7 +609,7 @@ public class ShopUI extends javax.swing.JFrame {
      
      private void clearData() {
         lblGold.setText(String.format("%d",(int)MainClass.player.getGold()));
-
+        
         JLabel[] labels
                 = {lblItem1a, lblItem1b, lblItem2a, lblItem2b, lblItem3a,
                     lblItem3b, lblItem4a, lblItem4b};
@@ -588,7 +633,7 @@ public class ShopUI extends javax.swing.JFrame {
         lblItem4b.putClientProperty("items", null);       
     }
      
-     private void loadData() {
+     private void loadEquipment() {
        clearData();
        sort = "Equipt";
         lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
@@ -627,7 +672,6 @@ public class ShopUI extends javax.swing.JFrame {
       private void loadUpgrade() {
        clearData();
        sort = "Upgrade";
-       changeButtonVisibility(false);
         lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
         JLabel[] label
                 = {lblItem1a, lblItem1b, lblItem2a, lblItem2b, lblItem3a,
@@ -649,15 +693,51 @@ public class ShopUI extends javax.swing.JFrame {
                         jbNext.setEnabled(false);
                     }
                 }
-            if (page != 1) 
-            {
-                jbPrevious.setEnabled(true);
-            }
-            else
+            if (page == 1) 
             {
                 jbPrevious.setEnabled(false);
             }
+            else
+            {
+                jbPrevious.setEnabled(true);
+            }
        
+    }
+     
+     
+      private void loadConsumables() {
+       clearData();
+       sort = "Consumables";
+       changeButtonVisibility(false);
+        lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
+        JLabel[] label
+                = {lblItem1a, lblItem1b, lblItem2a, lblItem2b, lblItem3a,
+                    lblItem3b, lblItem4a, lblItem4b};
+
+        for (int i = (page * 8) - 8, j = 0;
+                i < MainClass.consumableList.getLength() && j < 8;
+                i++, j++) {
+                    label[j].putClientProperty("items", MainClass.consumableList.getEntry(i));
+                    label[j].setIcon(new ImageIcon(MainClass.consumableList.getEntry(i).getImageIcon().getImage().getScaledInstance(160, 160, Image.SCALE_SMOOTH)));
+
+                   if (j == 7)
+                    {
+                       
+                        jbNext.setEnabled(true);
+                    }
+                    else 
+                    {
+                        jbNext.setEnabled(false);
+                    }
+                }
+            if (page == 1) 
+            {
+                jbPrevious.setEnabled(false);
+            }
+            else
+            {
+                jbPrevious.setEnabled(true);
+            }
     }
      
      
@@ -766,7 +846,7 @@ public class ShopUI extends javax.swing.JFrame {
                     Equipment equipment = MainClass.equipmentList.getEntry(i);
                     String type = equipment.getEqSlot();
                    
-                    if ( type != "Chestplate") {
+                    if ( type != "Chest") {
                     j--;
                     }
                     else
@@ -900,6 +980,8 @@ public class ShopUI extends javax.swing.JFrame {
             case "Upgrade":
                  DetailsShow((Upgrade) jLabel.getClientProperty("items"));
                  break;
+            case "Comsumables":
+                ComDetailsShow((Consumable) jLabel.getClientProperty("items"));
         }
         
     }  
@@ -970,6 +1052,42 @@ public class ShopUI extends javax.swing.JFrame {
          }
      }
      
+      private void ComDetailsShow(Consumable consumable) {
+         
+         
+         lblItemPic.setIcon(new ImageIcon(consumable.getImageIcon().getImage().getScaledInstance(280, 280, Image.SCALE_SMOOTH)));
+         lblItemName.setText(consumable.getConsName());
+         lblItemName.setFont(new Font("Nirmala UI", Font.BOLD, 25));
+        String itemDetails = "";
+        itemDetails += "<html><p>";
+        if (consumable.getAttackIncreased() != 0) {
+            
+            itemDetails += "<br>Attack : " + consumable.getAttackIncreased();
+            
+        }
+        if (consumable.getDefenseIncreased() != 0) {
+           
+            itemDetails += "<br><br>Defense : " + consumable.getDefenseIncreased();
+        }
+        if (consumable.getHealthIncreased() != 0) {
+           
+            itemDetails += "<br><br>Heals for " + consumable.getHealthIncreased() +"health.";
+        }
+        itemDetails += "</p></html>";
+         labelDetail.setText(itemDetails);
+         lblCost.setText("Cost : $ " +consumable.getPrice());
+         buttonPurchase.putClientProperty("items",consumable);
+  
+         if(MainClass.player.getGold() < consumable.getPrice())
+         {
+             buttonPurchase.setEnabled(false);
+         }
+         else
+         {
+             buttonPurchase.setEnabled(true);
+         }
+     }
+     
      
      
      
@@ -977,8 +1095,7 @@ public class ShopUI extends javax.swing.JFrame {
         JLabel[] label
                 = {lblItem1a, lblItem1b, lblItem2a, lblItem2b, lblItem3a,
                     lblItem3b, lblItem4a, lblItem4b};
-        Button[] button
-                ={btnUpgrade};
+        
         
         for (JLabel labels : label) {
             labels.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -990,13 +1107,7 @@ public class ShopUI extends javax.swing.JFrame {
         
         
         
-        btnUpgrade.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                
-                page = 1;
-                loadUpgrade();
-            }
-        });     
+       
                
     }
     private void changeButtonVisibility(Boolean visibility) {
@@ -1015,6 +1126,7 @@ public class ShopUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button btnUpgrade;
+    private java.awt.Button button1;
     private java.awt.Button buttonBoots;
     private java.awt.Button buttonChest;
     private java.awt.Button buttonEqp;
