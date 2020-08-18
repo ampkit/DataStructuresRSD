@@ -8,8 +8,11 @@ public class Player {
 
     private ImageIcon playerIcon;
     private String playerName;
+    
     private int highscore;
-
+    private int kills;
+    private double goldEarned;
+    
     private double baseHealth;
     private double curHealth;
     private double maxHealth;
@@ -76,8 +79,17 @@ public class Player {
         this.gold = gold;
     }
 
-    public Player(String playerName, double baseHealth, double baseAttack, double baseDefense) {
-        this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"));
+    public Player(String playerName, String job, double baseHealth, double baseAttack, double baseDefense) {
+        
+         switch (job) {
+            case "Swordsman":
+                this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Player_Swordsman.png"));
+                break;
+            case "Marksman":
+                this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Player_Marksman.png"));
+                break;
+        }
+        
         this.playerName = playerName;
         this.highscore = 0;
         this.baseHealth = baseHealth;
@@ -127,6 +139,10 @@ public class Player {
         return true;
     }
 
+    public void addKill(){
+        kills++;
+    }
+    
     //returns unequippedItem, if any
     public Equipment equipEquipment(Equipment equipment) {
         Equipment unequippedItem = null;
@@ -255,6 +271,10 @@ public class Player {
     public void addGold(double increase) {
         this.gold += increase;
     }
+    
+    public void addGoldEarned(double increase) {
+        this.goldEarned += increase;
+    }
 
     public void deductGold(double deduction) {
         this.gold -= deduction;
@@ -279,6 +299,22 @@ public class Player {
 
     public void setName(String playerName) {
         this.playerName = playerName;
+    }
+
+    public int getKills() {
+        return kills;
+    }
+
+    public void setKills(int kills) {
+        this.kills = kills;
+    }
+
+    public double getGoldEarned() {
+        return goldEarned;
+    }
+
+    public void setGoldEarned(int goldEarned) {
+        this.goldEarned = goldEarned;
     }
 
     public double getCurHealth() {

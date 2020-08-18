@@ -50,18 +50,17 @@ public class MainClass {
         if (damage - enemy.getDefense() >= 0) {
             enemy.setCurHealth(enemy.getCurHealth() - (damage - enemy.getDefense()));
 
-            //enemy.getCurHealth()= enemy.setCurHealth(enemy.getCurHealth() - (damage - enemy.getDefense()));
             if (enemy.getCurHealth() <= 0) {
-                //player.gold += 10;
-                player.addGold(enemy.getGoldDropped() * player.getGoldMultiplier());
+                double gold = enemy.getGoldDropped() * player.getGoldMultiplier();
+                player.addGold(gold);
+                player.addGoldEarned(gold);
+                player.addKill();
                 stage++;
                 enemyQueue.dequeue();
                 if (enemyQueue.isEmpty()) {
                     loadEnemy();
                 }
                 enemy = enemyQueue.getFront();
-
-                //below is placeholder
             }
 
             gameUI.updateGameUI();

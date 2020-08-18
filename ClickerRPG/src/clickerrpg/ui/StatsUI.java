@@ -2,6 +2,8 @@ package clickerrpg.ui;
 
 import clickerrpg.MainClass;
 import clickerrpg.Player;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 
 public class StatsUI extends javax.swing.JFrame {
 
@@ -36,6 +38,8 @@ public class StatsUI extends javax.swing.JFrame {
         lblKillsTotal = new javax.swing.JLabel();
         lblEqAttack = new javax.swing.JLabel();
         lblEqDefense = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        lblGoldTotal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -92,6 +96,13 @@ public class StatsUI extends javax.swing.JFrame {
         lblEqDefense.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lblEqDefense.setText("( + 99 from equipment )");
 
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel5.setText("Gold Earned :");
+
+        lblGoldTotal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblGoldTotal.setText("999");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -101,7 +112,8 @@ public class StatsUI extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblHealth)
@@ -113,7 +125,8 @@ public class StatsUI extends javax.swing.JFrame {
                         .addGap(88, 88, 88)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblEqDefense)
-                            .addComponent(lblEqAttack))))
+                            .addComponent(lblEqAttack)))
+                    .addComponent(lblGoldTotal))
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -137,7 +150,11 @@ public class StatsUI extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(lblKillsTotal))
-                .addContainerGap(188, Short.MAX_VALUE))
+                .addGap(3, 3, 3)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(lblGoldTotal))
+                .addContainerGap(153, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -231,14 +248,22 @@ public class StatsUI extends javax.swing.JFrame {
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
+        initializeData();
     }
 
     private void initializeData(){
         Player player = MainClass.player;
-        lblPlayerIcon.setIcon(player.getPlayerIcon());
-        lblPlayerName.setText(player.getName());        
+        lblPlayerIcon.setIcon(new ImageIcon(player.getPlayerIcon().getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
+        lblPlayerName.setText(player.getName());       
+        
         lblAttack.setText(String.valueOf(player.getAttack()));
-        lblEqAttack.setText(String.valueOf(player.getAttack() - player.getBaseAttack()));
+        lblEqAttack.setText("( + " + String.valueOf(player.getAttack() - player.getBaseAttack()) + " from equipment )" );
+        
+        lblDefense.setText(String.valueOf(player.getDefense()));
+        lblEqDefense.setText("( + " + String.valueOf(player.getDefense()- player.getBaseDefense()) + " from equipment )" );
+
+        lblKillsTotal.setText(String.valueOf(player.getKills()));
+        lblGoldTotal.setText(String.valueOf(player.getGoldEarned()));
 
     }
     
@@ -249,12 +274,14 @@ public class StatsUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblAttack;
     private javax.swing.JLabel lblDefense;
     private javax.swing.JLabel lblEqAttack;
     private javax.swing.JLabel lblEqDefense;
+    private javax.swing.JLabel lblGoldTotal;
     private javax.swing.JLabel lblHealth;
     private javax.swing.JLabel lblKillsTotal;
     private javax.swing.JLabel lblPlayerIcon;
