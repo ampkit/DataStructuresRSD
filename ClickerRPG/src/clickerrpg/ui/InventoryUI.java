@@ -734,8 +734,14 @@ public class InventoryUI extends javax.swing.JFrame {
                 break;
             case "Consumables":
                 Consumable consumable = (Consumable) jButton.getClientProperty("item");
+                if (consumable.getHealthIncreased() > 0){
+                    MainClass.player.heal(consumable.getHealthIncreased());
+                }
                 
+                MainClass.consumableInventory.remove(consumable);
                 
+                loadConsumables();
+                showDetails(consumable);
                 break;
 
         }
@@ -919,7 +925,7 @@ public class InventoryUI extends javax.swing.JFrame {
 
         itemStats += "</p></html>";
 
-        lblItemStats.setText(itemStats);
+        lblItemStats.setText("");
 
         if (equipment.isEquipped()) {
             btnEquip.setText("Unequip");
