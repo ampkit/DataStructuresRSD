@@ -3,21 +3,20 @@ package clickerrpg;
 //entity class
 public class Helper implements Comparable<Helper> {
 
-    private int id;
     private String name;
     private double damage;
     private double hireCost;
     private int level;
     private double upgradeCost;
-    private String imageUrl;
+    private String imageUrl;    //Image path of the helper
     private boolean hired;
     private boolean assigned;
     
-    private int currentAttackPeriod = 0;
-    private int attackPeriod = 1000; //milliseconds
-
-    public Helper(int id, String name, double damage, double hireCost, int level, double upgradeCost, String imageUrl) {
-        this.id = id;
+    private int currentAttackPeriod = 0; //currentAttackPeriod indicates the current milliseconds passed. 
+    private int attackPeriod = 1000;     //indicates how many milliseconds needed for the helper to perform his next attack.
+                                         //When the currentAttackPeriod >= attackPeriod the helper performs an attack.
+    
+    public Helper(String name, double damage, double hireCost, int level, double upgradeCost, String imageUrl) {
         this.name = name;
         this.damage = damage;
         this.hireCost = hireCost;
@@ -28,34 +27,33 @@ public class Helper implements Comparable<Helper> {
         this.assigned = false;
     }
 
-    public int getId() {
-        return id;
-    }
-
+    //Upgrade the helper which increase the level, damage and upgrade cost of the helper
     public void upgrade() {
         this.level++;
         this.upgradeCost *= 1.3;
         this.damage *= 1.3;
     }
 
+    //Compare helper with another helper by hireCost.
     @Override
     public int compareTo(Helper anotherHelper) {
-        if (this.getId() < anotherHelper.getId()) {
+        if (this.hireCost < anotherHelper.getHireCost()) {
             return -1;
-        } else if (this.getId() == anotherHelper.getId()) {
+        } else if (this.hireCost == anotherHelper.getHireCost()) {
             return 0;
         } else {
             return 1;
         }
     }
-
+    
+    //Add current attack period value.
     public void addCurrentAttackPeriod(int milSec){
         this.currentAttackPeriod += milSec;
     }
-    
+
     @Override
     public String toString() {
-        return "Helper{" + "id=" + id + ", name=" + name + ", damage=" + damage + ", hireCost=" + hireCost + ", level=" + level + ", levelUpCost=" + upgradeCost + '}';
+        return "Helper{" + "name=" + name + ", damage=" + damage + ", hireCost=" + hireCost + ", level=" + level + ", upgradeCost=" + upgradeCost + ", imageUrl=" + imageUrl + ", hired=" + hired + ", assigned=" + assigned + ", currentAttackPeriod=" + currentAttackPeriod + ", attackPeriod=" + attackPeriod + '}';
     }
 
     //setter, getter

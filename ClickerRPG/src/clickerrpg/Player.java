@@ -17,6 +17,7 @@ public class Player {
     private double attack;
     private double baseDefense;
     private double defense;
+    private double gold;
     private double goldMultiplier;
 
     private Equipment helmet;
@@ -25,7 +26,7 @@ public class Player {
     private Equipment boots;
     private Equipment weapon;
 
-    double gold;
+    
     
 
     public Player() {
@@ -55,20 +56,46 @@ public class Player {
         this.gold = 0;
     }
 
-    public Player(String playerName, double curHealth, double maxHealth, double attack, double defense, Equipment helmet, Equipment chest, Equipment leggings, Equipment boots, Equipment weapon, double gold, double goldMultiplier) {
+    public Player(ImageIcon playerIcon, String playerName, int highscore, double baseHealth, double curHealth, double maxHealth, double baseAttack, double attack, double baseDefense, double defense, double goldMultiplier, Equipment helmet, Equipment chest, Equipment leggings, Equipment boots, Equipment weapon, double gold) {
+        this.playerIcon = playerIcon;
         this.playerName = playerName;
+        this.highscore = highscore;
+        this.baseHealth = baseHealth;
         this.curHealth = curHealth;
         this.maxHealth = maxHealth;
+        this.baseAttack = baseAttack;
         this.attack = attack;
+        this.baseDefense = baseDefense;
         this.defense = defense;
+        this.goldMultiplier = goldMultiplier;
         this.helmet = helmet;
         this.chest = chest;
         this.leggings = leggings;
         this.boots = boots;
         this.weapon = weapon;
         this.gold = gold;
-        this.goldMultiplier = 1;
     }
+
+    public Player(String playerName, double baseHealth, double baseAttack, double baseDefense) {
+        this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"));
+        this.playerName = playerName;
+        this.highscore = 0;
+        this.baseHealth = baseHealth;
+        this.curHealth = baseHealth;
+        this.maxHealth = baseHealth;
+        this.baseAttack = baseAttack;
+        this.attack = baseAttack;
+        this.baseDefense = baseDefense;
+        this.defense = baseDefense;
+        this.gold = 0;
+        this.goldMultiplier = 1;
+        this.helmet = null;
+        this.chest = null;
+        this.leggings = null;
+        this.boots = null;
+        this.weapon = null;
+    }
+
 
     @Override
     public String toString() {

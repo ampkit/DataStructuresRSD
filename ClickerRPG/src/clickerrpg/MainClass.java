@@ -20,7 +20,7 @@ public class MainClass {
     public static PlayerListInterface<Player> playerList;
     public static QueueEnemyInterface<Enemy> enemyQueue;
     public static SortedHelperListInterface<Helper> helperList;
-    public static SortedHelperListInterface<Helper> assignedHelperList;    
+    public static SortedHelperListInterface<Helper> assignedHelperList;
     public static SLListInterface<Equipment> equipmentList;
     public static SLListInterface<Consumable> consumableList;
     public static SLListInterface<Equipment> equipmentInventory;
@@ -30,6 +30,7 @@ public class MainClass {
     public static GameUI gameUI = new GameUI();
     public static ScoreboardUI scoreboardUI = new ScoreboardUI();
     public static int stage = 1;
+    public static Timer timer = new Timer();
 
     public static void main(String args[]) throws InterruptedException {
         initializeData();
@@ -40,12 +41,7 @@ public class MainClass {
         }
         gameUI.updateGameUI();
         gameUI.startUp();
-        
-        
-        scoreboardUI.startUp();
-        scoreboardUI.displayScoreboardUI();
 
-        Timer timer = new Timer();
         timer.schedule(new AutoAttacks(), 0, 100);
 
     }
@@ -101,59 +97,72 @@ public class MainClass {
         upgradeList.add(new Upgrade("Df+40"));
 
         // <editor-fold defaultstate="collapsed" desc="Helpers">
-        helperList.add(new Helper(2, "Mario", 20, 200, 1, 100, "HelperMario.png"));
-        helperList.add(new Helper(5, "Finn", 50, 500, 1, 250, "HelperFinn.png"));
-        helperList.add(new Helper(3, "SpongeBob", 30, 300, 1, 150, "HelperSpongeBob.png"));
-        helperList.add(new Helper(8, "StarWar", 80, 800, 1, 400, "HelperStarwar.png"));
-        helperList.add(new Helper(6, "Minion", 60, 600, 1, 300, "HelperMinion.png"));
-        helperList.add(new Helper(7, "Pusheen", 70, 700, 1, 350, "HelperPusheen.png"));
-        helperList.add(new Helper(4, "Patrick", 40, 400, 1, 200, "HelperPatrick.png"));
-        helperList.add(new Helper(1, "Waikit, the xueba", 10, 100, 1, 50, "HelperWaikit.png"));
+        helperList.add(new Helper("Mario", 20, 200, 1, 100, "HelperMario.png"));
+        helperList.add(new Helper("Finn", 50, 500, 1, 250, "HelperFinn.png"));
+        helperList.add(new Helper("SpongeBob", 30, 300, 1, 150, "HelperSpongeBob.png"));
+        helperList.add(new Helper("StarWar", 80, 800, 1, 400, "HelperStarwar.png"));
+        helperList.add(new Helper("Minion", 60, 600, 1, 300, "HelperMinion.png"));
+        helperList.add(new Helper("Pusheen", 70, 700, 1, 350, "HelperPusheen.png"));
+        helperList.add(new Helper("Patrick", 40, 400, 1, 200, "HelperPatrick.png"));
+        helperList.add(new Helper("Waikit, the xueba", 10, 100, 1, 50, "HelperWaikit.png"));
         // </editor-fold>
-        
+
         // <editor-fold defaultstate="collapsed" desc="Equipment">
         equipmentList.add(new Equipment("Wooden Sword"));
         equipmentList.add(new Equipment("Iron Sword"));
         equipmentList.add(new Equipment("Golden Sword"));
         equipmentList.add(new Equipment("Diamond Sword"));
         equipmentList.add(new Equipment("Enchanted Diamond Sword"));
-        
+
         equipmentList.add(new Equipment("Leather Helmet"));
         equipmentList.add(new Equipment("Chainmail Helmet"));
         equipmentList.add(new Equipment("Iron Helmet"));
         equipmentList.add(new Equipment("Golden Helmet"));
         equipmentList.add(new Equipment("Diamond Helmet"));
         equipmentList.add(new Equipment("Netherite Helmet"));
-        
+
         equipmentList.add(new Equipment("Leather Chestplate"));
         equipmentList.add(new Equipment("Chainmail Chestplate"));
         equipmentList.add(new Equipment("Iron Chestplate"));
         equipmentList.add(new Equipment("Golden Chestplate"));
         equipmentList.add(new Equipment("Diamond Chestplate"));
         equipmentList.add(new Equipment("Netherite Chestplate"));
-        
+
         equipmentList.add(new Equipment("Leather Leggings"));
         equipmentList.add(new Equipment("Chainmail Leggings"));
         equipmentList.add(new Equipment("Iron Leggings"));
         equipmentList.add(new Equipment("Golden Leggings"));
         equipmentList.add(new Equipment("Diamond Leggings"));
         equipmentList.add(new Equipment("Netherite Leggings"));
-        
+
         equipmentList.add(new Equipment("Leather Boots"));
         equipmentList.add(new Equipment("Chainmail Boots"));
         equipmentList.add(new Equipment("Iron Boots"));
         equipmentList.add(new Equipment("Golden Boots"));
-        equipmentList.add(new Equipment("Diamond Boots"));        
+        equipmentList.add(new Equipment("Diamond Boots"));
         equipmentList.add(new Equipment("Netherite Boots"));
 
         // <editor-fold>
-        
         playerList.add(new Player("Player1", 10));
         playerList.add(new Player("Player2", 5));
         playerList.add(new Player("Player3", 7));
         playerList.add(new Player("Player4", 1));
         playerList.add(new Player("Player5", 4));
-
+        playerList.add(new Player("Player1", 10));
+        playerList.add(new Player("Player2", 5));
+        playerList.add(new Player("Player3", 7));
+        playerList.add(new Player("Player4", 1));
+        playerList.add(new Player("Player5", 4));
+        playerList.add(new Player("Player1", 10));
+        playerList.add(new Player("Player2", 5));
+        playerList.add(new Player("Player3", 7));
+        playerList.add(new Player("Player4", 1));
+        playerList.add(new Player("Player5", 4));
+        playerList.add(new Player("Player1", 10));
+        playerList.add(new Player("Player2", 5));
+        playerList.add(new Player("Player3", 7));
+        playerList.add(new Player("Player4", 1));
+        playerList.add(new Player("Player5", 4));
 
         // <editor-fold defaultstate="collapsed" desc="Starting Items">
         equipmentInventory.add(new Equipment("Wooden Sword"));
@@ -187,20 +196,24 @@ public class MainClass {
             } else {
                 if (enemy.getAttack() - player.getDefense() > 0) {
                     player.takeDamage(enemy.getAttack() - player.getDefense());
+                    if (player.getCurHealth() <= 0) {
+                        gameOver();
+
+                    }
                     enemy.setCurrentAttackPeriod(0); //=0
                 }
             }
-            
+
             if (assignedHelperList.get(0) != null) {
                 helperAttack(assignedHelperList.get(0));
                 gameUI.updateHelperAttackBars(1);
             }
-            
+
             if (assignedHelperList.get(1) != null) {
                 helperAttack(assignedHelperList.get(1));
                 gameUI.updateHelperAttackBars(2);
             }
-            
+
             if (assignedHelperList.get(2) != null) {
                 helperAttack(assignedHelperList.get(2));
                 gameUI.updateHelperAttackBars(3);
@@ -224,5 +237,14 @@ public class MainClass {
         enemyQueue.enqueue(new Enemy("Sephiroth", 100, 100, 50, 8, 60, 1000, "HelperWaikit.png"));
         enemyQueue.enqueue(new Enemy("Straga", 100, 100, 60, 9, 60, 1000, "HelperMinion.png"));
         enemyQueue.enqueue(new Enemy("Deathclaws", 100, 100, 60, 10, 60, 1000, "HelperWaikit.png"));
+    }
+
+    public static void gameOver() {
+        timer.cancel();
+        timer.purge();
+        player.setHighscore(stage);
+        playerList.add(player);
+        scoreboardUI.startUp();
+        scoreboardUI.displayScoreboardUI();
     }
 }

@@ -1,6 +1,5 @@
 package clickerrpg.ui;
 
-
 import clickerrpg.MainClass;
 import clickerrpg.Player;
 
@@ -73,7 +72,7 @@ public class LoginUI extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         String playerName = txtPlayerName.getText();
-        Player player = new Player(playerName, 100, 100, 10, 1, null, null, null, null, null, 0, 1);
+        Player player = new Player(playerName, 100, 10, 1);
         MainClass.player = player;
 
         this.setVisible(false);

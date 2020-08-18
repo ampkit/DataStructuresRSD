@@ -5,23 +5,27 @@
  */
 package clickerrpg.ui;
 
+import ChongJingYi.PlayerList;
+import ChongJingYi.PlayerListInterface;
 import clickerrpg.MainClass;
 import static clickerrpg.MainClass.playerList;
 import clickerrpg.Player;
 import javax.swing.JLabel;
+
 /**
  *
  * @author Lenovo
  */
 public class ScoreboardUI extends javax.swing.JFrame {
-
+    int page = 1;
+    PlayerListInterface<String> arrScoreBoard = new PlayerList<>();
     /**
      * Creates new form Scoreboard
      */
     public ScoreboardUI() {
         initComponents();
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -38,6 +42,8 @@ public class ScoreboardUI extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblPlayerName = new javax.swing.JLabel();
+        btnPrevious = new javax.swing.JButton();
+        btnNext = new javax.swing.JButton();
 
         jTextField3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
@@ -54,22 +60,42 @@ public class ScoreboardUI extends javax.swing.JFrame {
 
         lblPlayerName.setBackground(new java.awt.Color(255, 255, 255));
         lblPlayerName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        lblPlayerName.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+
+        btnPrevious.setText("Previous");
+        btnPrevious.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPreviousActionPerformed(evt);
+            }
+        });
+
+        btnNext.setText("Next");
+        btnNext.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNextActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addComponent(jLabel4)
-                        .addGap(161, 161, 161)
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(lblPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(35, 35, 35)
+                .addComponent(lblPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 357, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnPrevious)
+                .addGap(69, 69, 69)
+                .addComponent(btnNext)
+                .addGap(118, 118, 118))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(82, 82, 82)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(68, 68, 68))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -78,9 +104,13 @@ public class ScoreboardUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addComponent(lblPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 62, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblPlayerName, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnNext)
+                    .addComponent(btnPrevious))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -113,11 +143,27 @@ public class ScoreboardUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
+        // TODO add your handling code here:
+        if (page < arrScoreBoard.getLength()){
+            page++;
+            lblPlayerName.setText(arrScoreBoard.getEntry(page));
+        }
+    }//GEN-LAST:event_btnNextActionPerformed
+
+    private void btnPreviousActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPreviousActionPerformed
+        // TODO add your handling code here:
+        if (page > 1){
+            page--;
+            lblPlayerName.setText(arrScoreBoard.getEntry(page));
+        }
+    }//GEN-LAST:event_btnPreviousActionPerformed
 
     /**
      * @param args the command line arguments
@@ -177,11 +223,10 @@ public class ScoreboardUI extends javax.swing.JFrame {
         setVisible(true);
     }
     
-    public void displayScoreboardUI(){
-        
+    public void displayScoreboardUI() {
+
         //playerList.clear();
         //JLabel[] labels = {lblPlayerName, lblGolds};
-        
         /*for(int i=0; i<MainClass.playerList.getLength(); i++){
             //JLabel label = labels[i];
             
@@ -191,11 +236,31 @@ public class ScoreboardUI extends javax.swing.JFrame {
             
         }*/
         
-        lblPlayerName.setText(playerList.toString());
-
+        String strScoreBoard = "<html><table>";
+        int playerAt = 0;
+        for (int i = 1; i < playerList.getLength() + 1; i++) {
+            if (playerList.getEntry(i).getPlayerName() == MainClass.player.getName()) {
+                playerAt = i;
+            }
+            strScoreBoard += "<tr><td style=\"width:30px;\">" + i +"</td><td style=\"width:170px;\">" + playerList.getEntry(i).getPlayerName() + "</td><td>" + playerList.getEntry(i).getHighscore() + "</tr>";
+            if (i % 8 == 0) {
+                strScoreBoard += "</table></html>";
+                arrScoreBoard.add(strScoreBoard);
+                strScoreBoard = "<html><table>";
+            }
+        }
+        strScoreBoard += "</table></html>";
+        if (strScoreBoard != "<html><table></table></html>") {
+            arrScoreBoard.add(strScoreBoard);
+        }
+        page = (int) Math.ceil(playerAt / 8.0);
+        lblPlayerName.setText(arrScoreBoard.getEntry(page));
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnNext;
+    private javax.swing.JButton btnPrevious;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
