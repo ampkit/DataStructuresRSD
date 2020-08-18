@@ -47,19 +47,19 @@ public class Upgrade {
                 break;
             case "Att+20":
                 setItems("ATTACK +20","upgrade",20, 0, 0,70);
-                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Attack+10.png"));
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Attack+ 20.png"));
                 break;
             case "Hp+30":
                 setItems("HEALTH +30","upgrade",0, 30, 0,70);
-                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/hp+20.png"));
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/hp+30.png"));
                 break;
             case "Df+30":
                 setItems("DEFENSE +30","upgrade",0,0,30,70);
-                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Defense 20.png"));
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Defense 30.png"));
                 break;
             case "Att+30":
                 setItems("ATTACK +30","upgrade",30, 0, 0,90);
-                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Attack+10.png"));
+                this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Attack+ 30.png"));
                 break;   
             
                 default:

@@ -1,5 +1,6 @@
 package clickerrpg;
 
+
 import java.util.Objects;
 import javax.swing.ImageIcon;
 
@@ -7,6 +8,7 @@ public class Player {
 
     private ImageIcon playerIcon;
     private String playerName;
+    private int highscore;
 
     private double baseHealth;
     private double curHealth;
@@ -24,6 +26,7 @@ public class Player {
     private Equipment weapon;
 
     double gold;
+    
 
     public Player() {
         this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"));
@@ -36,11 +39,13 @@ public class Player {
         this.defense = 1;
 
         this.gold = 0;
+        this.highscore = 1;
     }
 
-    public Player(String playerName) {
+    public Player(String playerName, int highscore) {
         this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"));
         this.playerName = playerName;
+        this.highscore = highscore;
         this.curHealth = 100;
         this.maxHealth = 100;
 
@@ -67,9 +72,10 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player{" + "playerName=" + playerName + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", helmet=" + helmet + ", chest=" + chest + ", leggings=" + leggings + ", boots=" + boots + ", weapon=" + weapon + ", gold=" + gold + '}';
+        return "Player{" + "playerName=" + playerName + ", highscore=" + highscore + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", goldMultiplier=" + goldMultiplier + ", helmet=" + helmet + ", chest=" + chest + ", leggings=" + leggings + ", boots=" + boots + ", weapon=" + weapon + ", gold=" + gold + '}';
     }
 
+    
     @Override
     public int hashCode() {
         int hash = 5;
@@ -204,6 +210,19 @@ public class Player {
 
     public void deductGold(double deduction) {
         this.gold -= deduction;
+    }
+    
+    public void addAttack(double increase){
+        this.attack += increase;
+    }
+    
+    public void addHealth(double increase){
+        this.curHealth += increase;
+        this.maxHealth += increase;
+    }
+    
+    public void addDefense(double increase){
+        this.defense += increase;
     }
 
     public String getName() {
@@ -340,6 +359,14 @@ public class Player {
 
     public void setGoldMultiplier(double goldMultiplier) {
         this.goldMultiplier = goldMultiplier;
+    }
+
+    public int getHighscore() {
+        return highscore;
+    }
+
+    public void setHighscore(int highscore) {
+        this.highscore = highscore;
     }
 
 }

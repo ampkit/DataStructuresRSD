@@ -8,6 +8,7 @@ import ChongJingYi.*;
 
 import clickerrpg.ui.GameUI;
 import clickerrpg.ui.LoginUI;
+import clickerrpg.ui.ScoreboardUI;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -16,6 +17,7 @@ public class MainClass {
 
     public static Player player;
     public static Enemy enemy;
+    public static PlayerListInterface<Player> playerList;
     public static QueueEnemyInterface<Enemy> enemyQueue;
     public static SortedHelperListInterface<Helper> helperList;
     public static SortedHelperListInterface<Helper> assignedHelperList;    
@@ -26,6 +28,7 @@ public class MainClass {
     public static UpgradeListInterface<Upgrade> upgradeList;
     public static LoginUI loginUI = new LoginUI();
     public static GameUI gameUI = new GameUI();
+    public static ScoreboardUI scoreboardUI = new ScoreboardUI();
     public static int stage = 1;
 
     public static void main(String args[]) throws InterruptedException {
@@ -37,6 +40,10 @@ public class MainClass {
         }
         gameUI.updateGameUI();
         gameUI.startUp();
+        
+        
+        scoreboardUI.startUp();
+        scoreboardUI.displayScoreboardUI();
 
         Timer timer = new Timer();
         timer.schedule(new AutoAttacks(), 0, 100);
@@ -45,7 +52,6 @@ public class MainClass {
 
     public static void attack(double damage) {
         if (damage - enemy.getDefense() >= 0) {
-
             enemy.setCurHealth(enemy.getCurHealth() - (damage - enemy.getDefense()));
 
             //enemy.getCurHealth()= enemy.setCurHealth(enemy.getCurHealth() - (damage - enemy.getDefense()));
@@ -68,6 +74,7 @@ public class MainClass {
 
     public static void initializeData() {
         // <editor-fold defaultstate="collapsed" desc="Collections">
+        playerList = new PlayerList<>();
         enemyQueue = new QueueEnemy<>();
         helperList = new SortedHelperList<>();
         assignedHelperList = new SortedHelperList<>();
@@ -140,6 +147,12 @@ public class MainClass {
         equipmentList.add(new Equipment("Netherite Boots"));
 
         // <editor-fold>
+        
+        playerList.add(new Player("Player1", 10));
+        playerList.add(new Player("Player2", 5));
+        playerList.add(new Player("Player3", 7));
+        playerList.add(new Player("Player4", 1));
+        playerList.add(new Player("Player5", 4));
 
 
         // <editor-fold defaultstate="collapsed" desc="Starting Items">
