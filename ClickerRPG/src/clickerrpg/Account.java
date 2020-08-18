@@ -5,16 +5,19 @@ import java.util.Objects;
 
 public class Account {
     private String playerName;
+    private int score;
     private PlayerListInterface<Player> player;
     //Player player;
 
     public Account() {
     }
 
-    public Account(String playerName, PlayerListInterface<Player> player) {
+    public Account(String playerName, int score) {
         this.playerName = playerName;
-        this.player = player;
+        this.score = score;
+        //this.player = player;
     }
+
 
     public String getPlayerName() {
         return playerName;
@@ -23,6 +26,16 @@ public class Account {
     public void setPlayerName(String playerName) {
         this.playerName = playerName;
     }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+    
+    
 
     public PlayerListInterface<Player> getPlayer() {
         return player;

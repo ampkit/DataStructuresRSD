@@ -1,6 +1,6 @@
 package clickerrpg.ui;
 
-import clickerrpg.AllPlayerList;
+
 import clickerrpg.MainClass;
 import clickerrpg.Player;
 
