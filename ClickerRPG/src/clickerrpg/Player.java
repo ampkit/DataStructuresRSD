@@ -36,8 +36,8 @@ public class Player {
         this.curHealth = 100;
         this.maxHealth = 100;
 
-        this.attack = 10;
-        this.defense = 1;
+        this.baseAttack = 10;
+        this.baseDefense = 1;
 
         this.gold = 0;
         this.highscore = 1;
@@ -50,8 +50,8 @@ public class Player {
         this.curHealth = 100;
         this.maxHealth = 100;
 
-        this.attack = 10;
-        this.defense = 1;
+        this.baseAttack = 10;
+        this.baseDefense = 1;
 
         this.gold = 0;
     }
@@ -155,7 +155,7 @@ public class Player {
 
                 }
                 equipment.equip();
-                helmet = equipment;
+                leggings = equipment;
                 break;
             case "Boots":
                 if (boots != null) {
@@ -176,7 +176,7 @@ public class Player {
                 weapon = equipment;
                 break;
         }
-
+        calcEquipmentStats();
         return unequippedItem;
     }
 
@@ -220,6 +220,27 @@ public class Player {
         }
     }
 
+    private void calcEquipmentStats(){
+        Equipment equip[] = {weapon, helmet, chest, leggings, boots};
+        
+        double attackBoost = 0;
+        double healthBoost = 0;
+        double defenseBoost = 0;
+        
+        for ( int i = 0; i < equip.length; i++){
+            if (equip[i] != null) {
+                attackBoost += equip[i].getAttack();
+                healthBoost += equip[i].getHealth();
+                defenseBoost += equip[i].getDefense();
+            }
+        }
+        
+        attack = baseAttack + attackBoost;
+        defense = baseDefense + defenseBoost;
+        maxHealth = baseHealth + healthBoost;
+        return;
+    }
+    
     public void heal(double amount) {
         curHealth += amount;
         if (curHealth > maxHealth) {

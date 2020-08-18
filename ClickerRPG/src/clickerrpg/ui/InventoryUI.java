@@ -734,8 +734,14 @@ public class InventoryUI extends javax.swing.JFrame {
                 break;
             case "Consumables":
                 Consumable consumable = (Consumable) jButton.getClientProperty("item");
+                if (consumable.getHealthIncreased() > 0){
+                    MainClass.player.heal(consumable.getHealthIncreased());
+                }
                 
+                MainClass.consumableInventory.remove(consumable);
                 
+                loadConsumables();
+                showDetails(consumable);
                 break;
 
         }
@@ -1007,7 +1013,7 @@ public class InventoryUI extends javax.swing.JFrame {
             // if eqSlot is not All & eqSlot not equal, skip to next i
             if (!sortMode.equals("All") && !sortMode.equals(equipment.getEqSlot())) {
                 j--;
-                break;
+                continue;
             }
 
             label.putClientProperty("item", equipment);
