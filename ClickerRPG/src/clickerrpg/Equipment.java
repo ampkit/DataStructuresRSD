@@ -79,27 +79,27 @@ public class Equipment implements Comparable<Equipment> {
 // </editor-fold>
 // <editor-fold defaultstate="collapsed" desc="Chests">
             case "Leather Chestplate":
-                setEquipmentAttributes("Leather Chestplate", "Chestplate", 0, 10, 1, 5);
+                setEquipmentAttributes("Leather Chestplate", "Chest", 0, 10, 1, 5);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Leather_Chestplate.png"));
                 break;
             case "Chainmail Chestplate":
-                setEquipmentAttributes("Chainmail Chestplate", "Chestplate", 0, 50, 3, 100);
+                setEquipmentAttributes("Chainmail Chestplate", "Chest", 0, 50, 3, 100);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Chainmail_Chestplate.png"));
                 break;
             case "Iron Chestplate":
-                setEquipmentAttributes("Iron Chestplate", "Chestplate", 0, 200, 5, 500);
+                setEquipmentAttributes("Iron Chestplate", "Chest", 0, 200, 5, 500);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Iron_Chestplate.png"));
                 break;
             case "Golden Chestplate":
-                setEquipmentAttributes("Golden Chestplate", "Chestplate", 0, 500, 10, 1000);
+                setEquipmentAttributes("Golden Chestplate", "Chest", 0, 500, 10, 1000);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Golden_Chestplate.png"));
                 break;
             case "Diamond Chestplate":
-                setEquipmentAttributes("Diamond Chestplate", "Chestplate", 0, 1000, 15, 5000);
+                setEquipmentAttributes("Diamond Chestplate", "Chest", 0, 1000, 15, 5000);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Diamond_Chestplate.png"));
                 break;
             case "Netherite Chestplate":
-                setEquipmentAttributes("Netherite Chestplate", "Chestplate", 0, 3000, 30, 50000);
+                setEquipmentAttributes("Netherite Chestplate", "Chest", 0, 3000, 30, 50000);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Netherite_Chestplate.png"));
                 break;
 // </editor-fold>

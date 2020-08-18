@@ -335,6 +335,11 @@ public class GameUI extends javax.swing.JFrame {
         jButton4.setMaximumSize(new java.awt.Dimension(200, 100));
         jButton4.setMinimumSize(new java.awt.Dimension(200, 100));
         jButton4.setPreferredSize(new java.awt.Dimension(200, 100));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         btnInventory.setBackground(new java.awt.Color(51, 51, 51));
         btnInventory.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
@@ -460,6 +465,11 @@ public class GameUI extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         ShopUI shopUI = new ShopUI();
         shopUI.startUp();    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        StatsUI statsUI = new StatsUI();
+        statsUI.startUp();
+      }//GEN-LAST:event_jButton4ActionPerformed
     // </editor-fold>
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */

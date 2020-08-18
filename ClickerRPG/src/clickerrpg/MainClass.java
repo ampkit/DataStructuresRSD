@@ -40,10 +40,6 @@ public class MainClass {
         }
         gameUI.updateGameUI();
         gameUI.startUp();
-        
-        
-        scoreboardUI.startUp();
-        scoreboardUI.displayScoreboardUI();
 
         Timer timer = new Timer();
         timer.schedule(new AutoAttacks(), 0, 100);

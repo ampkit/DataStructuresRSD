@@ -925,7 +925,7 @@ public class InventoryUI extends javax.swing.JFrame {
 
         itemStats += "</p></html>";
 
-        lblItemStats.setText("");
+        lblItemStats.setText(itemStats);
 
         if (equipment.isEquipped()) {
             btnEquip.setText("Unequip");
@@ -1013,7 +1013,7 @@ public class InventoryUI extends javax.swing.JFrame {
             // if eqSlot is not All & eqSlot not equal, skip to next i
             if (!sortMode.equals("All") && !sortMode.equals(equipment.getEqSlot())) {
                 j--;
-                break;
+                continue;
             }
 
             label.putClientProperty("item", equipment);

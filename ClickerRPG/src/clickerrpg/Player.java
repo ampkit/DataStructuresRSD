@@ -35,8 +35,8 @@ public class Player {
         this.curHealth = 100;
         this.maxHealth = 100;
 
-        this.attack = 10;
-        this.defense = 1;
+        this.baseAttack = 10;
+        this.baseDefense = 1;
 
         this.gold = 0;
         this.highscore = 1;
@@ -49,18 +49,19 @@ public class Player {
         this.curHealth = 100;
         this.maxHealth = 100;
 
-        this.attack = 10;
-        this.defense = 1;
+        this.baseAttack = 10;
+        this.baseDefense = 1;
 
         this.gold = 0;
     }
 
     public Player(String playerName, double curHealth, double maxHealth, double attack, double defense, Equipment helmet, Equipment chest, Equipment leggings, Equipment boots, Equipment weapon, double gold, double goldMultiplier) {
-        this.playerName = playerName;
+        this.playerName = playerName;        
+        this.baseHealth = curHealth;
         this.curHealth = curHealth;
         this.maxHealth = maxHealth;
-        this.attack = attack;
-        this.defense = defense;
+        this.baseAttack = attack;
+        this.baseDefense = defense;
         this.helmet = helmet;
         this.chest = chest;
         this.leggings = leggings;
@@ -128,7 +129,7 @@ public class Player {
 
                 }
                 equipment.equip();
-                helmet = equipment;
+                leggings = equipment;
                 break;
             case "Boots":
                 if (boots != null) {
@@ -149,7 +150,7 @@ public class Player {
                 weapon = equipment;
                 break;
         }
-
+        calcEquipmentStats();
         return unequippedItem;
     }
 
@@ -193,6 +194,27 @@ public class Player {
         }
     }
 
+    private void calcEquipmentStats(){
+        Equipment equip[] = {weapon, helmet, chest, leggings, boots};
+        
+        double attackBoost = 0;
+        double healthBoost = 0;
+        double defenseBoost = 0;
+        
+        for ( int i = 0; i < equip.length; i++){
+            if (equip[i] != null) {
+                attackBoost += equip[i].getAttack();
+                healthBoost += equip[i].getHealth();
+                defenseBoost += equip[i].getDefense();
+            }
+        }
+        
+        attack = baseAttack + attackBoost;
+        defense = baseDefense + defenseBoost;
+        maxHealth = baseHealth + healthBoost;
+        return;
+    }
+    
     public void heal(double amount) {
         curHealth += amount;
         if (curHealth > maxHealth) {

@@ -1,14 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package clickerrpg.ui;
 
-/**
- *
- * @author ampkit
- */
+import clickerrpg.MainClass;
+import clickerrpg.Player;
+
 public class StatsUI extends javax.swing.JFrame {
 
     /**
@@ -58,6 +52,11 @@ public class StatsUI extends javax.swing.JFrame {
         btnBack.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnBack.setText("Back");
         btnBack.setPreferredSize(new java.awt.Dimension(150, 35));
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -189,6 +188,10 @@ public class StatsUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_btnBackActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -223,6 +226,22 @@ public class StatsUI extends javax.swing.JFrame {
             }
         });
     }
+
+    public void startUp() {
+        setResizable(false);
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+
+    private void initializeData(){
+        Player player = MainClass.player;
+        lblPlayerIcon.setIcon(player.getPlayerIcon());
+        lblPlayerName.setText(player.getName());        
+        lblAttack.setText(String.valueOf(player.getAttack()));
+        lblEqAttack.setText(String.valueOf(player.getAttack() - player.getBaseAttack()));
+
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
