@@ -40,7 +40,7 @@ public class ShopUI extends javax.swing.JFrame {
         btnUpgrade = new java.awt.Button();
         lblGold = new java.awt.Label();
         jLabel2 = new javax.swing.JLabel();
-        button1 = new java.awt.Button();
+        buttonConsumables = new java.awt.Button();
         jPanel2 = new javax.swing.JPanel();
         buttonHelmet = new java.awt.Button();
         buttonWeapon = new java.awt.Button();
@@ -118,13 +118,13 @@ public class ShopUI extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 215, 0));
         jLabel2.setText("$");
 
-        button1.setBackground(new java.awt.Color(0, 51, 51));
-        button1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        button1.setForeground(new java.awt.Color(255, 153, 153));
-        button1.setLabel("Consumables");
-        button1.addActionListener(new java.awt.event.ActionListener() {
+        buttonConsumables.setBackground(new java.awt.Color(0, 51, 51));
+        buttonConsumables.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        buttonConsumables.setForeground(new java.awt.Color(255, 153, 153));
+        buttonConsumables.setLabel("Consumables");
+        buttonConsumables.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                button1ActionPerformed(evt);
+                buttonConsumablesActionPerformed(evt);
             }
         });
 
@@ -138,7 +138,7 @@ public class ShopUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(buttonEqp, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22)
-                .addComponent(button1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(buttonConsumables, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(20, 20, 20)
                 .addComponent(btnUpgrade, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 207, Short.MAX_VALUE)
@@ -156,7 +156,7 @@ public class ShopUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
-            .addComponent(button1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(buttonConsumables, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         btnUpgrade.getAccessibleContext().setAccessibleName("");
@@ -579,11 +579,11 @@ public class ShopUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_buttonPurchaseActionPerformed
 
-    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+    private void buttonConsumablesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonConsumablesActionPerformed
         view = "Comsumables";
         page = 1;
         loadConsumables();
-    }//GEN-LAST:event_button1ActionPerformed
+    }//GEN-LAST:event_buttonConsumablesActionPerformed
 
     public static void main(String args[]) {
       
@@ -1126,9 +1126,9 @@ public class ShopUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button btnUpgrade;
-    private java.awt.Button button1;
     private java.awt.Button buttonBoots;
     private java.awt.Button buttonChest;
+    private java.awt.Button buttonConsumables;
     private java.awt.Button buttonEqp;
     private java.awt.Button buttonHelmet;
     private java.awt.Button buttonLeggings;
