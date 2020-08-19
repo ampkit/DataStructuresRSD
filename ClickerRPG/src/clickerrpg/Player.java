@@ -29,9 +29,6 @@ public class Player {
     private Equipment boots;
     private Equipment weapon;
 
-    
-    
-
     public Player() {
         this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"));
         this.playerName = "testPlayer";

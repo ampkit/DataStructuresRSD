@@ -781,7 +781,7 @@ public class HelperUI extends javax.swing.JFrame {
     }
 
     private void updateUI() {
-        labelGold.setText(String.format("%.2f", MainClass.player.getGold()));
+        labelGold.setText(String.format("%d", (int)MainClass.player.getGold()));
         updatePanel1Control(MainClass.helperList.get(page * 4 - 4));
         updatePanel2Control(MainClass.helperList.get(page * 4 - 3));
         updatePanel3Control(MainClass.helperList.get(page * 4 - 2));
@@ -798,10 +798,9 @@ public class HelperUI extends javax.swing.JFrame {
 
     private void hireBtnEvent(Helper helper) {
         if (helper.isHired() == false) {
-            if (MainClass.player.getGold() >= helper.getHireCost()) {
-                MainClass.player.deductGold(helper.getHireCost());
-                helper.setHired(true);
-            }
+            MainClass.player.deductGold((int) helper.getHireCost());
+            helper.setHired(true);
+
         } else if (helper.isAssigned() == false) {
             helper.setAssigned(true);
             MainClass.assignedHelperList.add(helper);
@@ -816,7 +815,7 @@ public class HelperUI extends javax.swing.JFrame {
     }
 
     private void upgradeBtnEvent(Helper helper) {
-        MainClass.player.deductGold(helper.getUpgradeCost());
+        MainClass.player.deductGold((int)helper.getUpgradeCost());
         helper.upgrade();
         MainClass.gameUI.updateGameUI();
         updateUI();
@@ -826,11 +825,11 @@ public class HelperUI extends javax.swing.JFrame {
         lblIcon.setIcon(new ImageIcon(imageFolderPath + helper.getImageUrl()));
         lblName.setText(helper.getName());
         lblLevelValue.setText(String.format("%d", helper.getLevel()));
-        lblDamageValue.setText(String.format("%.2f", helper.getDamage()));
+        lblDamageValue.setText(String.format("%d", (int) helper.getDamage()));
 
         if (helper.isHired()) {
             lblCost.setText("Upgrade Cost: $");
-            lblCostValue.setText(String.format("%.2f", helper.getUpgradeCost()));
+            lblCostValue.setText(String.format("%d", (int) helper.getUpgradeCost()));
             btnUpgrade.setEnabled(true);
             btnHire.setEnabled(true);
             if (helper.isAssigned()) {
@@ -849,7 +848,7 @@ public class HelperUI extends javax.swing.JFrame {
         } else {
             jPanel1.setBackground(new Color(51, 51, 51));
             lblCost.setText("Hire Cost: $");
-            lblCostValue.setText(String.format("%.2f", helper.getHireCost()));
+            lblCostValue.setText(String.format("%d", (int) helper.getHireCost()));
             btnHire.setText("Hire");
             btnUpgrade.setEnabled(false);
             if (MainClass.player.getGold() < helper.getHireCost()) {
@@ -864,11 +863,11 @@ public class HelperUI extends javax.swing.JFrame {
         lblIcon1.setIcon(new ImageIcon(imageFolderPath + helper.getImageUrl()));
         lblName1.setText(helper.getName());
         lblLevelValue1.setText(String.format("%d", helper.getLevel()));
-        lblDamageValue1.setText(String.format("%.2f", helper.getDamage()));
+        lblDamageValue1.setText(String.format("%d", (int) helper.getDamage()));
 
         if (helper.isHired()) {
             lblCost1.setText("Upgrade Cost: $");
-            lblCostValue1.setText(String.format("%.2f", helper.getUpgradeCost()));
+            lblCostValue1.setText(String.format("%d", (int) helper.getUpgradeCost()));
             btnUpgrade1.setEnabled(true);
             btnHire1.setEnabled(true);
             if (helper.isAssigned()) {
@@ -887,7 +886,7 @@ public class HelperUI extends javax.swing.JFrame {
         } else {
             jPanel3.setBackground(new Color(51, 51, 51));
             lblCost1.setText("Hire Cost: $");
-            lblCostValue1.setText(String.format("%.2f", helper.getHireCost()));
+            lblCostValue1.setText(String.format("%d", (int) helper.getHireCost()));
             btnHire1.setText("Hire");
             btnUpgrade1.setEnabled(false);
             if (MainClass.player.getGold() < helper.getHireCost()) {
@@ -902,11 +901,11 @@ public class HelperUI extends javax.swing.JFrame {
         lblIcon2.setIcon(new ImageIcon(imageFolderPath + helper.getImageUrl()));
         lblName2.setText(helper.getName());
         lblLevelValue2.setText(String.format("%d", helper.getLevel()));
-        lblDamageValue2.setText(String.format("%.2f", helper.getDamage()));
+        lblDamageValue2.setText(String.format("%d", (int) helper.getDamage()));
 
         if (helper.isHired()) {
             lblCost2.setText("Upgrade Cost: $");
-            lblCostValue2.setText(String.format("%.2f", helper.getUpgradeCost()));
+            lblCostValue2.setText(String.format("%d", (int) helper.getUpgradeCost()));
             btnUpgrade2.setEnabled(true);
             btnHire2.setEnabled(true);
             if (helper.isAssigned()) {
@@ -925,7 +924,7 @@ public class HelperUI extends javax.swing.JFrame {
         } else {
             jPanel4.setBackground(new Color(51, 51, 51));
             lblCost2.setText("Hire Cost: $");
-            lblCostValue2.setText(String.format("%.2f", helper.getHireCost()));
+            lblCostValue2.setText(String.format("%d", (int) helper.getHireCost()));
             btnHire2.setText("Hire");
             btnUpgrade2.setEnabled(false);
             if (MainClass.player.getGold() < helper.getHireCost()) {
@@ -940,11 +939,11 @@ public class HelperUI extends javax.swing.JFrame {
         lblIcon3.setIcon(new ImageIcon(imageFolderPath + helper.getImageUrl()));
         lblName3.setText(helper.getName());
         lblLevelValue3.setText(String.format("%d", helper.getLevel()));
-        lblDamageValue3.setText(String.format("%.2f", helper.getDamage()));
+        lblDamageValue3.setText(String.format("%d", (int) helper.getDamage()));
 
         if (helper.isHired()) {
             lblCost3.setText("Upgrade Cost: $");
-            lblCostValue3.setText(String.format("%.2f", helper.getUpgradeCost()));
+            lblCostValue3.setText(String.format("%d", (int) helper.getUpgradeCost()));
             btnUpgrade3.setEnabled(true);
             btnHire3.setEnabled(true);
             if (helper.isAssigned()) {
@@ -963,7 +962,7 @@ public class HelperUI extends javax.swing.JFrame {
         } else {
             jPanel5.setBackground(new Color(51, 51, 51));
             lblCost3.setText("Hire Cost: $");
-            lblCostValue3.setText(String.format("%.2f", helper.getHireCost()));
+            lblCostValue3.setText(String.format("%d", (int) helper.getHireCost()));
             btnHire3.setText("Hire");
             btnUpgrade3.setEnabled(false);
             if (MainClass.player.getGold() < helper.getHireCost()) {

@@ -63,6 +63,7 @@ public class MainClass {
                 player.addGold(gold);
                 player.addGoldEarned(gold);
                 player.addKill();
+                player.heal(player.getCurHealth()*0.1);
                 stage++;
                 enemyQueue.dequeue();
                 if (enemyQueue.isEmpty()) {
