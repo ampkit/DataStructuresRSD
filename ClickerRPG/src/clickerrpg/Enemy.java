@@ -25,7 +25,7 @@ public class Enemy{
     }
 
    public void increaseStats(int stage){
-        double percent = ( 1 + (stage/100));
+        double percent = ( 1 + (stage/100.0));
         this.attack *= percent;
         this.defense *= percent;
         this.maxHealth *= percent;

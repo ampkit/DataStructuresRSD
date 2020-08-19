@@ -152,8 +152,8 @@ public class MainClass {
         consumableList.add(new Consumable("Endurance Potion"));
         consumableList.add(new Consumable("Power Potion"));
         consumableList.add(new Consumable("Protection Potion"));
-
-        // <editor-fold>
+        //<editor-fold>
+        
         playerList.add(new Player("Player1", 10));
         playerList.add(new Player("Player2", 5));
         playerList.add(new Player("Player3", 7));
@@ -244,6 +244,7 @@ public class MainClass {
         }
     }
 
+    
     //game over
     public static void loadEnemy() {
         enemyQueue.clear();
