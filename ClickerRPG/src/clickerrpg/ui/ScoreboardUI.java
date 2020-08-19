@@ -51,7 +51,6 @@ public class ScoreboardUI extends javax.swing.JFrame {
         btnNext = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         btnExit = new javax.swing.JButton();
-        btnPlayAgain = new javax.swing.JButton();
 
         jTextField3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
@@ -99,14 +98,6 @@ public class ScoreboardUI extends javax.swing.JFrame {
             }
         });
 
-        btnPlayAgain.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        btnPlayAgain.setText("Play Again");
-        btnPlayAgain.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPlayAgainActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -127,8 +118,6 @@ public class ScoreboardUI extends javax.swing.JFrame {
                                 .addComponent(btnPrevious)
                                 .addGap(29, 29, 29)
                                 .addComponent(btnNext)
-                                .addGap(27, 27, 27)
-                                .addComponent(btnPlayAgain)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(lblPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -148,8 +137,7 @@ public class ScoreboardUI extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnPrevious)
                     .addComponent(btnNext)
-                    .addComponent(btnExit)
-                    .addComponent(btnPlayAgain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnExit))
                 .addContainerGap())
         );
 
@@ -206,14 +194,6 @@ public class ScoreboardUI extends javax.swing.JFrame {
         //dispose();
         System.exit(0);
     }//GEN-LAST:event_btnExitActionPerformed
-
-    private void btnPlayAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayAgainActionPerformed
-        /*try {
-            startGame();
-        } catch (InterruptedException ex) {
-            Logger.getLogger(ScoreboardUI.class.getName()).log(Level.SEVERE, null, ex);
-        }*/
-    }//GEN-LAST:event_btnPlayAgainActionPerformed
 
     /**
      * @param args the command line arguments
@@ -302,7 +282,6 @@ public class ScoreboardUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnExit;
     private javax.swing.JButton btnNext;
-    private javax.swing.JButton btnPlayAgain;
     private javax.swing.JButton btnPrevious;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

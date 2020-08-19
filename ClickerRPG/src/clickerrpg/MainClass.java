@@ -1,9 +1,7 @@
 package clickerrpg;
 
-import ADT.OoiPingXiu.QueueEnemy;
-import ADT.OoiPingXiu.QueueEnemyInterface;
-import ADT.IsabelLai.UpgradeList;
-import ADT.IsabelLai.UpgradeListInterface;
+import ADT.OoiPingXiu.*;
+import ADT.IsabelLai.*;
 import ADT.ChongWaiKit.SLListInterface;
 import ADT.ChongWaiKit.SortedLinkedList;
 import ADT.ChongJingYi.PlayerList;
@@ -31,24 +29,14 @@ public class MainClass {
     public static SLListInterface<Equipment> equipmentInventory;
     public static SLListInterface<Consumable> consumableInventory;
     public static UpgradeListInterface<Upgrade> upgradeList;
-    public static LoginUI loginUI = new LoginUI();
-    public static GameUI gameUI = new GameUI();
-    public static ScoreboardUI scoreboardUI = new ScoreboardUI();
-    public static int stage = 1;
+    public static LoginUI loginUI = new LoginUI();;
+    public static GameUI gameUI;
+    public static ScoreboardUI scoreboardUI;
+    public static int stage;
     public static Timer timer;
 
     public static void main(String args[]) throws InterruptedException {
-        initializeData();
         startGame();
-
-        /*loginUI.startUp();
-        while (player == null) {
-            Thread.sleep(1000);
-        }
-        gameUI.updateGameUI();
-        gameUI.startUp();
-
-        startAutoAttackTimers();*/
     }
 
     public static void startAutoAttackTimers() {
@@ -96,6 +84,10 @@ public class MainClass {
         upgradeList = new UpgradeList<>();
         // </editor-fold>
         
+        gameUI = new GameUI();
+        scoreboardUI = new ScoreboardUI();
+                
+        player = null;
         stage = 1;
         loadEnemy();
         enemy = enemyQueue.getFront();
@@ -271,8 +263,11 @@ public class MainClass {
     }
     
     public static void startGame() throws InterruptedException{
-        //stage = 1;
+        initializeData();
+
+        loginUI.revalidate();
         loginUI.startUp();
+        Thread.sleep(1000);
         while (player == null) {
             Thread.sleep(1000);
         }

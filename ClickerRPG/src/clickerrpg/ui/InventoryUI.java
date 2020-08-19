@@ -1159,7 +1159,14 @@ public class InventoryUI extends javax.swing.JFrame {
             label.putClientProperty("item", equipment);
             label.setIcon(equipment.getImageIcon());
 
-            if (equipment.isEquipped()) {
+            int eqItems = 0;
+            if (MainClass.player.getWeapon() != null) { eqItems++ ;}
+            if (MainClass.player.getHelmet()!= null) { eqItems++ ;}
+            if (MainClass.player.getChest() != null) { eqItems++ ;}
+            if (MainClass.player.getLeggings()!= null) { eqItems++ ;}
+            if (MainClass.player.getBoots()!= null) { eqItems++ ;}
+           
+            if ( j < eqItems) {
                 label.setHorizontalTextPosition(JLabel.LEFT);
                 label.setVerticalTextPosition(JLabel.TOP);
 
