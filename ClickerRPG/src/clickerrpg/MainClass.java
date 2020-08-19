@@ -212,14 +212,7 @@ public class MainClass {
                 if (enemy.getAttack() - player.getDefense() > 0) {
                     player.takeDamage(enemy.getAttack() - player.getDefense());
                     if (player.getCurHealth() <= 0) {
-                        if (gameOver()){
-                            player.setHighscore(stage);
-                            playerList.add(player);
-                            gameUI.setVisible(false);
-                            scoreboardUI.startUp();
-                            scoreboardUI.displayScoreboardUI();
-                        }
-
+                        gameOver();
                     }
                     enemy.setCurrentAttackPeriod(0); //=0
                 }
@@ -260,13 +253,13 @@ public class MainClass {
         enemyQueue.enqueue(new Enemy("Deathclaws", 100, 100, 10, 2, 100, 1000, "HelperWaikit.png"));
     }
 
-    public static boolean gameOver() {
+    public static void gameOver() {
         timer.cancel();
         timer.purge();
-        //player.setHighscore(stage);
-        //playerList.add(player);
-        //scoreboardUI.startUp();
-        //scoreboardUI.displayScoreboardUI();
-        return true;
+        player.setHighscore(stage);
+        playerList.add(player);
+        gameUI.setVisible(false);
+        scoreboardUI.startUp();
+        scoreboardUI.displayScoreboardUI();
     }
 }
