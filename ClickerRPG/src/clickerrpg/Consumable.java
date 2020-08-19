@@ -19,13 +19,37 @@ public class Consumable implements Comparable<Consumable>{
                 consName = "Health Potion";
                 imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Health_Potion.png"));
                 healthIncreased = 100;
-                price = 5;            
+                price = 5;
                 break;
             case "Greater Health Potion" :
                 consName = "Greater Health Potion";
                 imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Greater_Health_Potion.png"));
-                healthIncreased = 200;
+                healthIncreased = 300;
                 price = 20;
+                break;
+            case "Grand Health Potion" :
+                consName = "Grand Health Potion";
+                imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Grand_Health_Potion.png"));
+                healthIncreased = 500;
+                price = 100;
+                break;
+            case "Endurance Potion" :
+                consName = "Endurance Potion";
+                imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Endurance_Potion.png"));
+                maxHealthIncreased = 50;
+                price = 500;
+                break;
+            case "Power Potion" :
+                consName = "Power Potion";
+                imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Power_Potion.png"));
+                attackIncreased = 10;
+                price = 500;
+                break;
+            case "Protection Potion" :
+                consName = "Protection Potion";
+                imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Protection_Potion.png"));
+                defenseIncreased = 5;
+                price = 500;
                 break;
         }
     } 

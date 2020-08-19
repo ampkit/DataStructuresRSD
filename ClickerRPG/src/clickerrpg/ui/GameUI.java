@@ -2,12 +2,15 @@ package clickerrpg.ui;
 
 import clickerrpg.MainClass;
 import java.awt.Font;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 
 public class GameUI extends javax.swing.JFrame {
 
     private final String imageFolderPath = "src/clickerrpg/img/";
-
+    public boolean active;
+    
     public GameUI() {
         initComponents();
     }
@@ -460,21 +463,27 @@ public class GameUI extends javax.swing.JFrame {
         InventoryUI inventoryUI = new InventoryUI();
         inventoryUI.startUp();
         this.setEnabled(false);
+        MainClass.stopAutoAttackTimers();
     }//GEN-LAST:event_btnInventoryActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         HelperUI helperUI = new HelperUI();
         helperUI.startUp();
-        this.setEnabled(false);
+        this.setEnabled(false);        
+        MainClass.stopAutoAttackTimers();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         ShopUI shopUI = new ShopUI();
+        this.setEnabled(false);        
+        MainClass.stopAutoAttackTimers();
         shopUI.startUp();    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         StatsUI statsUI = new StatsUI();
-        statsUI.startUp();
+        statsUI.startUp();       
+        this.setEnabled(false);  
+        MainClass.stopAutoAttackTimers();
       }//GEN-LAST:event_jButton4ActionPerformed
     // </editor-fold>
     public static void main(String args[]) {

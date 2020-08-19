@@ -30,7 +30,7 @@ public class MainClass {
     public static GameUI gameUI = new GameUI();
     public static ScoreboardUI scoreboardUI = new ScoreboardUI();
     public static int stage = 1;
-    public static Timer timer = new Timer();
+    public static Timer timer;
 
     public static void main(String args[]) throws InterruptedException {
         initializeData();
@@ -42,8 +42,16 @@ public class MainClass {
         gameUI.updateGameUI();
         gameUI.startUp();
 
+        startAutoAttackTimers();
+    }
+    
+    public static void startAutoAttackTimers(){
+        timer = new Timer();
         timer.schedule(new AutoAttacks(), 0, 100);
+    }
 
+    public static void stopAutoAttackTimers(){
+        timer.cancel();
     }
 
     public static void attack(double damage) {
@@ -106,7 +114,7 @@ public class MainClass {
         helperList.add(new Helper("Waikit, the xueba", 10, 100, 1, 50, "HelperWaikit.png"));
         // </editor-fold>
 
-        // <editor-fold defaultstate="collapsed" desc="Equipment">
+        // <editor-fold defaultstate="collapsed" desc="Equipment and Consumables">
         equipmentList.add(new Equipment("Wooden Sword"));
         equipmentList.add(new Equipment("Iron Sword"));
         equipmentList.add(new Equipment("Golden Sword"));
@@ -141,6 +149,13 @@ public class MainClass {
         equipmentList.add(new Equipment("Diamond Boots"));
         equipmentList.add(new Equipment("Netherite Boots"));
 
+        consumableList.add(new Consumable("Health Potion"));
+        consumableList.add(new Consumable("Greater Health Potion"));
+        consumableList.add(new Consumable("Grand Health Potion"));
+        consumableList.add(new Consumable("Endurance Potion"));
+        consumableList.add(new Consumable("Power Potion"));
+        consumableList.add(new Consumable("Protection Potion"));
+
         // <editor-fold>
         playerList.add(new Player("Player1", 10));
         playerList.add(new Player("Player2", 5));
@@ -170,6 +185,10 @@ public class MainClass {
         equipmentInventory.add(new Equipment("Leather Leggings"));
         equipmentInventory.add(new Equipment("Leather Boots"));
 
+        consumableInventory.add(new Consumable("Health Potion"));
+        consumableInventory.add(new Consumable("Health Potion"));
+        consumableInventory.add(new Consumable("Health Potion"));
+        consumableInventory.add(new Consumable("Health Potion"));
         consumableInventory.add(new Consumable("Health Potion"));
         // </editor-fold>
 

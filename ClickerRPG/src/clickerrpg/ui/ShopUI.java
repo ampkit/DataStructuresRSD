@@ -453,7 +453,10 @@ public class ShopUI extends javax.swing.JFrame {
 
     private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
         MainClass.gameUI.updateGameUI();
-        this.setVisible(false);
+        this.setVisible(false);        
+        MainClass.gameUI.setEnabled(true);
+        MainClass.startAutoAttackTimers();
+
     }//GEN-LAST:event_jButtonBackActionPerformed
 
     private void jbPreviousActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPreviousActionPerformed

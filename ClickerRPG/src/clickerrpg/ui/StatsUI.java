@@ -206,7 +206,9 @@ public class StatsUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        this.setVisible(false);
+        this.setVisible(false);        
+        MainClass.startAutoAttackTimers();
+        MainClass.gameUI.setEnabled(true);
     }//GEN-LAST:event_btnBackActionPerformed
 
     /**

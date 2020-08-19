@@ -88,6 +88,9 @@ public class Player {
             case "Marksman":
                 this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Player_Marksman.png"));
                 break;
+            case "Magician":
+                this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Player_Magician.png"));
+                break;
         }
         
         this.playerName = playerName;
@@ -280,6 +283,7 @@ public class Player {
         this.gold -= deduction;
     }
     
+    
     public void addAttack(double increase){
         this.attack += increase;
     }
@@ -421,6 +425,10 @@ public class Player {
         this.baseHealth = baseHealth;
     }
 
+    public void addBaseHealth(double baseHealth) {
+        this.baseHealth += baseHealth;
+    }
+    
     public double getBaseAttack() {
         return baseAttack;
     }
@@ -428,13 +436,19 @@ public class Player {
     public void setBaseAttack(double baseAttack) {
         this.baseAttack = baseAttack;
     }
-
+    
+    public void addBaseAttack(double baseAttack) {
+        this.baseAttack += baseAttack;
+    }
     public double getBaseDefense() {
         return baseDefense;
     }
 
     public void setBaseDefense(double baseDefense) {
         this.baseDefense = baseDefense;
+    }
+    public void addBaseDefense(double baseDefense) {
+        this.baseDefense += baseDefense;
     }
 
     public double getGoldMultiplier() {

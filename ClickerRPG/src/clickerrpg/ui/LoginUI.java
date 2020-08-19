@@ -8,7 +8,6 @@ import javax.swing.border.LineBorder;
 public class LoginUI extends javax.swing.JFrame {
 
     String selectedPlayer;
-
     public LoginUI() {
         initComponents();
     }
@@ -33,11 +32,12 @@ public class LoginUI extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         lblMarksman = new javax.swing.JLabel();
-        panelidk = new javax.swing.JPanel();
+        panelMagician = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
         jTextArea13 = new javax.swing.JTextArea();
         jLabel15 = new javax.swing.JLabel();
         lblMarksman1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         txtPlayerName = new javax.swing.JTextField();
         lblPlayerName = new javax.swing.JLabel();
@@ -92,7 +92,9 @@ public class LoginUI extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Swordsman");
 
+        jLabel14.setBackground(new java.awt.Color(0, 0, 0));
         jLabel14.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Be brave. Be strong. ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -167,7 +169,9 @@ public class LoginUI extends javax.swing.JFrame {
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Marksman");
 
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("One shot, one kill.");
 
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
@@ -182,9 +186,11 @@ public class LoginUI extends javax.swing.JFrame {
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(jLabel13)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel17Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -222,10 +228,15 @@ public class LoginUI extends javax.swing.JFrame {
                 .addGap(28, 28, 28))
         );
 
-        panelidk.setBackground(new java.awt.Color(102, 102, 102));
-        panelidk.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        panelidk.setPreferredSize(new java.awt.Dimension(188, 351));
-        panelidk.setRequestFocusEnabled(false);
+        panelMagician.setBackground(new java.awt.Color(102, 102, 102));
+        panelMagician.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        panelMagician.setPreferredSize(new java.awt.Dimension(188, 351));
+        panelMagician.setRequestFocusEnabled(false);
+        panelMagician.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelMagicianMouseClicked(evt);
+            }
+        });
 
         jPanel19.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -235,12 +246,12 @@ public class LoginUI extends javax.swing.JFrame {
         jTextArea13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jTextArea13.setForeground(new java.awt.Color(0, 0, 0));
         jTextArea13.setRows(5);
-        jTextArea13.setText("Attack : 30\nHealth : 100\nDefense : 1");
+        jTextArea13.setText("Attack : 50\nHealth : 50\nDefense : 0");
 
         jLabel15.setBackground(new java.awt.Color(0, 0, 0));
         jLabel15.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel15.setText("Marksman");
+        jLabel15.setText("Magician");
 
         javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
         jPanel19.setLayout(jPanel19Layout);
@@ -266,29 +277,40 @@ public class LoginUI extends javax.swing.JFrame {
                 .addGap(34, 34, 34))
         );
 
-        lblMarksman1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Player_Marksman.png"))); // NOI18N
+        lblMarksman1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Player_Magician.png"))); // NOI18N
         lblMarksman1.setPreferredSize(new java.awt.Dimension(160, 160));
 
-        javax.swing.GroupLayout panelidkLayout = new javax.swing.GroupLayout(panelidk);
-        panelidk.setLayout(panelidkLayout);
-        panelidkLayout.setHorizontalGroup(
-            panelidkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelidkLayout.createSequentialGroup()
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setText("Fireball!!!~ Kya~");
+
+        javax.swing.GroupLayout panelMagicianLayout = new javax.swing.GroupLayout(panelMagician);
+        panelMagician.setLayout(panelMagicianLayout);
+        panelMagicianLayout.setHorizontalGroup(
+            panelMagicianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelMagicianLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(panelidkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelidkLayout.createSequentialGroup()
+                .addGroup(panelMagicianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panelMagicianLayout.createSequentialGroup()
                         .addComponent(lblMarksman1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 8, Short.MAX_VALUE))
-                    .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(0, 8, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(panelMagicianLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        panelidkLayout.setVerticalGroup(
-            panelidkLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelidkLayout.createSequentialGroup()
+        panelMagicianLayout.setVerticalGroup(
+            panelMagicianLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelMagicianLayout.createSequentialGroup()
                 .addComponent(lblMarksman1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addGap(26, 26, 26))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -301,7 +323,7 @@ public class LoginUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelMarksman, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(panelidk, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(panelMagician, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -315,7 +337,7 @@ public class LoginUI extends javax.swing.JFrame {
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelidk, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
+                    .addComponent(panelMagician, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
                     .addComponent(panelMarksman, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
                     .addComponent(panelSwordsman, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -400,6 +422,9 @@ public class LoginUI extends javax.swing.JFrame {
             case "Marksman":
                 MainClass.player = new Player(playerName, "Marksman", 100, 30, 1);
                 break;
+            case "Magician":
+                MainClass.player = new Player(playerName, "Magician", 50, 50, 0);
+                break;
         }
 
         this.setVisible(false);
@@ -412,6 +437,10 @@ public class LoginUI extends javax.swing.JFrame {
     private void panelMarksmanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelMarksmanMouseClicked
         selection("Marksman");
     }//GEN-LAST:event_panelMarksmanMouseClicked
+
+    private void panelMagicianMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelMagicianMouseClicked
+        selection("Magician");
+    }//GEN-LAST:event_panelMagicianMouseClicked
 
     /**
      * @param args the command line arguments
@@ -469,6 +498,10 @@ public class LoginUI extends javax.swing.JFrame {
                 panelMarksman.setBorder(border);
                 selectedPlayer = "Marksman";
                 break;
+            case "Magician":
+                panelMagician.setBorder(border);
+                selectedPlayer = "Magician";
+                break;
         }
         
         btnLogin.setEnabled(true);
@@ -478,15 +511,13 @@ public class LoginUI extends javax.swing.JFrame {
         LineBorder border = new LineBorder(Color.BLACK, 3, true);
 
         panelSwordsman.setBorder(border);
-        panelMarksman.setBorder(border);
+        panelMarksman.setBorder(border);        
+        panelMagician.setBorder(border);
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -494,57 +525,21 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
-    private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea10;
     private javax.swing.JTextArea jTextArea11;
     private javax.swing.JTextArea jTextArea13;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextArea jTextArea4;
-    private javax.swing.JTextArea jTextArea5;
-    private javax.swing.JTextArea jTextArea6;
-    private javax.swing.JTextArea jTextArea7;
-    private javax.swing.JTextArea jTextArea8;
-    private javax.swing.JTextArea jTextArea9;
     private javax.swing.JLabel lblMarksman;
     private javax.swing.JLabel lblMarksman1;
     private javax.swing.JLabel lblPlayerName;
     private javax.swing.JLabel lblSwordsman;
-    private javax.swing.JLabel lblSwordsman1;
-    private javax.swing.JLabel lblSwordsman2;
-    private javax.swing.JLabel lblSwordsman3;
-    private javax.swing.JLabel lblSwordsman4;
-    private javax.swing.JLabel lblSwordsman5;
-    private javax.swing.JLabel lblSwordsman6;
-    private javax.swing.JLabel lblSwordsman7;
-    private javax.swing.JLabel lblSwordsman8;
+    private javax.swing.JPanel panelMagician;
     private javax.swing.JPanel panelMarksman;
     private javax.swing.JPanel panelSwordsman;
-    private javax.swing.JPanel panelSwordsman1;
-    private javax.swing.JPanel panelSwordsman2;
-    private javax.swing.JPanel panelSwordsman3;
-    private javax.swing.JPanel panelSwordsman4;
-    private javax.swing.JPanel panelidk;
     private javax.swing.JTextField txtPlayerName;
     // End of variables declaration//GEN-END:variables
 }
