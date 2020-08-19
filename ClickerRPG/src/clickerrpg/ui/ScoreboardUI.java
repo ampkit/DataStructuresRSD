@@ -275,9 +275,9 @@ public class ScoreboardUI extends javax.swing.JFrame {
         for (int i = 1; i < playerList.getLength() + 1; i++) {
             if (playerList.getEntry(i).getPlayerName() == MainClass.player.getName()) {
                 playerAt = i;
-                strScoreBoard += "<tr style=\"border:1px solid black;\"><td style=\"width:50px;\">" + i + "</td><td style=\"width:160px;\">" + playerList.getEntry(i).getPlayerName() + "</td><td>" + playerList.getEntry(i).getHighscore() + "</tr>";
+                strScoreBoard += "<tr style=\"border:1px solid black;\"><td style=\"width:50px;\">" + i + "</td><td style=\"width:160px;\">" + playerList.getEntry(i).getPlayerName() + "</td><td style=\"width:50px;\">" + playerList.getEntry(i).getHighscore() + "</tr>";
             } else {
-                strScoreBoard += "<tr><td style=\"width:50px;\">" + i + "</td><td style=\"width:160px;\">" + playerList.getEntry(i).getPlayerName() + "</td><td>" + playerList.getEntry(i).getHighscore() + "</tr>";
+                strScoreBoard += "<tr><td style=\"width:50px;\">" + i + "</td><td style=\"width:160px;\">" + playerList.getEntry(i).getPlayerName() + "</td><td style=\"width:50px;\">" + playerList.getEntry(i).getHighscore() + "</tr>";
             }
             if (i % 8 == 0) {
                 strScoreBoard += "</table></html>";
