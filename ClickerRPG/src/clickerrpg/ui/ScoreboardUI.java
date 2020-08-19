@@ -208,11 +208,11 @@ public class ScoreboardUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnPlayAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayAgainActionPerformed
-        try {
+        /*try {
             startGame();
         } catch (InterruptedException ex) {
             Logger.getLogger(ScoreboardUI.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
     }//GEN-LAST:event_btnPlayAgainActionPerformed
 
     /**
