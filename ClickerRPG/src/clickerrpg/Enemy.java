@@ -25,10 +25,11 @@ public class Enemy{
     }
 
    public void increaseStats(int stage){
-        double percent = ( 1 + (stage/100.0));
-        this.attack *= percent;
-        this.defense *= percent;
-        this.maxHealth *= percent;
+        this.attack *= ( 1 + (stage/100.0));
+        this.defense *= ( 1 + (stage/100.0));
+        this.maxHealth *= ( 1 + (stage/10.0));
+        this.goldDropped *=(1 + (stage/10.0));
+        this.curHealth = maxHealth;
     }
      
     public void addCurrentAttackPeriod(int milSec){

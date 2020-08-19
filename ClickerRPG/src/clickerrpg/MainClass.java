@@ -44,13 +44,13 @@ public class MainClass {
 
         startAutoAttackTimers();
     }
-    
-    public static void startAutoAttackTimers(){
+
+    public static void startAutoAttackTimers() {
         timer = new Timer();
         timer.schedule(new AutoAttacks(), 0, 100);
     }
 
-    public static void stopAutoAttackTimers(){
+    public static void stopAutoAttackTimers() {
         timer.cancel();
     }
 
@@ -69,6 +69,7 @@ public class MainClass {
                     loadEnemy();
                 }
                 enemy = enemyQueue.getFront();
+                enemy.increaseStats(stage);
             }
 
             gameUI.updateGameUI();
@@ -153,7 +154,7 @@ public class MainClass {
         consumableList.add(new Consumable("Power Potion"));
         consumableList.add(new Consumable("Protection Potion"));
         //<editor-fold>
-        
+
         playerList.add(new Player("Player1", 10));
         playerList.add(new Player("Player2", 5));
         playerList.add(new Player("Player3", 7));
@@ -237,11 +238,9 @@ public class MainClass {
         }
     }
 
-    
     //game over
     public static void loadEnemy() {
         enemyQueue.clear();
-
         enemyQueue.enqueue(new Enemy("Murlocs", 100, 100, 5, 1, 100, 1000, "enemy1.png"));
         enemyQueue.enqueue(new Enemy("Reapers", 100, 100, 5, 2, 100, 1000, "HelperFinn.png"));
         enemyQueue.enqueue(new Enemy("Dark Ganon", 100, 100, 5, 3, 100, 1000, "enemy1.png"));

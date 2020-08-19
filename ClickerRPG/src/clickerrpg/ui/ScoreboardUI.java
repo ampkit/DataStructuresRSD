@@ -17,9 +17,10 @@ import javax.swing.JLabel;
  * @author Lenovo
  */
 public class ScoreboardUI extends javax.swing.JFrame {
+
     int page = 1;
     PlayerListInterface<String> arrScoreBoard = new PlayerList<>();
-    
+
     /**
      * Creates new form Scoreboard
      */
@@ -184,7 +185,7 @@ public class ScoreboardUI extends javax.swing.JFrame {
 
     private void btnNextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNextActionPerformed
         // use arrScoreBoard to store the page
-        if (page < arrScoreBoard.getLength()){
+        if (page < arrScoreBoard.getLength()) {
             page++;
             lblPlayerName.setText(arrScoreBoard.getEntry(page));
         }
@@ -192,7 +193,7 @@ public class ScoreboardUI extends javax.swing.JFrame {
 
     private void btnPreviousActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPreviousActionPerformed
         // TODO add your handling code here:
-        if (page > 1){
+        if (page > 1) {
             page--;
             lblPlayerName.setText(arrScoreBoard.getEntry(page));
         }
@@ -213,7 +214,7 @@ public class ScoreboardUI extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        
+
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -258,26 +259,26 @@ public class ScoreboardUI extends javax.swing.JFrame {
                 new ScoreboardUI().setVisible(true);
             }
         });
-        
+
     }
-    
+
     public void startUp() {
         setResizable(false);
         setLocationRelativeTo(null);
         setVisible(true);
     }
-    
+
     public void displayScoreboardUI() {
 
-        
-        
         String strScoreBoard = "<html><table>";
         int playerAt = 0;
         for (int i = 1; i < playerList.getLength() + 1; i++) {
             if (playerList.getEntry(i).getPlayerName() == MainClass.player.getName()) {
                 playerAt = i;
+                strScoreBoard += "<tr style=\"border:1px solid black;\"><td style=\"width:50px;\">" + i + "</td><td style=\"width:160px;\">" + playerList.getEntry(i).getPlayerName() + "</td><td>" + playerList.getEntry(i).getHighscore() + "</tr>";
+            } else {
+                strScoreBoard += "<tr><td style=\"width:50px;\">" + i + "</td><td style=\"width:160px;\">" + playerList.getEntry(i).getPlayerName() + "</td><td>" + playerList.getEntry(i).getHighscore() + "</tr>";
             }
-            strScoreBoard += "<tr><td style=\"width:50px;\">" + i +"</td><td style=\"width:160px;\">" + playerList.getEntry(i).getPlayerName() + "</td><td>" + playerList.getEntry(i).getHighscore() + "</tr>";
             if (i % 8 == 0) {
                 strScoreBoard += "</table></html>";
                 arrScoreBoard.add(strScoreBoard);
@@ -290,7 +291,7 @@ public class ScoreboardUI extends javax.swing.JFrame {
         }
         page = (int) Math.ceil(playerAt / 8.0);
         lblPlayerName.setText(arrScoreBoard.getEntry(page));
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
