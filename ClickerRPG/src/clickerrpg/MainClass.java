@@ -99,9 +99,6 @@ public class MainClass {
         upgradeList.add(new Upgrade("Hp+30"));
         upgradeList.add(new Upgrade("Att+30"));
         upgradeList.add(new Upgrade("Df+30"));
-        upgradeList.add(new Upgrade("Hp+40"));
-        upgradeList.add(new Upgrade("Att+40"));
-        upgradeList.add(new Upgrade("Df+40"));
 
         // <editor-fold defaultstate="collapsed" desc="Helpers">
         helperList.add(new Helper("Mario", 20, 200, 1, 100, "HelperMario.png"));
@@ -215,7 +212,13 @@ public class MainClass {
                 if (enemy.getAttack() - player.getDefense() > 0) {
                     player.takeDamage(enemy.getAttack() - player.getDefense());
                     if (player.getCurHealth() <= 0) {
-                        gameOver();
+                        if (gameOver()){
+                            player.setHighscore(stage);
+                            playerList.add(player);
+                            gameUI.setVisible(false);
+                            scoreboardUI.startUp();
+                            scoreboardUI.displayScoreboardUI();
+                        }
 
                     }
                     enemy.setCurrentAttackPeriod(0); //=0
@@ -257,12 +260,13 @@ public class MainClass {
         enemyQueue.enqueue(new Enemy("Deathclaws", 100, 100, 60, 10, 60, 1000, "HelperWaikit.png"));
     }
 
-    public static void gameOver() {
+    public static boolean gameOver() {
         timer.cancel();
         timer.purge();
-        player.setHighscore(stage);
-        playerList.add(player);
-        scoreboardUI.startUp();
-        scoreboardUI.displayScoreboardUI();
+        //player.setHighscore(stage);
+        //playerList.add(player);
+        //scoreboardUI.startUp();
+        //scoreboardUI.displayScoreboardUI();
+        return true;
     }
 }
