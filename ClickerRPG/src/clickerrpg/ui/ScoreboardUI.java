@@ -46,6 +46,8 @@ public class ScoreboardUI extends javax.swing.JFrame {
         btnPrevious = new javax.swing.JButton();
         btnNext = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        btnExit = new javax.swing.JButton();
+        btnPlayAgain = new javax.swing.JButton();
 
         jTextField3.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
 
@@ -66,6 +68,7 @@ public class ScoreboardUI extends javax.swing.JFrame {
         lblPlayerName.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblPlayerName.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
+        btnPrevious.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnPrevious.setText("Previous");
         btnPrevious.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -73,6 +76,7 @@ public class ScoreboardUI extends javax.swing.JFrame {
             }
         });
 
+        btnNext.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         btnNext.setText("Next");
         btnNext.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,29 +87,48 @@ public class ScoreboardUI extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Lucida Console", 1, 24)); // NOI18N
         jLabel5.setText("No.");
 
+        btnExit.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+
+        btnPlayAgain.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        btnPlayAgain.setText("Play Again");
+        btnPlayAgain.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlayAgainActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnPrevious)
-                .addGap(28, 28, 28)
-                .addComponent(btnNext)
-                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(lblPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(49, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel2)
-                        .addGap(68, 68, 68))))
+                        .addGap(68, 68, 68))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(btnPrevious)
+                                .addGap(29, 29, 29)
+                                .addComponent(btnNext)
+                                .addGap(27, 27, 27)
+                                .addComponent(btnPlayAgain)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblPlayerName, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(49, Short.MAX_VALUE))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -116,11 +139,13 @@ public class ScoreboardUI extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jLabel5))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblPlayerName, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                .addComponent(lblPlayerName, javax.swing.GroupLayout.DEFAULT_SIZE, 304, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnPrevious)
                     .addComponent(btnNext)
-                    .addComponent(btnPrevious))
+                    .addComponent(btnExit)
+                    .addComponent(btnPlayAgain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -151,7 +176,7 @@ public class ScoreboardUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -172,6 +197,17 @@ public class ScoreboardUI extends javax.swing.JFrame {
             lblPlayerName.setText(arrScoreBoard.getEntry(page));
         }
     }//GEN-LAST:event_btnPreviousActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        //dispose();
+        System.exit(0);
+    }//GEN-LAST:event_btnExitActionPerformed
+
+    private void btnPlayAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayAgainActionPerformed
+        // TODO add your handling code here:
+        //LoginUI.setVisible(true);
+        playerList.clear();
+    }//GEN-LAST:event_btnPlayAgainActionPerformed
 
     /**
      * @param args the command line arguments
@@ -258,7 +294,9 @@ public class ScoreboardUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnExit;
     private javax.swing.JButton btnNext;
+    private javax.swing.JButton btnPlayAgain;
     private javax.swing.JButton btnPrevious;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
