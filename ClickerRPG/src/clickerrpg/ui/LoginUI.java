@@ -23,18 +23,18 @@ public class LoginUI extends javax.swing.JFrame {
         panelSwordsman = new javax.swing.JPanel();
         lblSwordsman = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jTextArea1 = new javax.swing.JTextArea();
+        detailsSwordsman = new javax.swing.JTextArea();
         jLabel3 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         panelMarksman = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
-        jTextArea11 = new javax.swing.JTextArea();
+        detailsMarksman = new javax.swing.JTextArea();
         jLabel13 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         lblMarksman = new javax.swing.JLabel();
         panelMagician = new javax.swing.JPanel();
         jPanel19 = new javax.swing.JPanel();
-        jTextArea13 = new javax.swing.JTextArea();
+        detailsMagician = new javax.swing.JTextArea();
         jLabel15 = new javax.swing.JLabel();
         lblMarksman1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -79,13 +79,20 @@ public class LoginUI extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(102, 102, 102));
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(102, 102, 102));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Attack : 15\nHealth : 150\nDefense : 3");
+        detailsSwordsman.setEditable(false);
+        detailsSwordsman.setBackground(new java.awt.Color(102, 102, 102));
+        detailsSwordsman.setColumns(20);
+        detailsSwordsman.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        detailsSwordsman.setForeground(new java.awt.Color(0, 0, 0));
+        detailsSwordsman.setRows(5);
+        detailsSwordsman.setText("Attack : 15\nHealth : 150\nDefense : 3");
+        detailsSwordsman.setEnabled(false);
+        detailsSwordsman.setFocusable(false);
+        detailsSwordsman.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                detailsSwordsmanMouseClicked(evt);
+            }
+        });
 
         jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
@@ -108,7 +115,7 @@ public class LoginUI extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(detailsSwordsman, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -118,7 +125,7 @@ public class LoginUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextArea1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(detailsSwordsman, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel14)
                 .addGap(20, 20, 20))
@@ -146,6 +153,7 @@ public class LoginUI extends javax.swing.JFrame {
 
         panelMarksman.setBackground(new java.awt.Color(102, 102, 102));
         panelMarksman.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        panelMarksman.setFocusable(false);
         panelMarksman.setPreferredSize(new java.awt.Dimension(188, 351));
         panelMarksman.setRequestFocusEnabled(false);
         panelMarksman.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -156,13 +164,19 @@ public class LoginUI extends javax.swing.JFrame {
 
         jPanel17.setBackground(new java.awt.Color(102, 102, 102));
 
-        jTextArea11.setEditable(false);
-        jTextArea11.setBackground(new java.awt.Color(102, 102, 102));
-        jTextArea11.setColumns(20);
-        jTextArea11.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextArea11.setForeground(new java.awt.Color(0, 0, 0));
-        jTextArea11.setRows(5);
-        jTextArea11.setText("Attack : 30\nHealth : 100\nDefense : 1");
+        detailsMarksman.setEditable(false);
+        detailsMarksman.setBackground(new java.awt.Color(102, 102, 102));
+        detailsMarksman.setColumns(20);
+        detailsMarksman.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        detailsMarksman.setForeground(new java.awt.Color(0, 0, 0));
+        detailsMarksman.setRows(5);
+        detailsMarksman.setText("Attack : 30\nHealth : 100\nDefense : 1");
+        detailsMarksman.setEnabled(false);
+        detailsMarksman.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                detailsMarksmanMouseClicked(evt);
+            }
+        });
 
         jLabel13.setBackground(new java.awt.Color(0, 0, 0));
         jLabel13.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
@@ -182,7 +196,7 @@ public class LoginUI extends javax.swing.JFrame {
                 .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jTextArea11, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                        .addComponent(detailsMarksman, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                     .addGroup(jPanel17Layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addComponent(jLabel13)
@@ -198,7 +212,7 @@ public class LoginUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel13)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextArea11, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(detailsMarksman, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
                 .addComponent(jLabel4))
         );
@@ -240,13 +254,20 @@ public class LoginUI extends javax.swing.JFrame {
 
         jPanel19.setBackground(new java.awt.Color(102, 102, 102));
 
-        jTextArea13.setEditable(false);
-        jTextArea13.setBackground(new java.awt.Color(102, 102, 102));
-        jTextArea13.setColumns(20);
-        jTextArea13.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextArea13.setForeground(new java.awt.Color(0, 0, 0));
-        jTextArea13.setRows(5);
-        jTextArea13.setText("Attack : 50\nHealth : 50\nDefense : 0");
+        detailsMagician.setEditable(false);
+        detailsMagician.setBackground(new java.awt.Color(102, 102, 102));
+        detailsMagician.setColumns(20);
+        detailsMagician.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        detailsMagician.setForeground(new java.awt.Color(0, 0, 0));
+        detailsMagician.setRows(5);
+        detailsMagician.setText("Attack : 50\nHealth : 50\nDefense : 0");
+        detailsMagician.setEnabled(false);
+        detailsMagician.setFocusable(false);
+        detailsMagician.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                detailsMagicianMouseClicked(evt);
+            }
+        });
 
         jLabel15.setBackground(new java.awt.Color(0, 0, 0));
         jLabel15.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
@@ -264,7 +285,7 @@ public class LoginUI extends javax.swing.JFrame {
                         .addComponent(jLabel15))
                     .addGroup(jPanel19Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jTextArea13, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(detailsMagician, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel19Layout.setVerticalGroup(
@@ -273,7 +294,7 @@ public class LoginUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel15)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTextArea13, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(detailsMagician, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34))
         );
 
@@ -442,6 +463,18 @@ public class LoginUI extends javax.swing.JFrame {
         selection("Magician");
     }//GEN-LAST:event_panelMagicianMouseClicked
 
+    private void detailsMagicianMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_detailsMagicianMouseClicked
+        selection("Magician");
+    }//GEN-LAST:event_detailsMagicianMouseClicked
+
+    private void detailsMarksmanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_detailsMarksmanMouseClicked
+        selection("Marksman");
+    }//GEN-LAST:event_detailsMarksmanMouseClicked
+
+    private void detailsSwordsmanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_detailsSwordsmanMouseClicked
+        selection("Swordsman");
+    }//GEN-LAST:event_detailsSwordsmanMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -517,6 +550,9 @@ public class LoginUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogin;
+    private javax.swing.JTextArea detailsMagician;
+    private javax.swing.JTextArea detailsMarksman;
+    private javax.swing.JTextArea detailsSwordsman;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -530,9 +566,6 @@ public class LoginUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea11;
-    private javax.swing.JTextArea jTextArea13;
     private javax.swing.JLabel lblMarksman;
     private javax.swing.JLabel lblMarksman1;
     private javax.swing.JLabel lblPlayerName;

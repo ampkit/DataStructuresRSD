@@ -45,12 +45,16 @@ public class StatsUI extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
+        jPanel1.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         lblPlayerIcon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lblPlayerIcon.setMaximumSize(new java.awt.Dimension(200, 200));
         lblPlayerIcon.setMinimumSize(new java.awt.Dimension(200, 200));
         lblPlayerIcon.setPreferredSize(new java.awt.Dimension(200, 200));
 
         lblPlayerName.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        lblPlayerName.setForeground(new java.awt.Color(0, 0, 0));
         lblPlayerName.setText("Player Name");
 
         btnBack.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -62,45 +66,71 @@ public class StatsUI extends javax.swing.JFrame {
             }
         });
 
+        jPanel2.setBackground(new java.awt.Color(153, 153, 153));
+
+        jLabel1.setBackground(new java.awt.Color(0, 0, 0));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Health :");
 
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Attack :");
 
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Defense :");
 
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Kills :");
 
+        lblHealth.setBackground(new java.awt.Color(0, 0, 0));
         lblHealth.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblHealth.setForeground(new java.awt.Color(0, 0, 0));
         lblHealth.setText("100 / 100");
 
+        lblAttack.setBackground(new java.awt.Color(0, 0, 0));
         lblAttack.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblAttack.setForeground(new java.awt.Color(0, 0, 0));
         lblAttack.setText("999");
 
+        lblDefense.setBackground(new java.awt.Color(0, 0, 0));
         lblDefense.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblDefense.setForeground(new java.awt.Color(0, 0, 0));
         lblDefense.setText("999");
 
+        lblKillsTotal.setBackground(new java.awt.Color(0, 0, 0));
         lblKillsTotal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblKillsTotal.setForeground(new java.awt.Color(0, 0, 0));
         lblKillsTotal.setText("999");
 
+        lblEqAttack.setBackground(new java.awt.Color(0, 0, 0));
         lblEqAttack.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblEqAttack.setForeground(new java.awt.Color(0, 0, 0));
         lblEqAttack.setText("( + 99 from equipment )");
 
+        lblEqDefense.setBackground(new java.awt.Color(0, 0, 0));
         lblEqDefense.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblEqDefense.setForeground(new java.awt.Color(0, 0, 0));
         lblEqDefense.setText("( + 99 from equipment )");
 
+        jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("Gold Earned :");
 
+        lblGoldTotal.setBackground(new java.awt.Color(0, 0, 0));
         lblGoldTotal.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblGoldTotal.setForeground(new java.awt.Color(0, 0, 0));
         lblGoldTotal.setText("999");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -154,7 +184,7 @@ public class StatsUI extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(lblGoldTotal))
-                .addContainerGap(153, Short.MAX_VALUE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -168,7 +198,7 @@ public class StatsUI extends javax.swing.JFrame {
                         .addComponent(lblPlayerIcon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lblPlayerName)
-                        .addGap(0, 307, Short.MAX_VALUE))
+                        .addGap(0, 303, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -208,7 +238,8 @@ public class StatsUI extends javax.swing.JFrame {
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         this.setVisible(false);        
         MainClass.startAutoAttackTimers();
-        MainClass.gameUI.setEnabled(true);
+        MainClass.gameUI.setEnabled(true);       
+        MainClass.gameUI.toFront();
     }//GEN-LAST:event_btnBackActionPerformed
 
     /**
@@ -258,14 +289,16 @@ public class StatsUI extends javax.swing.JFrame {
         lblPlayerIcon.setIcon(new ImageIcon(player.getPlayerIcon().getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH)));
         lblPlayerName.setText(player.getName());       
         
-        lblAttack.setText(String.valueOf(player.getAttack()));
-        lblEqAttack.setText("( + " + String.valueOf(player.getAttack() - player.getBaseAttack()) + " from equipment )" );
+        lblHealth.setText(String.valueOf((int)player.getCurHealth()) + " / " + String.valueOf((int)player.getMaxHealth()));
         
-        lblDefense.setText(String.valueOf(player.getDefense()));
-        lblEqDefense.setText("( + " + String.valueOf(player.getDefense()- player.getBaseDefense()) + " from equipment )" );
+        lblAttack.setText(String.valueOf((int)player.getAttack()));
+        lblEqAttack.setText("( + " + String.valueOf((int)(player.getAttack() - player.getBaseAttack())) + " from equipment )" );
+        
+        lblDefense.setText(String.valueOf((int)player.getDefense()));
+        lblEqDefense.setText("( + " + String.valueOf((int)(player.getDefense()- player.getBaseDefense())) + " from equipment )" );
 
-        lblKillsTotal.setText(String.valueOf(player.getKills()));
-        lblGoldTotal.setText(String.valueOf(player.getGoldEarned()));
+        lblKillsTotal.setText(String.valueOf((int)player.getKills()));
+        lblGoldTotal.setText(String.valueOf((int)player.getGoldEarned()));
 
     }
     

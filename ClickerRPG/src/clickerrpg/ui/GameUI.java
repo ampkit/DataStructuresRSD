@@ -1,9 +1,8 @@
 package clickerrpg.ui;
 
 import clickerrpg.MainClass;
+import java.awt.Color;
 import java.awt.Font;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 
 public class GameUI extends javax.swing.JFrame {
@@ -31,8 +30,6 @@ public class GameUI extends javax.swing.JFrame {
         lblGold = new javax.swing.JLabel();
         gameScreen = new javax.swing.JLayeredPane();
         jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         labelPlayerName = new javax.swing.JLabel();
         playerHealthBar = new javax.swing.JProgressBar();
@@ -57,14 +54,15 @@ public class GameUI extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(960, 655));
+        setMaximumSize(new java.awt.Dimension(960, 687));
+        setMinimumSize(new java.awt.Dimension(960, 687));
         setUndecorated(true);
         setResizable(false);
 
         gameUIPanel.setBackground(new java.awt.Color(102, 102, 102));
-        gameUIPanel.setMaximumSize(new java.awt.Dimension(960, 670));
-        gameUIPanel.setMinimumSize(new java.awt.Dimension(960, 670));
-        gameUIPanel.setPreferredSize(new java.awt.Dimension(960, 670));
+        gameUIPanel.setMaximumSize(new java.awt.Dimension(960, 687));
+        gameUIPanel.setMinimumSize(new java.awt.Dimension(960, 687));
+        gameUIPanel.setPreferredSize(new java.awt.Dimension(960, 687));
 
         lblGoldIcon.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
         lblGoldIcon.setForeground(new java.awt.Color(255, 215, 0));
@@ -95,14 +93,6 @@ public class GameUI extends javax.swing.JFrame {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/background.png"))); // NOI18N
         jLabel5.setRequestFocusEnabled(false);
         jLabel5.setVerifyInputWhenFocusTarget(false);
-
-        jLabel7.setMaximumSize(new java.awt.Dimension(80, 80));
-        jLabel7.setMinimumSize(new java.awt.Dimension(80, 80));
-        jLabel7.setPreferredSize(new java.awt.Dimension(80, 80));
-
-        jLabel12.setMaximumSize(new java.awt.Dimension(80, 80));
-        jLabel12.setMinimumSize(new java.awt.Dimension(80, 80));
-        jLabel12.setPreferredSize(new java.awt.Dimension(80, 80));
 
         jPanel3.setMaximumSize(new java.awt.Dimension(920, 80));
         jPanel3.setMinimumSize(new java.awt.Dimension(920, 80));
@@ -201,8 +191,6 @@ public class GameUI extends javax.swing.JFrame {
         lblHelperName3.setText("Waikit, the xueba");
 
         gameScreen.setLayer(jLabel5, -1);
-        gameScreen.setLayer(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        gameScreen.setLayer(jLabel12, javax.swing.JLayeredPane.DEFAULT_LAYER);
         gameScreen.setLayer(jPanel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
         gameScreen.setLayer(lblHelper1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         gameScreen.setLayer(lblEnemyIcon, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -222,33 +210,6 @@ public class GameUI extends javax.swing.JFrame {
         gameScreenLayout.setHorizontalGroup(
             gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(gameScreenLayout.createSequentialGroup()
-                .addGap(5, 5, 5)
-                .addComponent(lblHelper2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblHelper1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblHelper3, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(gameScreenLayout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(gameScreenLayout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(lblPlayer, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(gameScreenLayout.createSequentialGroup()
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(gameScreenLayout.createSequentialGroup()
-                        .addGap(144, 144, 144)
-                        .addComponent(lblEnemyIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(gameScreenLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(gameScreenLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(gameScreenLayout.createSequentialGroup()
@@ -266,6 +227,26 @@ public class GameUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(enemyAttackBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(28, 28, 28))
+            .addGroup(gameScreenLayout.createSequentialGroup()
+                .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(gameScreenLayout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addComponent(lblHelper2, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(gameScreenLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(lblHelper1, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(gameScreenLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblHelper3, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblPlayer, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(168, 168, 168)
+                        .addComponent(lblEnemyIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(gameScreenLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(gameScreenLayout.createSequentialGroup()
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 931, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -291,87 +272,124 @@ public class GameUI extends javax.swing.JFrame {
                         .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(lblHelperName3)
                             .addComponent(lblHelperAttackBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
                         .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameScreenLayout.createSequentialGroup()
-                                .addComponent(lblHelper1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(26, 26, 26)
-                                .addComponent(lblHelper3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(19, 19, 19))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameScreenLayout.createSequentialGroup()
                                 .addComponent(lblHelper2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(91, 91, 91))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameScreenLayout.createSequentialGroup()
-                                .addComponent(lblEnemyIcon)
-                                .addGap(107, 107, 107))))
+                            .addGroup(gameScreenLayout.createSequentialGroup()
+                                .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(gameScreenLayout.createSequentialGroup()
+                                        .addComponent(lblHelper1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(28, 28, 28)
+                                        .addComponent(lblHelper3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblEnemyIcon))
+                                .addContainerGap(41, Short.MAX_VALUE))))
                     .addGroup(gameScreenLayout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(lblPlayer)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                        .addGap(92, 92, 92))))
             .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(gameScreenLayout.createSequentialGroup()
                     .addComponent(jLabel5)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+                    .addGap(0, 27, Short.MAX_VALUE)))
         );
 
-        jPanel2.setBackground(new java.awt.Color(51, 51, 51));
+        jPanel2.setBackground(new java.awt.Color(102, 102, 102));
         jPanel2.setMaximumSize(new java.awt.Dimension(940, 120));
         jPanel2.setMinimumSize(new java.awt.Dimension(940, 120));
         jPanel2.setPreferredSize(new java.awt.Dimension(940, 120));
 
-        jButton3.setBackground(new java.awt.Color(51, 51, 51));
-        jButton3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(153, 153, 153));
+        jButton3.setBackground(new java.awt.Color(153, 153, 153));
+        jButton3.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Shop");
+        jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         jButton3.setFocusPainted(false);
+        jButton3.setFocusable(false);
         jButton3.setMaximumSize(new java.awt.Dimension(200, 100));
         jButton3.setMinimumSize(new java.awt.Dimension(200, 100));
         jButton3.setPreferredSize(new java.awt.Dimension(200, 100));
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonMouseEnter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonMouseExit(evt);
+            }
+        });
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(51, 51, 51));
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(153, 153, 153));
+        jButton4.setBackground(new java.awt.Color(153, 153, 153));
+        jButton4.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("Stats");
+        jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         jButton4.setFocusPainted(false);
+        jButton4.setFocusable(false);
         jButton4.setMaximumSize(new java.awt.Dimension(200, 100));
         jButton4.setMinimumSize(new java.awt.Dimension(200, 100));
         jButton4.setPreferredSize(new java.awt.Dimension(200, 100));
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonMouseEnter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonMouseExit(evt);
+            }
+        });
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
 
-        btnInventory.setBackground(new java.awt.Color(51, 51, 51));
-        btnInventory.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        btnInventory.setForeground(new java.awt.Color(153, 153, 153));
+        btnInventory.setBackground(new java.awt.Color(153, 153, 153));
+        btnInventory.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        btnInventory.setForeground(new java.awt.Color(0, 0, 0));
+        btnInventory.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         btnInventory.setFocusPainted(false);
+        btnInventory.setFocusable(false);
         btnInventory.setLabel("Inventory");
         btnInventory.setMaximumSize(new java.awt.Dimension(200, 100));
         btnInventory.setMinimumSize(new java.awt.Dimension(200, 100));
         btnInventory.setPreferredSize(new java.awt.Dimension(200, 100));
+        btnInventory.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonMouseEnter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonMouseExit(evt);
+            }
+        });
         btnInventory.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInventoryActionPerformed(evt);
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(51, 51, 51));
-        jButton6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(153, 153, 153));
+        jButton6.setBackground(new java.awt.Color(153, 153, 153));
+        jButton6.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(0, 0, 0));
         jButton6.setText("Helper");
+        jButton6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         jButton6.setFocusPainted(false);
+        jButton6.setFocusable(false);
         jButton6.setMaximumSize(new java.awt.Dimension(200, 100));
         jButton6.setMinimumSize(new java.awt.Dimension(200, 100));
         jButton6.setPreferredSize(new java.awt.Dimension(200, 100));
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                buttonMouseEnter(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                buttonMouseExit(evt);
+            }
+        });
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -389,7 +407,7 @@ public class GameUI extends javax.swing.JFrame {
                 .addComponent(btnInventory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(25, 25, 25))
         );
@@ -436,8 +454,9 @@ public class GameUI extends javax.swing.JFrame {
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addComponent(gameScreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -448,7 +467,7 @@ public class GameUI extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(gameUIPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(gameUIPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -485,6 +504,16 @@ public class GameUI extends javax.swing.JFrame {
         this.setEnabled(false);  
         MainClass.stopAutoAttackTimers();
       }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void buttonMouseEnter(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseEnter
+        evt.getComponent().setBackground(new Color(51,51,51));
+        evt.getComponent().setForeground(new Color(153,153,153));
+    }//GEN-LAST:event_buttonMouseEnter
+
+    private void buttonMouseExit(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_buttonMouseExit
+        evt.getComponent().setBackground(new Color(153,153,153));
+        evt.getComponent().setForeground(new Color(0,0,0));
+    }//GEN-LAST:event_buttonMouseExit
     // </editor-fold>
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -637,10 +666,8 @@ public class GameUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel labelEnemyName;
