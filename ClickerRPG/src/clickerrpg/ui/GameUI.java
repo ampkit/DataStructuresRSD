@@ -148,9 +148,6 @@ public class GameUI extends javax.swing.JFrame {
 
         lblEnemyIcon.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         lblEnemyIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Enemy_Stheno.png"))); // NOI18N
-        lblEnemyIcon.setMaximumSize(new java.awt.Dimension(200, 200));
-        lblEnemyIcon.setMinimumSize(new java.awt.Dimension(200, 200));
-        lblEnemyIcon.setPreferredSize(new java.awt.Dimension(200, 200));
 
         lblPlayer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Player_Marksman.png"))); // NOI18N
 
@@ -248,7 +245,7 @@ public class GameUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lblPlayer, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(132, 132, 132)
-                        .addComponent(lblEnemyIcon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lblEnemyIcon)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(gameScreenLayout.createSequentialGroup()
@@ -294,7 +291,7 @@ public class GameUI extends javax.swing.JFrame {
                                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gameScreenLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                                .addComponent(lblEnemyIcon, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(lblEnemyIcon)
                                 .addGap(67, 67, 67))))))
             .addGroup(gameScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(gameScreenLayout.createSequentialGroup()
