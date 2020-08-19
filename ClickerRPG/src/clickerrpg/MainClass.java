@@ -248,16 +248,16 @@ public class MainClass {
     public static void loadEnemy() {
         enemyQueue.clear();
 
-        enemyQueue.enqueue(new Enemy("Murlocs", 100, 100, 10, 1, 10, 1000, "enemy1.png"));
-        enemyQueue.enqueue(new Enemy("Reapers", 100, 100, 10, 2, 30, 1000, "HelperFinn.png"));
-        enemyQueue.enqueue(new Enemy("Dark Ganon", 100, 100, 30, 3, 30, 1000, "enemy1.png"));
-        enemyQueue.enqueue(new Enemy("Frieza", 100, 100, 30, 4, 30, 1000, "HelperMinion.png"));
-        enemyQueue.enqueue(new Enemy("Zinyak", 100, 100, 40, 5, 40, 1000, "HelperWaikit.png"));
-        enemyQueue.enqueue(new Enemy("Brutalisks", 100, 100, 40, 6, 40, 1000, "HelperMinion.png"));
-        enemyQueue.enqueue(new Enemy("Spriggans", 100, 100, 50, 7, 40, 1000, "enemy1.png"));
-        enemyQueue.enqueue(new Enemy("Sephiroth", 100, 100, 50, 8, 60, 1000, "HelperWaikit.png"));
-        enemyQueue.enqueue(new Enemy("Straga", 100, 100, 60, 9, 60, 1000, "HelperMinion.png"));
-        enemyQueue.enqueue(new Enemy("Deathclaws", 100, 100, 60, 10, 60, 1000, "HelperWaikit.png"));
+        enemyQueue.enqueue(new Enemy("Murlocs", 100, 100, 5, 1, 100, 1000, "enemy1.png"));
+        enemyQueue.enqueue(new Enemy("Reapers", 100, 100, 5, 2, 100, 1000, "HelperFinn.png"));
+        enemyQueue.enqueue(new Enemy("Dark Ganon", 100, 100, 5, 3, 100, 1000, "enemy1.png"));
+        enemyQueue.enqueue(new Enemy("Frieza", 100, 100, 5, 3, 100, 1000, "HelperMinion.png"));
+        enemyQueue.enqueue(new Enemy("Zinyak", 100, 100, 5, 2, 100, 1000, "HelperWaikit.png"));
+        enemyQueue.enqueue(new Enemy("Brutalisks", 100, 100, 5, 2, 60, 1000, "HelperMinion.png"));
+        enemyQueue.enqueue(new Enemy("Spriggans", 100, 100, 5, 1, 70, 1000, "enemy1.png"));
+        enemyQueue.enqueue(new Enemy("Sephiroth", 100, 100, 10, 2, 80, 1000, "HelperWaikit.png"));
+        enemyQueue.enqueue(new Enemy("Straga", 100, 100, 10, 2, 90, 1000, "HelperMinion.png"));
+        enemyQueue.enqueue(new Enemy("Deathclaws", 100, 100, 10, 2, 100, 1000, "HelperWaikit.png"));
     }
 
     public static boolean gameOver() {

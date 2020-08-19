@@ -24,18 +24,13 @@ public class Enemy{
         this.imageIcon = imageIcon;
     }
 
-    
-    //public Enemy() {
-         //this.name = "testEnemy";
-
-        //this.curHealth = 100;
-        //this.maxHealth = 100;   
-        
-        //this.attack = 10;
-        //this.defense = 1;
-        
-    //}
-
+   public void increaseStats(int stage){
+        double percent = ( 1 + (stage/100));
+        this.attack *= percent;
+        this.defense *= percent;
+        this.maxHealth *= percent;
+    }
+     
     public void addCurrentAttackPeriod(int milSec){
         currentAttackPeriod += milSec;
     }
