@@ -1,7 +1,7 @@
-package CheongKaMeng;
+package ADT.CheongKaMeng;
 
 //adt implementation class
-import CheongKaMeng.SortedHelperListInterface;
+import ADT.CheongKaMeng.SortedHelperListInterface;
 
 public class SortedHelperList<T extends Comparable<T>> implements SortedHelperListInterface<T> {
 

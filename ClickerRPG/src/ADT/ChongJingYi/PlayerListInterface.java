@@ -1,4 +1,4 @@
-package ChongJingYi;
+package ADT.ChongJingYi;
 
 
 public interface PlayerListInterface<T> {

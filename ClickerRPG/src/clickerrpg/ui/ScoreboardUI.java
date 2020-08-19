@@ -5,8 +5,8 @@
  */
 package clickerrpg.ui;
 
-import ChongJingYi.PlayerList;
-import ChongJingYi.PlayerListInterface;
+import ADT.ChongJingYi.PlayerList;
+import ADT.ChongJingYi.PlayerListInterface;
 import clickerrpg.MainClass;
 import static clickerrpg.MainClass.playerList;
 import clickerrpg.Player;

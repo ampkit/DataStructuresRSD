@@ -12,9 +12,9 @@ public class Enemy{
     private int attackPeriod;
     private String imageIcon;
 
-    public Enemy(String name, double curHealth, double maxHealth, double attack, double defense, double goldDropped, int attackPeriod, String imageIcon) {
+    public Enemy(String name,double maxHealth, double attack, double defense, double goldDropped, int attackPeriod, String imageIcon) {
         this.name = name;
-        this.curHealth = curHealth;
+        this.curHealth = maxHealth;
         this.maxHealth = maxHealth;
         this.attack = attack;
         this.defense = defense;
@@ -28,7 +28,7 @@ public class Enemy{
         this.attack *= ( 1 + (stage/100.0));
         this.defense *= ( 1 + (stage/100.0));
         this.maxHealth *= ( 1 + (stage/10.0));
-        this.goldDropped *=(1 + (stage/10.0));
+        this.goldDropped *=(1 + (stage));
         this.curHealth = maxHealth;
     }
      

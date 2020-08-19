@@ -1,4 +1,4 @@
-package ChongWaiKit;
+package ADT.ChongWaiKit;
 
 /**
  * @author Chong Wai Kit

@@ -1,4 +1,4 @@
-package CheongKaMeng;
+package ADT.CheongKaMeng;
 
 //adt interface class
 public interface SortedHelperListInterface<T extends Comparable<T>> {

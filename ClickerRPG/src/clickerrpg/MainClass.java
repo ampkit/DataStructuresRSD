@@ -1,10 +1,15 @@
 package clickerrpg;
 
-import ChongWaiKit.*;
-import CheongKaMeng.*;
-import IsabelLai.*;
-import OoiPingXiu.*;
-import ChongJingYi.*;
+import ADT.OoiPingXiu.QueueEnemy;
+import ADT.OoiPingXiu.QueueEnemyInterface;
+import ADT.IsabelLai.UpgradeList;
+import ADT.IsabelLai.UpgradeListInterface;
+import ADT.ChongWaiKit.SLListInterface;
+import ADT.ChongWaiKit.SortedLinkedList;
+import ADT.ChongJingYi.PlayerList;
+import ADT.ChongJingYi.PlayerListInterface;
+import ADT.CheongKaMeng.SortedHelperListInterface;
+import ADT.CheongKaMeng.SortedHelperList;
 
 import clickerrpg.ui.GameUI;
 import clickerrpg.ui.LoginUI;
@@ -63,7 +68,7 @@ public class MainClass {
                 player.addGold(gold);
                 player.addGoldEarned(gold);
                 player.addKill();
-                player.heal(player.getCurHealth()*0.1);
+                player.heal(player.getMaxHealth()*0.1);
                 stage++;
                 enemyQueue.dequeue();
                 if (enemyQueue.isEmpty()) {
@@ -199,8 +204,8 @@ public class MainClass {
         } else {
             if (helper.getDamage() - enemy.getDefense() > 0) {
                 attack(helper.getDamage());
-                helper.setCurrentAttackPeriod(0);
             }
+            helper.setCurrentAttackPeriod(0);
         }
     }
 
@@ -216,8 +221,8 @@ public class MainClass {
                     if (player.getCurHealth() <= 0) {
                         gameOver();
                     }
-                    enemy.setCurrentAttackPeriod(0); //=0
                 }
+                enemy.setCurrentAttackPeriod(0); //=0
             }
 
             if (assignedHelperList.get(0) != null) {
@@ -242,16 +247,14 @@ public class MainClass {
     //game over
     public static void loadEnemy() {
         enemyQueue.clear();
-        enemyQueue.enqueue(new Enemy("Murlocs", 100, 100, 5, 1, 100, 1000, "enemy1.png"));
-        enemyQueue.enqueue(new Enemy("Reapers", 100, 100, 5, 2, 100, 1000, "HelperFinn.png"));
-        enemyQueue.enqueue(new Enemy("Dark Ganon", 100, 100, 5, 3, 100, 1000, "enemy1.png"));
-        enemyQueue.enqueue(new Enemy("Frieza", 100, 100, 5, 3, 100, 1000, "HelperMinion.png"));
-        enemyQueue.enqueue(new Enemy("Zinyak", 100, 100, 5, 2, 100, 1000, "HelperWaikit.png"));
-        enemyQueue.enqueue(new Enemy("Brutalisks", 100, 100, 5, 2, 60, 1000, "HelperMinion.png"));
-        enemyQueue.enqueue(new Enemy("Spriggans", 100, 100, 5, 1, 70, 1000, "enemy1.png"));
-        enemyQueue.enqueue(new Enemy("Sephiroth", 100, 100, 10, 2, 80, 1000, "HelperWaikit.png"));
-        enemyQueue.enqueue(new Enemy("Straga", 100, 100, 10, 2, 90, 1000, "HelperMinion.png"));
-        enemyQueue.enqueue(new Enemy("Deathclaws", 100, 100, 10, 2, 100, 1000, "HelperWaikit.png"));
+        enemyQueue.enqueue(new Enemy("Butcher", 100, 5, 1, 100, 3000, "Enemy_Butcher.png"));
+        enemyQueue.enqueue(new Enemy("Stheno the Snake",  100, 3, 2, 100, 1000, "Enemy_Stheno.png"));
+        enemyQueue.enqueue(new Enemy("Ghost", 300, 5, 0, 100, 3000, "Enemy_Ghost.png"));
+        enemyQueue.enqueue(new Enemy("Luffy the Pirate", 150, 5, 1, 200, 3000, "Enemy_Pirate.png"));
+        enemyQueue.enqueue(new Enemy("Spider", 100, 10, 2, 100, 2000, "Enemy_Spider.png"));        
+        enemyQueue.enqueue(new Enemy("Vesben the Ruthless", 300,  5, 0, 100, 3000, "Enemy_Ghost_2.png"));
+        enemyQueue.enqueue(new Enemy("Drake", 500,  10, 5, 300, 5000, "Enemy_Dragon.png"));
+        enemyQueue.enqueue(new Enemy("Illidan the Draconian", 800,  15, 7, 500, 5000, "Enemy_Dragon_2.png"));
     }
 
     public static void gameOver() {

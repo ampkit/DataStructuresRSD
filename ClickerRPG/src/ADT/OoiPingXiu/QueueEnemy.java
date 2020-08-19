@@ -1,4 +1,4 @@
-package OoiPingXiu;
+package ADT.OoiPingXiu;
 
 public class QueueEnemy <T> implements QueueEnemyInterface<T> {
   

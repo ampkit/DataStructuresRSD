@@ -1,6 +1,6 @@
 package clickerrpg;
 
-import ChongJingYi.PlayerListInterface;
+import ADT.ChongJingYi.PlayerListInterface;
 import java.util.Objects;
 
 public class Account {

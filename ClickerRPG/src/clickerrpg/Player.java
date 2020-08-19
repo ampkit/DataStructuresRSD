@@ -30,7 +30,6 @@ public class Player {
     private Equipment weapon;
 
     public Player() {
-        this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"));
         this.playerName = "testPlayer";
 
         this.curHealth = 100;
@@ -44,7 +43,6 @@ public class Player {
     }
 
     public Player(String playerName, int highscore) {
-        this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/player150x90.png"));
         this.playerName = playerName;
         this.highscore = highscore;
         this.curHealth = 100;

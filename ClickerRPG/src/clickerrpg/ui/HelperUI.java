@@ -6,8 +6,8 @@
 package clickerrpg.ui;
 
 import clickerrpg.MainClass;
-import CheongKaMeng.SortedHelperList;
-import CheongKaMeng.SortedHelperListInterface;
+import ADT.CheongKaMeng.SortedHelperList;
+import ADT.CheongKaMeng.SortedHelperListInterface;
 import clickerrpg.Helper;
 import java.awt.Color;
 import javax.swing.ImageIcon;

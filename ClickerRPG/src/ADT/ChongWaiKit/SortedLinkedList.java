@@ -1,4 +1,4 @@
-package ChongWaiKit;
+package ADT.ChongWaiKit;
 
 /**
  * @author Chong Wai Kit
@@ -13,7 +13,7 @@ public class SortedLinkedList<T extends Comparable<T>> implements SLListInterfac
         length = 0;
     }
     
-    //untested
+    //adds new node in sorted position
     public boolean add(T newEntry) {
         Node prevNode = null;
         Node newNode = new Node(newEntry);
@@ -52,7 +52,7 @@ public class SortedLinkedList<T extends Comparable<T>> implements SLListInterfac
         return true;
     }
     
-    //untested
+    //removes node
     public boolean remove(T anEntry) {
         boolean found = false;
         
@@ -86,7 +86,7 @@ public class SortedLinkedList<T extends Comparable<T>> implements SLListInterfac
         return false;
     }
     
-    //untested
+    //removes node at position
     public T removeAt(int givenPosition) {
         //check if givenPosition is valid
         if (givenPosition < 0 || givenPosition > length - 1)
@@ -120,13 +120,13 @@ public class SortedLinkedList<T extends Comparable<T>> implements SLListInterfac
         return currentNode.data;
     }
 
-    //untested
+    //clears the list
     public void clear() {
         firstNode = null;
         length = 0;    
     }
     
-    //untested
+    //gets position
     public int getPosition(T anEntry) {
         boolean found = false;
         
@@ -151,7 +151,7 @@ public class SortedLinkedList<T extends Comparable<T>> implements SLListInterfac
         return -1;
     }
     
-    //untested
+    //gets entry at position
     public T getEntry(int givenPosition) {
         //check if givenPosition is valid
         if (givenPosition < 0 || givenPosition > length - 1)
@@ -171,7 +171,7 @@ public class SortedLinkedList<T extends Comparable<T>> implements SLListInterfac
         return currentNode.data;    
     }
     
-    //untested
+    //check whether list  contains entry
     public boolean contains(T anEntry) {
         boolean found = false;
         
@@ -204,7 +204,6 @@ public class SortedLinkedList<T extends Comparable<T>> implements SLListInterfac
         remove(anEntry);
         add(anEntry);
     }
-
 
     private class Node{
         private T data;
