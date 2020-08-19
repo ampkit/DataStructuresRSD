@@ -139,9 +139,14 @@
               <Color blue="99" green="99" red="99" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Previous Page"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
             <Property name="focusPainted" type="boolean" value="false"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseExited"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPrevPageActionPerformed"/>
           </Events>
         </Component>
@@ -157,9 +162,14 @@
               <Color blue="99" green="99" red="99" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Next Page"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
             <Property name="focusPainted" type="boolean" value="false"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseExited"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnNextPageActionPerformed"/>
           </Events>
         </Component>
@@ -175,9 +185,14 @@
               <Color blue="99" green="99" red="99" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Back"/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Hand Cursor"/>
+            </Property>
             <Property name="focusPainted" type="boolean" value="false"/>
           </Properties>
           <Events>
+            <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseEntered"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseExited"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBackActionPerformed"/>
           </Events>
         </Component>
@@ -325,10 +340,15 @@
                   <Color blue="99" green="99" red="99" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Upgrade"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="enabled" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseExited"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpgradeActionPerformed"/>
               </Events>
             </Component>
@@ -341,9 +361,14 @@
                   <Color blue="99" green="99" red="99" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Hire"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseExited"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHireActionPerformed"/>
               </Events>
             </Component>
@@ -537,10 +562,15 @@
                   <Color blue="99" green="99" red="99" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Upgrade"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="enabled" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseExited"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpgrade1ActionPerformed"/>
               </Events>
             </Component>
@@ -553,9 +583,14 @@
                   <Color blue="99" green="99" red="99" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Hire"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseExited"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHire1ActionPerformed"/>
               </Events>
             </Component>
@@ -746,10 +781,15 @@
                   <Color blue="99" green="99" red="99" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Upgrade"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="enabled" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseExited"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpgrade2ActionPerformed"/>
               </Events>
             </Component>
@@ -762,9 +802,14 @@
                   <Color blue="99" green="99" red="99" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Hire"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseExited"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHire2ActionPerformed"/>
               </Events>
             </Component>
@@ -955,10 +1000,15 @@
                   <Color blue="99" green="99" red="99" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Upgrade"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="enabled" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseExited"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpgrade3ActionPerformed"/>
               </Events>
             </Component>
@@ -971,9 +1021,14 @@
                   <Color blue="99" green="99" red="99" type="rgb"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Hire"/>
+                <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+                  <Color id="Hand Cursor"/>
+                </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
               <Events>
+                <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseEntered"/>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnNextPageMouseExited"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnHire3ActionPerformed"/>
               </Events>
             </Component>

@@ -104,7 +104,16 @@ public class HelperUI extends javax.swing.JFrame {
         btnPrevPage.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnPrevPage.setForeground(new java.awt.Color(153, 153, 153));
         btnPrevPage.setText("Previous Page");
+        btnPrevPage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnPrevPage.setFocusPainted(false);
+        btnPrevPage.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseExited(evt);
+            }
+        });
         btnPrevPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPrevPageActionPerformed(evt);
@@ -115,7 +124,16 @@ public class HelperUI extends javax.swing.JFrame {
         btnNextPage.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnNextPage.setForeground(new java.awt.Color(153, 153, 153));
         btnNextPage.setText("Next Page");
+        btnNextPage.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnNextPage.setFocusPainted(false);
+        btnNextPage.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseExited(evt);
+            }
+        });
         btnNextPage.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNextPageActionPerformed(evt);
@@ -126,7 +144,16 @@ public class HelperUI extends javax.swing.JFrame {
         btnBack.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         btnBack.setForeground(new java.awt.Color(153, 153, 153));
         btnBack.setText("Back");
+        btnBack.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBack.setFocusPainted(false);
+        btnBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseExited(evt);
+            }
+        });
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -156,8 +183,17 @@ public class HelperUI extends javax.swing.JFrame {
         btnUpgrade.setBackground(new java.awt.Color(51, 51, 51));
         btnUpgrade.setForeground(new java.awt.Color(153, 153, 153));
         btnUpgrade.setText("Upgrade");
+        btnUpgrade.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnUpgrade.setEnabled(false);
         btnUpgrade.setFocusPainted(false);
+        btnUpgrade.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseExited(evt);
+            }
+        });
         btnUpgrade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpgradeActionPerformed(evt);
@@ -167,7 +203,16 @@ public class HelperUI extends javax.swing.JFrame {
         btnHire.setBackground(new java.awt.Color(51, 51, 51));
         btnHire.setForeground(new java.awt.Color(153, 153, 153));
         btnHire.setText("Hire");
+        btnHire.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnHire.setFocusPainted(false);
+        btnHire.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseExited(evt);
+            }
+        });
         btnHire.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHireActionPerformed(evt);
@@ -271,8 +316,17 @@ public class HelperUI extends javax.swing.JFrame {
         btnUpgrade1.setBackground(new java.awt.Color(51, 51, 51));
         btnUpgrade1.setForeground(new java.awt.Color(153, 153, 153));
         btnUpgrade1.setText("Upgrade");
+        btnUpgrade1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnUpgrade1.setEnabled(false);
         btnUpgrade1.setFocusPainted(false);
+        btnUpgrade1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseExited(evt);
+            }
+        });
         btnUpgrade1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpgrade1ActionPerformed(evt);
@@ -282,7 +336,16 @@ public class HelperUI extends javax.swing.JFrame {
         btnHire1.setBackground(new java.awt.Color(51, 51, 51));
         btnHire1.setForeground(new java.awt.Color(153, 153, 153));
         btnHire1.setText("Hire");
+        btnHire1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnHire1.setFocusPainted(false);
+        btnHire1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseExited(evt);
+            }
+        });
         btnHire1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHire1ActionPerformed(evt);
@@ -387,8 +450,17 @@ public class HelperUI extends javax.swing.JFrame {
         btnUpgrade2.setBackground(new java.awt.Color(51, 51, 51));
         btnUpgrade2.setForeground(new java.awt.Color(153, 153, 153));
         btnUpgrade2.setText("Upgrade");
+        btnUpgrade2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnUpgrade2.setEnabled(false);
         btnUpgrade2.setFocusPainted(false);
+        btnUpgrade2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseExited(evt);
+            }
+        });
         btnUpgrade2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpgrade2ActionPerformed(evt);
@@ -398,7 +470,16 @@ public class HelperUI extends javax.swing.JFrame {
         btnHire2.setBackground(new java.awt.Color(51, 51, 51));
         btnHire2.setForeground(new java.awt.Color(153, 153, 153));
         btnHire2.setText("Hire");
+        btnHire2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnHire2.setFocusPainted(false);
+        btnHire2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseExited(evt);
+            }
+        });
         btnHire2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHire2ActionPerformed(evt);
@@ -503,8 +584,17 @@ public class HelperUI extends javax.swing.JFrame {
         btnUpgrade3.setBackground(new java.awt.Color(51, 51, 51));
         btnUpgrade3.setForeground(new java.awt.Color(153, 153, 153));
         btnUpgrade3.setText("Upgrade");
+        btnUpgrade3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnUpgrade3.setEnabled(false);
         btnUpgrade3.setFocusPainted(false);
+        btnUpgrade3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseExited(evt);
+            }
+        });
         btnUpgrade3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpgrade3ActionPerformed(evt);
@@ -514,7 +604,16 @@ public class HelperUI extends javax.swing.JFrame {
         btnHire3.setBackground(new java.awt.Color(51, 51, 51));
         btnHire3.setForeground(new java.awt.Color(153, 153, 153));
         btnHire3.setText("Hire");
+        btnHire3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnHire3.setFocusPainted(false);
+        btnHire3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnNextPageMouseExited(evt);
+            }
+        });
         btnHire3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnHire3ActionPerformed(evt);
@@ -738,6 +837,19 @@ public class HelperUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnPrevPageActionPerformed
 
+    private void btnNextPageMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNextPageMouseEntered
+        // TODO add your handling code here:
+        if (evt.getComponent().isEnabled()) {
+            evt.getComponent().setBackground(new Color(80, 80, 80));
+        }
+
+    }//GEN-LAST:event_btnNextPageMouseEntered
+
+    private void btnNextPageMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNextPageMouseExited
+        // TODO add your handling code here:
+        evt.getComponent().setBackground(new Color(51, 51, 51));
+    }//GEN-LAST:event_btnNextPageMouseExited
+
     /**
      * @param args the command line arguments
      */
@@ -781,7 +893,7 @@ public class HelperUI extends javax.swing.JFrame {
     }
 
     private void updateUI() {
-        labelGold.setText(String.format("%d", (int)MainClass.player.getGold()));
+        labelGold.setText(String.format("%d", (int) MainClass.player.getGold()));
         updatePanel1Control(MainClass.helperList.get(page * 4 - 4));
         updatePanel2Control(MainClass.helperList.get(page * 4 - 3));
         updatePanel3Control(MainClass.helperList.get(page * 4 - 2));
@@ -815,7 +927,7 @@ public class HelperUI extends javax.swing.JFrame {
     }
 
     private void upgradeBtnEvent(Helper helper) {
-        MainClass.player.deductGold((int)helper.getUpgradeCost());
+        MainClass.player.deductGold((int) helper.getUpgradeCost());
         helper.upgrade();
         MainClass.gameUI.updateGameUI();
         updateUI();
