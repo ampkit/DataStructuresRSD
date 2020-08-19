@@ -52,6 +52,7 @@ public class GameUI extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         btnInventory = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMaximumSize(new java.awt.Dimension(960, 687));
@@ -427,6 +428,17 @@ public class GameUI extends javax.swing.JFrame {
                 .addContainerGap(14, Short.MAX_VALUE))
         );
 
+        btnExit.setBackground(new java.awt.Color(255, 51, 51));
+        btnExit.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(0, 0, 0));
+        btnExit.setText("X");
+        btnExit.setFocusable(false);
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout gameUIPanelLayout = new javax.swing.GroupLayout(gameUIPanel);
         gameUIPanel.setLayout(gameUIPanelLayout);
         gameUIPanelLayout.setHorizontalGroup(
@@ -445,17 +457,23 @@ public class GameUI extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addGap(18, 18, 18)
                         .addComponent(lblStage)
-                        .addGap(28, 28, 28))))
+                        .addGap(50, 50, 50)
+                        .addComponent(btnExit)
+                        .addContainerGap())))
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 960, Short.MAX_VALUE)
         );
         gameUIPanelLayout.setVerticalGroup(
             gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(gameUIPanelLayout.createSequentialGroup()
-                .addGroup(gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblGoldIcon)
-                    .addComponent(lblStage)
-                    .addComponent(lblGold)
-                    .addComponent(jLabel2))
+                .addGroup(gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(gameUIPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblGoldIcon)
+                        .addComponent(lblStage)
+                        .addComponent(lblGold)
+                        .addComponent(jLabel2))
+                    .addGroup(gameUIPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnExit)))
                 .addGap(18, 18, 18)
                 .addComponent(gameScreen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -518,6 +536,10 @@ public class GameUI extends javax.swing.JFrame {
         evt.getComponent().setBackground(new Color(153,153,153));
         evt.getComponent().setForeground(new Color(0,0,0));
     }//GEN-LAST:event_buttonMouseExit
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        MainClass.gameOver();
+    }//GEN-LAST:event_btnExitActionPerformed
     // </editor-fold>
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -662,6 +684,7 @@ public class GameUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnExit;
     private javax.swing.JButton btnInventory;
     private javax.swing.JProgressBar enemyAttackBar;
     private javax.swing.JProgressBar enemyHealthBar;
