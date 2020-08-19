@@ -473,6 +473,7 @@ public class ShopUI extends javax.swing.JFrame {
         this.setVisible(false);        
         MainClass.gameUI.setEnabled(true);
         MainClass.startAutoAttackTimers();
+        MainClass.gameUI.toFront();
 
     }//GEN-LAST:event_jButtonBackActionPerformed
 

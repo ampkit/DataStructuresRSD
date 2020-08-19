@@ -3,6 +3,7 @@ package clickerrpg.ui;
 import clickerrpg.Equipment;
 import clickerrpg.Consumable;
 import clickerrpg.MainClass;
+import clickerrpg.Player;
 import java.awt.Font;
 import java.awt.Image;
 import javax.swing.ImageIcon;
@@ -87,14 +88,19 @@ public class InventoryUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        lblHealth = new javax.swing.JLabel();
+        lblAttack = new javax.swing.JLabel();
+        lblDefense = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(102, 102, 102));
         setMaximumSize(new java.awt.Dimension(850, 660));
         setMinimumSize(new java.awt.Dimension(850, 660));
         setUndecorated(true);
         setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Inventory");
 
         jPanel1.setBackground(new java.awt.Color(153, 153, 153));
@@ -104,14 +110,17 @@ public class InventoryUI extends javax.swing.JFrame {
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Details");
 
         lblItemName.setBackground(new java.awt.Color(0, 0, 0));
         lblItemName.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblItemName.setForeground(new java.awt.Color(0, 0, 0));
         lblItemName.setText("Item Name");
 
         lblItemIcon.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblItemIcon.setForeground(new java.awt.Color(0, 0, 0));
         lblItemIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblItemIcon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lblItemIcon.setMaximumSize(new java.awt.Dimension(160, 160));
@@ -120,11 +129,15 @@ public class InventoryUI extends javax.swing.JFrame {
 
         lblItemStats.setBackground(new java.awt.Color(0, 0, 0));
         lblItemStats.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblItemStats.setForeground(new java.awt.Color(0, 0, 0));
         lblItemStats.setText("Stats");
         lblItemStats.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
+        btnEquip.setBackground(new java.awt.Color(102, 102, 102));
         btnEquip.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnEquip.setForeground(new java.awt.Color(255, 255, 255));
         btnEquip.setText("Equip");
+        btnEquip.setFocusable(false);
         btnEquip.setMaximumSize(new java.awt.Dimension(150, 35));
         btnEquip.setMinimumSize(new java.awt.Dimension(150, 35));
         btnEquip.setPreferredSize(new java.awt.Dimension(150, 35));
@@ -134,8 +147,11 @@ public class InventoryUI extends javax.swing.JFrame {
             }
         });
 
+        btnSell.setBackground(new java.awt.Color(102, 102, 102));
         btnSell.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnSell.setForeground(new java.awt.Color(255, 255, 255));
         btnSell.setText("Sell");
+        btnSell.setFocusable(false);
         btnSell.setMaximumSize(new java.awt.Dimension(150, 35));
         btnSell.setMinimumSize(new java.awt.Dimension(150, 35));
         btnSell.setPreferredSize(new java.awt.Dimension(150, 35));
@@ -146,6 +162,7 @@ public class InventoryUI extends javax.swing.JFrame {
         });
 
         lblSellPrice.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblSellPrice.setForeground(new java.awt.Color(0, 0, 0));
         lblSellPrice.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lblSellPrice.setText("Sell Price");
 
@@ -200,10 +217,12 @@ public class InventoryUI extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.setMaximumSize(new java.awt.Dimension(482, 492));
         jPanel2.setMinimumSize(new java.awt.Dimension(482, 492));
-        jPanel2.setOpaque(false);
 
+        btnPrevPage.setBackground(new java.awt.Color(102, 102, 102));
         btnPrevPage.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnPrevPage.setForeground(new java.awt.Color(255, 255, 255));
         btnPrevPage.setText("Previous Page");
+        btnPrevPage.setFocusable(false);
         btnPrevPage.setMaximumSize(new java.awt.Dimension(150, 35));
         btnPrevPage.setMinimumSize(new java.awt.Dimension(150, 35));
         btnPrevPage.setPreferredSize(new java.awt.Dimension(150, 35));
@@ -213,7 +232,10 @@ public class InventoryUI extends javax.swing.JFrame {
             }
         });
 
+        btnNextPage.setBackground(new java.awt.Color(102, 102, 102));
         btnNextPage.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnNextPage.setForeground(new java.awt.Color(255, 255, 255));
+        btnNextPage.setFocusable(false);
         btnNextPage.setLabel("Next Page");
         btnNextPage.setMaximumSize(new java.awt.Dimension(150, 35));
         btnNextPage.setMinimumSize(new java.awt.Dimension(150, 35));
@@ -225,11 +247,13 @@ public class InventoryUI extends javax.swing.JFrame {
         });
 
         lblPage.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblPage.setForeground(new java.awt.Color(0, 0, 0));
         lblPage.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPage.setText("0 / 0");
         lblPage.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         lblSortAll.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortAll.setForeground(new java.awt.Color(0, 0, 0));
         lblSortAll.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSortAll.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_All.png"))); // NOI18N
         lblSortAll.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -238,6 +262,7 @@ public class InventoryUI extends javax.swing.JFrame {
         lblSortAll.setPreferredSize(new java.awt.Dimension(40, 40));
 
         lblSortWeapon.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortWeapon.setForeground(new java.awt.Color(0, 0, 0));
         lblSortWeapon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSortWeapon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Weapon.png"))); // NOI18N
         lblSortWeapon.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -246,6 +271,7 @@ public class InventoryUI extends javax.swing.JFrame {
         lblSortWeapon.setPreferredSize(new java.awt.Dimension(40, 40));
 
         lblSortHelmet.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortHelmet.setForeground(new java.awt.Color(0, 0, 0));
         lblSortHelmet.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSortHelmet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Helmet.png"))); // NOI18N
         lblSortHelmet.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -254,6 +280,7 @@ public class InventoryUI extends javax.swing.JFrame {
         lblSortHelmet.setPreferredSize(new java.awt.Dimension(40, 40));
 
         lblSortChest.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortChest.setForeground(new java.awt.Color(0, 0, 0));
         lblSortChest.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSortChest.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Chest.png"))); // NOI18N
         lblSortChest.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -262,6 +289,7 @@ public class InventoryUI extends javax.swing.JFrame {
         lblSortChest.setPreferredSize(new java.awt.Dimension(40, 40));
 
         lblSortLeggings.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortLeggings.setForeground(new java.awt.Color(0, 0, 0));
         lblSortLeggings.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSortLeggings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Leggings.png"))); // NOI18N
         lblSortLeggings.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
@@ -270,12 +298,15 @@ public class InventoryUI extends javax.swing.JFrame {
         lblSortLeggings.setPreferredSize(new java.awt.Dimension(40, 40));
 
         lblSortBoots.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        lblSortBoots.setForeground(new java.awt.Color(0, 0, 0));
         lblSortBoots.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSortBoots.setIcon(new javax.swing.ImageIcon(getClass().getResource("/clickerrpg/img/Slot_Boots.png"))); // NOI18N
         lblSortBoots.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         lblSortBoots.setMaximumSize(new java.awt.Dimension(70, 70));
         lblSortBoots.setMinimumSize(new java.awt.Dimension(70, 70));
         lblSortBoots.setPreferredSize(new java.awt.Dimension(40, 40));
+
+        jPanel5.setBackground(new java.awt.Color(153, 153, 153));
 
         lblItem1x1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblItem1x1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -515,6 +546,7 @@ public class InventoryUI extends javax.swing.JFrame {
                         .addContainerGap(22, Short.MAX_VALUE))))
         );
 
+        lblSortBoots1.setBackground(new java.awt.Color(153, 153, 153));
         lblSortBoots1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         lblSortBoots1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblSortBoots1.setMaximumSize(new java.awt.Dimension(70, 70));
@@ -574,7 +606,9 @@ public class InventoryUI extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        btnShowEquipment.setBackground(new java.awt.Color(102, 102, 102));
         btnShowEquipment.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnShowEquipment.setForeground(new java.awt.Color(255, 255, 255));
         btnShowEquipment.setText("Equipment");
         btnShowEquipment.setFocusable(false);
         btnShowEquipment.addActionListener(new java.awt.event.ActionListener() {
@@ -583,7 +617,9 @@ public class InventoryUI extends javax.swing.JFrame {
             }
         });
 
+        btnShowConsumables.setBackground(new java.awt.Color(102, 102, 102));
         btnShowConsumables.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        btnShowConsumables.setForeground(new java.awt.Color(255, 255, 255));
         btnShowConsumables.setText("Consumables");
         btnShowConsumables.setFocusable(false);
         btnShowConsumables.addActionListener(new java.awt.event.ActionListener() {
@@ -613,8 +649,11 @@ public class InventoryUI extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        backButton.setBackground(new java.awt.Color(102, 102, 102));
         backButton.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        backButton.setForeground(new java.awt.Color(255, 255, 255));
         backButton.setText("Back");
+        backButton.setFocusable(false);
         backButton.setMaximumSize(new java.awt.Dimension(150, 35));
         backButton.setMinimumSize(new java.awt.Dimension(150, 35));
         backButton.setPreferredSize(new java.awt.Dimension(150, 35));
@@ -649,20 +688,38 @@ public class InventoryUI extends javax.swing.JFrame {
         lblGold.setText("999 999 999");
         lblGold.setName(""); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel2.setText("Health :");
         jLabel2.setToolTipText("");
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel3.setText("Attack :");
         jLabel3.setToolTipText("");
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel4.setText("Defense :");
         jLabel4.setToolTipText("");
+
+        lblHealth.setBackground(new java.awt.Color(0, 0, 0));
+        lblHealth.setForeground(new java.awt.Color(0, 0, 0));
+        lblHealth.setText("100 / 100");
+
+        lblAttack.setBackground(new java.awt.Color(0, 0, 0));
+        lblAttack.setForeground(new java.awt.Color(0, 0, 0));
+        lblAttack.setText("100000");
+
+        lblDefense.setBackground(new java.awt.Color(0, 0, 0));
+        lblDefense.setForeground(new java.awt.Color(0, 0, 0));
+        lblDefense.setText("100000");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -671,20 +728,35 @@ public class InventoryUI extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblHealth))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblAttack))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblDefense)))
+                .addContainerGap(83, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jLabel2)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(lblHealth))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(lblAttack))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(lblDefense))
                 .addContainerGap(15, Short.MAX_VALUE))
         );
 
@@ -707,8 +779,8 @@ public class InventoryUI extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(115, 115, 115)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(lblGoldIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
@@ -751,6 +823,7 @@ public class InventoryUI extends javax.swing.JFrame {
 
     private void itemClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_itemClicked
         JLabel jLabel = (JLabel) evt.getSource();
+        if (jLabel.getClientProperty("item") == null) return;
 
         switch (viewType) {
             case "Equipment":
@@ -758,6 +831,8 @@ public class InventoryUI extends javax.swing.JFrame {
                 break;
             case "Consumables":
                 showDetails((Consumable) jLabel.getClientProperty("item"));
+                break;
+            default:
                 break;
         }
     }//GEN-LAST:event_itemClicked
@@ -1035,6 +1110,7 @@ public class InventoryUI extends javax.swing.JFrame {
             JLabel label = labels[i];
             label.setIcon(null);
             label.setText(null);
+            label.putClientProperty("item", null);
         }
 
         lblItemIcon.setIcon(null);
@@ -1046,6 +1122,12 @@ public class InventoryUI extends javax.swing.JFrame {
 
         btnEquip.putClientProperty("equipment", null);
         btnSell.putClientProperty("equipment", null);
+        
+        Player player = MainClass.player;
+        lblHealth.setText(String.valueOf((int)player.getCurHealth()) + " / " + String.valueOf((int)player.getMaxHealth()));
+        lblAttack.setText(String.valueOf((int)player.getAttack()));
+        lblDefense.setText(String.valueOf((int)player.getDefense()));
+
     }
 
     private void loadEquipment() {
@@ -1175,8 +1257,11 @@ public class InventoryUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JLabel lblAttack;
+    private javax.swing.JLabel lblDefense;
     private javax.swing.JLabel lblGold;
     private javax.swing.JLabel lblGoldIcon;
+    private javax.swing.JLabel lblHealth;
     private javax.swing.JLabel lblItem1x1;
     private javax.swing.JLabel lblItem1x2;
     private javax.swing.JLabel lblItem1x3;

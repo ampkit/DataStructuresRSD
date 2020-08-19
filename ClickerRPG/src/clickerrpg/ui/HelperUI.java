@@ -716,7 +716,6 @@ public class HelperUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnUpgradeActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        MainClass.startAutoAttackTimers();
         MainClass.gameUI.setEnabled(true);
         this.setVisible(false);
         MainClass.startAutoAttackTimers();
