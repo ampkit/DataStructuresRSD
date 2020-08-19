@@ -9,7 +9,10 @@ import ADT.ChongJingYi.PlayerList;
 import ADT.ChongJingYi.PlayerListInterface;
 import clickerrpg.MainClass;
 import static clickerrpg.MainClass.playerList;
+import static clickerrpg.MainClass.startGame;
 import clickerrpg.Player;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JLabel;
 
 /**
@@ -205,9 +208,11 @@ public class ScoreboardUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnExitActionPerformed
 
     private void btnPlayAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlayAgainActionPerformed
-        // TODO add your handling code here:
-        //LoginUI.setVisible(true);
-        playerList.clear();
+        try {
+            startGame();
+        } catch (InterruptedException ex) {
+            Logger.getLogger(ScoreboardUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_btnPlayAgainActionPerformed
 
     /**

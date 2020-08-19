@@ -39,15 +39,16 @@ public class MainClass {
 
     public static void main(String args[]) throws InterruptedException {
         initializeData();
+        startGame();
 
-        loginUI.startUp();
+        /*loginUI.startUp();
         while (player == null) {
             Thread.sleep(1000);
         }
         gameUI.updateGameUI();
         gameUI.startUp();
 
-        startAutoAttackTimers();
+        startAutoAttackTimers();*/
     }
 
     public static void startAutoAttackTimers() {
@@ -94,6 +95,8 @@ public class MainClass {
         consumableInventory = new SortedLinkedList<>();
         upgradeList = new UpgradeList<>();
         // </editor-fold>
+        
+        stage = 1;
         loadEnemy();
         enemy = enemyQueue.getFront();
 
@@ -265,5 +268,17 @@ public class MainClass {
         gameUI.setVisible(false);
         scoreboardUI.startUp();
         scoreboardUI.displayScoreboardUI();
+    }
+    
+    public static void startGame() throws InterruptedException{
+        //stage = 1;
+        loginUI.startUp();
+        while (player == null) {
+            Thread.sleep(1000);
+        }
+        gameUI.updateGameUI();
+        gameUI.startUp();
+
+        startAutoAttackTimers();
     }
 }
