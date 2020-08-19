@@ -541,7 +541,7 @@ public class ShopUI extends javax.swing.JFrame {
                     
 
                 }
-
+                    break;
             }
             case "Upgrade" :
             {
@@ -564,6 +564,7 @@ public class ShopUI extends javax.swing.JFrame {
                         MainClass.player.addDefense(upgrade.getDefense());
                     }
                 }
+                break;
             }
             case "Consumables" :
             {
@@ -579,6 +580,7 @@ public class ShopUI extends javax.swing.JFrame {
                     
 
                 }
+                break;
             }
         }
     }//GEN-LAST:event_buttonPurchaseActionPerformed
@@ -986,6 +988,7 @@ public class ShopUI extends javax.swing.JFrame {
                  break;
             case "Comsumables":
                 ComDetailsShow((Consumable) jLabel.getClientProperty("items"));
+                break;
         }
         
     }  
