@@ -433,6 +433,7 @@ public class ShopUI extends javax.swing.JFrame {
     private void buttonUpgradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpgradeActionPerformed
         view = "Upgrade"; 
         page = 1;
+        changeButtonVisibility(false);
         loadUpgrade();
        
         
@@ -588,10 +589,11 @@ public class ShopUI extends javax.swing.JFrame {
     private void buttonConsumablesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonConsumablesActionPerformed
         view = "Comsumables";
         page = 1;
+        changeButtonVisibility(false);
         loadConsumables();
     }//GEN-LAST:event_buttonConsumablesActionPerformed
 
-    public static void main(String args[]) {
+     public static void main(String args[]) {
       
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -601,7 +603,7 @@ public class ShopUI extends javax.swing.JFrame {
     }
     
      public void startUp() {
-         page = 1;
+        page = 1;
         buttonPurchase.setEnabled(false);
         setAlwaysOnTop(true);
         setLocationRelativeTo(null);
@@ -674,8 +676,7 @@ public class ShopUI extends javax.swing.JFrame {
        
     }
      
-     
-      private void loadUpgrade() {
+     private void loadUpgrade() {
        clearData();
        sort = "Upgrade";
         lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
@@ -709,9 +710,8 @@ public class ShopUI extends javax.swing.JFrame {
             }
        
     }
-     
-     
-      private void loadConsumables() {
+          
+     private void loadConsumables() {
        clearData();
        sort = "Consumables";
        changeButtonVisibility(false);
@@ -746,8 +746,7 @@ public class ShopUI extends javax.swing.JFrame {
             }
     }
      
-     
-        private void loadWeapon() {
+     private void loadWeapon() {
        clearData();
        sort = "Equipt";
         lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
@@ -790,7 +789,7 @@ public class ShopUI extends javax.swing.JFrame {
        
     }
         
-        private void loadHelmet() {
+     private void loadHelmet() {
        clearData();
        sort = "Equipt";
         lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
@@ -837,7 +836,7 @@ public class ShopUI extends javax.swing.JFrame {
        
     }
         
-        private void loadChest() {
+     private void loadChest() {
          clearData();
          sort = "Equipt";
         lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
@@ -883,7 +882,7 @@ public class ShopUI extends javax.swing.JFrame {
        
     }
         
-        private void loadleggings() {
+     private void loadleggings() {
          clearData();
          sort = "Equipt";
          lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
@@ -929,7 +928,7 @@ public class ShopUI extends javax.swing.JFrame {
        
     }
         
-        private void loadBoots() {
+     private void loadBoots() {
        clearData();
        sort = "Equipt";
         lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
@@ -992,8 +991,8 @@ public class ShopUI extends javax.swing.JFrame {
         }
         
     }  
+     
      private void EqDetailsShow(Equipment equipment) {
-         
          
          lblItemPic.setIcon(new ImageIcon(equipment.getImageIcon().getImage().getScaledInstance(280, 280, Image.SCALE_SMOOTH)));
          lblItemName.setText(equipment.getEqName());
@@ -1059,9 +1058,8 @@ public class ShopUI extends javax.swing.JFrame {
          }
      }
      
-      private void ComDetailsShow(Consumable consumable) {
-         
-         
+     private void ComDetailsShow(Consumable consumable) {
+              
          lblItemPic.setIcon(new ImageIcon(consumable.getImageIcon().getImage().getScaledInstance(280, 280, Image.SCALE_SMOOTH)));
          lblItemName.setText(consumable.getConsName());
          lblItemName.setFont(new Font("Nirmala UI", Font.BOLD, 25));
@@ -1069,16 +1067,20 @@ public class ShopUI extends javax.swing.JFrame {
         itemDetails += "<html><p>";
         if (consumable.getAttackIncreased() != 0) {
             
-            itemDetails += "<br>Attack : " + consumable.getAttackIncreased();
+            itemDetails += "<br>Increase for "+ consumable.getAttackIncreased() + " attack.";
             
         }
         if (consumable.getDefenseIncreased() != 0) {
            
-            itemDetails += "<br><br>Defense : " + consumable.getDefenseIncreased();
+            itemDetails += "<br><br>Increase for " + consumable.getDefenseIncreased() +" defense.";
         }
         if (consumable.getHealthIncreased() != 0) {
            
-            itemDetails += "<br><br>Heals for " + consumable.getHealthIncreased() +"health.";
+            itemDetails += "<br><br>Heals for " + consumable.getHealthIncreased() +" health.";
+        }
+        if (consumable.getMaxHealthIncreased() != 0) {
+           
+            itemDetails += "<br><br>Heals for " + consumable.getMaxHealthIncreased() +" maxHealth.";
         }
         itemDetails += "</p></html>";
          labelDetail.setText(itemDetails);
@@ -1093,12 +1095,9 @@ public class ShopUI extends javax.swing.JFrame {
          {
              buttonPurchase.setEnabled(true);
          }
-     }
+     }  
      
-     
-     
-     
- private void setMouseListeners() {
+     private void setMouseListeners() {
         JLabel[] label
                 = {lblItem1a, lblItem1b, lblItem2a, lblItem2b, lblItem3a,
                     lblItem3b, lblItem4a, lblItem4b};
@@ -1117,7 +1116,8 @@ public class ShopUI extends javax.swing.JFrame {
        
                
     }
-    private void changeButtonVisibility(Boolean visibility) {
+   
+     private void changeButtonVisibility(Boolean visibility) {
           buttonWeapon.setVisible(visibility);
           buttonHelmet.setVisible(visibility);
           buttonChest.setVisible(visibility);
