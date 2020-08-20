@@ -1,9 +1,5 @@
 package ADT.ChongWaiKit;
 
-/**
- * @author Chong Wai Kit
- */
-
 public interface SLListInterface<T extends Comparable<T>> {
     
     public boolean add(T newEntry);

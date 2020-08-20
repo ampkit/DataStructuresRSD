@@ -537,7 +537,7 @@ public class ShopUI extends javax.swing.JFrame {
                     
                         MainClass.player.deductGold(equipment.getPrice());
                         lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
-                        MainClass.equipmentInventory.add(equipment);
+                        MainClass.equipmentInventory.add(new Equipment(equipment.getEqName()));
                     
 
                 }
