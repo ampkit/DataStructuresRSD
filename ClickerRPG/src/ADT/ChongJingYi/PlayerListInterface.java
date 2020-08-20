@@ -17,4 +17,8 @@ public interface PlayerListInterface<T> {
     
     public boolean contains(T anEntry);
     
+    public void addDescendingSortedNode(T newEntry);
+    
+    public void sortList();
+    
 }

@@ -1,7 +1,11 @@
 package ADT.ChongJingYi;
 
+import clickerrpg.Player;
+
 
 public class PlayerList<T> implements PlayerListInterface<T> {
+
+    
     
     private Node firstNode;
     private int length;
@@ -95,6 +99,52 @@ public class PlayerList<T> implements PlayerListInterface<T> {
         return found;
     }
     
+    @Override
+    public void addDescendingSortedNode(T newEntry) {
+        if (newEntry instanceof Player) {
+            Node currentNode = firstNode;
+            if (firstNode == null) {
+                firstNode = new Node(newEntry);
+            } else if (((Player) newEntry).getHighscore() > ((Player) firstNode.data).getHighscore()) {
+
+                Node newNode = new Node(newEntry);
+                newNode.next = firstNode;
+                firstNode = newNode;
+            } else {
+
+                Node previousNode = currentNode;
+                currentNode = currentNode.next;
+                while (currentNode != null) {
+                    if (((Player) newEntry).getHighscore() > ((Player) currentNode.data).getHighscore()) {
+                        Node tempNode = currentNode;
+                        Node newNode = new Node(newEntry);
+                        previousNode.setNext(newNode);
+                        newNode.setNext(tempNode);
+                        break;
+                    }
+                    previousNode = previousNode.next;
+                    currentNode = currentNode.next;
+                    System.out.println(currentNode);
+                }
+                if (currentNode == null) {
+                    previousNode.setNext(new Node(newEntry));
+                }
+
+            }
+            length++;
+        }
+    }
+
+    @Override
+    public void sortList() {
+        PlayerList temp = new PlayerList();
+        for (int i = 1; i <= length; i++) {
+            temp.addDescendingSortedNode(getEntry(i));
+        }
+
+        this.firstNode = temp.firstNode;
+    }
+    
     //inner class
   private class Node {
 
@@ -109,6 +159,10 @@ public class PlayerList<T> implements PlayerListInterface<T> {
     private Node(T data, Node next) {
       this.data = data;
       this.next = next;
+    }
+    
+    public void setNext(Node next) {
+        this.next = next;
     }
   }// node
     

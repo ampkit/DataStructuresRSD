@@ -1,0 +1,4 @@
+JJ,16
+LiftLift,6
+LiftLift,3
+Money,8

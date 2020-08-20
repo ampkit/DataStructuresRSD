@@ -12,6 +12,12 @@ import ADT.CheongKaMeng.SortedHelperList;
 import clickerrpg.ui.GameUI;
 import clickerrpg.ui.LoginUI;
 import clickerrpg.ui.ScoreboardUI;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -156,6 +162,7 @@ public class MainClass {
         consumableList.add(new Consumable("Protection Potion"));
         //<editor-fold>
 
+        /*
         playerList.add(new Player("Player1", 10));
         playerList.add(new Player("Player2", 5));
         playerList.add(new Player("Player3", 7));
@@ -176,6 +183,19 @@ public class MainClass {
         playerList.add(new Player("Player3", 7));
         playerList.add(new Player("Player4", 1));
         playerList.add(new Player("Player5", 4));
+        */
+        
+        //initialize playerList from file "playerHistory.txt"
+        try{
+            Scanner sc = new Scanner(new FileInputStream("playerHistory.txt"));
+            while(sc.hasNextLine()){
+                String[] temp = sc.nextLine().split(",");
+                playerList.addDescendingSortedNode(new Player(temp[0],Integer.parseInt(temp[1])));
+            }
+            sc.close();
+        }catch(FileNotFoundException e){
+            System.out.println(e.getMessage());
+        }
 
         // <editor-fold defaultstate="collapsed" desc="Starting Items">
         equipmentInventory.add(new Equipment("Wooden Sword"));
@@ -256,7 +276,16 @@ public class MainClass {
         timer.cancel();
         timer.purge();
         player.setHighscore(stage);
-        playerList.add(player);
+        //playerList.add(player);
+        playerList.addDescendingSortedNode(player);  
+        try{
+            PrintWriter pw = new PrintWriter(new FileOutputStream("playerHistory.txt",true));
+            pw.println(player.getPlayerName()+","+player.getHighscore());
+            pw.close();
+        }catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+        
         gameUI.setVisible(false);
         scoreboardUI.startUp();
         scoreboardUI.displayScoreboardUI();

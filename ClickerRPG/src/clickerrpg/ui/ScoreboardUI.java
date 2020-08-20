@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package clickerrpg.ui;
-
 import ADT.ChongJingYi.PlayerList;
 import ADT.ChongJingYi.PlayerListInterface;
 import clickerrpg.MainClass;
@@ -23,7 +22,7 @@ public class ScoreboardUI extends javax.swing.JFrame {
 
     int page = 1;
     PlayerListInterface<String> arrScoreBoard = new PlayerList<>();
-
+    
     /**
      * Creates new form Scoreboard
      */

@@ -1,6 +1,8 @@
 package clickerrpg;
 
 
+import ADT.ChongJingYi.PlayerList;
+import ADT.ChongJingYi.PlayerListInterface;
 import java.util.Objects;
 import javax.swing.ImageIcon;
 
