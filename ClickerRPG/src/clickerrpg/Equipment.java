@@ -235,7 +235,9 @@ public class Equipment implements Comparable<Equipment> {
         }
 
         //compare by stats
-        double statDifference = this.attack + this.defense + this.health - comparedEquipment.attack - comparedEquipment.defense - comparedEquipment.health;
+        double thisEqStats = this.attack + this.defense + this.health;
+        double comparedEqStats = comparedEquipment.attack + comparedEquipment.defense + comparedEquipment.health;
+        double statDifference =  thisEqStats - comparedEqStats;
         if (statDifference != 0) {
             return (int) statDifference * -1;
         } //return negative stat difference as larger stats are sorted in front
