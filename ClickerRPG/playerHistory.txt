@@ -11,3 +11,7 @@ LiftLift,1
 LiftLift,35
 KM,16
 Bob,9
+LiftLift,4
+LiftLift,1
+LiftLift,2
+LiftLift,1

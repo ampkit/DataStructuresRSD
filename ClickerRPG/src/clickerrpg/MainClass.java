@@ -2,12 +2,9 @@ package clickerrpg;
 
 import ADT.OoiPingXiu.*;
 import ADT.IsabelLai.*;
-import ADT.ChongWaiKit.SLListInterface;
-import ADT.ChongWaiKit.SortedLinkedList;
-import ADT.ChongJingYi.PlayerList;
-import ADT.ChongJingYi.PlayerListInterface;
-import ADT.CheongKaMeng.SortedHelperListInterface;
-import ADT.CheongKaMeng.SortedHelperList;
+import ADT.ChongWaiKit.*;
+import ADT.ChongJingYi.*;
+import ADT.CheongKaMeng.*;
 
 import clickerrpg.ui.GameUI;
 import clickerrpg.ui.LoginUI;

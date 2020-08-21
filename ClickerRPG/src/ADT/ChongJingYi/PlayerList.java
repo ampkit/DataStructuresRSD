@@ -93,7 +93,6 @@ public class PlayerList<T extends Comparable<T>> implements PlayerListInterface<
         return found;
     }
 
-    @Override
     public void addDescendingSortedNode(T newEntry) {
 
         Node currentNode = firstNode;
@@ -128,7 +127,6 @@ public class PlayerList<T extends Comparable<T>> implements PlayerListInterface<
 
     }
 
-    @Override
     public void sortList() {
         PlayerList temp = new PlayerList();
         for (int i = 1; i <= length; i++) {
