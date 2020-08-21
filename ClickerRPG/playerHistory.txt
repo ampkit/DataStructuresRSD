@@ -2,3 +2,11 @@ JJ,16
 LiftLift,6
 LiftLift,3
 Money,8
+LiftLift,11
+LiftLift,1
+LiftLift,4
+LiftLift,12
+LiftLift,1
+LiftLift,1
+LiftLift,35
+KM,16

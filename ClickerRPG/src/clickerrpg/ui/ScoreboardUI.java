@@ -7,7 +7,6 @@ package clickerrpg.ui;
 import ADT.ChongJingYi.PlayerList;
 import ADT.ChongJingYi.PlayerListInterface;
 import clickerrpg.MainClass;
-import static clickerrpg.MainClass.playerList;
 import static clickerrpg.MainClass.startGame;
 import clickerrpg.Player;
 import java.util.logging.Level;
@@ -253,15 +252,15 @@ public class ScoreboardUI extends javax.swing.JFrame {
     }
 
     public void displayScoreboardUI() {
-
+        MainClass.playerList.sortList();
         String strScoreBoard = "<html><table>";
         int playerAt = 0;
-        for (int i = 1; i < playerList.getLength() + 1; i++) {
-            if (playerList.getEntry(i).getPlayerName() == MainClass.player.getName()) {
+        for (int i = 1; i < MainClass.playerList.getLength() + 1; i++) {
+            if (MainClass.playerList.getEntry(i).getPlayerName() == MainClass.player.getName()) {
                 playerAt = i;
-                strScoreBoard += "<tr style=\"border:1px solid black;\"><td style=\"width:50px;\">" + i + "</td><td style=\"width:160px;\">" + playerList.getEntry(i).getPlayerName() + "</td><td style=\"width:50px;\">" + playerList.getEntry(i).getHighscore() + "</tr>";
+                strScoreBoard += "<tr style=\"border:1px solid black;\"><td style=\"width:50px;\">" + i + "</td><td style=\"width:160px;\">" + MainClass.playerList.getEntry(i).getPlayerName() + "</td><td style=\"width:50px;\">" + MainClass.playerList.getEntry(i).getHighscore() + "</tr>";
             } else {
-                strScoreBoard += "<tr><td style=\"width:50px;\">" + i + "</td><td style=\"width:160px;\">" + playerList.getEntry(i).getPlayerName() + "</td><td style=\"width:50px;\">" + playerList.getEntry(i).getHighscore() + "</tr>";
+                strScoreBoard += "<tr><td style=\"width:50px;\">" + i + "</td><td style=\"width:160px;\">" + MainClass.playerList.getEntry(i).getPlayerName() + "</td><td style=\"width:50px;\">" + MainClass.playerList.getEntry(i).getHighscore() + "</tr>";
             }
             if (i % 8 == 0) {
                 strScoreBoard += "</table></html>";

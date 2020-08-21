@@ -35,7 +35,8 @@ public class MainClass {
     public static SLListInterface<Equipment> equipmentInventory;
     public static SLListInterface<Consumable> consumableInventory;
     public static UpgradeListInterface<Upgrade> upgradeList;
-    public static LoginUI loginUI = new LoginUI();;
+    public static LoginUI loginUI = new LoginUI();
+    ;
     public static GameUI gameUI;
     public static ScoreboardUI scoreboardUI;
     public static int stage;
@@ -63,7 +64,7 @@ public class MainClass {
                 player.addGold(gold);
                 player.addGoldEarned(gold);
                 player.addKill();
-                player.heal(player.getMaxHealth()*0.1);
+                player.heal(player.getMaxHealth() * 0.1);
                 stage++;
                 enemyQueue.dequeue();
                 if (enemyQueue.isEmpty()) {
@@ -89,10 +90,10 @@ public class MainClass {
         consumableInventory = new SortedLinkedList<>();
         upgradeList = new UpgradeList<>();
         // </editor-fold>
-        
+
         gameUI = new GameUI();
         scoreboardUI = new ScoreboardUI();
-                
+
         player = null;
         stage = 1;
         loadEnemy();
@@ -162,38 +163,15 @@ public class MainClass {
         consumableList.add(new Consumable("Protection Potion"));
         //<editor-fold>
 
-        /*
-        playerList.add(new Player("Player1", 10));
-        playerList.add(new Player("Player2", 5));
-        playerList.add(new Player("Player3", 7));
-        playerList.add(new Player("Player4", 1));
-        playerList.add(new Player("Player5", 4));
-        playerList.add(new Player("Player1", 10));
-        playerList.add(new Player("Player2", 5));
-        playerList.add(new Player("Player3", 7));
-        playerList.add(new Player("Player4", 1));
-        playerList.add(new Player("Player5", 4));
-        playerList.add(new Player("Player1", 10));
-        playerList.add(new Player("Player2", 5));
-        playerList.add(new Player("Player3", 7));
-        playerList.add(new Player("Player4", 1));
-        playerList.add(new Player("Player5", 4));
-        playerList.add(new Player("Player1", 10));
-        playerList.add(new Player("Player2", 5));
-        playerList.add(new Player("Player3", 7));
-        playerList.add(new Player("Player4", 1));
-        playerList.add(new Player("Player5", 4));
-        */
-        
         //initialize playerList from file "playerHistory.txt"
-        try{
+        try {
             Scanner sc = new Scanner(new FileInputStream("playerHistory.txt"));
-            while(sc.hasNextLine()){
+            while (sc.hasNextLine()) {
                 String[] temp = sc.nextLine().split(",");
-                playerList.addDescendingSortedNode(new Player(temp[0],Integer.parseInt(temp[1])));
+                playerList.add(new Player(temp[0], Integer.parseInt(temp[1])));
             }
             sc.close();
-        }catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println(e.getMessage());
         }
 
@@ -263,35 +241,34 @@ public class MainClass {
     public static void loadEnemy() {
         enemyQueue.clear();
         enemyQueue.enqueue(new Enemy("Butcher", 100, 5, 1, 100, 3000, "Enemy_Butcher.png"));
-        enemyQueue.enqueue(new Enemy("Stheno the Snake",  100, 3, 2, 100, 1000, "Enemy_Stheno.png"));
+        enemyQueue.enqueue(new Enemy("Stheno the Snake", 100, 3, 2, 100, 1000, "Enemy_Stheno.png"));
         enemyQueue.enqueue(new Enemy("Ghost", 300, 5, 0, 100, 3000, "Enemy_Ghost.png"));
         enemyQueue.enqueue(new Enemy("Luffy the Pirate", 150, 5, 1, 200, 3000, "Enemy_Pirate.png"));
-        enemyQueue.enqueue(new Enemy("Spider", 100, 10, 2, 100, 2000, "Enemy_Spider.png"));        
-        enemyQueue.enqueue(new Enemy("Vesben the Ruthless", 300,  5, 0, 100, 3000, "Enemy_Ghost_2.png"));
-        enemyQueue.enqueue(new Enemy("Drake", 500,  10, 5, 300, 5000, "Enemy_Dragon.png"));
-        enemyQueue.enqueue(new Enemy("Illidan the Draconian", 800,  15, 7, 500, 5000, "Enemy_Dragon_2.png"));
+        enemyQueue.enqueue(new Enemy("Spider", 100, 10, 2, 100, 2000, "Enemy_Spider.png"));
+        enemyQueue.enqueue(new Enemy("Vesben the Ruthless", 300, 5, 0, 100, 3000, "Enemy_Ghost_2.png"));
+        enemyQueue.enqueue(new Enemy("Drake", 500, 10, 5, 300, 5000, "Enemy_Dragon.png"));
+        enemyQueue.enqueue(new Enemy("Illidan the Draconian", 800, 15, 7, 500, 5000, "Enemy_Dragon_2.png"));
     }
 
     public static void gameOver() {
         timer.cancel();
         timer.purge();
         player.setHighscore(stage);
-        //playerList.add(player);
-        playerList.addDescendingSortedNode(player);  
-        try{
-            PrintWriter pw = new PrintWriter(new FileOutputStream("playerHistory.txt",true));
-            pw.println(player.getPlayerName()+","+player.getHighscore());
+        playerList.add(player);
+        try {
+            PrintWriter pw = new PrintWriter(new FileOutputStream("playerHistory.txt", true));
+            pw.println(player.getPlayerName() + "," + player.getHighscore());
             pw.close();
-        }catch(IOException e){
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
-        
+
         gameUI.setVisible(false);
         scoreboardUI.startUp();
         scoreboardUI.displayScoreboardUI();
     }
-    
-    public static void startGame() throws InterruptedException{
+
+    public static void startGame() throws InterruptedException {
         initializeData();
 
         loginUI.revalidate();

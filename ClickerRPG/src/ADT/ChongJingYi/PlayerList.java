@@ -2,11 +2,8 @@ package ADT.ChongJingYi;
 
 import clickerrpg.Player;
 
+public class PlayerList<T extends Comparable<T>> implements PlayerListInterface<T> {
 
-public class PlayerList<T> implements PlayerListInterface<T> {
-
-    
-    
     private Node firstNode;
     private int length;
 
@@ -16,35 +13,33 @@ public class PlayerList<T> implements PlayerListInterface<T> {
     // create new node
     public void add(T newEntry) {
         Node newNode = new Node(newEntry);
-        
-        if(isEmpty()){
+
+        if (isEmpty()) {
             firstNode = newNode;
-        }
-        else{
+        } else {
             Node currentNode = firstNode;
-            while(currentNode.next != null){
+            while (currentNode.next != null) {
                 currentNode = currentNode.next;
             }
             currentNode.next = newNode;
         }
-        
+
         length++;
     }
 
     @Override
     public T remove(int position) {
         T result = null;
-        
-        if((position >= 1) && (position <= length)){
+
+        if ((position >= 1) && (position <= length)) {
             //case 1: remove 1st entry
-            if(position == 1){
+            if (position == 1) {
                 result = firstNode.data;
                 firstNode = firstNode.next;
-            }
-            //case 2: position > 1
-            else{
+            } //case 2: position > 1
+            else {
                 Node nodeBefore = firstNode;
-                for(int i = 1; i < position - 1; ++i){
+                for (int i = 1; i < position - 1; ++i) {
                     nodeBefore = nodeBefore.next;
                 }
                 result = nodeBefore.next.data;
@@ -53,7 +48,7 @@ public class PlayerList<T> implements PlayerListInterface<T> {
         }
         return result;
     }
-    
+
     public void clear() {
         firstNode = null;
         length = 0;
@@ -65,74 +60,72 @@ public class PlayerList<T> implements PlayerListInterface<T> {
     }
 
     public T getEntry(int givenPosition) {
-    T result = null;
+        T result = null;
 
-    if ((givenPosition >= 1) && (givenPosition <= length)) {
-      Node currentNode = firstNode;
-      for (int i = 0; i < givenPosition - 1; ++i) {
-        currentNode = currentNode.next;	
-      }
-      result = currentNode.data;
+        if ((givenPosition >= 1) && (givenPosition <= length)) {
+            Node currentNode = firstNode;
+            for (int i = 0; i < givenPosition - 1; ++i) {
+                currentNode = currentNode.next;
+            }
+            result = currentNode.data;
+        }
+
+        return result;
     }
-
-    return result;
-  }
 
     @Override
     public int getLength() {
         return length;
     }
-    
+
     public boolean contains(T anEntry) {
         boolean found = false;
-        
+
         Node currentNode = firstNode;
-        
-        while(!found && (currentNode != null)){
-            if(currentNode.equals(currentNode.data)){
+
+        while (!found && (currentNode != null)) {
+            if (currentNode.equals(currentNode.data)) {
                 found = true;
-            }
-            else{
+            } else {
                 currentNode = currentNode.next;
             }
         }
         return found;
     }
-    
+
     @Override
     public void addDescendingSortedNode(T newEntry) {
-        if (newEntry instanceof Player) {
-            Node currentNode = firstNode;
-            if (firstNode == null) {
-                firstNode = new Node(newEntry);
-            } else if (((Player) newEntry).getHighscore() > ((Player) firstNode.data).getHighscore()) {
 
-                Node newNode = new Node(newEntry);
-                newNode.next = firstNode;
-                firstNode = newNode;
-            } else {
+        Node currentNode = firstNode;
+        if (firstNode == null) {
+            firstNode = new Node(newEntry);
+        } else if (newEntry.compareTo(firstNode.data) > 0) {
 
-                Node previousNode = currentNode;
+            Node newNode = new Node(newEntry);
+            newNode.next = firstNode;
+            firstNode = newNode;
+        } else {
+
+            Node previousNode = currentNode;
+            currentNode = currentNode.next;
+            while (currentNode != null) {
+                if (newEntry.compareTo(currentNode.data) > 0) {
+                    Node tempNode = currentNode;
+                    Node newNode = new Node(newEntry);
+                    previousNode.setNext(newNode);
+                    newNode.setNext(tempNode);
+                    break;
+                }
+                previousNode = previousNode.next;
                 currentNode = currentNode.next;
-                while (currentNode != null) {
-                    if (((Player) newEntry).getHighscore() > ((Player) currentNode.data).getHighscore()) {
-                        Node tempNode = currentNode;
-                        Node newNode = new Node(newEntry);
-                        previousNode.setNext(newNode);
-                        newNode.setNext(tempNode);
-                        break;
-                    }
-                    previousNode = previousNode.next;
-                    currentNode = currentNode.next;
-                    System.out.println(currentNode);
-                }
-                if (currentNode == null) {
-                    previousNode.setNext(new Node(newEntry));
-                }
-
             }
-            length++;
+            if (currentNode == null) {
+                previousNode.setNext(new Node(newEntry));
+            }
+
         }
+        length++;
+
     }
 
     @Override
@@ -144,26 +137,26 @@ public class PlayerList<T> implements PlayerListInterface<T> {
 
         this.firstNode = temp.firstNode;
     }
-    
+
     //inner class
-  private class Node {
+    private class Node {
 
-    private T data;
-    private Node next;
+        private T data;
+        private Node next;
 
-    private Node(T data) {
-      this.data = data;
-      this.next = null;
-    }
+        private Node(T data) {
+            this.data = data;
+            this.next = null;
+        }
 
-    private Node(T data, Node next) {
-      this.data = data;
-      this.next = next;
-    }
-    
-    public void setNext(Node next) {
-        this.next = next;
-    }
-  }// node
-    
+        private Node(T data, Node next) {
+            this.data = data;
+            this.next = next;
+        }
+
+        public void setNext(Node next) {
+            this.next = next;
+        }
+    }// node
+
 }

@@ -6,7 +6,7 @@ import ADT.ChongJingYi.PlayerListInterface;
 import java.util.Objects;
 import javax.swing.ImageIcon;
 
-public class Player {
+public class Player implements Comparable<Player>{
 
     private ImageIcon playerIcon;
     private String playerName;
@@ -109,6 +109,17 @@ public class Player {
     }
 
 
+    public int compareTo(Player playerEntry){
+        if (this.highscore < playerEntry.getHighscore()) {
+            return -1;
+        } else if (this.highscore == playerEntry.getHighscore()) {
+            return 0;
+        } else {
+            return 1;
+        }
+    
+    }
+    
     @Override
     public String toString() {
         return "Player{" + "playerName=" + playerName + ", highscore=" + highscore + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", goldMultiplier=" + goldMultiplier + ", helmet=" + helmet + ", chest=" + chest + ", leggings=" + leggings + ", boots=" + boots + ", weapon=" + weapon + ", gold=" + gold + '}';
@@ -467,5 +478,6 @@ public class Player {
     public void restartStats(){
         
     }
+
 
 }

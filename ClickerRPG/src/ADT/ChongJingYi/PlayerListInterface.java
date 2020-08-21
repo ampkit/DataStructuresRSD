@@ -1,7 +1,7 @@
 package ADT.ChongJingYi;
 
 
-public interface PlayerListInterface<T> {
+public interface PlayerListInterface<T extends Comparable<T>> {
     
     public void add(T newEntry);
     
