@@ -1,20 +1,19 @@
 package clickerrpg;
 
-
 import ADT.ChongJingYi.PlayerList;
 import ADT.ChongJingYi.PlayerListInterface;
 import java.util.Objects;
 import javax.swing.ImageIcon;
 
-public class Player implements Comparable<Player>{
+public class Player implements Comparable<Player> {
 
     private ImageIcon playerIcon;
     private String playerName;
-    
+
     private int highscore;
     private int kills;
     private double goldEarned;
-    
+
     private double baseHealth;
     private double curHealth;
     private double maxHealth;
@@ -77,8 +76,8 @@ public class Player implements Comparable<Player>{
     }
 
     public Player(String playerName, String job, double baseHealth, double baseAttack, double baseDefense) {
-        
-         switch (job) {
+
+        switch (job) {
             case "Swordsman":
                 this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Player_Swordsman.png"));
                 break;
@@ -89,7 +88,7 @@ public class Player implements Comparable<Player>{
                 this.playerIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Player_Magician.png"));
                 break;
         }
-        
+
         this.playerName = playerName;
         this.highscore = 0;
         this.baseHealth = baseHealth;
@@ -108,8 +107,7 @@ public class Player implements Comparable<Player>{
         this.weapon = null;
     }
 
-
-    public int compareTo(Player playerEntry){
+    public int compareTo(Player playerEntry) {
         if (this.highscore < playerEntry.getHighscore()) {
             return -1;
         } else if (this.highscore == playerEntry.getHighscore()) {
@@ -117,19 +115,12 @@ public class Player implements Comparable<Player>{
         } else {
             return 1;
         }
-    
+
     }
-    
+
     @Override
     public String toString() {
         return "Player{" + "playerName=" + playerName + ", highscore=" + highscore + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", goldMultiplier=" + goldMultiplier + ", helmet=" + helmet + ", chest=" + chest + ", leggings=" + leggings + ", boots=" + boots + ", weapon=" + weapon + ", gold=" + gold + '}';
-    }
-
-    
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        return hash;
     }
 
     @Override
@@ -150,10 +141,28 @@ public class Player implements Comparable<Player>{
         return true;
     }
 
-    public void addKill(){
+    public void consume(Consumable consumable) {
+        if (consumable.getHealthIncreased() > 0) {
+            heal(consumable.getHealthIncreased());
+        }
+        if (consumable.getAttackIncreased() > 0) {
+            baseAttack += consumable.getAttackIncreased();
+        }
+        if (consumable.getDefenseIncreased() > 0) {
+            baseDefense += consumable.getDefenseIncreased();
+        }
+        if (consumable.getHealthIncreased() > 0) {
+            baseHealth += consumable.getMaxHealthIncreased();
+            heal(consumable.getMaxHealthIncreased());
+        }
+        
+        calcEquipmentStats();
+    }
+
+    public void addKill() {
         kills++;
     }
-    
+
     //returns unequippedItem, if any
     public Equipment equipEquipment(Equipment equipment) {
         Equipment unequippedItem = null;
@@ -247,27 +256,27 @@ public class Player implements Comparable<Player>{
         }
     }
 
-    private void calcEquipmentStats(){
+    private void calcEquipmentStats() {
         Equipment equip[] = {weapon, helmet, chest, leggings, boots};
-        
+
         double attackBoost = 0;
         double healthBoost = 0;
         double defenseBoost = 0;
-        
-        for ( int i = 0; i < equip.length; i++){
+
+        for (int i = 0; i < equip.length; i++) {
             if (equip[i] != null) {
                 attackBoost += equip[i].getAttack();
                 healthBoost += equip[i].getHealth();
                 defenseBoost += equip[i].getDefense();
             }
         }
-        
+
         attack = baseAttack + attackBoost;
         defense = baseDefense + defenseBoost;
         maxHealth = baseHealth + healthBoost;
         return;
     }
-    
+
     public void heal(double amount) {
         curHealth += amount;
         if (curHealth > maxHealth) {
@@ -282,7 +291,7 @@ public class Player implements Comparable<Player>{
     public void addGold(double increase) {
         this.gold += increase;
     }
-    
+
     public void addGoldEarned(double increase) {
         this.goldEarned += increase;
     }
@@ -290,18 +299,17 @@ public class Player implements Comparable<Player>{
     public void deductGold(double deduction) {
         this.gold -= deduction;
     }
-    
-    
-    public void addAttack(double increase){
+
+    public void addAttack(double increase) {
         this.attack += increase;
     }
-    
-    public void addHealth(double increase){
+
+    public void addHealth(double increase) {
         this.curHealth += increase;
         this.maxHealth += increase;
     }
-    
-    public void addDefense(double increase){
+
+    public void addDefense(double increase) {
         this.defense += increase;
     }
 
@@ -436,7 +444,7 @@ public class Player implements Comparable<Player>{
     public void addBaseHealth(double baseHealth) {
         this.baseHealth += baseHealth;
     }
-    
+
     public double getBaseAttack() {
         return baseAttack;
     }
@@ -444,10 +452,11 @@ public class Player implements Comparable<Player>{
     public void setBaseAttack(double baseAttack) {
         this.baseAttack = baseAttack;
     }
-    
+
     public void addBaseAttack(double baseAttack) {
         this.baseAttack += baseAttack;
     }
+
     public double getBaseDefense() {
         return baseDefense;
     }
@@ -455,6 +464,7 @@ public class Player implements Comparable<Player>{
     public void setBaseDefense(double baseDefense) {
         this.baseDefense = baseDefense;
     }
+
     public void addBaseDefense(double baseDefense) {
         this.baseDefense += baseDefense;
     }
@@ -474,10 +484,5 @@ public class Player implements Comparable<Player>{
     public void setHighscore(int highscore) {
         this.highscore = highscore;
     }
-    
-    public void restartStats(){
-        
-    }
-
 
 }

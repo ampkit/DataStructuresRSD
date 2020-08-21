@@ -858,18 +858,8 @@ public class InventoryUI extends javax.swing.JFrame {
                 break;
             case "Consumables":
                 Consumable consumable = (Consumable) jButton.getClientProperty("item");
-                if (consumable.getHealthIncreased() > 0){
-                    MainClass.player.heal(consumable.getHealthIncreased());
-                }
-                if (consumable.getAttackIncreased() > 0){
-                    MainClass.player.addBaseAttack(consumable.getAttackIncreased());
-                }
-                if (consumable.getDefenseIncreased() > 0){
-                    MainClass.player.addBaseDefense(consumable.getDefenseIncreased());
-                }
-                if (consumable.getHealthIncreased() > 0){
-                    MainClass.player.addBaseHealth(consumable.getHealthIncreased());
-                }
+                
+                MainClass.player.consume(consumable);
                 
                 MainClass.consumableInventory.remove(consumable);
                 

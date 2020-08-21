@@ -36,7 +36,6 @@ public class MainClass {
     public static SLListInterface<Consumable> consumableInventory;
     public static UpgradeListInterface<Upgrade> upgradeList;
     public static LoginUI loginUI = new LoginUI();
-    ;
     public static GameUI gameUI;
     public static ScoreboardUI scoreboardUI;
     public static int stage;

@@ -2,67 +2,62 @@ package clickerrpg;
 
 import javax.swing.ImageIcon;
 
-public class Consumable implements Comparable<Consumable>{
+public class Consumable implements Comparable<Consumable> {
+
     private String consName;
     private ImageIcon imageIcon;
-     
+
     private double attackIncreased = 0;
-    private double healthIncreased = 0;    
+    private double healthIncreased = 0;
     private double maxHealthIncreased = 0;
     private double defenseIncreased = 0;
-    
+
     private double price = 0;
 
-    public Consumable(String name){
-        switch(name){
-            case "Health Potion" :
+    public Consumable(String name) {
+        switch (name) {
+            case "Health Potion":
                 consName = "Health Potion";
                 imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Health_Potion.png"));
                 healthIncreased = 100;
                 price = 5;
                 break;
-            case "Greater Health Potion" :
+            case "Greater Health Potion":
                 consName = "Greater Health Potion";
                 imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Greater_Health_Potion.png"));
                 healthIncreased = 300;
                 price = 20;
                 break;
-            case "Grand Health Potion" :
+            case "Grand Health Potion":
                 consName = "Grand Health Potion";
                 imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Grand_Health_Potion.png"));
                 healthIncreased = 500;
                 price = 100;
                 break;
-            case "Endurance Potion" :
+            case "Endurance Potion":
                 consName = "Endurance Potion";
                 imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Endurance_Potion.png"));
                 maxHealthIncreased = 50;
                 price = 500;
                 break;
-            case "Power Potion" :
+            case "Power Potion":
                 consName = "Power Potion";
                 imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Power_Potion.png"));
                 attackIncreased = 10;
                 price = 500;
                 break;
-            case "Protection Potion" :
+            case "Protection Potion":
                 consName = "Protection Potion";
                 imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Protection_Potion.png"));
                 defenseIncreased = 5;
                 price = 500;
                 break;
         }
-    } 
-    
-    public void consume(Player player){
-        if (healthIncreased != 0) { 
-            player.heal(healthIncreased);
-        }
     }
-   
+
     @Override
-    public int compareTo(Consumable comparedConsumable){
-        return (int)comparedConsumable.price - (int)price;
+    public int compareTo(Consumable comparedConsumable) {
+        return (int) comparedConsumable.price - (int) price;
     }
 
     public String getConsName() {
@@ -120,7 +115,5 @@ public class Consumable implements Comparable<Consumable>{
     public void setPrice(double price) {
         this.price = price;
     }
-    
-    
-    
+
 }
