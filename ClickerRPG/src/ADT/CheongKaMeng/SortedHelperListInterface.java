@@ -13,6 +13,8 @@ public interface SortedHelperListInterface<T extends Comparable<T>> {
 
     public boolean isEmpty();
     
+    public boolean isFull();
+    
     public T get(int index);
     
     public boolean contains(T anEntry);

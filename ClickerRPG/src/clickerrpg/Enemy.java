@@ -1,7 +1,8 @@
 package clickerrpg;
 
 // entity class
-public class Enemy{
+public class Enemy {
+
     private String name;
     private double curHealth;
     private double maxHealth;
@@ -12,7 +13,7 @@ public class Enemy{
     private int attackPeriod;
     private String imageIcon;
 
-    public Enemy(String name,double maxHealth, double attack, double defense, double goldDropped, int attackPeriod, String imageIcon) {
+    public Enemy(String name, double maxHealth, double attack, double defense, double goldDropped, int attackPeriod, String imageIcon) {
         this.name = name;
         this.curHealth = maxHealth;
         this.maxHealth = maxHealth;
@@ -24,18 +25,18 @@ public class Enemy{
         this.imageIcon = imageIcon;
     }
 
-   public void increaseStats(int stage){
-        this.attack *= ( 1 + (stage/100.0));
-        this.defense *= ( 1 + (stage/100.0));
-        this.maxHealth *= ( 1 + (stage/10.0));
-        this.goldDropped *=(1 + (stage));
+    public void increaseStats(int stage) {
+        this.attack *= (1 + (stage / 100.0));
+        this.defense *= (1 + (stage / 100.0));
+        this.maxHealth *= (1 + (stage / 10.0));
+        this.goldDropped *= (1 + (stage / 10.0));
         this.curHealth = maxHealth;
     }
-     
-    public void addCurrentAttackPeriod(int milSec){
+
+    public void addCurrentAttackPeriod(int milSec) {
         currentAttackPeriod += milSec;
     }
-    
+
     public String getName() {
         return name;
     }
@@ -107,11 +108,10 @@ public class Enemy{
     public void setImageIcon(String imageIcon) {
         this.imageIcon = imageIcon;
     }
-    
+
     @Override
     public String toString() {
         return "Enemy{" + "name=" + name + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", goldDropped=" + goldDropped + '}';
     }
-    
- 
+
 }
