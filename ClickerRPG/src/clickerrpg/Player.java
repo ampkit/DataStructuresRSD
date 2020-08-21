@@ -125,12 +125,7 @@ public class Player implements Comparable<Player>{
         return "Player{" + "playerName=" + playerName + ", highscore=" + highscore + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", goldMultiplier=" + goldMultiplier + ", helmet=" + helmet + ", chest=" + chest + ", leggings=" + leggings + ", boots=" + boots + ", weapon=" + weapon + ", gold=" + gold + '}';
     }
 
-    
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        return hash;
-    }
+
 
     @Override
     public boolean equals(Object obj) {
