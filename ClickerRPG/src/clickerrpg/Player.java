@@ -470,9 +470,6 @@ public class Player implements Comparable<Player>{
         this.highscore = highscore;
     }
     
-    public void restartStats(){
-        
-    }
 
 
 }
