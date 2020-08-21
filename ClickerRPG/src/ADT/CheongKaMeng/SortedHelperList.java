@@ -81,10 +81,11 @@ public class SortedHelperList<T extends Comparable<T>> implements SortedHelperLi
         return true;
     }
 
-    private boolean isFull() {
+    public boolean isFull() {
         return length == dataList.length;
     }
 
+    //expand the array size
     private void expandArray() {
         T[] oldList = dataList;
         int oldSize = dataList.length;
@@ -96,6 +97,7 @@ public class SortedHelperList<T extends Comparable<T>> implements SortedHelperLi
         }
     }
 
+    //make a space in the specified index
     private void makeSpace(int newSpaceIndex) {
         int lastIndex = length - 1;
 
@@ -104,6 +106,7 @@ public class SortedHelperList<T extends Comparable<T>> implements SortedHelperLi
         }
     }
 
+    //remove a space in the specified index
     private void removeSpace(int targetIndex) {
         int lastIndex = length - 1;
 

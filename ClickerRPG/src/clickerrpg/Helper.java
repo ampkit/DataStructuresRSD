@@ -8,11 +8,11 @@ public class Helper implements Comparable<Helper> {
     private double hireCost;
     private int level;
     private double upgradeCost;
-    private String imageUrl;    //Image path of the helper
+    private String imageUrl;    //Image file name of the helper
     private boolean hired;
     private boolean assigned;
     
-    private int currentAttackPeriod = 0; //currentAttackPeriod indicates the current milliseconds passed. 
+    private int currentAttackPeriod = 0; //currentAttackPeriod indicates how many milliseconds has passed since the last attack. 
     private int attackPeriod = 1000;     //indicates how many milliseconds needed for the helper to perform his next attack.
                                          //When the currentAttackPeriod >= attackPeriod the helper performs an attack.
     

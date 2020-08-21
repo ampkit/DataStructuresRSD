@@ -79,7 +79,7 @@ public class MainClass {
         playerList = new PlayerList<>();
         enemyQueue = new QueueEnemy<>();
         helperList = new SortedHelperList<>();
-        assignedHelperList = new SortedHelperList<>();
+        assignedHelperList = new SortedHelperList<>(3);
         equipmentList = new SortedLinkedList<>();
         consumableList = new SortedLinkedList<>();
         equipmentInventory = new SortedLinkedList<>();
@@ -106,6 +106,7 @@ public class MainClass {
         upgradeList.add(new Upgrade("Df+30"));
 
         // <editor-fold defaultstate="collapsed" desc="Helpers">
+        //assign Helper available to be hired
         helperList.add(new Helper("Mario", 20, 200, 1, 100, "HelperMario.png"));
         helperList.add(new Helper("Finn", 50, 500, 1, 250, "HelperFinn.png"));
         helperList.add(new Helper("SpongeBob", 30, 300, 1, 150, "HelperSpongeBob.png"));
@@ -213,17 +214,20 @@ public class MainClass {
                 }
                 enemy.setCurrentAttackPeriod(0); //=0
             }
-
+            
+            //helper 1 attack
             if (assignedHelperList.get(0) != null) {
                 helperAttack(assignedHelperList.get(0));
                 gameUI.updateHelperAttackBars(1);
             }
-
+            
+            //helper 2 attack
             if (assignedHelperList.get(1) != null) {
                 helperAttack(assignedHelperList.get(1));
                 gameUI.updateHelperAttackBars(2);
             }
 
+            //helper 3 attack
             if (assignedHelperList.get(2) != null) {
                 helperAttack(assignedHelperList.get(2));
                 gameUI.updateHelperAttackBars(3);
@@ -233,7 +237,7 @@ public class MainClass {
         }
     }
 
-    //game over
+    
     public static void loadEnemy() {
         enemyQueue.clear();
         enemyQueue.enqueue(new Enemy("Butcher", 100, 5, 1, 100, 3000, "Enemy_Butcher.png"));
@@ -245,7 +249,7 @@ public class MainClass {
         enemyQueue.enqueue(new Enemy("Drake", 500, 10, 5, 300, 5000, "Enemy_Dragon.png"));
         enemyQueue.enqueue(new Enemy("Illidan the Draconian", 800, 15, 7, 500, 5000, "Enemy_Dragon_2.png"));
     }
-
+//game over
     public static void gameOver() {
         timer.cancel();
         timer.purge();

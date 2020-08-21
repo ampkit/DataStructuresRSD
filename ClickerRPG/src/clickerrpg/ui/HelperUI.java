@@ -950,7 +950,7 @@ public class HelperUI extends javax.swing.JFrame {
             } else {
                 btnHire.setText("Assign");
                 jPanel1.setBackground(new Color(102, 102, 102));
-                if (MainClass.assignedHelperList.size() == 3) {
+                if (MainClass.assignedHelperList.isFull()) {
                     btnHire.setEnabled(false);
                 }
             }
@@ -988,7 +988,7 @@ public class HelperUI extends javax.swing.JFrame {
             } else {
                 btnHire1.setText("Assign");
                 jPanel3.setBackground(new Color(102, 102, 102));
-                if (MainClass.assignedHelperList.size() == 3) {
+                if (MainClass.assignedHelperList.isFull()) {
                     btnHire1.setEnabled(false);
                 }
             }
@@ -1026,7 +1026,7 @@ public class HelperUI extends javax.swing.JFrame {
             } else {
                 btnHire2.setText("Assign");
                 jPanel4.setBackground(new Color(102, 102, 102));
-                if (MainClass.assignedHelperList.size() == 3) {
+                if (MainClass.assignedHelperList.isFull()) {
                     btnHire2.setEnabled(false);
                 }
             }
@@ -1064,7 +1064,7 @@ public class HelperUI extends javax.swing.JFrame {
             } else {
                 btnHire3.setText("Assign");
                 jPanel5.setBackground(new Color(102, 102, 102));
-                if (MainClass.assignedHelperList.size() == 3) {
+                if (MainClass.assignedHelperList.isFull()) {
                     btnHire3.setEnabled(false);
                 }
             }
