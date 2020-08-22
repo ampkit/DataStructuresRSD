@@ -19,3 +19,4 @@ Googg,26
 lel,5
 Bearbear,8
 Master,12
+Kris,13
