@@ -204,7 +204,7 @@ public class MainClass {
         public void run() {
             //enemy attack
             if (enemy.getCurrentAttackPeriod() < enemy.getAttackPeriod()) {
-                enemy.addCurrentAttackPeriod(100); //+= 100;
+                enemy.addCurrentAttackPeriod(100);
             } else {
                 if (enemy.getAttack() - player.getDefense() > 0) {
                     player.takeDamage(enemy.getAttack() - player.getDefense());
@@ -212,7 +212,7 @@ public class MainClass {
                         gameOver();
                     }
                 }
-                enemy.setCurrentAttackPeriod(0); //=0
+                enemy.setCurrentAttackPeriod(0);
             }
             
             //helper 1 attack

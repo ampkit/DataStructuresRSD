@@ -1,5 +1,6 @@
 package ADT.OoiPingXiu;
 
+// adt implementation class
 public class QueueEnemy <T> implements QueueEnemyInterface<T> {
   
   private T[] array;
