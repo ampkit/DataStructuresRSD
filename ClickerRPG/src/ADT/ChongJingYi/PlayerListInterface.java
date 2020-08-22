@@ -5,8 +5,6 @@ public interface PlayerListInterface<T extends Comparable<T>> {
     
     public void add(T newEntry);
     
-    public T remove(int position);
-    
     public void clear();
     
     public boolean isEmpty();

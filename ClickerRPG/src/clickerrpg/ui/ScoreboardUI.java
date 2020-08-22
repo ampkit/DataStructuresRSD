@@ -13,10 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
 
-/**
- *
- * @author Lenovo
- */
+
 public class ScoreboardUI extends javax.swing.JFrame {
 
     int page = 1;
@@ -181,7 +178,7 @@ public class ScoreboardUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnNextActionPerformed
 
     private void btnPreviousActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPreviousActionPerformed
-        // TODO add your handling code here:
+
         if (page > 1) {
             page--;
             lblPlayerName.setText(arrScoreBoard.getEntry(page));
