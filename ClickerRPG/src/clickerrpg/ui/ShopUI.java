@@ -433,7 +433,7 @@ public class ShopUI extends javax.swing.JFrame {
     private void buttonUpgradeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpgradeActionPerformed
         view = "Upgrade"; 
         page = 1;
-        changeButtonVisibility(false);
+        changeButtonVisibility(false); //set the visibility for four button of equipment to false 
         loadUpgrade();
        
         
@@ -442,7 +442,7 @@ public class ShopUI extends javax.swing.JFrame {
     private void buttonEqpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEqpActionPerformed
         view = "Equipment";
         page = 1;
-        changeButtonVisibility(true);
+        changeButtonVisibility(true);//set the visibility for four button of equipment to true
         loadEquipment();
        
       
@@ -462,16 +462,16 @@ public class ShopUI extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonChestActionPerformed
 
     private void buttonLeggingsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLeggingsActionPerformed
-        loadleggings();
+        loadleggings();//display the item which is a leggings in equipment list
     }//GEN-LAST:event_buttonLeggingsActionPerformed
 
     private void buttonBootsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonBootsActionPerformed
-        loadBoots();
+        loadBoots();//display the item which is a boots in equipment list
     }//GEN-LAST:event_buttonBootsActionPerformed
 
     private void jButtonBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
         MainClass.gameUI.updateGameUI();
-        this.setVisible(false);        
+        this.setVisible(false);        //set the purchase button to false
         MainClass.gameUI.setEnabled(true);
         MainClass.startAutoAttackTimers();
         MainClass.gameUI.toFront();
@@ -532,13 +532,13 @@ public class ShopUI extends javax.swing.JFrame {
             {
 
                 Equipment equipment = (Equipment) jButton.getClientProperty("items");
-                if(MainClass.player.getGold() >= equipment.getPrice() )
+                if(MainClass.player.getGold() >= equipment.getPrice() ) //player can only be click on the purchase button if the golds they eraned is higher than the price of the item that wish to purchase
                 {
                     buttonPurchase.setEnabled(true);
                     
                         MainClass.player.deductGold(equipment.getPrice());
-                        lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
-                        MainClass.equipmentInventory.add(new Equipment(equipment.getEqName()));
+                        lblGold.setText(String.format("%.2f", MainClass.player.getGold())); // set the lalel price from calling the getGold from the player.java
+                        MainClass.equipmentInventory.add(new Equipment(equipment.getEqName())); //add the equipt to equipmentInventory if the player have purchase with the equipment 
                     
 
                 }
@@ -547,14 +547,14 @@ public class ShopUI extends javax.swing.JFrame {
             case "Upgrade" :
             {
                 Upgrade upgrade = (Upgrade) jButton.getClientProperty("items");
-                if(MainClass.player.getGold() >= upgrade.getCost() )
+                if(MainClass.player.getGold() >= upgrade.getCost() ) //player can only be click on the purchase button if the golds they eraned is higher than the price of the item that wish to purchase
                 {
-                    buttonPurchase.setEnabled(true);
-                    MainClass.player.deductGold(upgrade.getCost());
+                    buttonPurchase.setEnabled(true); //purchase button has now be click because the golds earn is higher than the item
+                    MainClass.player.deductGold(upgrade.getCost());  //deduct player's gold when they purchase an items
                     lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
                     if( upgrade.getAttack() !=0 )
                     {
-                        MainClass.player.addAttack(upgrade.getAttack());
+                        MainClass.player.addAttack(upgrade.getAttack()); 
                     }else
                     if(upgrade.getHealth()!=0)
                     {
@@ -571,13 +571,13 @@ public class ShopUI extends javax.swing.JFrame {
             {
                 
                  Consumable consumable = (Consumable) jButton.getClientProperty("items");
-                if(MainClass.player.getGold() >= consumable.getPrice() )
+                if(MainClass.player.getGold() >= consumable.getPrice() ) //player can only be click on the purchase button if the golds they eraned is more than the price of the item that wish to purchase
                 {
-                    buttonPurchase.setEnabled(true);
+                    buttonPurchase.setEnabled(true);//purchase button has now be click because the golds earn is higher than the item
                     
                         MainClass.player.deductGold(consumable.getPrice());
                         lblGold.setText(String.format("%.2f", MainClass.player.getGold()));
-                        MainClass.consumableInventory.add(consumable);
+                        MainClass.consumableInventory.add(consumable);//add the consumable to consumableInventory if the player have purchase with the consumable 
                     
 
                 }
@@ -652,7 +652,7 @@ public class ShopUI extends javax.swing.JFrame {
         for (int i = (page * 8) - 8, j = 0;
                 i < MainClass.equipmentList.getLength() && j < 8;
                 i++, j++) {
-                    label[j].putClientProperty("items", MainClass.equipmentList.getEntry(i));
+                    label[j].putClientProperty("items", MainClass.equipmentList.getEntry(i)); //get the data from the equipmentList
                     label[j].setIcon(new ImageIcon(MainClass.equipmentList.getEntry(i).getImageIcon().getImage().getScaledInstance(160, 160, Image.SCALE_SMOOTH)));
 
                     if (j == 7)

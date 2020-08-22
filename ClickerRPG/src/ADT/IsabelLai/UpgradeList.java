@@ -23,7 +23,7 @@ public class UpgradeList<T> implements UpgradeListInterface<T> {
         array[length] = newElement;
          length++;
      }
-     
+     //removes data at position
      public T remove(int selection) 
      {
          T result = null;
@@ -71,6 +71,7 @@ public class UpgradeList<T> implements UpgradeListInterface<T> {
     return found;
     }
     
+    //get data in given position
     public T getEntry(int selection) {
         if ((selection >=0) && (selection <= length)) {
           return array[selection];
@@ -95,16 +96,19 @@ public class UpgradeList<T> implements UpgradeListInterface<T> {
          return array[index];
      }
      
+     //clear the list
      public void clear() 
     {
         length = 0;
     }
 
+     //get the length of the list
     public int getLength() 
     {
         return length;
     }
 
+    //check whether the list is empty 
     public boolean isEmpty() 
     {
         return length == 0;

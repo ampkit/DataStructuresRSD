@@ -1,5 +1,6 @@
 package ADT.OoiPingXiu;
 
+// adt interface class
 public interface QueueEnemyInterface<T> {
         
     public void enqueue(T newEntry) ;

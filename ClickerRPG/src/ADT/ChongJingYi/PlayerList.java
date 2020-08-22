@@ -10,70 +10,55 @@ public class PlayerList<T extends Comparable<T>> implements PlayerListInterface<
     public PlayerList() {
     }
 
-    // create new node
+    
     public void add(T newEntry) {
-        Node newNode = new Node(newEntry);
+        // create new node
+        Node newNode = new Node(newEntry);  
 
         if (isEmpty()) {
             firstNode = newNode;
-        } else {
-            Node currentNode = firstNode;
-            while (currentNode.next != null) {
+        } 
+        else {
+            // traverse linked list with p pointing to the current node
+            Node currentNode = firstNode; 
+            // while have not reached the last node
+            while (currentNode.next != null) {  
                 currentNode = currentNode.next;
             }
-            currentNode.next = newNode;
+            // make last node reference new node
+            currentNode.next = newNode;  
         }
-
         length++;
     }
 
-    @Override
-    public T remove(int position) {
-        T result = null;
-
-        if ((position >= 1) && (position <= length)) {
-            //case 1: remove 1st entry
-            if (position == 1) {
-                result = firstNode.data;
-                firstNode = firstNode.next;
-            } //case 2: position > 1
-            else {
-                Node nodeBefore = firstNode;
-                for (int i = 1; i < position - 1; ++i) {
-                    nodeBefore = nodeBefore.next;
-                }
-                result = nodeBefore.next.data;
-            }
-            length--;
-        }
-        return result;
-    }
 
     public void clear() {
         firstNode = null;
         length = 0;
     }
 
-    @Override
+    
     public boolean isEmpty() {
         return length == 0;
     }
 
+    
     public T getEntry(int givenPosition) {
         T result = null;
 
         if ((givenPosition >= 1) && (givenPosition <= length)) {
             Node currentNode = firstNode;
             for (int i = 0; i < givenPosition - 1; ++i) {
-                currentNode = currentNode.next;
+                // advance currentNode to next node
+                currentNode = currentNode.next;  
             }
-            result = currentNode.data;
+            // currentNode is pointing to the node at givenPosition
+            result = currentNode.data;  
         }
 
         return result;
     }
 
-    @Override
     public int getLength() {
         return length;
     }
@@ -96,15 +81,19 @@ public class PlayerList<T extends Comparable<T>> implements PlayerListInterface<
     public void addDescendingSortedNode(T newEntry) {
 
         Node currentNode = firstNode;
+        //add at beginning
         if (firstNode == null) {
             firstNode = new Node(newEntry);
-        } else if (newEntry.compareTo(firstNode.data) > 0) {
+        } 
+        // newEntry > firstNode.data
+        else if (newEntry.compareTo(firstNode.data) > 0) {
 
             Node newNode = new Node(newEntry);
             newNode.next = firstNode;
             firstNode = newNode;
-        } else {
-
+        }
+        //add in the middle or at the end
+        else {
             Node previousNode = currentNode;
             currentNode = currentNode.next;
             while (currentNode != null) {
@@ -121,7 +110,6 @@ public class PlayerList<T extends Comparable<T>> implements PlayerListInterface<
             if (currentNode == null) {
                 previousNode.setNext(new Node(newEntry));
             }
-
         }
         length++;
 

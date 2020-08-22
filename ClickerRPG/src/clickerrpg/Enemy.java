@@ -25,6 +25,7 @@ public class Enemy {
         this.imageIcon = imageIcon;
     }
 
+    // increase the stats of the enemy
     public void increaseStats(int stage) {
         this.attack *= (1 + (stage / 100.0));
         this.defense *= (1 + (stage / 100.0));
@@ -33,10 +34,12 @@ public class Enemy {
         this.curHealth = maxHealth;
     }
 
+    //add current attack period value
     public void addCurrentAttackPeriod(int milSec) {
         currentAttackPeriod += milSec;
     }
 
+    // getter & setter
     public String getName() {
         return name;
     }
@@ -111,7 +114,7 @@ public class Enemy {
 
     @Override
     public String toString() {
-        return "Enemy{" + "name=" + name + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", goldDropped=" + goldDropped + '}';
+        return "Enemy{" + "name=" + name + ", curHealth=" + curHealth + ", maxHealth=" + maxHealth + ", attack=" + attack + ", defense=" + defense + ", goldDropped=" + goldDropped + ", currentAttackPeriod=" + currentAttackPeriod + ", attackPeriod=" + attackPeriod + ", imageIcon=" + imageIcon + '}';
     }
 
 }
