@@ -240,14 +240,14 @@ public class MainClass {
     
     public static void loadEnemy() {
         enemyQueue.clear();
-        enemyQueue.enqueue(new Enemy("Butcher", 100, 5, 1, 100, 3000, "Enemy_Butcher.png"));
-        enemyQueue.enqueue(new Enemy("Stheno the Snake", 100, 3, 2, 100, 1000, "Enemy_Stheno.png"));
-        enemyQueue.enqueue(new Enemy("Ghost", 300, 5, 0, 100, 3000, "Enemy_Ghost.png"));
-        enemyQueue.enqueue(new Enemy("Luffy the Pirate", 150, 5, 1, 200, 3000, "Enemy_Pirate.png"));
-        enemyQueue.enqueue(new Enemy("Spider", 100, 10, 2, 100, 2000, "Enemy_Spider.png"));
-        enemyQueue.enqueue(new Enemy("Vesben the Ruthless", 300, 5, 0, 100, 3000, "Enemy_Ghost_2.png"));
-        enemyQueue.enqueue(new Enemy("Drake", 500, 10, 5, 300, 5000, "Enemy_Dragon.png"));
-        enemyQueue.enqueue(new Enemy("Illidan the Draconian", 800, 15, 7, 500, 5000, "Enemy_Dragon_2.png"));
+        enemyQueue.enqueue(new Enemy("Butcher", 100, 7, 1, 100, 3000, "Enemy_Butcher.png"));
+        enemyQueue.enqueue(new Enemy("Stheno the Snake", 100, 5, 2, 100, 1000, "Enemy_Stheno.png"));
+        enemyQueue.enqueue(new Enemy("Ghost", 300, 7, 0, 100, 3000, "Enemy_Ghost.png"));
+        enemyQueue.enqueue(new Enemy("Luffy the Pirate", 150, 7, 1, 200, 3000, "Enemy_Pirate.png"));
+        enemyQueue.enqueue(new Enemy("Spider", 100, 12, 2, 100, 2000, "Enemy_Spider.png"));
+        enemyQueue.enqueue(new Enemy("Vesben the Ruthless", 300, 6, 0, 100, 3000, "Enemy_Ghost_2.png"));
+        enemyQueue.enqueue(new Enemy("Drake", 400, 12, 5, 300, 5000, "Enemy_Dragon.png"));
+        enemyQueue.enqueue(new Enemy("Illidan the Draconian", 600, 18, 7, 500, 5000, "Enemy_Dragon_2.png"));
     }
 //game over
     public static void gameOver() {

@@ -27,10 +27,15 @@ public class Enemy {
 
     // increase the stats of the enemy
     public void increaseStats(int stage) {
-        this.attack *= (1 + (stage / 10.0));
+        this.attack *= (1 + (stage / 8.0));
         this.defense *= (1 + (stage / 50.0));
         this.maxHealth *= (1 + (stage / 10.0));
         this.goldDropped *= (1 + (stage / 30.0));
+        if (stage < 100) {
+            this.attackPeriod *= (1 - (stage / 150.0));
+        } else {
+            this.attackPeriod *= (1 - (100 / 150.0) - (stage / 999.9));
+        }
         this.curHealth = maxHealth;
     }
 

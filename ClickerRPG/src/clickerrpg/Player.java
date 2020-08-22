@@ -105,6 +105,7 @@ public class Player implements Comparable<Player> {
         this.leggings = null;
         this.boots = null;
         this.weapon = null;
+        
     }
 
     public int compareTo(Player playerEntry) {
