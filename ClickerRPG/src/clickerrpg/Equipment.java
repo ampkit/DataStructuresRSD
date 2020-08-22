@@ -42,11 +42,11 @@ public class Equipment implements Comparable<Equipment> {
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Golden_Sword.png"));
                 break;
             case "Diamond Sword":
-                setEquipmentAttributes("Diamond Sword", "Weapon", 80, 0, 0, 10000);
+                setEquipmentAttributes("Diamond Sword", "Weapon", 800, 0, 0, 10000);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Diamond_Sword.png"));
                 break;
             case "Enchanted Diamond Sword":
-                setEquipmentAttributes("Enchanted Diamond Sword", "Weapon", 200, 0, 0, 50000);
+                setEquipmentAttributes("Enchanted Diamond Sword", "Weapon", 2000, 0, 0, 50000);
                 this.imageIcon = new ImageIcon(getClass().getResource("/clickerrpg/img/Enchanted_Diamond_Sword.png"));
                 break;
 

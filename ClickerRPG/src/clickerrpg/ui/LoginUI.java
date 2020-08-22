@@ -435,7 +435,7 @@ public class LoginUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
-        String playerName = txtPlayerName.getText();
+        String playerName = txtPlayerName.getText().trim();
         switch (selectedPlayer) {
             case "Swordsman":
                 MainClass.player = new Player(playerName, "Swordsman", 150, 15, 3);
@@ -447,7 +447,11 @@ public class LoginUI extends javax.swing.JFrame {
                 MainClass.player = new Player(playerName, "Magician", 50, 50, 0);
                 break;
         }
-
+        
+        if (playerName.equals("DSA")) {
+            MainClass.player.addGold(10000);
+        }
+        
         this.setVisible(false);
     }//GEN-LAST:event_btnLoginActionPerformed
 
