@@ -107,13 +107,13 @@ public class MainClass {
 
         // <editor-fold defaultstate="collapsed" desc="Helpers">
         //assign Helper available to be hired
-        helperList.add(new Helper("Mario", 20, 200, 1, 100, "HelperMario.png"));
-        helperList.add(new Helper("Finn", 50, 500, 1, 250, "HelperFinn.png"));
-        helperList.add(new Helper("SpongeBob", 30, 300, 1, 150, "HelperSpongeBob.png"));
-        helperList.add(new Helper("StarWar", 80, 800, 1, 400, "HelperStarwar.png"));
-        helperList.add(new Helper("Minion", 60, 600, 1, 300, "HelperMinion.png"));
-        helperList.add(new Helper("Pusheen", 70, 700, 1, 350, "HelperPusheen.png"));
-        helperList.add(new Helper("Patrick", 40, 400, 1, 200, "HelperPatrick.png"));
+        helperList.add(new Helper("Mario", 20, 1500, 1, 750, "HelperMario.png"));
+        helperList.add(new Helper("Finn", 50, 4300, 1, 2150, "HelperFinn.png"));
+        helperList.add(new Helper("SpongeBob", 30, 2900, 1, 1450, "HelperSpongeBob.png"));
+        helperList.add(new Helper("StarWarMaster", 80, 8500, 1, 4250, "HelperStarwar.png"));
+        helperList.add(new Helper("Minion", 60, 5700, 1, 2650, "HelperMinion.png"));
+        helperList.add(new Helper("Pusheen", 70, 7100, 1, 3050, "HelperPusheen.png"));
+        helperList.add(new Helper("Patrick", 40, 3500, 1, 1750, "HelperPatrick.png"));
         helperList.add(new Helper("Waikit, the xueba", 10, 100, 1, 50, "HelperWaikit.png"));
         // </editor-fold>
 

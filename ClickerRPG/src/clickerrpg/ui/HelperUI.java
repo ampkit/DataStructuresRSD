@@ -892,6 +892,7 @@ public class HelperUI extends javax.swing.JFrame {
         setVisible(true);
     }
 
+    //update the whole helper UI
     private void updateUI() {
         labelGold.setText(String.format("%d", (int) MainClass.player.getGold()));
         updatePanel1Control(MainClass.helperList.get(page * 4 - 4));
@@ -908,6 +909,7 @@ public class HelperUI extends javax.swing.JFrame {
 
     }
 
+    //hire,upgrade,assign,unassign button event
     private void hireBtnEvent(Helper helper) {
         if (helper.isHired() == false) {
             MainClass.player.deductGold((int) helper.getHireCost());
@@ -926,6 +928,7 @@ public class HelperUI extends javax.swing.JFrame {
         updateUI();
     }
 
+    //upgrade Button Event
     private void upgradeBtnEvent(Helper helper) {
         MainClass.player.deductGold((int) helper.getUpgradeCost());
         helper.upgrade();
@@ -933,6 +936,7 @@ public class HelperUI extends javax.swing.JFrame {
         updateUI();
     }
 
+    //update button controls for the first panel
     private void updatePanel1Control(Helper helper) {
         lblIcon.setIcon(new ImageIcon(imageFolderPath + helper.getImageUrl()));
         lblName.setText(helper.getName());
@@ -971,6 +975,7 @@ public class HelperUI extends javax.swing.JFrame {
         }
     }
 
+    //update button controls for the second panel
     private void updatePanel2Control(Helper helper) {
         lblIcon1.setIcon(new ImageIcon(imageFolderPath + helper.getImageUrl()));
         lblName1.setText(helper.getName());
@@ -1009,6 +1014,7 @@ public class HelperUI extends javax.swing.JFrame {
         }
     }
 
+    //update button controls for the third panel
     private void updatePanel3Control(Helper helper) {
         lblIcon2.setIcon(new ImageIcon(imageFolderPath + helper.getImageUrl()));
         lblName2.setText(helper.getName());
@@ -1047,6 +1053,7 @@ public class HelperUI extends javax.swing.JFrame {
         }
     }
 
+    //update button controls for the forth panel
     private void updatePanel4Control(Helper helper) {
         lblIcon3.setIcon(new ImageIcon(imageFolderPath + helper.getImageUrl()));
         lblName3.setText(helper.getName());

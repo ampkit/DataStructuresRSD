@@ -20,3 +20,8 @@ lel,5
 Bearbear,8
 Master,12
 Kris,13
+LiftLift,48
+LiftLift,12
+King,140
+Chrome,50
+Sam,7

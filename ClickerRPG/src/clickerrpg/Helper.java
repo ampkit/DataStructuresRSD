@@ -31,7 +31,7 @@ public class Helper implements Comparable<Helper> {
     public void upgrade() {
         this.level++;
         this.upgradeCost *= 1.3;
-        this.damage *= 1.3;
+        this.damage *= 1.2;
     }
 
     //Compare helper with another helper by hireCost.
